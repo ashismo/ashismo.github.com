@@ -1,6 +1,6 @@
 ---
 layout: post
-category : lessons
+category : android-System API
 tagline: "Interact with Camera"
 tags : [Android Tutorial]
 ---
