@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 tagline: "Interact with Camera"
-tags : [system api, beginner, tutorial]
+tags : [Android Tutorial]
 ---
 {% include JB/setup %}
 
