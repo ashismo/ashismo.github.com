@@ -7,7 +7,7 @@ group: navigation
 {% include JB/setup %}
 
 {% for category in site.categories %} 
-  {% if category contains 'android' %} 
+  {% if "{{ category[0] }}" contains 'android' %} 
     <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
     <ul>
       {% assign pages_list = category[1] %}  
