@@ -10,6 +10,7 @@ h4 {
 	color: green
 }
 
-h4 {
-	color: grey
+h5 {
+	color: grey;
+	font-weight: bold;
 }
