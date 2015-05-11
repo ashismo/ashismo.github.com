@@ -4,14 +4,13 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-markdown: kramdown
+markdown: rdiscount
 #highlighter: pygments
 highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
 
-kramdown:
-  input: GFM
+rdiscount:
   auto_ids:       true
   footnote_nr:    1
   entity_output:  as_char
