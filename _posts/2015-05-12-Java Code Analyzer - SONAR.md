@@ -76,3 +76,14 @@ sonar.host.url=http://localhost:9000
 
 **Important Note**
  As we are not using any database so the analysis report will get stored in **sonar.h2** file @%SONAR_PATH%\sonar\sonarqube-5.1\data. After stopping the server you can delete the file from the location so all previous analysis reports will get deleted.
+
+
+ #### Generate Sonar Report for Analysis
+ 
+ The generated report is purely based on the defined rules in the server. To check the defined rules:
+  * Login to http://localhost:9000 (User name - admin, password - admin)
+  * Go to **Quality Profile** tab
+  * Default Java profile is **Sonar Way**
+  * Check the Rules. (You can deactivate rules if not required)
+  
+Run the **sonar-runner** command from the [project path](#project-setup-and-start-the-client). Once the command gets executed successfully, the project will be visible in the dashboard
