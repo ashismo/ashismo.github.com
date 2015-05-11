@@ -26,6 +26,7 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
  * Unzip both the files into the same folder.
  * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
  * Configure the below environment variables
+ 
 <pre class="prettyprint lang-java">
 SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4
 PATH=%PATH%;%SONAR_PATH%/sonar/sonar-runner-2.4/bin
