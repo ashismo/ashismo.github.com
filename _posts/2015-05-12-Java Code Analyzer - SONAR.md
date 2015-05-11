@@ -27,7 +27,7 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
  * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
  * Configure the below environment variables
 > SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4
-PATH=%PATH%;%SONER_PATH%/sonar/sonar-runner-2.4/bin
+PATH=%PATH%;%SONAR_PATH%/sonar/sonar-runner-2.4/bin
 SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
  * It is advisable to run using JDK1.7 to avoid compiler version specific errors.
  
@@ -36,21 +36,21 @@ SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
 ##### Configure and start the Server
 
 By default we are going to use h2 DB. However, Sonar supports other databases like MySQL, Oracle, SQL Server etc  
- * Open **sonar.properties** file from %SONER_PATH%\sonar\sonarqube-5.1\conf location
+ * Open **sonar.properties** file from %SONAR_PATH%\sonar\sonarqube-5.1\conf location
  * Make sure you have minimal setup as shown below
  > sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
  sonar.web.port=9000  
  http.proxyHost=proxy.abc.com    (if you are behind proxy server)  
  http.proxyPort=8080
  * You are done with the server configuration.
- * To start the server go inside %SONER_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
+ * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
  * http://localhost:9000/ URL should be accessiable once the server starts successfully
  * admin/admin is the default user name and password
 
 ##### Configure client
 
 Assumption is that our server and client are running in the same server.
- * Open sonar-runner.properties file from %SONER_PATH%/sonar/sonar-runner-2.4/conf folder
+ * Open sonar-runner.properties file from %SONAR_PATH%/sonar/sonar-runner-2.4/conf folder
  * Specify the Sonar server URL here. In our case below is the configuration
  > sonar.host.url=http://localhost:9000
 
@@ -64,4 +64,4 @@ Assumption is that our server and client are running in the same server.
 * Once the client is started up then the project will be visible in the dashboard
 
 **Important Note**
- As we are not using any database so the analysis report will get stored in **sonar.h2** file @%SONER_PATH%\sonar\sonarqube-5.1\data. After stopping the server you can delete the file from the location so all previous analysis reports will get deleted.
+ As we are not using any database so the analysis report will get stored in **sonar.h2** file @%SONAR_PATH%\sonar\sonarqube-5.1\data. After stopping the server you can delete the file from the location so all previous analysis reports will get deleted.
