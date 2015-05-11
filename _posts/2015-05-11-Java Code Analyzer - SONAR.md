@@ -1,6 +1,6 @@
 ---
 layout: post
-category : java-02
+category : java-code quality analyzer
 tags : [Code Quality Tutorial]
 ---
 {% include JB/setup %}
