@@ -1,18 +1,7 @@
 h4 {
-	color: blue
-}
-ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+	color: blue;
 }
 
-li {
-  padding-left: 1em;
-  text-indent: -1em;
-}
-
-li:before {
-  content: "-";
-  padding-right: 5px;
+h2 h3 {
+	color: black;
 }
