@@ -26,9 +26,12 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
  * Unzip both the files into the same folder.
  * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
  * Configure the below environment variables
-> SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4
+<pre class="prettyprint">
+SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4
 PATH=%PATH%;%SONAR_PATH%/sonar/sonar-runner-2.4/bin
 SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
+</pre>
+
  * It is advisable to run using JDK1.7 to avoid compiler version specific errors.
  
 #### Sonar Configuration
@@ -38,10 +41,12 @@ SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
 By default we are going to use h2 DB. However, Sonar supports other databases like MySQL, Oracle, SQL Server etc  
  * Open **sonar.properties** file from %SONAR_PATH%\sonar\sonarqube-5.1\conf location
  * Make sure you have minimal setup as shown below
- > sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
+``` 
+sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
  sonar.web.port=9000  
  http.proxyHost=proxy.abc.com    (if you are behind proxy server)  
  http.proxyPort=8080
+ ```
  * You are done with the server configuration.
  * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
  * http://localhost:9000/ URL should be accessiable once the server starts successfully
@@ -50,17 +55,19 @@ By default we are going to use h2 DB. However, Sonar supports other databases li
 ##### Configure client
 
 Assumption is that our server and client are running in the same server.
- * Open sonar-runner.properties file from %SONAR_PATH%/sonar/sonar-runner-2.4/conf folder
+ * Open **sonar-runner.properties** file from %SONAR_PATH%/sonar/sonar-runner-2.4/conf folder
  * Specify the Sonar server URL here. In our case below is the configuration
- > sonar.host.url=http://localhost:9000
+<pre class="prettyprint">
+sonar.host.url=http://localhost:9000
+</pre>
 
 ##### Project setup and start the client
 
 * Go to your eclipse project location.
-* Create a file called sonar-project.properties file as shown in the below image.
+* Create a file called **sonar-project.properties** file as shown in the below image.
 * Make sure the project key is unique for all sonar projects analized by your server
-<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7563951/c42c47b2-f7ff-11e4-94ba-295631c530a8.png" height="300" width="800">
-* Open command prompt from project path and execute **sonar-runner** command
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565197/9a24c41a-f80b-11e4-9136-62b1a71ef22a.png" height="250" width="850">
+* Open command prompt from project path, set JDK1.7 path (if not set) and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
 **Important Note**
