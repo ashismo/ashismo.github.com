@@ -9,13 +9,10 @@ tags : [Code Quality Tutorial]
 Analyzing java source code is an important aspest of good coding. It helps developer to findout the unused variables, dead code, deviation from the coding standard, possible bugs and many more. There are many open source Java code analyzers are available in the market.Few of them are PMD, SONAR, Find Bugs, QJ-Pro, JDiff, CheckStyle etc. PMD and SONAR are very popular in the industry. This tutorial gives brief on SONAR setup.
 
 ## SONAR
-SONAR (Currently known as SonarQube) is an open source platform to inspect code quality. For Java code it identifies the potential problems like:
-<ul>
- <li> Possible bugs - Empty try/catch/finally/switch blocks</li>
- <li> Dead code - Unused variables </li>
- <li> Duplicate code </li>
- <li> Empty if/while statements </li>
-</ul>
+SONAR (Currently known as SonarQube) is an open source platform to inspect code quality. It identifies the problems as mentioned in the below image.
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7565993/0190cab2-f812-11e4-8412-8acbc253d291.png" style="border:1px solid black">
+
 Sonar report shows the indicative issues. It is upto the developer to decide whether the issue to be fixed. However, it is advisable that the developpers should fix priority 1 and 2 violations.
 
 ### Sonar Setup
@@ -92,3 +89,8 @@ Run the **sonar-runner** command from the [project path](#project-setup-and-star
 Click on the project available in the dashboard to see Blocking/Critical/Major/Minor violations. It is advisable to fix Blocking/Critical one. It is good to fix major violations as well.
 
 <img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565865/0901db52-f811-11e4-8a96-122c8bab57f8.png">
+
+
+#### Share the sonar report
+
+You can share the Sonar analysis report in html/pdf format.
