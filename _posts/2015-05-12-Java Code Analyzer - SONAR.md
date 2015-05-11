@@ -4,7 +4,6 @@ category : java-code quality analyzer
 tags : [Code Quality Tutorial]
 ---
 {% include JB/setup %}
-
 ## Java Code Analyzer
 Analyzing java source code is an important aspest of good coding. It helps developer to findout the unused variables, dead code, deviation from the coding standard, possible bugs and many more. There are many open source Java code analyzers are available in the market.Few of them are PMD, SONAR, Find Bugs, QJ-Pro, JDiff, CheckStyle etc. PMD and SONAR are very popular in the industry. This tutorial gives brief on SONAR setup.
 
@@ -21,6 +20,7 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
 ### Sonar Setup
 
 #### Sonar Installation
+
 * Download sonarqube-5.1.zip and sonar-runner-dist-2.4.zip from the [official website](http://www.sonarqube.org/downloads/) and place them together inside a folder (%SOME_PATH%/sonar/).
  * Unzip both the files into the same folder.
  * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
@@ -58,7 +58,7 @@ Assumption is that our server and client are running in the same server.
 * Go to your eclipse project location.
 * Create a file called sonar-project.properties file as shown in the below image.
 * Make sure the project key is unique for all sonar projects analized by your server
-<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7563951/c42c47b2-f7ff-11e4-94ba-295631c530a8.png" height="350" width="650">
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7563951/c42c47b2-f7ff-11e4-94ba-295631c530a8.png" height="300" width="800">
 * Open command prompt from project path and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
