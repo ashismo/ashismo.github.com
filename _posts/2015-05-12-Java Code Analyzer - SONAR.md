@@ -42,12 +42,14 @@ SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
 By default we are going to use h2 DB. However, Sonar supports other databases like MySQL, Oracle, SQL Server etc  
  * Open **sonar.properties** file from %SONAR_PATH%\sonar\sonarqube-5.1\conf location
  * Make sure you have minimal setup as shown below
+ 
 ``` 
 sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
 sonar.web.port=9000  
 http.proxyHost=proxy.abc.com    (if you are behind proxy server)  
 http.proxyPort=8080  
 ```
+
  * You are done with the server configuration.
  * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
  * http://localhost:9000/ URL should be accessiable once the server starts successfully
