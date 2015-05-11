@@ -3,9 +3,20 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-#highlighter: rouge
+
 markdown: kramdown
-highlighter: pygments
+#highlighter: pygments
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
