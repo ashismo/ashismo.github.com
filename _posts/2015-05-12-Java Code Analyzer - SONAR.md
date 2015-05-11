@@ -96,4 +96,4 @@ Click on the project available in the dashboard to see Blocking/Critical/Major/M
 You can share the Sonar analysis report in html/pdf format. To generate report you need some plugin. The architecture is as shown below.
 <img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7566215/371702cc-f813-11e4-8de2-6fcc534c26cd.png">
 
-If your project is a maven project, then you can generate the report in multiple format. Update your pom.xml with the [following content](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/sonar-report-plugin-pom.xml)
+If your project is a maven project, then you can generate the report in multiple format. Update your pom.xml with the [this content](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/sonar-report-plugin-pom.xml)
