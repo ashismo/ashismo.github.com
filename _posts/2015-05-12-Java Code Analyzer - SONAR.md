@@ -85,4 +85,10 @@ sonar.host.url=http://localhost:9000
   * Default Java profile is **Sonar Way**
   * Check the Rules. (You can deactivate rules if not required)
   
-Run the **sonar-runner** command from the [project path](#project-setup-and-start-the-client). Once the command gets executed successfully, the project will be visible in the dashboard
+Run the **sonar-runner** command from the [project path](#project-setup-and-start-the-client). Once the command gets executed successfully, the project will be visible in the dashboard.
+
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565830/b6b9cd78-f810-11e4-9119-e53bd1d6a534.png">
+
+Click on the project available in the dashboard to see Blocking/Critical/Major/Minor violations. It is advisable to fix Blocking/Critical one. It is good to fix major violations as well.
+
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565865/0901db52-f811-11e4-8a96-122c8bab57f8.png">
