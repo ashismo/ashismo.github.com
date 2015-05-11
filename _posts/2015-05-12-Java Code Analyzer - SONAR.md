@@ -26,7 +26,7 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
  * Unzip both the files into the same folder.
  * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
  * Configure the below environment variables
-<pre class="prettyprint">
+<pre class="prettyprint lang-java">
 SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4
 PATH=%PATH%;%SONAR_PATH%/sonar/sonar-runner-2.4/bin
 SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)
@@ -43,10 +43,10 @@ By default we are going to use h2 DB. However, Sonar supports other databases li
  * Make sure you have minimal setup as shown below
 ``` 
 sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
- sonar.web.port=9000  
- http.proxyHost=proxy.abc.com    (if you are behind proxy server)  
- http.proxyPort=8080
- ```
+sonar.web.port=9000  
+http.proxyHost=proxy.abc.com    (if you are behind proxy server)  
+http.proxyPort=8080
+```
  * You are done with the server configuration.
  * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
  * http://localhost:9000/ URL should be accessiable once the server starts successfully
