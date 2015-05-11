@@ -4,6 +4,7 @@ category : java-code quality analyzer
 tags : [Code Quality Tutorial]
 ---
 {% include JB/setup %}
+
 ## Java Code Analyzer
 Analyzing java source code is an important aspest of good coding. It helps developer to findout the unused variables, dead code, deviation from the coding standard, possible bugs and many more. There are many open source Java code analyzers are available in the market.Few of them are PMD, SONAR, Find Bugs, QJ-Pro, JDiff, CheckStyle etc. PMD and SONAR are very popular in the industry. This tutorial gives brief on SONAR setup.
 
@@ -62,5 +63,5 @@ Assumption is that our server and client are running in the same server.
 * Open command prompt from project path and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
-** Important Note **
+**Important Note**
  As we are not using any database so the analysis report will get stored in **sonar.h2** file @%SONER_PATH%\sonar\sonarqube-5.1\data. After stopping the server you can delete the file from the location so all previous analysis reports will get deleted.
