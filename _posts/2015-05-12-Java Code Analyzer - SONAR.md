@@ -53,8 +53,8 @@ http.proxyPort=8080
 
 
  * You are done with the server configuration.
- * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
- * http://localhost:9000/ URL should be accessiable once the server starts successfully
+ * To start the server go inside **%SONAR_PATH%\sonar\sonarqube-5.1\bin** and open appropriate folder as per your OS. I have gone inside **windows-x86-32** folder for my system. Then execute StartSonar.bat file 
+ * **http://localhost:9000/** URL should be accessiable once the server starts successfully
  * admin/admin is the default user name and password
 
 ##### Configure client
@@ -81,7 +81,7 @@ sonar.host.url=http://localhost:9000
 #### Analyze the project using sonar-runner
 
 
-* Open command prompt from project path, set JDK1.7 path (if not set) and execute **sonar-runner** command
+* Open command prompt from project path, set **JDK1.7** path (if not set) and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
 **Important Note**
