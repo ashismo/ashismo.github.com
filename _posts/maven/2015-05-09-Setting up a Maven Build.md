@@ -85,7 +85,7 @@ The default repository location is ${user.home}/.m2/repository. However, user ca
 
 #### Internet connection
 
-The maven must connect to the internet (or copy the working repository then internet connection is not required) for the first time.  To connect to the internet: make sure <proxy> tag is correct in your settings.xml 
+The maven must connect to the internet (or copy the working repository then internet connection is not required) for the first time.  To connect to the internet: make sure the **proxy** tag is correct in your settings.xml 
 
 ```
 <proxy>
@@ -114,14 +114,55 @@ In pom.xml, if repository is not mentioned then by default then it will look int
 </repositories>
 ````
 
+### Create a maven project
+
+##### Create Maven project from Eclipse
+
+
+ * Create a normal project in eclipse
+ * Right click on the project -> Configure -> Configure to Maven project
+ 
+##### Create Maven project from cmd prompt
+
+
+* Create a project folder
+* Then execute the following
+
+```
+mvn archetype:create 
+-DgroupId=com.test 
+-DartifactId=ArtifactName
+```
+
+### Build Java project
+
+The below attached script creates jar file and place into another location by the followings steps. Comments added in each steps in the pom.xml file
+
+
+ - It defines the dependencies (jars) with scope. 
+    - If the scope is **system** then it picks the jar from the hardcoded location
+    - If the scope is **test** then the testing files does not get copied into the final jar
+ - Define the JDK version
+ - Copy resource files (.properties/.bat) into respective folder
+ - Copy dependant jar files into ${outputPath}/lib folder
+ - Create executable jar with depandant jars as entry into manifest.mf file
+ - Copy the jar into final destination
+ - Also declare variables which are used across the pom.xml
+
+For details, check this [pom.xml file](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml)
+
+
+### Call ant build from maven script
+
+If you are using JDK1.4 or below then maven does not offer much plugings. So to achieve something you may need to run ant target or ant scripts from maven. [This file](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom_call_ant_script.xml) shows how to call ant script from maven build.
+
+
 ### URL to check complete code
 
 Click
 <a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/main/java/com/app/ashish/localtraininfo/activity/StationNamesSplashScreenActivity.java" target="_blank">
 	<img src="{{ ASSET_PATH }}/../../images/github.jpg" height="32" width="32">
-</a>
-to see the complete code from my 
+</a> to see the complete code from my
 <a href="https://github.com/ashismo/LocalTrainInfo/" target="_blank">
 	<img src="{{ ASSET_PATH }}/../../images/localtrain.jpg" height="52" width="52" alt="IRCTC Local Train Live Status">
-</a>
-application
+</a> android application
