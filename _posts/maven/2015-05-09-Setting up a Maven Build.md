@@ -149,12 +149,12 @@ The below attached script creates jar file and place into another location by th
  - Copy the jar into final destination
  - Also declare variables which are used across the pom.xml
 
-For details, check this [pom.xml file](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml)
+For details, check this <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml" target="_blank">pom.xml file</a>
 
 
 ### Call ant build from maven script
 
-If you are using JDK1.4 or below then maven does not offer much plugings. So to achieve something you may need to run ant target or ant scripts from maven. [This file](https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom_call_ant_script.xml) shows how to call ant script from maven build.
+If you are using JDK1.4 or below then maven does not offer much plugings. So to achieve something you may need to run ant target or ant scripts from maven. <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom_call_ant_script.xml" target="_blank">This file</a> shows how to call ant script from maven build.
 
 
 ### URL to check complete code
