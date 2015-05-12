@@ -10,8 +10,11 @@ tags : [Code Repository Setup]
 
 * Google and Install **tortoise SVN** and **SVN for windows**(TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi)
 * Create a repository from cmd prompt
-    * svnadmin create **"F:\ashish.mondal\mySVN\MyProjectRepo"**
-    * Modifying Security and Authentication Settings
+
+```
+svnadmin create "F:\ashish.mondal\mySVN\MyProjectRepo"
+```
+* Modifying Security and Authentication Settings
     
 Go to D:\Project\Repository\conf location
 	For our purposes, just uncomment out the following lines from **svnserv.conf** file in configuration
@@ -24,7 +27,7 @@ password-db = passwd
 
 ```
 
-Open passwd file and define username=password  
+Open **passwd** file and define username=password  
 e.g.  
 
 	
