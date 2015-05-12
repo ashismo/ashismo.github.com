@@ -15,6 +15,7 @@ tags : [Code Repository Setup]
     
 Go to D:\Project\Repository\conf location
 	For our purposes, just uncomment out the following lines from svnserv.conf file in configuration  
+
  ```
 [general]  
 anon-access = read  
@@ -31,6 +32,7 @@ root=root
  
  
 * Start the SVN server (Serving Your Repos for the First Time)
+
 ```
 svnserve --daemon --root "F:\ashish.mondal\mySVN\MyProjectRepo"  
 ```
