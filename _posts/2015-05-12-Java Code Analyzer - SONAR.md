@@ -117,6 +117,9 @@ You can share the Sonar report in html/pdf format. In this example I am going to
 # Generate sonar issues report in html and console
 sonar.issuesReport.html.enable=true
 sonar.issuesReport.console.enable=true
+
+# Incremental mode performs a fully analysis only on changed code, and does not save the results to the database. 
+# It is used on the developer's machine to check the quality of code changes before checking them in
 sonar.analysis.mode=incremental
 ```
 
