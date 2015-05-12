@@ -4,6 +4,9 @@
 - url: /java.html
   title: Java/J2EE
   group: navigation
+- url: /misc.html
+  title: Miscellaneous
+  group: navigation
 - url: /archive.html
   title: Archive
   group: navigation
