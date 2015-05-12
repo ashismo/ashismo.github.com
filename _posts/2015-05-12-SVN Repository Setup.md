@@ -14,20 +14,28 @@ tags : [Code Repository Setup]
     * Modifying Security and Authentication Settings
     
 Go to D:\Project\Repository\conf location
-	For our purposes, just uncomment out the following lines from svnserv.conf file in configuration
+	For our purposes, just uncomment out the following lines from **svnserv.conf** file in configuration
 
- ```properties
+ ```
 [general]
+
 anon-access = read
+
 auth-access = write
+
 password-db = passwd
+
  ```
 	
  ```
 Open passwd file and define username=password  
+
 e.g.  
-ashismo=root  
+
+ashismo=root
+
 root=root  
+
  ```
  
  
