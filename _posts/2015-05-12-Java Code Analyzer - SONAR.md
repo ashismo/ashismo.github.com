@@ -19,10 +19,11 @@ Sonar report shows the indicative issues. It is upto the developer to decide whe
 
 #### Sonar Installation
 
-* Download sonarqube-5.1.zip and sonar-runner-dist-2.4.zip from the [official website](http://www.sonarqube.org/downloads/) and place them together inside a folder (%SOME_PATH%/sonar/).
- * Unzip both the files into the same folder.
- * sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
- * Configure the below environment variables
+
+- Download sonarqube-5.1.zip and sonar-runner-dist-2.4.zip from the [official website](http://www.sonarqube.org/downloads/) and place them together inside a folder (%SOME_PATH%/sonar/).
+- Unzip both the files into the same folder.
+- sonarqube-5.1 is the server here and sonar-runner-dist-2.4 is the client here. I have placed server and client at the same location.
+- Configure the below environment variables
  
 ```
 SONAR_RUNNER_HOME=%SONAR_PATH%/sonar/sonar-runner-2.4  
@@ -30,15 +31,18 @@ PATH=%PATH%;%SONAR_PATH%/sonar/sonar-runner-2.4/bin
 SONAR_RUNNER_OPTS=-Xmx512m -XX:MaxPermSize=128m    (This is optional)  
 ```
 
- * It is advisable to run using JDK1.7 to avoid compiler version specific errors.
+
+ - It is advisable to run using JDK1.7 to avoid compiler version specific errors.
  
 #### Sonar Configuration
 
 ##### Configure and start the Server
 
 By default we are going to use h2 DB. However, Sonar supports other databases like MySQL, Oracle, SQL Server etc  
- * Open **sonar.properties** file from %SONAR_PATH%\sonar\sonarqube-5.1\conf location
- * Make sure you have minimal setup as shown below
+
+
+ - Open **sonar.properties** file from %SONAR_PATH%\sonar\sonarqube-5.1\conf location
+ - Make sure you have minimal setup as shown below
  
 ``` 
 sonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar  
