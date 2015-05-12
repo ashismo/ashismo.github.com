@@ -51,6 +51,7 @@ http.proxyHost=proxy.abc.com    (if you are behind proxy server)
 http.proxyPort=8080  
 ```
 
+
  * You are done with the server configuration.
  * To start the server go inside %SONAR_PATH%\sonar\sonarqube-5.1\bin and open appropriate folder as per your OS. I have gone inside windows-x86-32 for my system. Then execute StartSonar.bat file 
  * http://localhost:9000/ URL should be accessiable once the server starts successfully
@@ -59,6 +60,8 @@ http.proxyPort=8080
 ##### Configure client
 
 Assumption is that our server and client are running in the same server.
+
+
  * Open **sonar-runner.properties** file from %SONAR_PATH%/sonar/sonar-runner-2.4/conf folder
  * Specify the Sonar server URL here. In our case below is the configuration
 
@@ -67,6 +70,7 @@ sonar.host.url=http://localhost:9000
 ```
 
 ##### Project setup and start the client
+
 
 * Go to your eclipse project location.
 * Create a file called **sonar-project.properties** file as shown in the below image.
@@ -81,6 +85,8 @@ sonar.host.url=http://localhost:9000
 #### Generate Sonar Report for Analysis
  
  The generated report is purely based on the defined rules in the server. To check the defined rules:
+
+
   * Login to http://localhost:9000 (User name - admin, password - admin)
   * Go to **Quality Profile** tab
   * Default Java profile is **Sonar Way**
