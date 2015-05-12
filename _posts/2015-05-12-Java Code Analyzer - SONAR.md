@@ -128,5 +128,5 @@ sonar.analysis.mode=incremental
 - A detailed html report will get generated (because of *sonar.issuesReport.html.enable=true* property) at the following location : %PROJECT_PATH%\.sonar\issues-report. By default two html files get generated **issues-report.html** and **issues-report-light.html**
 - The sample html file looks like as shown below.
   
-<img src="https://cloud.githubusercontent.com/assets/11231867/7583648/f0974e7c-f8b4-11e4-875c-bc0a77cfc241.png"/>
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7583648/f0974e7c-f8b4-11e4-875c-bc0a77cfc241.png"/>
 
