@@ -161,8 +161,8 @@ If you are using JDK1.4 or below then maven does not offer much plugings. So to 
 
 Click
 <a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/main/java/com/app/ashish/localtraininfo/activity/StationNamesSplashScreenActivity.java" target="_blank">
-	<img src="{{ ASSET_PATH }}/../../images/github.jpg" height="32" width="32">
+<img src="{{ ASSET_PATH }}/../../images/github.jpg" height="32" width="32">
 </a> to see the complete code from my
 <a href="https://github.com/ashismo/LocalTrainInfo/" target="_blank">
-	<img src="{{ ASSET_PATH }}/../../images/localtrain.jpg" height="52" width="52" alt="IRCTC Local Train Live Status">
+<img src="{{ ASSET_PATH }}/../../images/localtrain.jpg" height="52" width="52" alt="IRCTC Local Train Live Status">
 </a> android application
