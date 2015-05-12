@@ -69,7 +69,7 @@ Assumption is that our server and client are running in the same server.
 sonar.host.url=http://localhost:9000  
 ```
 
-##### Project setup and start the client
+##### Sonar Setup for the project
 
 
 * Go to your eclipse project location.
@@ -78,6 +78,9 @@ sonar.host.url=http://localhost:9000
   
 <img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565197/9a24c41a-f80b-11e4-9136-62b1a71ef22a.png" height="250" width="850">  
   
+#### Analyze the project using sonar-runner
+
+
 * Open command prompt from project path, set JDK1.7 path (if not set) and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
@@ -105,10 +108,25 @@ Click on the project available in the dashboard to see Blocking/Critical/Major/M
 
 #### Share the sonar report
 
-You can share the Sonar analysis report in html/pdf format. To generate report you need some plugin. The architecture is as shown below.
-<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7566215/371702cc-f813-11e4-8de2-6fcc534c26cd.png">
+You can share the Sonar report in html/pdf format. In this example I am going to show the required configuration to generate report in html
 
-If your project is a maven project, then you can generate the report in multiple format. Update your pom.xml with
-<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/sonar-report-plugin-pom.xml" target="_blank">
-this content
-</a>
+
+- Open **sonar-project.properties** file present inside the [project] (#sonar-setup-for-the-project) and add the below configuration
+
+```
+# Generate sonar issues report in html and console
+sonar.issuesReport.html.enable=true
+sonar.issuesReport.console.enable=true
+sonar.analysis.mode=incremental
+```
+
+- Open the command prompt from the same location and execute **sonar-runner** command
+- The console will display the summary of the report because of the *sonar.issuesReport.console.enable=true* property
+  
+<img src="https://cloud.githubusercontent.com/assets/11231867/7583513/9c45acde-f8b3-11e4-97dc-758e1de9aefe.png"/>
+  
+- A detailed html report will get generated (because of *sonar.issuesReport.html.enable=true* property) at the following location : %PROJECT_PATH%\.sonar\issues-report. By default two html files get generated **issues-report.html** and **issues-report-light.html**
+- The sample html file looks like as shown below.
+  
+<img src="https://cloud.githubusercontent.com/assets/11231867/7583648/f0974e7c-f8b4-11e4-875c-bc0a77cfc241.png"/>
+
