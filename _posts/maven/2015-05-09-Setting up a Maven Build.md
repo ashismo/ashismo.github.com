@@ -170,7 +170,7 @@ Click <a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/mai
 SL NO | Issue | Solution
 :---:|:---|:---
 1 | Could not calculate build plan: Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved |Maven is not able to connect to the internet. Follow the step 5 or copy working repository into your system
-2 | 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing | Add <version> for the plugin. Use <br/> <plugin> <br/><artifactId>maven-compiler-plugin</artifactId><br/><version>2.3.2</version><br/>INSTEAD OF<br/><plugin><br/><artifactId>maven-compiler-plugin</artifactId>
+2 | 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing | Add <version> for the plugin. Use <br/> &lt;plugin&gt;<br/>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;<br/>&lt;version&gt;2.3.2&lt;/version&gt;<br/>INSTEAD OF<br/><plugin><br/><artifactId>maven-compiler-plugin</artifactId>
 3 | [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! | Add the below line in your pom.xml<br/><properties><br/><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><br/></properties>
 
 
