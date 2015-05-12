@@ -114,7 +114,7 @@ In pom.xml, if repository is not mentioned then by default then it will look int
 </repositories>
 ````
 
-### Create a maven project
+## Create a maven project
 
 ##### Create Maven project from Eclipse
 
@@ -134,7 +134,7 @@ mvn archetype:create
 -DartifactId=ArtifactName
 ```
 
-### Build Java project
+## Build Java project
 
 The below attached script creates jar file and place into another location by the followings steps. Comments added in each steps in the pom.xml file
 
@@ -152,17 +152,15 @@ The below attached script creates jar file and place into another location by th
 For details, check this <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml" target="_blank">pom.xml file</a>
 
 
-### Call ant build from maven script
+##### Call ant build from maven script
 
 If you are using JDK1.4 or below then maven does not offer much plugings. So to achieve something you may need to run ant target or ant scripts from maven. <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom_call_ant_script.xml" target="_blank">This file</a> shows how to call ant script from maven build.
 
 
 ### URL to check complete code
 
-Click
-<a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/main/java/com/app/ashish/localtraininfo/activity/StationNamesSplashScreenActivity.java" target="_blank">
+Click <a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/main/java/com/app/ashish/localtraininfo/activity/StationNamesSplashScreenActivity.java" target="_blank">
 <img src="{{ ASSET_PATH }}/../../images/github.jpg" height="32" width="32">
-</a> to see the complete code from my
-<a href="https://github.com/ashismo/LocalTrainInfo/" target="_blank">
+</a> to see the complete code from my <a href="https://github.com/ashismo/LocalTrainInfo/" target="_blank">
 <img src="{{ ASSET_PATH }}/../../images/localtrain.jpg" height="52" width="52" alt="IRCTC Local Train Live Status">
 </a> android application
