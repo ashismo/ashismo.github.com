@@ -1,6 +1,6 @@
 ---
 layout: post
-category : misc-Code Repository Setup (SVN)
+category : misc-SVN Setup
 tags : [Code Repository Setup]
 ---
 {% include JB/setup %}
