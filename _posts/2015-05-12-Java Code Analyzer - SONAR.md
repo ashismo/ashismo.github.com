@@ -74,8 +74,10 @@ sonar.host.url=http://localhost:9000
 
 * Go to your eclipse project location.
 * Create a file called **sonar-project.properties** file as shown in the below image.
-* Make sure the project key is unique for all sonar projects analized by your server
-<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565197/9a24c41a-f80b-11e4-9136-62b1a71ef22a.png" height="250" width="850">
+* Make sure the project key is unique among the all sonar projects analized by your server  
+  
+<img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7565197/9a24c41a-f80b-11e4-9136-62b1a71ef22a.png" height="250" width="850">  
+  
 * Open command prompt from project path, set JDK1.7 path (if not set) and execute **sonar-runner** command
 * Once the client is started up then the project will be visible in the dashboard
 
