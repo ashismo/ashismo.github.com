@@ -137,7 +137,7 @@ mvn archetype:create
 ## Build Java project
 
 In this example, we are going to create an executable jar, place it into another location
-Follow comments added in each steps in <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml" target="_blank">pom.xml file</a>
+Follow comments added in each steps in <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml" target="_blank">pom.xml file</a>. I have tried to cover all possible scenarios in my pom.xml to create an executable Jar file.
 
 
  - It defines the dependencies (jars) and their scope. 
