@@ -17,6 +17,9 @@ You shall get lots of blogs discuss about how to write RESTful webservice? But t
 * JDK 1.7
 * Maven. If you want to know more about maven setup then follow <a href="/java-build/2015/05/09/Setting%20up%20a%20Maven%20Build/" target="_blank">my blog on maven</a>
 
+## Objectives
+
+Write a restful webservice that expectes authentication token in the header of the request. If the request does not contain authentication parameter then the web service call should fail. A test client java code is used to test the RESTful webservice. Backend developers always prefer testing RESTful webservice code using test client java code which is faster and convenient way of testing.
 
 ## Steps to write a code
 
