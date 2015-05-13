@@ -28,8 +28,8 @@ Migration of code repository is very common practice in the industry. However, m
 ### Migration steps
 
 
-1. Backup your code from SVN into some location. (You know the reason right?, If something goes wrong(even though it is the rarest of the rare case) then you are not loosing the code base)
-2. Create a new folder then execute the below command FROM **command** prompt to Migrate your subversion repository in to the new folder
+* Backup your code from SVN into some location. (You know the reason right?, If something goes wrong(even though it is the rarest of the rare case) then you are not loosing the code base)
+* Create a new folder then execute the below command FROM **command** prompt to Migrate your subversion repository in to the new folder
 
 ```
 > svn2git http://[domain name]/svn/[repository root]
@@ -41,17 +41,17 @@ Then follow [this URL](https://github.com/nirvdrum/svn2git). If you have no trun
 ```
 > svn2git svn://localhost/CustomizedUjanLearningAndroid --rootistrunk
 ```
-3. Prepare to push your code to Github by executing the below command. <a href="http://gitref.org/remotes/" target="_blank">Click here </a> for more details about remote command
+* Prepare to push your code to Github by executing the below command. <a href="http://gitref.org/remotes/" target="_blank">Click here </a> for more details about remote command
 
 ```
 > git remote add origin https://github.com/ashismo/LearningABCD
 ```
-4. Verify if it has been completed successfully, execute the below command from 
+* Verify if it has been completed successfully, execute the below command from 
 
 ```
 > git remote –v
 ```
-5. Push the code in Github by executing the **git push --all** command. The execution snippet is given below
+* Push the code in Github by executing the **git push --all** command. The execution snippet is given below
 
 ```
 F:\ashish.mondal\myGithub\svnToGitLatest>git push --all
@@ -67,4 +67,4 @@ hint: (e.g. 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 If you get the above mentioned error comes then use **git push --force** command instead of "git push --all". 
-6. Finally execute **git config --global push.default matching** command.
+* Finally execute **git config --global push.default matching** command.
