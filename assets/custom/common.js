@@ -4,7 +4,7 @@ $(document).ready(function() {
    
    // Copy text into clipboard
    $("pre").hover(function() {
-       $( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
+       $( this ).parent().append( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
          $(".copy-button").click(function() {
             alert($("#copyIntoClipBoard").parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
          });
