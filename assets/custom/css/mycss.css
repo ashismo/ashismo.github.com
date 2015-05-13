@@ -38,5 +38,7 @@ tbody tr:nth-child(even){
 pre {
 	background-color: white;
 	white-space: pre; 
-	overflow: auto; 
+	overflow: auto;
+	width:inherit;
+	max-height: 200px;
 }
