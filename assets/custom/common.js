@@ -10,7 +10,7 @@ $(document).ready(function() {
          });
          $(".copy-button").hover(function() {
             //$(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
-            alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
+            //alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
            }, function() {
              $(".copy-button").parent().find( "div:last" ).remove();
          });
