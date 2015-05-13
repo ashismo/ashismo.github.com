@@ -37,6 +37,8 @@ The meaning of the below entry is the dependent jars will go to WEB-INF/lib fold
 * Your web.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-web.xml){:target="_bank"}. All http requests must pass through **com.ashish.rest.authentication.RestAuthenticationFilter** authentication class.
 * A **GET** request shown here which will return JSON output for a employee. This method takes employeeId as input
 URL is : http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123
+  
+  
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.rest.controller;
 import javax.ws.rs.GET;
@@ -58,9 +60,12 @@ public class HelloWorldREST {
 	}
 }
 </pre>
+  
+  
 * Once you hit *http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123* URL you will see 401 error this means your HTTP basic authentication is working as expected.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7607012/b4c4a5bc-f97b-11e4-9433-04efd88cc109.png" style="border: 1px solid black;"/>
 * Write the below RestAuthenticationFilter Java class to pass the Basic REST request authentication
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 public class RestAuthenticationFilter implements javax.servlet.Filter {
 	public static final String AUTHENTICATION_HEADER = "Authorization";
