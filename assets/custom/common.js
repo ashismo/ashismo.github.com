@@ -9,7 +9,7 @@ $(document).ready(function() {
             alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
          });
          $(".copy-button").hover(function() {
-            $( this ).parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
+            $( this ).apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
            }, function() {
              $( this ).parent().find( "div:last" ).remove();
          });
