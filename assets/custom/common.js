@@ -9,9 +9,9 @@ $(document).ready(function() {
             alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
          });
          $(".copy-button").hover(function() {
-            $( this ).apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
+            $(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
            }, function() {
-             $( this ).parent().find( "div:last" ).remove();
+             $(".copy-button").parent().find( "div:last" ).remove();
          });
      }, function() {
        $( this ).find( "button:first" ).remove();
