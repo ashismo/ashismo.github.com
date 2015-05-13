@@ -7,4 +7,14 @@ $(document).ready(function() {
      }, function() {
        $( this ).find( "button:first" ).remove();
    });
+   
+   $(".copy-button").hover(function() {
+      $( this ).parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
+     }, function() {
+       $( this ).parent().find( "div:last" ).remove();
+   });
+   
+   $(".copy-button").onclick(function() {
+      alert("Copy text: ");
+   });
 });
