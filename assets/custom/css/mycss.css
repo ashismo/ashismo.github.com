@@ -46,3 +46,27 @@ pre {
 li {
 	margin: 0 0 1em;
 }
+
+.copy-button {
+	position: absolute;
+	margin-left: 634px;
+	margin: 1px 1px 10px 0;
+	padding: 20px;
+	background-image: url(../img/iconsprite.png);
+	background-repeat: no-repeat;
+	background-position: 2px -429px;
+	width: 20px;
+	height: 22px;
+	border: 0;
+	background-color: #34302d
+}
+
+.copy-button.snippet {
+	float: right
+}
+
+@media ( max-width :1075px) {
+	.copy-button {
+		display: none
+	}
+}
