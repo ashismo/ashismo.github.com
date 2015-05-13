@@ -288,3 +288,8 @@ Base64 encoded auth string: YWRtaW46YWRtaW4=
 Response for the GET with HTTP Basic authentication request: {"empId":123,"address1":null,"address2":null,"address3":null,"pin":null,"salary":0.0,"name":"Ashish Mondal"}
 =========================================================================
 ```
+
+### Common issues
+SL NO | Issues | Solution
+---|:---------|:--------
+1|Unable to load class while running a java class from eclipse | You may need to update maven project by the following option (right click on the project->Maven->update maven project)
