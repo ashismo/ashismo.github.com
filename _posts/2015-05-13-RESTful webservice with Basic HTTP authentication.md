@@ -59,7 +59,6 @@ public class HelloWorldREST {
 	}
 }
 </pre>
- 
 
 * Once you hit *http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123* URL you will see 401 error this means your HTTP basic authentication is working as expected.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7607012/b4c4a5bc-f97b-11e4-9433-04efd88cc109.png" style="border: 1px solid black;"/>
