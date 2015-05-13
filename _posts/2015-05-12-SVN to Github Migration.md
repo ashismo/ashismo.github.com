@@ -11,7 +11,7 @@ Migration of code repository is very common practice in the industry. However, m
 
   
   
-### Required softwares 
+### Required software 
 
 
  * Download and install right version of ruby (32 bit/64 bits) from [the official website](http://rubyinstaller.org/downloads/)
@@ -33,11 +33,15 @@ Migration of code repository is very common practice in the industry. However, m
 
 ```
   svn2git http://[domain name]/svn/[repository root]
-	If you get the following error
-		**command failed:
-		git checkout –f master**
-		
-		Then follow [this URL](https://github.com/nirvdrum/svn2git)
-		Example: if you have no trunk, branch,tag in your SVN repository then use 
-			$ svn2git svn://localhost/CustomizedUjanLearningAndroid --rootistrunk
+```
+If you get the following error
+		**command failed:**
+		**git checkout –f master**
+Then follow [this URL](https://github.com/nirvdrum/svn2git)
+  
+  		
+If you have no trunk, branch,tag in your SVN repository then use 
+
+```
+	$ svn2git svn://localhost/CustomizedUjanLearningAndroid --rootistrunk
 ```
