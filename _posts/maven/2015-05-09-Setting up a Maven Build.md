@@ -165,7 +165,7 @@ Click <a href="https://github.com/ashismo/LocalTrainInfo/blob/master/app/src/mai
 <img src="{{ ASSET_PATH }}/../../images/localtrain.jpg" height="52" width="52" alt="IRCTC Local Train Live Status">
 </a> android application
 
-## Common during setup
+## Common issues during maven setup
 
 SL NO | Issue | Solution
 :---:|:---|:---
