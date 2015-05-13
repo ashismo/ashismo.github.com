@@ -22,10 +22,10 @@ table tr td {
 }
 
 /*  Define the background color for all the ODD table columns  */
-tr:nth-child(odd){ 
-	background: #b8d1f3;
+tbody tr:nth-child(odd) { 
+	background: white;
 }
 /*  Define the background color for all the EVEN table columns  */
-td:nth-child(even){
-	background: #dae5f4;
+tbody td:nth-child(even){
+	background: gray;
 }
