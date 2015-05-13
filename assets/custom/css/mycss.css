@@ -34,3 +34,9 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even){
 	background: #F0F0F0;
 }
+
+pre {
+	background-color: white;
+	white-space: pre; 
+	overflow: auto; 
+}
