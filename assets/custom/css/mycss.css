@@ -15,9 +15,13 @@ h5 {
 	font-weight: bold;
 }
 thead {
-	background-color: #FFCC99;	
+	background-color: #660000;	
 }
-
+table tr th {
+	border: 1px solid black;
+	text-align: center;
+	color: white;
+}
 table tr td {
 	border: 1px solid black;
 }
