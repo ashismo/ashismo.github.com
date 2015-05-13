@@ -14,3 +14,18 @@ h5 {
 	color: 333333;
 	font-weight: bold;
 }
+
+table tr td {
+	width:100%; 
+	border-collapse:collapse; 
+	border: 1px solid black;
+}
+
+/*  Define the background color for all the ODD table columns  */
+tr:nth-child(odd){ 
+	background: #b8d1f3;
+}
+/*  Define the background color for all the EVEN table columns  */
+td:nth-child(even){
+	background: #dae5f4;
+}
