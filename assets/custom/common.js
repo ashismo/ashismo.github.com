@@ -14,7 +14,7 @@ $(document).ready(function() {
        $( this ).parent().find( "div:last" ).remove();
    });
    
-   $(".copy-button").onclick(function() {
-      alert("Copy text: ");
+   $(".copy-button").click(function() {
+      alert("Copy text: " + $(".copy-button").parent().html());
    });
 });
