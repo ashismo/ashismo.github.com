@@ -14,10 +14,11 @@ h5 {
 	color: 333333;
 	font-weight: bold;
 }
+thead {
+	background-color: #FFCC99;	
+}
 
 table tr td {
-	width:100%; 
-	border-collapse:collapse; 
 	border: 1px solid black;
 }
 
@@ -27,5 +28,5 @@ tbody tr:nth-child(odd) {
 }
 /*  Define the background color for all the EVEN table columns  */
 tbody tr:nth-child(even){
-	background: gray;
+	background: #F0F0F0;
 }
