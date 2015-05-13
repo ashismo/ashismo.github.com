@@ -62,7 +62,7 @@ public class HelloWorldREST {
 
 * Once you hit *http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123* URL you will see 401 error this means your HTTP basic authentication is working as expected.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7607012/b4c4a5bc-f97b-11e4-9433-04efd88cc109.png" style="border: 1px solid black;"/>
-* Write the below RestAuthenticationFilter Java class to pass the Basic REST request authentication
+* Write the below RestAuthenticationFilter Java class to pass the REST request through Basic authentication class
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 public class RestAuthenticationFilter implements javax.servlet.Filter {
@@ -100,6 +100,42 @@ public class RestAuthenticationFilter implements javax.servlet.Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
+	}
+}
+</code></pre>
+
+* In the above code the authentication is done in **AuthenticationService.authenticate()** method as shown below
+  
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.rest.authentication.service;
+
+import java.io.IOException;
+import java.util.StringTokenizer;
+import sun.misc.BASE64Decoder;
+
+public class AuthenticationService {
+	public boolean authenticate(String credential) {
+		if (null == credential) {
+			return false;
+		}
+		// header value format will be "Basic encodedstring" for Basic
+		// authentication. Example "Basic YWRtaW46YWRtaW4="
+		final String encodedUserPassword = credential.replaceFirst("Basic" + " ", "");
+		String usernameAndPassword = null;
+		try {
+			byte[] decodedBytes = new BASE64Decoder().decodeBuffer(encodedUserPassword);
+			usernameAndPassword = new String(decodedBytes, "UTF-8");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		final StringTokenizer tokenizer = new StringTokenizer(usernameAndPassword, ":");
+		final String username = tokenizer.nextToken();
+		final String password = tokenizer.nextToken();
+
+		// we have fixed the userid and password as admin
+		// call some UserService/LDAP here
+		boolean authenticationStatus = "admin".equals(username) && "admin".equals(password);
+		return authenticationStatus;
 	}
 }
 </code></pre>
