@@ -17,7 +17,7 @@ h5 {
 thead {
 	background-color: #660000;	
 }
-thead th * {
+thead tr * {
 	border: 1px solid black;
 	text-align: center;
 	color: white;
