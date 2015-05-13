@@ -3,7 +3,7 @@ $(document).ready(function() {
    $("thead tr", this).children("*").attr("style", "text-align: center");
    
    $("pre").hover(function() {
-       $( this ).prepend( $( '<button class="copy-button github" data-toggle="tooltip" data-clipboard-text="https://github.com/spring-guides/gs-maven.git"></button>' ) );
+       $( this ).prepend( $( '<div style="text-align:right;"><button class="copy-button github"></button></div>' ) );
      }, function() {
        $( this ).find( "button:first" ).remove();
    });
