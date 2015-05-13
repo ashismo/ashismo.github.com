@@ -136,14 +136,15 @@ mvn archetype:create
 
 ## Build Java project
 
-The below attached script creates jar file and place into another location by the followings steps. Comments added in each steps in the pom.xml file
+In this example, we are going to create an executable jar, place it into another location
+Follow comments added in each steps in <a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/pom.xml" target="_blank">pom.xml file</a>
 
 
- - It defines the dependencies (jars) with scope. 
+ - It defines the dependencies (jars) and their scope. 
     - If the scope is **system** then it picks the jar from the hardcoded location
     - If the scope is **test** then the testing files does not get copied into the final jar
  - Define the JDK version
- - Copy resource files (.properties/.bat) into respective folder
+ - Copy resource files (e.g. .properties or .bat) into required folder
  - Copy dependant jar files into ${outputPath}/lib folder
  - Create executable jar with depandant jars as entry into manifest.mf file
  - Copy the jar into final destination
