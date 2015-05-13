@@ -4,6 +4,9 @@ $(document).ready(function() {
    
    $("pre").hover(function() {
        $( this ).prepend( $( '<div style="text-align:right;"><button class="copy-button github"></button></div>' ) );
+       $(".copy-button").click(function() {
+         alert($(".copy-button").parent().html());
+      });
      }, function() {
        $( this ).find( "button:first" ).remove();
    });
@@ -14,7 +17,5 @@ $(document).ready(function() {
        $( this ).parent().find( "div:last" ).remove();
    });*/
    
-   $(".copy-button").click(function() {
-      alert($(".copy-button").parent().html());
-   });
+   
 });
