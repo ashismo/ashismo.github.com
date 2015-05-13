@@ -36,10 +36,11 @@ Migration of code repository is very common practice in the industry. However, m
 ```
 If you get the following error
 		**command failed:**
-		**git checkout –f master**
-Then follow [this URL](https://github.com/nirvdrum/svn2git). If you have no trunk, branch,tag in your SVN repository then use 
+		**git checkout –f master**  
+Then follow [this URL](https://github.com/nirvdrum/svn2git). If you have no trunk, branch,tag in your SVN repository then use
+
 ```
-> svn2git svn://localhost/CustomizedUjanLearningAndroid --rootistrunk
+> svn2git svn://localhost/LearningAndroid --rootistrunk
 ```
 
 
