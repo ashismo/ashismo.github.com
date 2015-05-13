@@ -35,7 +35,7 @@ The meaning of the below entry is the dependent jars will go to WEB-INF/lib fold
 <img src="https://cloud.githubusercontent.com/assets/11231867/7606640/5e2a367a-f978-11e4-98ad-4a582769b338.png" style="border: 1px solid black;"/>
 * Your pom.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-pom.xml){:target="_blank"} to build your project.
 * Your web.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-web.xml){:target="_bank"}. All http requests must pass through **com.ashish.rest.authentication.RestAuthenticationFilter** authentication class.
-* A **GET** request shown here which will return JSON output for a employee. This method takes employeeId as input
+* A **GET** and **POST** request shown here which will return JSON output for a employee. This method takes employeeId as input
 URL is : http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
@@ -56,6 +56,21 @@ public class HelloWorldREST {
 	
 		return emp;
 	
+	}
+	
+	@POST
+	@Path("/getSalary")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Employee getSalary( @PathParam("empId") int empId,
+			@DefaultValue("No Employee Id passed") @QueryParam("value") String value) {
+		System.out.println("getSalary method is called");
+		Employee emp = new Employee();
+		emp.setEmpId(empId);
+		emp.setName("Ashish Mondal");
+		emp.setSalary(1000);
+		
+		return emp;
+
 	}
 }
 </code></pre>
@@ -139,3 +154,134 @@ public class AuthenticationService {
 	}
 }
 </code></pre>
+
+* Write below client code to test your code. Below code can test the following 
+   * Test POST request **without** passing authentication request in the header
+   * Test POST request **with** passing authentication request in the header
+   * Test GET request **with** passing authentication request in the header
+ 
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.rest.test;
+
+import sun.misc.BASE64Encoder;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+public class TestClient {
+
+  public static void main(String[] args) {
+
+	  testPostWithoutBasicAuth();
+	  testPOSTWithBasicAuth();
+	  testGETWithBasicAuth();
+ }
+
+  /**
+   * Below method is used to test GET request with HTTP Basic authentication in the header of the request
+   */
+	private static void testGETWithBasicAuth() {
+		try {
+	
+	        Client client = Client.create();
+	
+	        String name = "admin";
+	        String password = "admin";
+	        String authString = name + ":" + password;
+	        String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+	        System.out.println("Base64 encoded auth string: " + authStringEnc);
+	        WebResource webResource = client.resource("http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123");
+	        
+	        ClientResponse resp = webResource.accept("application/json")
+	                                         .header("Authorization", "Basic " + authStringEnc)
+	                                         .get(ClientResponse.class);
+	        if(resp.getStatus() != 200){
+	            System.err.println("Unable to connect to the server");
+	        }
+	        String output = resp.getEntity(String.class);
+	        System.out.println("Response for the GET with HTTP Basic authentication request: "+output);
+	
+	      } catch (Exception e) {
+	
+	        e.printStackTrace();
+	
+	      } finally {
+	    	  System.out.println("=========================================================================");
+	      }
+	}
+	
+	/**
+	 * Below method is used to test POST request with HTTP Basic authentication in the header of the request
+	 */
+	private static void testPOSTWithBasicAuth() {
+		try {
+	
+	        Client client = Client.create();
+	
+	        String name = "admin";
+	        String password = "admin";
+	        String authString = name + ":" + password;
+	        String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+	        System.out.println("Base64 encoded auth string: " + authStringEnc);
+	        WebResource webResource = client.resource("http://localhost:8080/RESTfulAuth/rest/hello/getSalary");
+	        
+	        ClientResponse resp = webResource.accept("application/json")
+	                                         .header("Authorization", "Basic " + authStringEnc)
+	                                         .post(ClientResponse.class);
+	        if(resp.getStatus() != 200){
+	            System.err.println("Unable to connect to the server");
+	        }
+	        String output = resp.getEntity(String.class);
+	        System.out.println("Response for the POST with HTTP Basic authentication request: "+output);
+	      } catch (Exception e) {
+	        e.printStackTrace();
+	      } finally {
+	    	  System.out.println("=========================================================================");
+	      }
+	}
+	
+	/**
+	 * Below method is used to test POST request without HTTP Basic authentication in the header of the request
+	 */
+	private static void testPostWithoutBasicAuth() {
+		try {
+	
+	        Client client = Client.create();
+	        WebResource webResource = client.resource("http://localhost:8080/RESTfulAuth/rest/hello/getSalary");
+	
+	        String input = "{\"empId\":\"123\"}";
+	
+	        ClientResponse response = webResource.type("application/json")
+	           .post(ClientResponse.class, input);
+	
+	        if (response.getStatus() != 201) {
+	            throw new RuntimeException("Failed : HTTP error code : "
+	                 + response.getStatus());
+	        }
+	
+	        System.out.println("HTTP Basic authentication error .... \n");
+	        String output = response.getEntity(String.class);
+	        System.out.println(output);
+	      } catch (Exception e) {
+	        e.printStackTrace();
+	      } finally {
+	    	  System.out.println("=========================================================================");
+	      }
+	}
+}
+</code></pre>
+The output of the above code is as shown below. First method in the above example does not pass authentication token in the request header so the calling has failed. However, other two request with the authentication string in the header has got the successful output.
+
+```
+java.lang.RuntimeException: Failed : HTTP error code : 401
+	at com.ashish.rest.test.TestClient.testPostWithoutBasicAuth(TestClient.java:96)
+	at com.ashish.rest.test.TestClient.main(TestClient.java:13)
+=========================================================================
+Base64 encoded auth string: YWRtaW46YWRtaW4=
+Response for the POST with HTTP Basic authentication request: {"empId":0,"address1":null,"address2":null,"address3":null,"pin":null,"salary":1000.0,"name":"Ashish Mondal"}
+=========================================================================
+Base64 encoded auth string: YWRtaW46YWRtaW4=
+Response for the GET with HTTP Basic authentication request: {"empId":123,"address1":null,"address2":null,"address3":null,"pin":null,"salary":0.0,"name":"Ashish Mondal"}
+=========================================================================
+```
