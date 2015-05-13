@@ -8,13 +8,13 @@ $(document).ready(function() {
        $( this ).find( "button:first" ).remove();
    });
    
-   $(".copy-button").hover(function() {
+   /*$(".copy-button").hover(function() {
       $( this ).parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
      }, function() {
        $( this ).parent().find( "div:last" ).remove();
-   });
+   });*/
    
    $(".copy-button").click(function() {
-      alert("Copy text: " + $(".copy-button").parent().html());
+      alert($(".copy-button").parent().html());
    });
 });
