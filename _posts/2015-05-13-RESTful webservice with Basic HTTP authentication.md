@@ -33,18 +33,18 @@ Good to learn the RESTful web service is to download a small [my project](){:tar
 **Note:** Deploy path should be WEB-INF/lib by default
 The meaning of the below entry is the dependent jars will go to WEB-INF/lib folder in the deployable
 <img src="https://cloud.githubusercontent.com/assets/11231867/7606640/5e2a367a-f978-11e4-98ad-4a582769b338.png" style="border: 1px solid black;"/>
-* Your pom.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-pom.xml){:target="_blank"} to build your project
+* Your pom.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-pom.xml){:target="_blank"} to build your project.
+* Your web.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-web.xml){:target="_bank"}. All http requests must pass through **com.ashish.rest.authentication.RestAuthenticationFilter** authentication class.
 * A **GET** request shown here which will return JSON output for a employee. This method takes employeeId as input
 URL is : http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-
 package com.ashish.rest.controller;
 import javax.ws.rs.GET;
 .....
 @Path("/hello")
 public class HelloWorldREST {
-  @GET
+  	@GET
 	@Path("/getEmployee/{empId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Employee getEmployee( @PathParam("empId") int empId,
@@ -53,9 +53,53 @@ public class HelloWorldREST {
 		Employee emp = new Employee();
 		emp.setEmpId(empId);
 		emp.setName("Ashish Mondal");
-
+	
 		return emp;
+	
+	}
+}
+</pre>
 
+* Once you hit *http://localhost:8080/RESTfulAuth/rest/hello/getEmployee/123* URL you will see 401 error this means your HTTP basic authentication is working as expected.
+<img src="https://cloud.githubusercontent.com/assets/11231867/7607012/b4c4a5bc-f97b-11e4-9433-04efd88cc109.png" style="border: 1px solid black;"/>
+
+* Write the below RestAuthenticationFilter Java class to pass the Basic REST request authentication
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+public class RestAuthenticationFilter implements javax.servlet.Filter {
+	public static final String AUTHENTICATION_HEADER = "Authorization";
+
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response,
+			FilterChain filter) throws IOException, ServletException {
+		if (request instanceof HttpServletRequest) {
+			HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+			String authCredentials = httpServletRequest
+					.getHeader(AUTHENTICATION_HEADER);
+
+			// You can implement dependancy injection here
+			AuthenticationService authenticationService = new AuthenticationService();
+
+			boolean authenticationStatus = authenticationService
+					.authenticate(authCredentials);
+
+			if (authenticationStatus) {
+				filter.doFilter(request, response);
+			} else {
+				if (response instanceof HttpServletResponse) {
+					HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+					httpServletResponse
+							.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+				}
+			}
+		}
+	}
+
+	@Override
+	public void destroy() {
+	}
+
+	@Override
+	public void init(FilterConfig arg0) throws ServletException {
 	}
 }
 </pre>
