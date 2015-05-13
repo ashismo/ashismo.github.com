@@ -26,6 +26,6 @@ tbody tr:nth-child(odd) {
 	background: white;
 }
 /*  Define the background color for all the EVEN table columns  */
-tbody td:nth-child(even){
+tbody tr:nth-child(even){
 	background: gray;
 }
