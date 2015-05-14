@@ -1,7 +1,8 @@
 $(document).ready(function() {
    // Header in all tables will be center aligned 
-   $("thead tr", this).children("*").attr("style", "text-align: center");
-   
+   if($("thead tr", this) !== null) {
+      $("thead tr", this).children("*").attr("style", "text-align: center");
+   }
    // Add copy to clipboard button before every pre
     $("pre").wrap("<div class='codeSnippet'></div>");
     $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
