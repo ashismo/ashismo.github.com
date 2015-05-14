@@ -10,7 +10,8 @@ $(document).ready(function() {
        //$( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
          $( this ).find("div").css("visibility", "visible");
          $( this ).find(".copy-button").click(function() {
-            alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
+            //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
+            alert($( this ).find("pre").html());
          });
          $(".copy-button").hover(function() {
             //$(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
