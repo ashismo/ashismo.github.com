@@ -10,14 +10,7 @@ $(document).ready(function() {
        //$( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
          $( this ).find("div:first").css("visibility", "visible");
          $( this ).find("div").find("button").addClass("selectedButton");
-         $(".selectedButton").click(function() {
-            //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
-            // If the button is visible
-            if($(".selectedButton").parent().parent().is(':visible')) {
-               //alert($(".selectedButton").parent().parent().parent().find("pre").html());
-               alert("This feature is coming soon");
-            }
-         });
+         
         /* $(".copy-button").hover(function() {
             //$(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
             //alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
@@ -29,5 +22,14 @@ $(document).ready(function() {
        $( this ).find("div").find("button").removeClass("selectedButton");
        $( this ).find("div:first").css("visibility", "hidden");
    });
+   
+   $(".copy-button").click(function() {
+         //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
+         // If the button is visible
+         if($(".copy-button").parent().parent().is(':visible')) {
+            //alert($(".selectedButton").parent().parent().parent().find("pre").html());
+            alert("This feature is coming soon");
+         }
+      });
 
 });
