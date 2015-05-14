@@ -11,14 +11,14 @@ $(document).ready(function() {
          $( this ).find("div").css("visibility", "visible");
          $( this ).find(".copy-button").click(function() {
             //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
-            alert($( this ).find("pre").html());
+            alert($( this ).parent().parent().parent().find("pre").html());
          });
-         $(".copy-button").hover(function() {
+        /* $(".copy-button").hover(function() {
             //$(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
             //alert($(".copy-button").parent().parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
            }, function() {
              $(".copy-button").parent().find( "div:last" ).remove();
-         });
+         });*/
      }, function() {
        //$( "#copyIntoClipBoard" ).remove();
        $( this ).find("div").css("visibility", "hidden");
