@@ -106,7 +106,7 @@
 			clip.setHandCursor( true );
 			
 			clip.addEventListener('load', function (client) {
-				debugstr("Flash movie loaded and ready.");
+				//debugstr("Flash movie loaded and ready.");
 			});
 			
 			clip.addEventListener('mouseOver', function (client) {
@@ -115,7 +115,7 @@
 			});
 			
 			clip.addEventListener('complete', function (client, text) {
-				debugstr("Copied text to clipboard: " + text );
+			//	debugstr("Copied text to clipboard: " + text );
 			});
 			
 			clip.glue( 'clickedButton', 'codeCopied' );
