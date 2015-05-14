@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    copyIntoClipBoard();
    // Header in all tables will be center aligned 
    $("thead tr", this).children("*").attr("style", "text-align: center");
    
@@ -10,7 +11,7 @@ $(document).ready(function() {
          $( this ).find("div:first").css("visibility", "visible");
          $( this ).prepend('<div style="display:none;" id="codeCopied"></div>');
          $( this ).find("div").find("button").addClass("selectedButton");
-         $( this ).find("div").find("button").attr("id", "selectedButton")
+         $( this ).find("div").find("button").attr("id", "clickedButton")
      }, function() {
        $( "#codeCopied" ).remove();
        $( this ).find("div").find("button").removeClass("selectedButton");
@@ -21,8 +22,8 @@ $(document).ready(function() {
    $(".copy-button").click(function() {
          // If the button is visible
          if($( this ).parent().parent().is(':visible')) {
-            alert($(".selectedButton").parent().parent().parent().find("pre").html());
-            //alert("This feature is coming soon");
+            //alert($(".selectedButton").parent().parent().parent().find("pre").html());
+            alert($("#clickedButton"));
          }
       });
 
@@ -36,5 +37,5 @@ function copyIntoClipBoard() {
 			alert("Copied text to clipboard: " + text );
 		});
 		
-		clip.glue( 'selectedButton', 'codeCopied' );
+		clip.glue( 'clickedButton', 'codeCopied' );
 }
