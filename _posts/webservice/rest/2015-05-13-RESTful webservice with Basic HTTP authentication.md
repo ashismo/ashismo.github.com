@@ -8,7 +8,7 @@ tags : [Webservice Tutorial]
 ## Introduction
 
 This document will help user to setup a **RESTful webservice with Basic HTTP authentication** powered by **Jersey framework**.
-You shall get lots of blogs discuss about how to write RESTful webservice? But there are few that will cover Authentication of RESTful webservice.
+You shall get lots of blogs discuss about how to write RESTful webservice? But there are a few that will cover Authentication of RESTful webservice.
 
 ## Required software
 
