@@ -4,12 +4,12 @@ $(document).ready(function() {
    
    // Add copy to clipboard button before every pre
     $("pre").wrap("<div class='codeSnippet'></div>");
-    $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
+    $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
    // Copy text into clipboard
    $(".codeSnippet").hover(function() {
        //$( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
          $( this ).find("div").css("visibility", "visible");
-         $( this ).find("div").find("button").addClass("copy-button");
+         $( this ).find("div").find("button").addClass("selectedButton");
          $( this ).find(".copy-button").click(function() {
             //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
             alert($( this ).parent().parent().parent().find("pre").html());
@@ -22,7 +22,7 @@ $(document).ready(function() {
          });*/
      }, function() {
        //$( "#copyIntoClipBoard" ).remove();
-       $( this ).find("div").find("button").removeClass("copy-button");
+       $( this ).find("div").find("button").removeClass("selectedButton");
        $( this ).find("div").css("visibility", "hidden");
    });
 
