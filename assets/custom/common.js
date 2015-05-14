@@ -4,11 +4,11 @@ $(document).ready(function() {
    
    // Add copy to clipboard button before every pre
     $("pre").wrap("<div class='codeSnippet'></div>");
-    $(".codeSnippet").prepend('<div style="text-align:right; display:none;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
+    $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
    // Copy text into clipboard
    $(".codeSnippet").hover(function() {
        //$( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
-         $( this ).find("div").css("display", "block");
+         $( this ).find("div").css("visibility", "visible");
          $(".copy-button").click(function() {
             alert($("#copyIntoClipBoard").parent().html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
          });
@@ -20,7 +20,7 @@ $(document).ready(function() {
          });
      }, function() {
        //$( "#copyIntoClipBoard" ).remove();
-       $( this ).find("div").css("display", "none");
+       $( this ).find("div").css("visibility", "hidden");
    });
 
 });
