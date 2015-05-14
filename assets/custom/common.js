@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    copyIntoClipBoard();
    // Header in all tables will be center aligned 
    $("thead tr", this).children("*").attr("style", "text-align: center");
    
@@ -23,19 +22,9 @@ $(document).ready(function() {
          // If the button is visible
          if($( this ).parent().parent().is(':visible')) {
             //alert($(".selectedButton").parent().parent().parent().find("pre").html());
-            alert($("#clickedButton"));
+            alert($("#codeCopied").html());
          }
       });
 
 });
 
-function copyIntoClipBoard() {
-		clip = new ZeroClipboard.Client();
-		clip.setHandCursor( true );
-		
-		clip.addEventListener('complete', function (client, text) {
-			alert("Copied text to clipboard: " + text );
-		});
-		
-		clip.glue( 'clickedButton', 'codeCopied' );
-}
