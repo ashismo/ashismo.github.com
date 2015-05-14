@@ -12,7 +12,10 @@ $(document).ready(function() {
          $( this ).find("div").find("button").addClass("selectedButton");
          $(".selectedButton").click(function() {
             //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
-            alert($(".selectedButton").parent().parent().parent().find("pre").html());
+            // If the button is visible
+            if($(".selectedButton").is(':visible')) {
+               alert($(".selectedButton").parent().parent().parent().find("pre").html());
+            }
          });
         /* $(".copy-button").hover(function() {
             //$(".copy-button").parent().apend( $( '<div style="text-align:right;">Copy into clipboard</button></div>' ) );
