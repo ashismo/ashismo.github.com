@@ -13,7 +13,7 @@ $(document).ready(function() {
          $(".selectedButton").click(function() {
             //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
             // If the button is visible
-            if($(".selectedButton").is(':visible')) {
+            if($(".selectedButton").parent().parent().is(':visible')) {
                alert($(".selectedButton").parent().parent().parent().find("pre").html());
             }
          });
