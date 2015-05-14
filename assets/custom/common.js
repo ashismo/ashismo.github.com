@@ -8,7 +8,7 @@ $(document).ready(function() {
    // Copy text into clipboard
    $(".codeSnippet").hover(function() {
        //$( this ).prepend( $( '<div style="text-align:right;" id="copyIntoClipBoard"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>' ) );
-         $( this ).find("div").css("visibility", "visible");
+         $( this ).find("div:first").css("visibility", "visible");
          $( this ).find("div").find("button").addClass("selectedButton");
          $(".selectedButton").click(function() {
             //alert($( this ).find("pre").html().replace(/^(.*)$/mg, "<span class=\"line\">$1</span>"));
@@ -27,7 +27,7 @@ $(document).ready(function() {
      }, function() {
        //$( "#copyIntoClipBoard" ).remove();
        $( this ).find("div").find("button").removeClass("selectedButton");
-       $( this ).find("div").css("visibility", "hidden");
+       $( this ).find("div:first").css("visibility", "hidden");
    });
 
 });
