@@ -286,7 +286,7 @@ sonar.issuesReport.console.enable=true
 # Display Jacoco report into SonarQube dashboard
 # Comma-separated paths to directories with tests (optional)
 sonar.tests=src/test/java
-#You may need to change the name of exec file. For mvn clean test it generates jacoco-ut.exec file
+# You may need to change the name of exec file. For mvn clean test it generates jacoco-ut.exec file
 sonar.jacoco.reportPath=target/coverage-reports/jacoco-ut.exec
 sonar.dynamicAnalysis=reuseReports
 sonar.java.coveragePlugin=jacoco
