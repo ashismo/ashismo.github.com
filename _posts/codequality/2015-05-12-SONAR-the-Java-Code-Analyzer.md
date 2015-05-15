@@ -133,8 +133,8 @@ sonar.analysis.mode=incremental
   
 <img style="border:1px solid black" src="https://cloud.githubusercontent.com/assets/11231867/7583648/f0974e7c-f8b4-11e4-875c-bc0a77cfc241.png"/>
 
-## Common issues during sonar setup
+## Common issues during SONAR setup
 
 SL NO | Issue | Solution
 :---:|:---|:---
-1 | **sonar-runner** command is successful but the project is not getting displayed in the SONAR dashboard | Comment out **sonar.analysis.mode=incremental** property then execute **sonar-runner** command again
+1 | **sonar-runner** command is successful but the project is not getting displayed in the SONAR dashboard | Comment out **sonar.analysis.mode=incremental** property then execute **sonar-runner** command again and check the project should be available in the SONAR dashboard
