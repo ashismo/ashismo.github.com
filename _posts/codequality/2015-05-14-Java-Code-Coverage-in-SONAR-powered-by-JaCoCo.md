@@ -107,7 +107,7 @@ public class CalculatorTest {
 }
 </code></pre>
 
-* Write a pom.xml file to build the code. In the next topic we shall see what is required for JaCoCo code coverage report
+* Write a pom.xml file to build the code. In the next section we shall see what is required for JaCoCo code coverage report
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
