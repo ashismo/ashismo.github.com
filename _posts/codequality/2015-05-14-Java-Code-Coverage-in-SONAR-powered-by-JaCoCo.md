@@ -111,45 +111,47 @@ public class CalculatorTest {
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>JaCoCoCodeCoverage</groupId>
-	<artifactId>JaCoCoCodeCoverage</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;JaCoCoCodeCoverage&lt;/groupId&gt;
+	&lt;artifactId&gt;JaCoCoCodeCoverage&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 
-	<repositories>
-		<repository>
-			<id>maven2-repository.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://repo1.maven.org/maven2</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
+	&lt;repositories&gt;
+		&lt;repository&gt;
+			&lt;id&gt;maven2-repository.java.net&lt;/id&gt;
+			&lt;name&gt;Java.net Repository for Maven&lt;/name&gt;
+			&lt;url&gt;http://repo1.maven.org/maven2&lt;/url&gt;
+			&lt;layout&gt;default&lt;/layout&gt;
+		&lt;/repository&gt;
+	&lt;/repositories&gt;
 
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	&lt;build&gt;
+		&lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.7&lt;/source&gt;
+					&lt;target&gt;1.7&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
 
-	<dependencies>
-		<!-- Junit dependancy -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-		</dependency>
-	</dependencies>
-</project>
+			
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+
+	&lt;dependencies&gt;
+		&lt;!-- Junit dependancy --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;junit&lt;/groupId&gt;
+			&lt;artifactId&gt;junit&lt;/artifactId&gt;
+			&lt;version&gt;4.8.1&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
 
 </code></pre>
 
@@ -160,84 +162,85 @@ So you are done with the project setup.
 
 * Add below JaCoCo plugin in your pom.xml file. The complete pom.xml for my project look [like this](https://github.com/ashismo/repositoryForMyBlog/blob/master/JaCoCoCodeCoveragePOM.xml){:target="_blank"}
 
-```xml
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
-<!-- Configuring The JaCoCo Maven Plugin -->
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.6.3.201306030806</version>
-				<executions>
-					<!-- Prepares the property pointing to the JaCoCo runtime agent which 
-						is passed as VM argument when Maven the Surefire plugin is executed. -->
-					<execution>
-						<id>pre-unit-test</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<configuration>
-							<!-- Sets the path to the file which contains the execution data. -->
-							<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-							<!-- Sets the name of the property containing the settings for JaCoCo 
-								runtime agent. -->
-							<propertyName>surefireArgLine</propertyName>
-						</configuration>
-					</execution>
-					<!-- Ensures that the code coverage report for unit tests is created 
-						after unit tests have been run. -->
-					<execution>
-						<id>post-unit-test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<configuration>
-							<!-- Sets the path to the file which contains the execution data. -->
-							<dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
-							<!-- Sets the output directory for the code coverage report. -->
-							<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Configuring The Maven Surefire Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.15</version>
-				<configuration>
-					<!-- Sets the VM argument line used when unit tests are run. -->
-					<argLine>${surefireArgLine}</argLine>
-					<!-- Skips unit tests if the value of skip.unit.tests property is true -->
-					<skipTests>${skip.unit.tests}</skipTests>
-					<!-- Excludes integration tests when unit tests are run. -->
-					<excludes>
-						<exclude>**/IT*.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-			<!-- Configuring The Maven Failsafe Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.15</version>
-				<executions>
-					<!-- Ensures that both integration-test and verify goals of the Failsafe 
-						Maven plugin are executed. -->
-					<execution>
-						<id>integration-tests</id>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
-						<configuration>
-							<!-- Sets the VM argument line used when integration tests are run. -->
-							<argLine>${failsafeArgLine}</argLine>
-							<!-- Skips integration tests if the value of skip.integration.tests 
-								property is true -->
-							<skipTests>${skip.integration.tests}</skipTests>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-```
+&lt;!-- Configuring The JaCoCo Maven Plugin --&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+				&lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+				&lt;version&gt;0.6.3.201306030806&lt;/version&gt;
+				&lt;executions&gt;
+					&lt;!-- Prepares the property pointing to the JaCoCo runtime agent which 
+						is passed as VM argument when Maven the Surefire plugin is executed. --&gt;
+					&lt;execution&gt;
+						&lt;id&gt;pre-unit-test&lt;/id&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;prepare-agent&lt;/goal&gt;
+						&lt;/goals&gt;
+						&lt;configuration&gt;
+							&lt;!-- Sets the path to the file which contains the execution data. --&gt;
+							&lt;destFile&gt;${project.build.directory}/coverage-reports/jacoco-ut.exec&lt;/destFile&gt;
+							&lt;!-- Sets the name of the property containing the settings for JaCoCo 
+								runtime agent. --&gt;
+							&lt;propertyName&gt;surefireArgLine&lt;/propertyName&gt;
+						&lt;/configuration&gt;
+					&lt;/execution&gt;
+					&lt;!-- Ensures that the code coverage report for unit tests is created 
+						after unit tests have been run. --&gt;
+					&lt;execution&gt;
+						&lt;id&gt;post-unit-test&lt;/id&gt;
+						&lt;phase&gt;test&lt;/phase&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;report&lt;/goal&gt;
+						&lt;/goals&gt;
+						&lt;configuration&gt;
+							&lt;!-- Sets the path to the file which contains the execution data. --&gt;
+							&lt;dataFile&gt;${project.build.directory}/coverage-reports/jacoco-ut.exec&lt;/dataFile&gt;
+							&lt;!-- Sets the output directory for the code coverage report. --&gt;
+							&lt;outputDirectory&gt;${project.reporting.outputDirectory}/jacoco-ut&lt;/outputDirectory&gt;
+						&lt;/configuration&gt;
+					&lt;/execution&gt;
+				&lt;/executions&gt;
+			&lt;/plugin&gt;
+			&lt;!-- Configuring The Maven Surefire Plugin --&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+				&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+				&lt;version&gt;2.15&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;!-- Sets the VM argument line used when unit tests are run. --&gt;
+					&lt;argLine&gt;${surefireArgLine}&lt;/argLine&gt;
+					&lt;!-- Skips unit tests if the value of skip.unit.tests property is true --&gt;
+					&lt;skipTests&gt;${skip.unit.tests}&lt;/skipTests&gt;
+					&lt;!-- Excludes integration tests when unit tests are run. --&gt;
+					&lt;excludes&gt;
+						&lt;exclude&gt;**/IT*.java&lt;/exclude&gt;
+					&lt;/excludes&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+			&lt;!-- Configuring The Maven Failsafe Plugin --&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+				&lt;artifactId&gt;maven-failsafe-plugin&lt;/artifactId&gt;
+				&lt;version&gt;2.15&lt;/version&gt;
+				&lt;executions&gt;
+					&lt;!-- Ensures that both integration-test and verify goals of the Failsafe 
+						Maven plugin are executed. --&gt;
+					&lt;execution&gt;
+						&lt;id&gt;integration-tests&lt;/id&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;integration-test&lt;/goal&gt;
+							&lt;goal&gt;verify&lt;/goal&gt;
+						&lt;/goals&gt;
+						&lt;configuration&gt;
+							&lt;!-- Sets the VM argument line used when integration tests are run. --&gt;
+							&lt;argLine&gt;${failsafeArgLine}&lt;/argLine&gt;
+							&lt;!-- Skips integration tests if the value of skip.integration.tests 
+								property is true --&gt;
+							&lt;skipTests&gt;${skip.integration.tests}&lt;/skipTests&gt;
+						&lt;/configuration&gt;
+					&lt;/execution&gt;
+				&lt;/executions&gt;
+			&lt;/plugin&gt;
+			
+</code></pre>
