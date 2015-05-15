@@ -158,9 +158,9 @@ So you are done with the project setup.
 #### Configure JaCoCo plugin for code coverage
 
 
-* Add below JaCoCo plugin in your pom.xml file. The complete pom.xml for my project look [like this] (https://github.com/ashismo/repositoryForMyBlog/blob/master/JaCoCoCodeCoveragePOM.xml){target:_blank}
+* Add below JaCoCo plugin in your pom.xml file. The complete pom.xml for my project look [like this](https://github.com/ashismo/repositoryForMyBlog/blob/master/JaCoCoCodeCoveragePOM.xml){target:_blank}
 
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+```xml
 
 <!-- Configuring The JaCoCo Maven Plugin -->
 			<plugin>
@@ -240,4 +240,4 @@ So you are done with the project setup.
 					</execution>
 				</executions>
 			</plugin>
-</code></pre>
+```
