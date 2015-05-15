@@ -299,3 +299,6 @@ sonar.java.binaries=target/classes
 <img src="https://cloud.githubusercontent.com/assets/11231867/7651265/3ffd8396-fb1c-11e4-9103-58ea0cc262c4.png"/>
 
 * You are good to see the coverage report in the SONAR dashboard
+* The code coverage in SONAR dashboard for this example is shown below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7653126/2f0e2800-fb31-11e4-907e-0c3ce94bbc09.png"/>
