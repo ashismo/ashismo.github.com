@@ -258,7 +258,7 @@ If you are not confortable with the sonar configuration then [follow my another 
 * Start the Sonar server
 * Create **sonar-project.properties** file in the project root path with the following configuration
 
-``` properties
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
 # must be unique in a given SonarQube instance
 sonar.projectKey=JaCoCoCodeCoverage
@@ -290,4 +290,4 @@ sonar.java.coveragePlugin=jacoco
 sonar.jacoco.reportMissing.force.zero=true
 sonar.binaries=target/classes
 
-```
+</code></pre>
