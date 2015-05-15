@@ -246,9 +246,9 @@ So you are done with the project setup.
 </code></pre>
 
 * You are done with the configuration. Now execute **mvn clean test** from the command prompt.
-	* Command for unit test coverage: **mvn clean test**
-	* Command for integration test coverage **mvn clean verify -P integration-test**
-	* Command for unit teat and integration test coverage **mvn clean verify -P all-tests**
+	* Command for unit test coverage report: **mvn clean test**
+	* Command for integration test coverage report: **mvn clean verify -P integration-test**
+	* Command for unit teat and integration test coverage report: **mvn clean verify -P all-tests**
 <img src="https://cloud.githubusercontent.com/assets/11231867/7651112/8397a796-fb1a-11e4-9e76-5962800200ae.png"/>
 * Then go to **target/site/jacoco-ut** path and see the files generated with code coverage report as shown below.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7651092/4d2bde84-fb1a-11e4-9249-a4bff49241e3.png"/>
