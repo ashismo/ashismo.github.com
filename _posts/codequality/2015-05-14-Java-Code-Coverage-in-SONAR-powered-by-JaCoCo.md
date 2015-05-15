@@ -249,4 +249,45 @@ So you are done with the project setup.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7651112/8397a796-fb1a-11e4-9e76-5962800200ae.png"/>
 * Then go to **target/site/jacoco-ut** path and see the files generated with code coverage report as shown below.
 <img src="https://cloud.githubusercontent.com/assets/11231867/7651092/4d2bde84-fb1a-11e4-9249-a4bff49241e3.png"/>
-* 
+
+#### Display Code coverage report in SONAR dashboard
+
+If you are not confortable with the sonar configuration then [follow my another blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer/){:target="_blank"}
+
+
+* Start the Sonar server
+* Create **sonar-project.properties** file in the project root path with the following configuration
+
+``` properties
+
+# must be unique in a given SonarQube instance
+sonar.projectKey=JaCoCoCodeCoverage
+# this is the name displayed in the SonarQube UI
+sonar.projectName=JaCoCoCodeCoverage
+sonar.projectVersion=1.0
+ 
+# Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.
+# Since SonarQube 4.2, this property is optional if sonar.modules is set. 
+# If not set, SonarQube starts looking for source code from the directory containing 
+# the sonar-project.properties file.
+sonar.sources=src/main/java
+ 
+# Encoding of the source code. Default is default system encoding
+#sonar.sourceEncoding=UTF-8
+sonar.java.source=1.5
+
+# Generate sonar issues report in html and console
+sonar.issuesReport.html.enable=true
+sonar.issuesReport.console.enable=true
+#sonar.analysis.mode=incremental
+
+# Display Jacoco report into SonarQube dashboard
+# Comma-separated paths to directories with tests (optional)
+sonar.tests=src/test/java
+sonar.jacoco.reportPath=target/coverage-reports/jacoco.exec
+sonar.dynamicAnalysis=reuseReports
+sonar.java.coveragePlugin=jacoco
+sonar.jacoco.reportMissing.force.zero=true
+sonar.binaries=target/classes
+
+```
