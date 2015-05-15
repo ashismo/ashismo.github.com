@@ -25,7 +25,7 @@ Below are the high level steps to accomplish our goal
 #### Create a Java Maven Project
 
 
-* Create a Java project in eclipse and convert into Maven project. For more details, follow my [another blog](/java-build/2015/05/09/Setting%20up%20a%20Maven%20Build/){target:_blank}
+* Create a Java project in eclipse and convert into Maven project. For more details, follow my [another blog](/java-build/2015/05/09/Setting%20up%20a%20Maven%20Build/){:target="_blank"}
 * In my example, **src/main/java** and **src/test/java** are the src folders for java and junit respectively in eclipse as shown below
 <img src="https://cloud.githubusercontent.com/assets/11231867/7649932/285fb0ea-fb0f-11e4-84c9-1c63e5ca2220.png" style="border: 1px solid black"/>
 
@@ -158,7 +158,7 @@ So you are done with the project setup.
 #### Configure JaCoCo plugin for code coverage
 
 
-* Add below JaCoCo plugin in your pom.xml file. The complete pom.xml for my project look [like this](https://github.com/ashismo/repositoryForMyBlog/blob/master/JaCoCoCodeCoveragePOM.xml){target:_blank}
+* Add below JaCoCo plugin in your pom.xml file. The complete pom.xml for my project look [like this](https://github.com/ashismo/repositoryForMyBlog/blob/master/JaCoCoCodeCoveragePOM.xml){:target="_blank"}
 
 ```xml
 
