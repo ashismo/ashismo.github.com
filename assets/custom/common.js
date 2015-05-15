@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
    // Header in all tables will be center aligned 
    if($("thead tr", this) !== null) {
       $("thead tr", this).children("*").attr("style", "text-align: center");
@@ -24,7 +25,24 @@ $(document).ready(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
                //alert($(".selectedButton").parent().parent().parent().find("pre").html());
-               alert($("#codeCopied").html());
+               //alert($("#codeCopied").html());
+			   var clip = new ZeroClipboard.Client();
+			clip.setHandCursor( true );
+			
+			clip.addEventListener('load', function (client) {
+				//debugstr("Flash movie loaded and ready.");
+			});
+			
+			clip.addEventListener('mouseOver', function (client) {
+				// update the text on mouse over
+				//clip.setText( $('fe_text').value );
+			});
+			
+			clip.addEventListener('complete', function (client, text) {
+				debugstr("Copied text to clipboard: " + text );
+			});
+			
+			clip.glue( 'clickedButton', 'codeCopied' );
             }
          });
    }
