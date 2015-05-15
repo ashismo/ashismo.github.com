@@ -279,7 +279,6 @@ sonar.java.source=1.5
 # Generate sonar issues report in html and console
 sonar.issuesReport.html.enable=true
 sonar.issuesReport.console.enable=true
-#sonar.analysis.mode=incremental
 
 # Display Jacoco report into SonarQube dashboard
 # Comma-separated paths to directories with tests (optional)
@@ -291,3 +290,8 @@ sonar.jacoco.reportMissing.force.zero=true
 sonar.binaries=target/classes
 
 </code></pre>
+
+* Execute the **sonar-runner** command from the project root path as shown below
+<img src="https://cloud.githubusercontent.com/assets/11231867/7651265/3ffd8396-fb1c-11e4-9103-58ea0cc262c4.png"/>
+
+* You are good to see the coverage report in the SONAR dashboard
