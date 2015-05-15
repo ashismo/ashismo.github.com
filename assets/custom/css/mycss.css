@@ -1,5 +1,11 @@
 h2 {
-	color: black
+	font-family: proxima-nova-alt-condensed,serif;
+	color: #2f3840;
+	margin: 0;
+	font-weight: 900;
+	margin-bottom: 7px;
+	line-height: 50px;
+	font-size: 33px;
 }
 
 h3 {
