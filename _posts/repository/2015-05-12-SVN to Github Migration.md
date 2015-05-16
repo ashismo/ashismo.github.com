@@ -2,6 +2,7 @@
 layout: post
 category : misc-SVN to GitHub migration
 tags : [Miscellanous]
+weight: 150
 ---
 {% include JB/setup %}
 

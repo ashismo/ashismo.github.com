@@ -2,6 +2,8 @@
 layout: post
 category : java-web service
 tags : [Webservice Tutorial]
+name: 10
+weight: 100
 ---
 {% include JB/setup %}
 

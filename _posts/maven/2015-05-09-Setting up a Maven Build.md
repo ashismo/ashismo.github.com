@@ -2,6 +2,7 @@
 layout: post
 category : java-build
 tags : [Build Tutorial]
+weight: 100
 ---
 {% include JB/setup %}
 

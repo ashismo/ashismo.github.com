@@ -5,7 +5,7 @@ Usage:
   2) include JB/pages_list
   example:
     <ul>
-  	  {% assign pages_list = site.pages %}  
+  	  {% assign pages_list = site.pages | sort "title"%}  
   	  {% include JB/pages_list %}
   	</ul>
   	
@@ -24,7 +24,7 @@ Usage:
   {% include custom/pages_list %}
 {% else %}
   {% for node in pages_list %}
-    {% if node.title != null %}
+	{% if node.title != null %}
       {% if group == null or group == node.group %}
       	{% if page.url == node.url %}
       	<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
