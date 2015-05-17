@@ -21,6 +21,17 @@ $(document).ready(function() {
           $( this ).find("div:first").css("visibility", "hidden");
       });
       
+	  // Category formatting: example, java-build will be changed to Build
+	  var url = window.location.href;
+	  if(url.indexOf(".html") != -1) { // This is the main page
+		  $("h3").each(function(){
+			var content = $(this).html();
+			content = content.substring(content.indexOf("-") + 1);
+			content = toTitleCase(content);
+			$(this).html(content);
+		  });
+		  
+	  }
       $(".copy-button").click(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
