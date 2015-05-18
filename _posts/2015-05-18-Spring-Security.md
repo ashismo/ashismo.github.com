@@ -350,6 +350,7 @@ pageEncoding="ISO-8859-1"%&gt;
 &lt;/html&gt;
 </code></pre>
 
+
   * **denied.jsp**
   
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
@@ -402,6 +403,7 @@ pageEncoding="ISO-8859-1"%&gt;
 
  * **LoginController.java** controls login,logout and denied request and **HelloWorldController.java** controls hello world request
 
+
   * **LoginController.java**
   
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
@@ -442,6 +444,7 @@ public class LoginController {
 }
 
 </code></pre>
+
 
   * **HelloWorldController.java**
 
