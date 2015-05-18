@@ -180,11 +180,10 @@ public class HelloWorldREST {
 </code></pre>
 
 * Right click on the project then **Run As**-> **Run on Server**
-
- 	* 1st request and response from the above controller is shown in the below image
- 	<img src="https://cloud.githubusercontent.com/assets/11231867/7675667/c7cd6622-fd58-11e4-89b7-bde014712f9e.png"/>
- 	* 2nd request and response from the above controller is shown in the below image
- 	<img src="https://cloud.githubusercontent.com/assets/11231867/7675668/c7f8f242-fd58-11e4-9891-622e381afe39.png"/>
+* 1st request and response from the above controller is shown in the below image
+<img src="https://cloud.githubusercontent.com/assets/11231867/7675667/c7cd6622-fd58-11e4-89b7-bde014712f9e.png"/>
+* 2nd request and response from the above controller is shown in the below image
+<img src="https://cloud.githubusercontent.com/assets/11231867/7675668/c7f8f242-fd58-11e4-9891-622e381afe39.png"/>
 
 **Note:** In the above controller class, getSalary resource can be called by POST and GET methods. The GET method is shown above. I am going to show the POST method below.
 
@@ -214,8 +213,8 @@ pageEncoding="ISO-8859-1"%&gt;
 </code></pre>
 
 
-	* Follow the below steps to test the POST request from webpage
-	<img src="https://cloud.githubusercontent.com/assets/11231867/7676127/4fc9372c-fd5e-11e4-97ad-dd17bc00eb31.png"/>
-	<img src="https://cloud.githubusercontent.com/assets/11231867/7676128/5157560a-fd5e-11e4-8557-f788eab23775.png"/>
+* Follow the below steps to test the POST request from webpage
+<img src="https://cloud.githubusercontent.com/assets/11231867/7676127/4fc9372c-fd5e-11e4-97ad-dd17bc00eb31.png"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/7676128/5157560a-fd5e-11e4-8557-f788eab23775.png"/>
 
 		
