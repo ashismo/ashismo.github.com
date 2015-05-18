@@ -35,7 +35,7 @@ Click here to see [my project at github](https://github.com/ashismo/repositoryFo
 * Create a package under java source (src/main/java): com.ashish.rest.controller
 * Add maven dependancy: **Right click on project->properties->Deployment Assembly->Add->Java Build Path Entries->Maven Dependencies**
 **Note:** Deploy path should be WEB-INF/lib by default
-The meaning of the below entry is the dependent jars will go to WEB-INF/lib folder in the deployable
+The meaning of the below entry (as shown in the image) is that the dependent jars will get packaged into the WEB-INF/lib folder of the deployer
 <img src="https://cloud.githubusercontent.com/assets/11231867/7606640/5e2a367a-f978-11e4-98ad-4a582769b338.png" style="border: 1px solid black;"/>
 * Your pom.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-pom.xml){:target="_blank"} to build your project.
 * Your web.xml should be like [this](https://github.com/ashismo/repositoryForMyBlog/blob/master/restfulWebservice-web.xml){:target="_bank"}. All http requests must pass through **com.ashish.rest.authentication.RestAuthenticationFilter** authentication class.
