@@ -1,5 +1,15 @@
 $(document).ready(function() {
-	
+    // Fix the navigation at the top of the page
+    $(document).scroll(function () {
+        var scroll = $(this).scrollTop();
+        var topDist = $(".navbar-default").position();
+        if (scroll > topDist.top) {
+            $('nav').css({"position":"fixed","top":"0"});
+        } else {
+            $('nav').css({"position":"static","top":"auto"});
+        }
+    });
+    
    // Header in all tables will be center aligned 
    if($("thead tr", this) !== null) {
       $("thead tr", this).children("*").attr("style", "text-align: center");
