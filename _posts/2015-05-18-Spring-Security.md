@@ -474,4 +474,9 @@ public class HelloWorldController {
 }
 
 </code></pre>
-  
+
+## Screen navigation
+
+The screen navigation or page flow for the above is shown below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7680858/5107ce9e-fd88-11e4-8e0d-8b968283dd5a.png" style="maxheight:550px; maxwidth: 750px"/>
