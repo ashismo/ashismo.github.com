@@ -163,10 +163,57 @@ public class HelloWorldREST {
 
 		return emp;
 	}
+	
+	@POST
+	@Path("/getSalary")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Employee getSalary( @PathParam("empId") int empId,
+			@DefaultValue("No Employee Id passed") @QueryParam("value") String value) {
+		System.out.println("getSalary method is called");
+		Employee emp = new Employee();
+		emp.setEmpId(empId);
+		emp.setName("Ashish Mondal");
+		emp.setSalary(1000);
+		return emp;
+	}
 }
 </code></pre>
 
- 	* 1st request and response from the above controller
+* Right click on the project then **Run As**-> **Run on Server**
+ 	* 1st request and response from the above controller is shown in the below image
  	<img src="https://cloud.githubusercontent.com/assets/11231867/7675667/c7cd6622-fd58-11e4-89b7-bde014712f9e.png"/>
- 	* 2nd Request and response from the above controller
+ 	* 2nd request and response from the above controller is shown in the below image
  	<img src="https://cloud.githubusercontent.com/assets/11231867/7675668/c7f8f242-fd58-11e4-9891-622e381afe39.png"/>
+
+**Note:** In the above controller class, getSalary resource can be called by POST and GET methods. The GET method is shown above. I am going to show the POST method below.
+
+	* Note that index.jsp is mentioned as the welcome file in web.xml.
+	* Create index.jsp file under **WebContent** folder and the content should be as shown below
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
+&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;form method="post" action="rest/hello/getSalary/"&gt;
+		&lt;div&gt;POST method testing&lt;/div&gt;
+		&lt;div&gt;
+			Emp Id: &lt;input type="text" value="" /&gt;
+			&lt;button&gt;Go&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+	* Follow the below steps to test the POST request from webpage
+	<img src="https://cloud.githubusercontent.com/assets/11231867/7676127/4fc9372c-fd5e-11e4-97ad-dd17bc00eb31.png"/>
+	<img src="https://cloud.githubusercontent.com/assets/11231867/7676128/5157560a-fd5e-11e4-8557-f788eab23775.png"/>
+
+	
