@@ -180,6 +180,7 @@ public class HelloWorldREST {
 </code></pre>
 
 * Right click on the project then **Run As**-> **Run on Server**
+
  	* 1st request and response from the above controller is shown in the below image
  	<img src="https://cloud.githubusercontent.com/assets/11231867/7675667/c7cd6622-fd58-11e4-89b7-bde014712f9e.png"/>
  	* 2nd request and response from the above controller is shown in the below image
@@ -212,8 +213,9 @@ pageEncoding="ISO-8859-1"%&gt;
 &lt;/html&gt;
 </code></pre>
 
+
 	* Follow the below steps to test the POST request from webpage
 	<img src="https://cloud.githubusercontent.com/assets/11231867/7676127/4fc9372c-fd5e-11e4-97ad-dd17bc00eb31.png"/>
 	<img src="https://cloud.githubusercontent.com/assets/11231867/7676128/5157560a-fd5e-11e4-8557-f788eab23775.png"/>
 
-	
+		
