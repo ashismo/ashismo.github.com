@@ -418,7 +418,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 //Below annotation is used to mark this class as controller.
-//<context:component-scan base-package="com.ashish.springmvc.controller" /> is declared
+//&lt;context:component-scan base-package="com.ashish.springmvc.controller" /&gt; is declared
 //in mvc-applicationContext.xml file to scan controller in com.ashish.springmvc.controller package
 @Controller
 public class LoginController {
