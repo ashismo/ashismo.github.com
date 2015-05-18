@@ -1,6 +1,6 @@
 ---
 layout: post
-category : java-Spring Seurity
+category : java-Spring
 tags : [Spring Tutorial]
 weight: 100
 ---
