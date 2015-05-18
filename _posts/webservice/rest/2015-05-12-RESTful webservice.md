@@ -187,8 +187,9 @@ public class HelloWorldREST {
 
 **Note:** In the above controller class, getSalary resource can be called by POST and GET methods. The GET method is shown above. I am going to show the POST method below.
 
-	* Note that index.jsp is mentioned as the welcome file in web.xml.
-	* Create index.jsp file under **WebContent** folder and the content should be as shown below
+
+* Note that index.jsp is mentioned as the welcome file in web.xml.
+* Create index.jsp file under **WebContent** folder and the content should be as shown below
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
@@ -217,4 +218,31 @@ pageEncoding="ISO-8859-1"%&gt;
 <img src="https://cloud.githubusercontent.com/assets/11231867/7676127/4fc9372c-fd5e-11e4-97ad-dd17bc00eb31.png"/>
 <img src="https://cloud.githubusercontent.com/assets/11231867/7676128/5157560a-fd5e-11e4-8557-f788eab23775.png"/>
 
-		
+
+### Common issues during project setup
+
+SL NO | Issues | Solution
+:---:|:---|:---
+1 | SEVERE: Servlet /JAXRS-HelloWorld threw load() exception
+java.lang.ClassNotFoundException: com.sun.jersey.spi.container.servlet.ServletContainer
+ | Right click on project->properties->Deployment Assembly->Add->Java Build Path Entries->Maven Dependencies (Note: Deploy path should be WEB-INF/lib by default)
+ 2 | com.sun.jersey.api.container.ContainerException: The ResourceConfig instance does not contain any root resource classes. | a) com.sun.jersey.config.property.packages doesn’t exist in your web.xml
+	&lt;servlet&gt;
+	&lt;servlet-name&gt;jersey-helloWorld-serlvet&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;
+		com.sun.jersey.spi.container.servlet.ServletContainer
+	&lt;/servlet-class&gt;
+	&lt;init-param&gt;
+		&lt;param-name&gt;
+			com.sun.jersey.config.property.packages
+		&lt;/param-name&gt;
+		&lt;param-value&gt;com.ashish.rest.controller&lt;/param-value&gt;
+	&lt;/init-param&gt;
+	&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;  
+
+b) com.sun.jersey.config.property.packages included a resource that doesn’t include any jersey services. In above case, "com.ashish.rest.controller” doesn’t contains any jersey services.  
+
+c) The project's java source directory must be under src/main/java folder as the project is of type Maven
+
+
