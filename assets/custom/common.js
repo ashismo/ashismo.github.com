@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Fix the navigation at the top of the page
-    $(document).scroll(function () {
+    /*$(document).scroll(function () {
         var scroll = $(this).scrollTop();
         var topDist = $(".navbar-default").position();
         if (scroll > topDist.top) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
         } else {
             $('nav').css({"position":"static","top":"auto"});
         }
-    });
+    });*/
     
    // Header in all tables will be center aligned 
    if($("thead tr", this) !== null) {
