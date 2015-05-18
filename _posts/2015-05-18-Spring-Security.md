@@ -328,3 +328,48 @@ pageEncoding="ISO-8859-1"%&gt;
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
+
+  * **logout.jsp**
+
+<pre class="prettyprint highlight"><code class="language-jsp" data-lang="jsp">
+&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;% session.invalidate(); %&gt;
+	You are now logged out!!
+ 
+	&lt;a href="${pageContext.request.contextPath}/"&gt;go back&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  * **denied.jsp**
+  
+<pre class="prettyprint highlight"><code class="language-jsp" data-lang="jsp">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+    <body>
+     
+        <h1 id="banner">Unauthorized Access !!</h1>
+     
+        <hr />
+     
+        <c:if test="${not empty error}">
+            <div style="color:red">
+                Invalid Username/password !!<br />
+                Caused : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+            </div>
+        </c:if>
+     
+        <p class="message">Access denied!</p>
+        <a href="login">Go back to login page</a>
+    </body>
+</html>
+</code></pre>
