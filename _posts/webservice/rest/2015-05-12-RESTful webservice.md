@@ -91,7 +91,9 @@ The meaning of the below entry (as shown in the image) is that the dependent jar
 </code></pre>
 
  * Your web.xml should be as shown below. As per the web.xml file http://server:<port>/<context root>/rest/* request will pass through the controller. Go through the inline comments in the web.xml
+ 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/javaee"
@@ -121,6 +123,7 @@ The meaning of the below entry (as shown in the image) is that the dependent jar
 		&lt;url-pattern&gt;/rest/*&lt;/url-pattern&gt;
 	&lt;/servlet-mapping&gt;
 &lt;/web-app&gt;
+
 </code></pre>
 
  * Your controller class **HelloWorldREST.java** should be as shown below. This controller produces string output and json output. 
