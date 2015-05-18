@@ -51,72 +51,76 @@ The meaning of the below entry (as shown in the image) is that the dependent jar
  * Your pom.xml file should be as shown below
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ashish.rest.controller</groupId>
-  <artifactId>test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <repositories>
-		<repository>
-			<id>maven2-repository.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://download.java.net/maven/2/</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
- 
-	<dependencies>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
-			<version>1.9</version>
-		</dependency>
-		
-		<!--  Below two dependencies are added to support JSON response -->
- 		<dependency>
-		    <groupId>com.sun.jersey</groupId>
-		    <artifactId>jersey-json</artifactId>
-		    <version>1.8</version>
-		 </dependency>
-		<dependency> 
-			<groupId>com.sun.jersey</groupId> 
-			<artifactId>jersey-bundle</artifactId> 
-			<version>1.18.1</version> 
-		</dependency>
-	</dependencies>
-	
-</project>
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.rest.controller&lt;/groupId&gt;
+	&lt;artifactId&gt;test&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+	&lt;repositories&gt;
+		&lt;repository&gt;
+			&lt;id&gt;maven2-repository.java.net&lt;/id&gt;
+			&lt;name&gt;Java.net Repository for Maven&lt;/name&gt;
+			&lt;url&gt;http://download.java.net/maven/2/&lt;/url&gt;
+			&lt;layout&gt;default&lt;/layout&gt;
+		&lt;/repository&gt;
+	&lt;/repositories&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
+			&lt;artifactId&gt;jersey-server&lt;/artifactId&gt;
+			&lt;version&gt;1.9&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Below two dependencies are added to support JSON response --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
+			&lt;artifactId&gt;jersey-json&lt;/artifactId&gt;
+			&lt;version&gt;1.8&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
+			&lt;artifactId&gt;jersey-bundle&lt;/artifactId&gt;
+			&lt;version&gt;1.18.1&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+
+&lt;/project&gt;
 </code></pre>
 
  * Your web.xml should be as shown below. As per the web.xml file http://server:<port>/<context root>/rest/* request will pass through the controller. Go through the inline comments in the web.xml
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
- <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>Restful WebApplication</display-name>
- 
-	<servlet>
-		<servlet-name>jersey-helloWorld-serlvet</servlet-name>
-		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-        <!-- Below init-param is added to for RESTful webservice with Jersey framework -->
-		<init-param>
-		     <param-name>com.sun.jersey.config.property.packages</param-name>
-		     <param-value>com.ashish.rest.controller</param-value>
-		</init-param>
+ &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0"&gt;
+	&lt;display-name&gt;Restful WebApplication&lt;/display-name&gt;
 
-		<!-- Below init-param is added to support JSON response -->
-		<init-param>
-            		<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
-            		<param-value>true</param-value>
-        	</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
- 
-	<servlet-mapping>
-		<servlet-name>jersey-helloWorld-serlvet</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
-	</servlet-mapping>
-</web-app>
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;jersey-helloWorld-serlvet&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;com.sun.jersey.spi.container.servlet.ServletContainer&lt;/servlet-class&gt;
+		&lt;!-- Below init-param is added to for RESTful webservice with Jersey framework --&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;com.sun.jersey.config.property.packages&lt;/param-name&gt;
+			&lt;param-value&gt;com.ashish.rest.controller&lt;/param-value&gt;
+		&lt;/init-param&gt;
+
+		&lt;!-- Below init-param is added to support JSON response --&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;com.sun.jersey.api.json.POJOMappingFeature&lt;/param-name&gt;
+			&lt;param-value&gt;true&lt;/param-value&gt;
+		&lt;/init-param&gt;
+		&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+	&lt;/servlet&gt;
+
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;jersey-helloWorld-serlvet&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/rest/*&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
 </code></pre>
 
  * Your controller class **HelloWorldREST.java** should be as shown below. This controller produces string output and json output. 
