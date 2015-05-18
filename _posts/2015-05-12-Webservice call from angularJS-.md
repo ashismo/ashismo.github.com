@@ -30,3 +30,50 @@ The Objective of this blog is to call GET and POST RESTful webservice.
  
 
  * Write [GET and POST RESTful webservices](/java-web%20service/2015/05/12/RESTful%20webservice/){:target="_block"} from my another blog
+ * replace **index.jsp** with the following content. From this JSP file we are calling GET and POST RESTful webservice. In the below file **&lt;html ng-app="empRecordApp"&gt;** indicates that this is the root element of angular JS application
+ 
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html ng-app="empRecordApp"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Integrate HTML5 and Angular JS&lt;/title&gt;
+		&lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+		&lt;!-- &lt;script src="&lt;%=request.getContextPath()%&gt;/angularjs/angular.min.js"&gt;&lt;/script&gt; --&gt;
+		&lt;script src="&lt;%=request.getContextPath()%&gt;/angularjs/employee.js"&gt;&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div&gt;
+		   GET restful Webservice call&lt;br/&gt;
+		   ============================
+		&lt;/div&gt;
+		&lt;div ng-controller="getEmployee"&gt;
+			&lt;div&gt;
+				&lt;p&gt;The Employee ID is {{employeeData.empId}}&lt;/p&gt;
+				&lt;p&gt;The Employee Name is {{employeeData.name}}&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				EmpId: &lt;input type="text" placeholder="Emp Id" ng-model="employeeData.empId"&gt;
+				Name: &lt;input type="text" placeholder="Name" ng-model="employeeData.name"&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;br/&gt;&lt;br/&gt;
+		&lt;div&gt;
+		   POST restful Webservice call&lt;br/&gt;
+		   ===========================
+		&lt;/div&gt;
+		&lt;br&gt;
+		&lt;div ng-controller="getSalary"&gt;
+			&lt;div&gt;
+				EmpId: &lt;input type="text" placeholder="Name" ng-model="employeeData.name"&gt;
+				Salary: &lt;input type="text" placeholder="Salary" ng-model="employeeData.salary"&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;p&gt;The Employee Name is {{employeeData.name}}&lt;/p&gt;
+				&lt;p&gt;The Employee Salary is {{employeeData.salary}}&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
