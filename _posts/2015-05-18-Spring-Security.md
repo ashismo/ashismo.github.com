@@ -271,6 +271,7 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd"&gt;
 </code></pre>
 
 * **index.jsp**: This is welcome file as configured in web.xml
+
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
  
@@ -295,6 +296,7 @@ pageEncoding="ISO-8859-1"%&gt;
 
  * **login.jsp, logout.jsp, denied.jsp, helloworld.jsp** files are created inside WEB-INF/views folder
  * **login.jsp**
+ 
 <pre class="prettyprint highlight"><code class="language-html" data-lang="html">
 &lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
 &lt;%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %&gt;
