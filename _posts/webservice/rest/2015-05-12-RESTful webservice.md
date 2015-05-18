@@ -48,4 +48,45 @@ The meaning of the below entry (as shown in the image) is that the dependent jar
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7606640/5e2a367a-f978-11e4-98ad-4a582769b338.png"/>
  
- * 
+ * Your pom.xml file should be as below
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ashish.rest.controller</groupId>
+  <artifactId>test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <repositories>
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+ 
+	<dependencies>
+ 
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.9</version>
+		</dependency>
+		
+		<!--  Below two dependencies are added to support JSON response -->
+ 		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-json</artifactId>
+		    <version>1.8</version>
+		 </dependency>
+		<dependency> 
+			<groupId>com.sun.jersey</groupId> 
+			<artifactId>jersey-bundle</artifactId> 
+			<version>1.18.1</version> 
+		</dependency>
+	</dependencies>
+	
+</project>
+</code></pre>
