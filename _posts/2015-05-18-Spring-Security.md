@@ -11,10 +11,11 @@ Spring security is a Java/J2EE framework that provides authentication and author
 Objectives of this project are 
 
 
- * authenticate and autorize all incoming requests.
+ * authenticate and autorize all incoming requests (Hardcoded user name/password is root/root)
  * navigate to welcome jsp via spring security login page
  * on successful login, display welcome page with a link
  * on clicing the URL, you will get navigated to another page.
+ * create customize login page (by default spring security framework provides login page)
 
 ## Required Software
 
@@ -77,17 +78,6 @@ The content of pom.xml, web.xml, security xml, jsp and controller classes are gi
 		    &lt;groupId&gt;jstl&lt;/groupId&gt;
 		    &lt;artifactId&gt;jstl&lt;/artifactId&gt;
 		    &lt;version&gt;1.2&lt;/version&gt;
-		&lt;/dependency&gt;
-		&lt;!--  Below two dependencies are added to support JSON response --&gt;
- 		&lt;dependency&gt;
-		    &lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
-		    &lt;artifactId&gt;jersey-json&lt;/artifactId&gt;
-		    &lt;version&gt;1.8&lt;/version&gt;
-		 &lt;/dependency&gt;
-		&lt;dependency&gt; 
-			&lt;groupId&gt;com.sun.jersey&lt;/groupId&gt; 
-			&lt;artifactId&gt;jersey-bundle&lt;/artifactId&gt; 
-			&lt;version&gt;1.18.1&lt;/version&gt; 
 		&lt;/dependency&gt;
 		
 		&lt;!-- Spring dependencies --&gt;
@@ -167,7 +157,9 @@ The content of pom.xml, web.xml, security xml, jsp and controller classes are gi
 	&lt;context-param&gt;
 		&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
 		&lt;param-value&gt;
+			&lt;!-- URL mapping is here --&gt;
 			/WEB-INF/dispatcher-servlet.xml
+			&lt;!-- Spring security configuration is here --&gt;
 			/WEB-INF/security-applicationContext.xml
 		&lt;/param-value&gt;
 	&lt;/context-param&gt;
@@ -193,3 +185,88 @@ The content of pom.xml, web.xml, security xml, jsp and controller classes are gi
 	 &lt;/filter-mapping&gt;
 &lt;/web-app&gt;
 </code></pre>
+
+ * **dispatcher-servlet.xml** file has spring MVC configuration
+ 
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd"&gt;
+ 
+	&lt;context:component-scan base-package="com.ashish.springmvc.controller" /&gt;
+ 
+	&lt;bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+		&lt;property name="prefix"&gt;
+			&lt;value&gt;/WEB-INF/views/&lt;/value&gt;
+		&lt;/property&gt;
+		&lt;property name="suffix"&gt;
+			&lt;value&gt;.jsp&lt;/value&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+
+ * **security-applicationContext.xml** file has spring security configuration. Go through the inline comments
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd"&gt;
+ 
+ &lt;security:global-method-security secured-annotations="enabled" /&gt;
+&lt;!-- 
+	auto-config: Includes some basic services like form-login,http-basic, logout etc
+	use-expressions: It is here to use expressions to secure individual URLs. These expressions can be 
+					 e.g. hasRole([role]), hasAnyRole([role1,role2]), permitAll, denyAll etc
+	intercept-url: This will match the requested url pattern from request and will decide what action to take based on access value.
+	form-login: This will come into picture when user will try to access any secured URL. 
+				A login page mapped to “login-page” attribute will be served for authentication check. 
+				If not provided, spring will provide an inbuilt login page to user. It also contains attribute 
+				for default target if login success, or login failure due to invalid user/password match.
+ --&gt; 
+    &lt;security:http auto-config="true"  use-expressions="true"&gt;
+    	&lt;!-- intercept-url=/j_spring_security_check: By default, spring auto generates and configures a UsernamePasswordAuthenticationFilter bean. 
+    						This filter, by default, responds to the URL /j_spring_security_check when processing a login POST from your web-form. 
+    						For username field it uses ‘j_username‘ and for password field it uses ‘j_password‘. 
+    	--&gt;
+    	&lt;security:intercept-url pattern="/j_spring_security_check" access="permitAll" /&gt;
+        &lt;security:intercept-url pattern="/springmvc/login" access="permitAll" /&gt;
+        &lt;security:intercept-url pattern="/springmvc/logout" access="permitAll" /&gt;
+        &lt;security:intercept-url pattern="/springmvc/accessdenied" access="permitAll" /&gt;
+        &lt;security:intercept-url pattern="/**" access="hasRole('ROLE_USER')" /&gt;
+        &lt;security:form-login login-page="/springmvc/login" default-target-url="/springmvc/homepage" authentication-failure-url="/springmvc/accessdenied" /&gt;
+        &lt;security:logout logout-success-url="/springmvc/logout" /&gt;
+    &lt;/security:http&gt;
+ 
+ &lt;!-- 
+ 	  Authentication Providers for Form Login:
+ 	  below user-service hardcoded the username and password (root/root) in this xml file itself
+ 	  In realtime application this is going to be some user service fetching data from remote database 
+  --&gt;
+    &lt;security:authentication-manager alias="authenticationManager"&gt;
+        &lt;security:authentication-provider&gt;
+            &lt;security:user-service&gt;
+                &lt;security:user name="root" password="root" authorities="ROLE_USER" /&gt;
+                &lt;!-- Below is the way to check username/password from remote database. It is commented out now --&gt;
+                &lt;!-- &lt;security:jdbc-user-service data-source-ref="dataSource" /&gt; --&gt;
+            &lt;/security:user-service&gt;
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+ 
+ &lt;!-- ADD THE DATASOURCES HERE --&gt;
+ 
+&lt;/beans:beans&gt;
+</code></pre>
+
