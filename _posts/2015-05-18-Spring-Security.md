@@ -352,24 +352,123 @@ pageEncoding="ISO-8859-1"%&gt;
 
   * **denied.jsp**
   
-<pre class="prettyprint highlight"><code class="language-jsp" data-lang="jsp">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<html>
-    <body>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%&gt;
+&lt;html&gt;
+    &lt;body&gt;
      
-        <h1 id="banner">Unauthorized Access !!</h1>
+        &lt;h1 id="banner"&gt;Unauthorized Access !!&lt;/h1&gt;
      
-        <hr />
+        &lt;hr /&gt;
      
-        <c:if test="${not empty error}">
-            <div style="color:red">
-                Invalid Username/password !!<br />
+        &lt;c:if test="${not empty error}"&gt;
+            &lt;div style="color:red"&gt;
+                Invalid Username/password !!&lt;br /&gt;
                 Caused : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
-            </div>
-        </c:if>
+            &lt;/div&gt;
+        &lt;/c:if&gt;
      
-        <p class="message">Access denied!</p>
-        <a href="login">Go back to login page</a>
-    </body>
-</html>
+        &lt;p class="message"&gt;Access denied!&lt;/p&gt;
+        &lt;a href="login"&gt;Go back to login page&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
+
+
+  * **helloworld.jsp**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
+&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+&lt;title&gt;Hello World title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;a href="&lt;c:url value="logout" /&gt;" &gt; Logout&lt;/a&gt;
+	&lt;center&gt;
+		&lt;h2&gt;Hello World&lt;/h2&gt;
+		&lt;h3&gt;
+			${message} ${name}
+		&lt;/h3&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+ * **LoginController.java** controls login,logout and denied request and **HelloWorldController.java** controls hello world request
+
+  * **LoginController.java**
+  
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.springmvc.controller;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+//Below annotation is used to mark this class as controller.
+//<context:component-scan base-package="com.ashish.springmvc.controller" /> is declared
+//in mvc-applicationContext.xml file to scan controller in com.ashish.springmvc.controller package
+@Controller
+public class LoginController {
+	private static final Log log = LogFactory.getLog(LoginController.class);
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView login(ModelMap model) {
+		log.info("Going login page got called");
+		ModelAndView mv = new ModelAndView("login");
+		return mv;
+    }
+ 
+    @RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
+    public String loginerror(ModelMap model) {
+        model.addAttribute("error", "true");
+        return "denied";
+    }
+ 
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(ModelMap model) {
+        return "logout";
+    }
+}
+
+</code></pre>
+
+  * **HelloWorldController.java**
+
+ <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+ 
+@Controller
+public class HelloWorldController {
+	String message = "Welcome to Spring MVC!";
+ 
+	@RequestMapping("/hello")
+	public ModelAndView showMessage(
+			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
+		System.out.println("in controller");
+ 
+		ModelAndView mv = new ModelAndView("helloworld");
+		mv.addObject("message", message);
+		mv.addObject("name", name);
+		return mv;
+	}
+}
+
+</code></pre>
+  
