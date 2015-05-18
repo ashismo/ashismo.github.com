@@ -295,7 +295,7 @@ pageEncoding="ISO-8859-1"%&gt;
 
  * **login.jsp, logout.jsp, denied.jsp, helloworld.jsp** files are created inside WEB-INF/views folder
  * **login.jsp**
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+<pre class="prettyprint highlight"><code class="language-html" data-lang="html">
 &lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
 &lt;%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %&gt;
 &lt;%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %&gt;
