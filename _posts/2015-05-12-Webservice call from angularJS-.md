@@ -77,3 +77,32 @@ The Objective of this blog is to call GET and POST RESTful webservice.
 	&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
+ * **employee.js**: GET and POST RESTful webservice call is here. Place this file under **WebContent/angularjs** folder
+ 
+<pre class="prettyprint highlight"><code class="language-javascript" data-lang="javascript">
+/*
+ * In this below example, the GET webservice got called inside the controller
+ */
+var empRecordAppCtrl = angular.module('empRecordApp', []);
+
+empRecordAppCtrl.controller('getEmployee', function($scope, $http) {
+    $http.get("http://localhost:8080/angularjs/rest/hello/getEmployee/123")
+	    .success(function(response) {
+	    	$scope.employeeData = response;
+	    });
+});
+
+
+/*
+ * In this below example, the POST webservice got called inside the controller
+ */
+
+empRecordAppCtrl.controller('getSalary', function($scope, $http) {
+    $http.post("http://localhost:8080/angularjs/rest/hello/getSalary", {empId:'123'})
+    .success(function(response) {
+    	$scope.employeeData = response;
+    });
+});
+
+</code></pre>
