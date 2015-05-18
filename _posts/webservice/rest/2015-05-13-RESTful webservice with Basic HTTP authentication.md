@@ -25,6 +25,8 @@ Write a restful webservice that expectes authentication token in the header of t
 
 ## Steps to write a code
 
+Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/webservices/RESTfulHTTPAuthentication){:target="_blank"}
+
 #### Create a RESTful project
 
 Good to learn the RESTful web service is to download a small [my project](){:target="_blank"} and check the pom.xml, web.xml, java file details as mentioned below
