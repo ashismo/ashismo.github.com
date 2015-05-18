@@ -80,9 +80,9 @@ The Objective of this blog is to call GET and POST RESTful webservice.
 
  * **employee.js**: GET and POST RESTful webservice call is here. Place this file under **WebContent/angularjs** folder
  
-<pre class="prettyprint highlight"><code class="language-javascript" data-lang="javascript">
+<pre class="prettyprint highlight"><code class="language-js" data-lang="js">
 /*
- * In this below example, the GET webservice got called inside the controller
+ * In this below example, the GET webservice got called
  */
 var empRecordAppCtrl = angular.module('empRecordApp', []);
 
@@ -95,7 +95,7 @@ empRecordAppCtrl.controller('getEmployee', function($scope, $http) {
 
 
 /*
- * In this below example, the POST webservice got called inside the controller
+ * In this below example, the POST webservice got called
  */
 
 empRecordAppCtrl.controller('getSalary', function($scope, $http) {
@@ -106,3 +106,6 @@ empRecordAppCtrl.controller('getSalary', function($scope, $http) {
 });
 
 </code></pre>
+
+ * Below is the screenshot of the application
+ <img src="https://cloud.githubusercontent.com/assets/11231867/7682182/cb2287ae-fd93-11e4-8e2f-2f854db24542.png"/>
