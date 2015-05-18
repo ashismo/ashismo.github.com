@@ -4,7 +4,7 @@ $(document).ready(function() {
         var scroll = $(this).scrollTop();
         var topDist = $(".navbar-default").position();
         if (scroll > topDist.top) {
-            $('nav').css({"position":"fixed","top":"0"});
+            $('nav').fadeIn().css({"position":"fixed","top":"0"});
         } else {
             $('nav').css({"position":"static","top":"auto"});
         }
