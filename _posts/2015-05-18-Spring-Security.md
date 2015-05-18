@@ -270,3 +270,58 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd"&gt;
 &lt;/beans:beans&gt;
 </code></pre>
 
+* **index.jsp**: This is welcome file as configured in web.xml
+<pre class="prettyprint highlight"><code class="language-jsp" data-lang="jsp">
+&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ 
+pageEncoding="ISO-8859-1"%&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
+&lt;title&gt;Spring 4 MVC - HelloWorld Index Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+	&lt;center&gt;
+		&lt;h2&gt;Hello World&lt;/h2&gt;
+		&lt;h3&gt;
+			&lt;a href="springmvc/hello?name=Ashish"&gt;Click Here&lt;/a&gt;
+		&lt;/h3&gt;
+	&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+ * **login.jsp, logout.jsp, denied.jsp, helloworld.jsp** files are created inside WEB-INF/views folder
+ * **login.jsp**
+<pre class="prettyprint highlight"><code class="language-jsp" data-lang="jsp">
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;
+&lt;%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %&gt;
+&lt;%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %&gt;
+ 
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1 id="banner"&gt;Login to Security Demo&lt;/h1&gt; 
+        &lt;form name="f" action="&lt;c:url value='/j_spring_security_check'/&gt;"
+                    method="POST"&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Username:&lt;/td&gt;
+                    &lt;td&gt;&lt;input type='text' name='j_username' /&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Password:&lt;/td&gt;
+                    &lt;td&gt;&lt;input type='password' name='j_password'&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2"&gt;&nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan='2'&gt;&lt;input name="submit" type="submit"&gt;&nbsp;&lt;input name="reset" type="reset"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
