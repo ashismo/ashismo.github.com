@@ -26,6 +26,7 @@ The Objective of this blog is to call GET and POST RESTful webservice.
  * Maven 2.2.x
  * Eclipse for J2EE
  
- ## Steps to write code
+## Steps to write code
  
- 
+
+ * Write [GET and POST RESTful webservices](/java-web%20service/2015/05/12/RESTful%20webservice/){:target="_block"} from my another blog
