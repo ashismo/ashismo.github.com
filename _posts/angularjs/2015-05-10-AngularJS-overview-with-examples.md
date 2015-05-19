@@ -150,6 +150,8 @@ Defines an AngularJS click event
 Defines condition
 
 Example of ** ng-show/ng-hide, ng-click, ng-if **
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;body&gt;
 &lt;div ng-app="myUserCtrlApp" ng-controller="personCtrl"&gt;
  &lt;div ng-if="displayUser"&gt;
@@ -180,7 +182,6 @@ app.controller('personCtrl', function($scope) {
 &lt;/script&gt; 
 
 &lt;/body&gt;
-
 </code></pre>
 
 **snapshot**  
