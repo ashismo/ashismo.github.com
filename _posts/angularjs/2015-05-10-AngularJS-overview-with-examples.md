@@ -17,7 +17,52 @@ AngularJS
  * is the cross browser compliant
  * helps to write the client side code in a clean MVC way
  
-## ng-directives
+## Write your first AngularJS application
+
+AngularJS application has two major parts called **modules** and **controllers**
+**Module(ng-app)** defines the Angular js application
+**Controller(ng-controller)** controls AngularJS application
+
+**Code snippet** and **output** given below
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;Try to change the name&lt;/p&gt;
+
+&lt;div ng-app="angularJSApp" ng-controller="agularJSController"&gt;
+
+First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br/&gt;
+Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br/&gt;
+&lt;br/&gt;
+Full Name: {{firstName + " " + lastName}}
+
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module('angularJSApp', []);  // This is angular js module
+  app.controller('agularJSController', function($scope) { // This is angular js controller
+      $scope.firstName= 'Ashish';
+      $scope.lastName= 'Mondal';
+ });
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+</code></pre>
+
+**Output** of the above code
+<img src="https://cloud.githubusercontent.com/assets/11231867/7700093/e47cb3f4-fe39-11e4-8133-390319cd9a43.png"/>
+
+
+## Know different ng-directives...
 
 ### ng-app, ng-model, ng-bind
 
