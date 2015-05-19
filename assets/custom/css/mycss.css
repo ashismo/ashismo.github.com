@@ -81,3 +81,13 @@ li {
 img {
 	border: 1px solid black;
 }
+
+/*.navbar-collapse {
+	background-color:#D3D3D3;
+	color: white;
+	font-weight: bold;
+}*/
+
+#wrap {
+	background-color:#FFFFF0;
+}
