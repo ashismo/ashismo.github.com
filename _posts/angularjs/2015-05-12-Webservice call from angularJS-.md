@@ -28,7 +28,7 @@ The Objective of this blog is to call GET and POST RESTful webservice.
  
 ## Steps to write code
 
-Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/angular/AngularJS-RESTfulWS){:target="_blank"}
+Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/angularjs/AngularJS-RESTfulWS){:target="_blank"}
  
 
  * Write [GET and POST RESTful webservices](/java-web%20service/2015/05/12/RESTful%20webservice/){:target="_block"} from my another blog
