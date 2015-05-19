@@ -135,3 +135,54 @@ Binds AngularJS application data to the disabled attribute of HTML elements
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7699523/1cdcec4a-fe36-11e4-9809-047f3840b569.png"/>
 
+### ng-show/ng-hide, ng-click, ng-if
+
+#### ng-show/ng-hide
+
+Shows or hides an HTML element
+
+#### ng-click
+
+Defines an AngularJS click event
+
+#### ng-if
+
+Defines condition
+
+Example of ** ng-show/ng-hide, ng-click, ng-if **
+&lt;body&gt;
+&lt;div ng-app="myUserCtrlApp" ng-controller="personCtrl"&gt;
+ &lt;div ng-if="displayUser"&gt;
+   &lt;button ng-click="toggleUserDtls()"&gt;Display user&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;div ng-if="!displayUser"&gt;
+   &lt;button ng-click="toggleUserDtls()"&gt;Hide user&lt;/button&gt;
+ &lt;/div&gt;
+
+ &lt;p ng-hide="displayUser"&gt;
+  First Name: &lt;input type=text ng-model="fName"&gt;&lt;br&gt;
+  Last Name: &lt;input type=text ng-model="lName"&gt;&lt;br&gt;&lt;br&gt;
+  Full Name: {{fName + " " + lName}}
+ &lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+var app = angular.module('myUserCtrlApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.fName = "Ashish",
+    $scope.lName = "Mondal"
+    $scope.displayUser = false;
+    $scope.toggleUserDtls = function() {
+        $scope.displayUser = !$scope.displayUser;
+    }
+});
+&lt;/script&gt; 
+
+&lt;/body&gt;
+
+</code></pre>
+
+**snapshot**  
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7699626/cdadb824-fe36-11e4-8e8b-03346517aeef.png"/>
