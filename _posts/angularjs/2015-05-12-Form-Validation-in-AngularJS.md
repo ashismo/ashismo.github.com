@@ -12,47 +12,46 @@ In the below example **$dirty,$invalid** properties are used.
 **$dirty** means user has interacted with the field, and **$invalid** means the field contains invalid
 
 <pre class="prettyprint highlight"><code class="language-html" data-lang="html"> 
-<!DOCTYPE html>
-<html ng-app="formValidation">
-<head>
-<meta charset="UTF-8">
-<title>Integrate HTML5 and Angular JS</title>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-</head>
-<body>
-	<form ng-app=""
+&lt;!DOCTYPE html&gt;
+&lt;html ng-app="formValidation"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Integrate HTML5 and Angular JS&lt;/title&gt;
+&lt;script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;form ng-app=""
 		ng-init="data={'user':'ashish', 'email':'amo@gmail.com'}"
-		name="myForm" novalidate>
+		name="myForm" novalidate&gt;
 
-		<p>
-			Username:<br> <input type="text" name="user"
-				ng-model="data.user" required> <span style="color: red"
-				ng-show="myForm.user.$dirty && myForm.user.$invalid"> <span
-				ng-show="myForm.user.$error.required">Username is required.</span>
-			</span>
-		</p>
+		&lt;p&gt;
+			Username:&lt;br&gt; &lt;input type="text" name="user"
+				ng-model="data.user" required&gt; &lt;span style="color: red"
+				ng-show="myForm.user.$dirty && myForm.user.$invalid"&gt; &lt;span
+				ng-show="myForm.user.$error.required"&gt;Username is required.&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
 
-		<p>
-			Email:<br> <input type="email" name="email"
-				ng-model="data.email" required> <span style="color: red"
-				ng-show="myForm.email.$dirty && myForm.email.$invalid"> <span
-				ng-show="myForm.email.$error.required">Email is required.</span> <span
-				ng-show="myForm.email.$error.email">Invalid email address.</span>
-			</span>
-		</p>
+		&lt;p&gt;
+			Email:&lt;br&gt; &lt;input type="email" name="email"
+				ng-model="data.email" required&gt; &lt;span style="color: red"
+				ng-show="myForm.email.$dirty && myForm.email.$invalid"&gt; &lt;span
+				ng-show="myForm.email.$error.required"&gt;Email is required.&lt;/span&gt; &lt;span
+				ng-show="myForm.email.$error.email"&gt;Invalid email address.&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
 
-		<p>
-			<input type="submit"
+		&lt;p&gt;
+			&lt;input type="submit"
 				ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
- myForm.email.$dirty && myForm.email.$invalid">
-		</p>
+ myForm.email.$dirty && myForm.email.$invalid"&gt;
+		&lt;/p&gt;
 
-	</form>
+	&lt;/form&gt;
 
-</body>
-</html>
-
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>  
 
 **Output**
