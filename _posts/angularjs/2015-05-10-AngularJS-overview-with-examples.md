@@ -62,7 +62,7 @@ Full Name: {{firstName + " " + lastName}}
 <img src="https://cloud.githubusercontent.com/assets/11231867/7700093/e47cb3f4-fe39-11e4-8133-390319cd9a43.png"/>
 
 
-## Know different ng-directives...
+## Know different types of ng-directives...
 
 ### ng-app, ng-model, ng-bind
 
