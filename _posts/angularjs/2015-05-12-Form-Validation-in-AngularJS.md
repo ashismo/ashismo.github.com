@@ -5,7 +5,7 @@ tags : [AngularJS Tutorial]
 weight: 15
 ---
 
-##Form Validation using AngularJS
+## Form Validation using AngularJS
 
 Below example validates username and email id.
 In the below example **$dirty,$invalid** properties are used. 
