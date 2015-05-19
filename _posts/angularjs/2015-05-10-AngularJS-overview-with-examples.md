@@ -67,5 +67,39 @@ Example of **ng-app, ng-model, ng-bind**
 &lt;/html&gt;
 </code></pre>
 
-**snapshot**
+**snapshot**  
+
 <img src="https://cloud.githubusercontent.com/assets/11231867/7699334/c8bc8ce8-fe34-11e4-9a92-2ccb7c57b655.png"/>
+
+
+### ng-bind, ng-init, ng-repeat
+
+#### ng-bind
+
+Binds application data to the HTML view
+
+#### ng-init
+
+defines **initial values** for an AngularJS application
+
+#### ng-repeat
+
+repeats an HTML element
+
+Example of ** ng-bind, ng-init, ng-repeat**
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;div ng-app="" ng-init="names=['Ashish','Dona','Ujan']"&gt;
+  &lt;p&gt;Looping with ng-repeat:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat="x in names"&gt;
+      Name: {{ x }} &lt;br/&gt;
+      Alternative way: &lt;span ng-bind="x"/&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+**snapshot**  
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7699459/aab42124-fe35-11e4-9564-6fd779ee9e58.png"/>
+
