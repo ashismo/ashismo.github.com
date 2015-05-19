@@ -87,7 +87,9 @@ Defines **initial values** for an AngularJS application
 Repeats an HTML element
 
 Example of ** ng-bind, ng-init, ng-repeat**
+
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
 &lt;div ng-app="" ng-init="names=['Ashish','Dona','Ujan']"&gt;
   &lt;p&gt;Looping with ng-repeat:&lt;/p&gt;
   &lt;ul&gt;
