@@ -80,11 +80,11 @@ Binds application data to the HTML view
 
 #### ng-init
 
-defines **initial values** for an AngularJS application
+Defines **initial values** for an AngularJS application
 
 #### ng-repeat
 
-repeats an HTML element
+Repeats an HTML element
 
 Example of ** ng-bind, ng-init, ng-repeat**
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
@@ -102,4 +102,36 @@ Example of ** ng-bind, ng-init, ng-repeat**
 **snapshot**  
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7699459/aab42124-fe35-11e4-9564-6fd779ee9e58.png"/>
+
+
+### ng-disabled
+
+Binds AngularJS application data to the disabled attribute of HTML elements
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div ng-app="" ng-init="mySwitch=true"&gt;
+	&lt;p&gt;
+	&lt;button ng-disabled="mySwitch"&gt;Click Me!&lt;/button&gt;
+	&lt;/p&gt;
+	&lt;p&gt;
+	&lt;input type="checkbox" ng-model="mySwitch"/&gt;Button
+	&lt;/p&gt;
+	&lt;p&gt;
+	Button disabled: {{ mySwitch }}
+	&lt;/p&gt;
+&lt;/div&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+**snapshot**  
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7699523/1cdcec4a-fe36-11e4-9809-047f3840b569.png"/>
 
