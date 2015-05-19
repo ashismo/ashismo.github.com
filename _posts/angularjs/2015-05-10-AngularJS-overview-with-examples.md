@@ -17,4 +17,55 @@ AngularJS
  * is the cross browser compliant
  * helps to write the client side code in a clean MVC way
  
- 
+## ng-directives
+
+### ng-app, ng-model, ng-bind
+
+#### ng-app
+
+Defines an AngularJS application
+
+
+ * This is root element of angularJS application
+ * This will auto-bootstrap (automatically initialize) the application when a web page is loaded
+ * can have a value (like ng-app="directiveExample "), to connect code modules
+  
+#### ng-model
+
+Binds the value of HTML controls (input, select, textarea) to application data.
+
+
+ * Provide type validation for application data (number, email, required).
+ * Provide status for application data (invalid, dirty, touched, error).
+ * Provide CSS classes for HTML elements
+ * Bind HTML elements to HTML forms
+
+#### ng-bind
+
+Binds application data to the HTML view
+
+Example of **ng-app, ng-model, ng-bind**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div ng-app="directiveExample"&gt;
+		&lt;p&gt;Input something in the input box:&lt;/p&gt;
+		&lt;p&gt;
+			Name: &lt;input type="text" ng-model="name"&gt;
+		&lt;/p&gt;
+		ng-bind example:
+		&lt;p ng-bind="name"&gt;&lt;/p&gt;
+		An alternative to ng-bind is: {{name}}
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+**snapshot**
+<img src="https://cloud.githubusercontent.com/assets/11231867/7699334/c8bc8ce8-fe34-11e4-9a92-2ccb7c57b655.png"/>
