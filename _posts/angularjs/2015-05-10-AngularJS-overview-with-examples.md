@@ -234,3 +234,61 @@ app.controller('personCtrl', function($scope) {
 **snapshot**  
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7699626/cdadb824-fe36-11e4-8e8b-03346517aeef.png"/>
+
+## AngularJS filters
+
+AngularJS filters are currency, filter, lowercase, orderBy, uppercase
+
+**currency: ** Format a number to a currency format
+**filter: ** Select a subset of items from an array
+**lowercase: ** Format a string to lower case
+**orderBy: ** Orders an array by an expression
+**uppercase: ** Format a string to upper case
+
+Below is the example of filter implementation
+
+**filter.html**
+
+Download and include **angular.js** as shown in the code snippet. Write your own js file called **controller.js**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml"> 
+&lt;!DOCTYPE html&gt;
+&lt;html ng-app="myFilterApp"&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;script type="text/javascript" src="lib/angular.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/controller.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;div ng-controller="myFilterController"&gt;
+	
+    Enter principal amount : &lt;input type="text"  ng-model="principal" placeholder="Principle Amount" maxlength="10" autocomplete="off"/&gt; &lt;br/&gt;
+    Enter rate of interest : &lt;input type="text"  ng-model="rate" placeholder="Rate of Interest" maxlength="2" autocomplete="off"/&gt;&lt;br/&gt;
+    Enter Tenure of the loan (Years) : &lt;input type="text"  ng-model="duration" placeholder="Tenure of the Loan" maxlength="2" autocomplete="off"/&gt;&lt;br/&gt;
+    &lt;br/&gt;&lt;br/&gt;&lt;span&gt;Interest amount using ng-bind&lt;/span&gt;
+    &lt;h3 ng-bind="((principal * rate * duration) /100) | currency"&gt;&lt;/h3&gt;
+    &lt;h2&gt;Interest amount is {{((principal * rate * duration) /100) | currency}}&lt;/h2&gt;
+	
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+
+</code></pre>  
+
+**controller.js**
+
+<pre class="prettyprint highlight"><code class="language-js" data-lang="js"> 
+var myFilterController = angular.module('myFilterApp', []);
+myFilterController.controller('myFilterController', function($scope) {
+	$scope.principal = '';
+	$scope.rate='';
+	$scope.duration='';
+	$scope.interest = $scope.principal * ($scope.rate/100) * $scope.duration;
+  }); 
+</code></pre>  
+
+**Output**
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7700282/36d69c4a-fe3b-11e4-987a-28c322dba086.png"/>
