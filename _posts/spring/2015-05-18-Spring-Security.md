@@ -11,10 +11,10 @@ Spring security is a Java/J2EE framework that provides authentication and author
 Objectives of this project are 
 
 
- * authenticate and autorize all incoming requests (Hardcoded user name/password is root/root)
+ * authenticate and authorize all incoming requests (Hard coded user name/password is root/root)
  * navigate to welcome jsp via spring security login page
  * on successful login, display welcome page with a link
- * on clicing the URL, you will get navigated to another page.
+ * on clicking the URL, you will get navigated to another page.
  * create customize login page (by default spring security framework provides login page)
 
 ## Required Software
@@ -26,7 +26,9 @@ Objectives of this project are
   
 ## Steps to write code
 
-The content of pom.xml, web.xml, security xml, jsp and controller classes are given below. Go through the inline code comments to understand better.
+Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringSecurity){:target="_blank"} and click here to get the [zip file](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringSecurity.zip){:target="_blank"}
+
+The content of pom.xml, web.xml, security xml, jsp and controller classes are given below. Go through the in-line code comments to understand better.
 
 * **pom.xml**
 
