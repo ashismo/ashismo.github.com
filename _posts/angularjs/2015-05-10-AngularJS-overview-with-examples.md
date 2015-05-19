@@ -292,3 +292,63 @@ myFilterController.controller('myFilterController', function($scope) {
 **Output**
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7700282/36d69c4a-fe3b-11e4-987a-28c322dba086.png"/>
+
+
+## Dependency Injection
+
+Following are the core component can be injected into each other as dependencies
+
+
+ * Value
+ * Factory
+ * Service
+ * Provider
+ * Constants
+
+#### Value
+
+Value is simple javascript object and it is used to pass values to controller during config phase
+
+<pre class="prettyprint highlight"><code class="language-js" data-lang="js"> 
+//define a module
+var mainApp = angular.module("mainApp", []);
+//create a value object as "defaultInput" and pass it a data.
+mainApp.value("defaultInput", 5);
+...
+//inject the value in the controller using its name "defaultInput"
+mainApp.controller('CalcController', function($scope, CalcService, defaultInput) {
+      $scope.number = defaultInput;
+      $scope.result = CalcService.square($scope.number);
+
+      $scope.square = function() {
+          $scope.result = CalcService.square($scope.number);
+      }
+});
+
+</code></pre>  
+
+
+#### Factory
+
+factory is a function which is used to return value. It creates value on demand whenever a service or controller requires. It normally uses a factory function to calculate and return the value
+
+<pre class="prettyprint highlight"><code class="language-js" data-lang="js"> 
+//define a module
+var mainApp = angular.module("mainApp", []);
+//create a factory "MathService" which provides a method multiply to return multiplication of two numbers
+mainApp.factory('MathService', function() {     
+   var factory = {};  
+   factory.multiply = function(a, b) {
+      return a * b 
+   }
+   return factory;
+}); 
+
+//inject the factory "MathService" in a service to utilize the multiply method of factory.
+mainApp.service('CalcService', function(MathService){
+      this.square = function(a) { 
+         return MathService.multiply(a,a); 
+      }
+});
+...
+</code></pre>  
