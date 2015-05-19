@@ -237,13 +237,12 @@ app.controller('personCtrl', function($scope) {
 
 ## AngularJS filters
 
-AngularJS filters are currency, filter, lowercase, orderBy, uppercase
-
-**currency: ** Format a number to a currency format
-**filter: ** Select a subset of items from an array
-**lowercase: ** Format a string to lower case
-**orderBy: ** Orders an array by an expression
-**uppercase: ** Format a string to upper case
+AngularJS filters are currency, filter, lowercase, orderBy, uppercase  
+**currency:** Format a number to a currency format
+**filter:** Select a subset of items from an array
+**lowercase:** Format a string to lower case
+**orderBy:** Orders an array by an expression
+**uppercase:** Format a string to upper case
 
 Below is the example of filter implementation
 
