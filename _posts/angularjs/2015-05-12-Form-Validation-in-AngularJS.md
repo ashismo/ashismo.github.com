@@ -13,7 +13,7 @@ In the below example **$dirty,$invalid** properties are used.
 
 <pre class="prettyprint highlight"><code class="language-html" data-lang="html"> 
 &lt;!DOCTYPE html&gt;
-&lt;html ng-app="formValidation"&gt;
+&lt;html data-ng-app="formValidation"&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"&gt;
 &lt;title&gt;Integrate HTML5 and Angular JS&lt;/title&gt;
@@ -21,7 +21,7 @@ In the below example **$dirty,$invalid** properties are used.
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;form ng-app=""
+	&lt;form data-ng-app=""
 		ng-init="data={'user':'ashish', 'email':'amo@gmail.com'}"
 		name="myForm" novalidate&gt;
 
