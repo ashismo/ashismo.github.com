@@ -42,8 +42,13 @@ UDDI is a platform-independent framework for describing services, discovering bu
 
 #### WSDL - Web Services Description Language
 
+WSDL stands for Web Services Description Language written in XML.
+**WSDL:**
 
- 
-##### How can UDDI be Used?
+ * describes the webservice
+ * describes how to access them
+ * is also used to locate Web services
+ * is W3C recommendation
 
+##### Sample WSDL Document
 
