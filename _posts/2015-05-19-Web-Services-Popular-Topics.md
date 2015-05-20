@@ -125,3 +125,9 @@ Go through the inline comments to understand WSDL components
  * **JAX-WS** implementation comes by default with JDK. If you need WS-security, WS-Policy etc then you need to go for **CXF or AXIS2 or Metro**
  * **CXF** has better integration with Spring and other frameworks
  * **AXIS2** supports multiple languages like Java, C, C++ etc.
+
+### What is endpoints? 
+
+## What is stub and skeleton?
+
+**Skeleton** belongs to service provider side and **Stub** belongs to client side. At lower level the **Stub** and **Skeleton** communicates with each other. In both the sides (server and client) we generate skeleton and Stub from the WSDL. 
