@@ -11,10 +11,10 @@ weight: 100
  * Web services are client and server applications that communicate over the World Wide Web's (WWW) HyperText Transfer Protocol (HTTP).
  * Two applications on two different platforms can communicate via web services.
  * Webservices are broadly classified into **RESTful** and **SOAP** web services.
-   * REST stands for REpresentational State Transfer
    * SOAP stands for Simple Object Access Protocol
+   * REST stands for REpresentational State Transfer
   
-## SOAP
+## SOAP (Simple Object Access Protocol)
 
 ### Core components of SOAP
 
@@ -39,4 +39,11 @@ UDDI is a platform-independent framework for describing services, discovering bu
 ##### How can UDDI be Used?
 
 **Airlines** can register their services into an UDDI directory and **Travel agencies** can search UDDI to find airline's reservation interfaces. If the interface found, the agency can communicate with the service over SOAP protocol.
+
+#### WSDL - Web Services Description Language
+
+
+ 
+##### How can UDDI be Used?
+
 
