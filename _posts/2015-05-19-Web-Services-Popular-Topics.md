@@ -5,7 +5,7 @@ tags : [Java/J2EE popular topics]
 weight: 100
 ---
 
-### What is web services?
+## What is web services?
 
  * A Web service is a method of communication between two electronic devices over a network. 
  * Web services are client and server applications that communicate over the World Wide Web's (WWW) HyperText Transfer Protocol (HTTP).
@@ -14,9 +14,9 @@ weight: 100
    * REST stands for REpresentational State Transfer
    * SOAP stands for Simple Object Access Protocol
   
-### SOAP
+## SOAP
 
-#### Core components of SOAP
+### Core components of SOAP
 
 Core components of SOAP webservices are
 
@@ -25,7 +25,7 @@ Core components of SOAP webservices are
 * WSDL - Web Services Description Language
 * XSD - XML Schema Definition
 
-##### UDDI - Universal Description, Discovery and Integration 
+#### UDDI - Universal Description, Discovery and Integration 
 
 UDDI is a platform-independent framework for describing services, discovering businesses, and integrating business services by using the Internet.
 
@@ -36,7 +36,7 @@ UDDI is a platform-independent framework for describing services, discovering bu
  * UDDI communicates via SOAP
  * UDDI is built into the Microsoft .NET platform and supported by all major platform and software providers like Dell, Fujitsu, HP, Hitachi, IBM, Intel, Microsoft, Oracle, SAP etc.
  
-###### How can UDDI be Used?
+##### How can UDDI be Used?
 
 **Airlines** can register their services into an UDDI directory and **Travel agencies** can search UDDI to find airline's reservation interfaces. If the interface found, the agency can communicate with the service over SOAP protocol.
 
