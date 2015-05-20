@@ -128,6 +128,8 @@ Go through the inline comments to understand WSDL components
 
 ### What is endpoints? 
 
+
+
 ### What is stub and skeleton?
 
 **Skeleton** belongs to service provider side and **Stub** belongs to client side. At lower level the **Stub** and **Skeleton** communicates with each other. In both the sides (server and client) we generate skeleton and Stub from the WSDL. 
