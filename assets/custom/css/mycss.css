@@ -9,15 +9,17 @@ h2 {
 }
 
 h3 {
-	color: blue
+	color: blue;
+	font-weight: bold;
 }
 
 h4 {
-	color: green
+	color: green;
+	font-weight: bold;
 }
 
 h5 {
-	color: 333333;
+	color: #A52A2A;
 	font-weight: bold;
 }
 thead {
