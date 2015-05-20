@@ -53,22 +53,31 @@ WSDL stands for Web Services Description Language written in XML.
 ##### Sample WSDL Document
 
 Below wsdl file provides a public function called **sayHelloWorld**. It takes string as input and string as output.
-For example, if you pass "This is my first webservices program" as input then the output will be "Hello World! This is my first webservices program"
+For example, if you pass "This is my first webservices program" as input then the output will be "Hello World! This is my first webservices program". 
 
+Go through the inline comments to understand WSDL components  
+
+**Web Service Name:** HelloWorldService
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;definitions name="HelloWorldService"
 	targetNamespace="http://www.examples.com/wsdl/HelloService.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
 
+	&lt;!-- Request takes text as input. The type of the text is built-in String --&gt;
 	&lt;message name="Request"&gt;
-		&lt;part name="firstName" type="xsd:string" /&gt;
+		&lt;part name="text" type="xsd:string" /&gt;
 	&lt;/message&gt;
 
+	&lt;!-- Response produces output in message variable. The type of the message is built-in String --&gt;
 	&lt;message name="Response"&gt;
-		&lt;part name="greeting" type="xsd:string" /&gt;
+		&lt;part name="message" type="xsd:string" /&gt;
 	&lt;/message&gt;
 
+	&lt;!-- portType is an abstract set of operations supported by one or more endpoints.
+		 sayHelloWorld operation is a part HelloWorld_PortType portType and takes Request and produces Response 
+		 HelloWorld_PortType portType is binding with HelloWorld_Binding
+	 --&gt;
 	&lt;portType name="HelloWorld_PortType"&gt;
 		&lt;operation name="sayHelloWorld"&gt;
 			&lt;input message="tns:Request" /&gt;
@@ -76,7 +85,10 @@ For example, if you pass "This is my first webservices program" as input then th
 		&lt;/operation&gt;
 	&lt;/portType&gt;
 
-	&lt;binding name="Hello_Binding" type="tns:HelloWorld_PortType"&gt;
+	&lt;!-- binding defines the transport protocol as HTTP and message style as RPC or DOCUMENT --&gt;
+	&lt;!-- If the WSDL is RPC type then xsd file won't be imported but for DOCUMENT type, the xsd file will be imported in wsdl file --&gt;
+	&lt;!-- RPC style message is tightly coupled where as DOCUMENT style message is loosely coupled and can be validated against schema --&gt;
+	&lt;binding name="HelloWorld_Binding" type="tns:HelloWorld_PortType"&gt;
 		&lt;soap:binding style="rpc"
 			transport="http://schemas.xmlsoap.org/soap/http" /&gt;
 		&lt;operation name="sayHelloWorld"&gt;
@@ -93,6 +105,7 @@ For example, if you pass "This is my first webservices program" as input then th
 		&lt;/operation&gt;
 	&lt;/binding&gt;
 
+	&lt;!-- Service is a collection of related endpoints. It says the webservice is available at http://www.ashismo.github.com/sayHelloWorld/ --&gt;
 	&lt;service name="HelloWorld_Service"&gt;
 		&lt;documentation&gt;WSDL File for HelloWorldService&lt;/documentation&gt;
 		&lt;port binding="tns:HelloWorld_Binding" name="HelloWorld_Port"&gt;
@@ -101,4 +114,3 @@ For example, if you pass "This is my first webservices program" as input then th
 	&lt;/service&gt;
 &lt;/definitions&gt;
 </code></pre>
-
