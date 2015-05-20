@@ -117,3 +117,11 @@ Go through the inline comments to understand WSDL components
 &lt;/definitions&gt;
 
 </code></pre>
+
+### What is the difference between JAX-WS, AXIS2 and CXF?
+
+
+ * **JAX-WS** is Java specification for SOAP based web services.**CXF or AXIS2** are the implementation of **JAX-WS** by Apache.
+ * **JAX-WS** implementation comes by default with JDK. If you need WS-security, WS-Policy etc then you need to go for **CXF or AXIS2 or Metro**
+ * **CXF** has better integration with Spring and other frameworks
+ * **AXIS2** supports multiple languages like Java, C, C++ etc.
