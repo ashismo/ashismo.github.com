@@ -128,6 +128,10 @@ Go through the inline comments to understand WSDL components
 
 ### What is endpoints? 
 
-## What is stub and skeleton?
+### What is stub and skeleton?
 
 **Skeleton** belongs to service provider side and **Stub** belongs to client side. At lower level the **Stub** and **Skeleton** communicates with each other. In both the sides (server and client) we generate skeleton and Stub from the WSDL. 
+### Webservice design approach (What is bottom up and top down approach?)
+
+**Bottom up approch:** Service code is written code then we generate the WSDL from it.
+**Top down approach:** WSDL is created first then the service code will be written
