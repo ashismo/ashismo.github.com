@@ -58,7 +58,9 @@ For example, if you pass "This is my first webservices program" as input then th
 Go through the inline comments to understand WSDL components  
 
 **Web Service Name:** HelloWorldService
+
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
 &lt;definitions name="HelloWorldService"
 	targetNamespace="http://www.examples.com/wsdl/HelloService.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
@@ -113,4 +115,5 @@ Go through the inline comments to understand WSDL components
 		&lt;/port&gt;
 	&lt;/service&gt;
 &lt;/definitions&gt;
+
 </code></pre>
