@@ -52,3 +52,53 @@ WSDL stands for Web Services Description Language written in XML.
 
 ##### Sample WSDL Document
 
+Below wsdl file provides a public function called **sayHelloWorld**. It takes string as input and string as output.
+For example, if you pass "This is my first webservices program" as input then the output will be "Hello World! This is my first webservices program"
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;definitions name="HelloWorldService"
+	targetNamespace="http://www.examples.com/wsdl/HelloService.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+
+	&lt;message name="Request"&gt;
+		&lt;part name="firstName" type="xsd:string" /&gt;
+	&lt;/message&gt;
+
+	&lt;message name="Response"&gt;
+		&lt;part name="greeting" type="xsd:string" /&gt;
+	&lt;/message&gt;
+
+	&lt;portType name="HelloWorld_PortType"&gt;
+		&lt;operation name="sayHelloWorld"&gt;
+			&lt;input message="tns:Request" /&gt;
+			&lt;output message="tns:Response" /&gt;
+		&lt;/operation&gt;
+	&lt;/portType&gt;
+
+	&lt;binding name="Hello_Binding" type="tns:HelloWorld_PortType"&gt;
+		&lt;soap:binding style="rpc"
+			transport="http://schemas.xmlsoap.org/soap/http" /&gt;
+		&lt;operation name="sayHelloWorld"&gt;
+			&lt;soap:operation soapAction="sayHelloWorld" /&gt;
+			&lt;input&gt;
+				&lt;soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:examples:helloworldservice" use="encoded" /&gt;
+			&lt;/input&gt;
+
+			&lt;output&gt;
+				&lt;soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:examples:helloworldservice" use="encoded" /&gt;
+			&lt;/output&gt;
+		&lt;/operation&gt;
+	&lt;/binding&gt;
+
+	&lt;service name="HelloWorld_Service"&gt;
+		&lt;documentation&gt;WSDL File for HelloWorldService&lt;/documentation&gt;
+		&lt;port binding="tns:HelloWorld_Binding" name="HelloWorld_Port"&gt;
+			&lt;soap:address location="http://www.ashismo.github.com/sayHelloWorld/" /&gt;
+		&lt;/port&gt;
+	&lt;/service&gt;
+&lt;/definitions&gt;
+</code></pre>
+
