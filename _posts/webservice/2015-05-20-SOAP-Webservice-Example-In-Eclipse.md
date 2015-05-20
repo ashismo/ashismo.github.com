@@ -56,3 +56,8 @@ public class HelloWorld {
 
  * After clicking start server,eclipse will open test web service API.With this test API,you can test your web service.
  
+## Issues you may face during setup
+
+SL NO | Issue | Solution
+:---: | :--- | :---
+1 | IWAB0014E Unexpected exception occurred. | Follow this URL:  http://stackoverflow.com/questions/28282734/iwab0014e-unexpected-exception-occurred
