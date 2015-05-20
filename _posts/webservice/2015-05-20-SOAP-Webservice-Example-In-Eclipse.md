@@ -45,9 +45,10 @@ public class HelloWorld {
  
  <img src="https://cloud.githubusercontent.com/assets/11231867/7726539/87546c66-ff20-11e4-9486-69b312d1515b.png"/>
 
- * Click Next and select the style as RPC/encoded as shown below
+ * Click Next and select the style as document/literal as shown below
  
- <img src="https://cloud.githubusercontent.com/assets/11231867/7726540/87607736-ff20-11e4-8e8c-f413dde71e00.png"/>
+ <img src="https://cloud.githubusercontent.com/assets/11231867/7726772/e0a3605a-ff21-11e4-8d06-8b0cc815da40.png"/>
+ <!--<img src="https://cloud.githubusercontent.com/assets/11231867/7726540/87607736-ff20-11e4-8e8c-f413dde71e00.png"/>-->
 
  * Click Next then click on **Start Server**
  
