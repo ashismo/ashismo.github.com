@@ -60,7 +60,11 @@ public class HelloWorld {
  * Another project,SOAPWebServicesClient will get automatically created as the client code.
  * Finally a web browser will get opened in the Eclipse for your testing as shown below
  <img src="https://cloud.githubusercontent.com/assets/11231867/7744573/3a25657e-ffc2-11e4-8a1a-cd399fbb4ae4.png"/>
- 
+
+## Sanity Testing of your Web Services
+
+Hit the following URL - <a href="http://localhost:8080/SOAPWebServices/services/HelloWorld?wsdl">http://localhost:8080/SOAPWebServices/services/HelloWorld?wsdl</a> from your browser. It will open the generated WSDL file. So your web services deployed properly.
+
 ## Issues you may face during setup
 
 SL NO | Issue | Solution
