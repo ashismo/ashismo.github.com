@@ -284,7 +284,7 @@ public class CustomLog4JAppender extends RollingFileAppender  {
 
 ## Steps to Integrate XML based Log4J
 
-Remove the **log4j.properties** file and create **log4j.xml** file at the same location with the below content
+Remove the **log4j.properties** file and create **log4j.xml** file at the same location with the below content. Go through the inline comments to understand the configuration
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
