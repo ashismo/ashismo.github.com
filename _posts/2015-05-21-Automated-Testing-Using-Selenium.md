@@ -1,6 +1,6 @@
 ---
 layout: post
-category : upcoming-Automated Testing Using Selenium Tool
+category : upcoming-Automated Testing
 tags : [Upcoming topics]
 weight: 100
 ---
