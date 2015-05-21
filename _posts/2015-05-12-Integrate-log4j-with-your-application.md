@@ -67,7 +67,7 @@ SL No | File Name | Purpose
 Content of each file is given below. Please go through the inline comments with the code snippets
 
 
- * **log4j.properties: ** log4j configuration is done here. Please go through the inline comments to understand the configuration
+ * **log4j.properties:** log4j configuration is done here. Please go through the inline comments to understand the configuration
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 ########################################################
@@ -125,8 +125,6 @@ log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
 log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
 
 
-
-
 ########################################################
 # Another Log file for another package
 ########################################################
@@ -138,10 +136,9 @@ log4j.appender.another.layout=org.apache.log4j.PatternLayout
 #Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
 ######
 log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
-
 </code></pre>
-  
-  
+
+
  * **Log4JIntegration:** Log level is set to **TRACE** so this class will print all logs.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
