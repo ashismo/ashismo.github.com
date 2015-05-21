@@ -25,7 +25,8 @@ This blog will help you to
 ## Steps to write the code
 
 
- * Create **dynamic web project** in eclipse and make sure **src/main/java** as the src directory of your project to support maven build. Axis2 Select Dynamic web module version as 2.5 during creation of the **dynamic web project**
+ * Create **dynamic web project** in eclipse and make sure **src/main/java** as the src directory of your project to support maven build. Axis2 Select Dynamic web module version as 2.5 during creation of the **dynamic web project**  
+ <img src="https://cloud.githubusercontent.com/assets/11231867/7744201/ef82a2b4-ffbe-11e4-87a5-fe83c57135e2.png"/>  
  * Create a package called **com.ashish.soap**
  * Create a simple java class called **HelloWorld** with the following content
 
