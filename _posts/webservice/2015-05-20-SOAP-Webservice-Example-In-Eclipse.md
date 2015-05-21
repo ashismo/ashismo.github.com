@@ -20,12 +20,12 @@ This blog will help you to
  * Eclipse with J2EE supports
  * JDK 1.7
  * Tocat 7
- * JAX-WS
+ * Axis2
  
 ## Steps to write the code
 
 
- * Create **dynamic web project** in eclipse and make sure **src/main/java** as the src directory of your project to support maven build
+ * Create **dynamic web project** in eclipse and make sure **src/main/java** as the src directory of your project to support maven build. Axis2 Select Dynamic web module version as 2.5 during creation of the **dynamic web project**
  * Create a package called **com.ashish.soap**
  * Create a simple java class called **HelloWorld** with the following content
 
@@ -43,7 +43,8 @@ public class HelloWorld {
  * Right click on the project->new->web service -> Clock on next
  * In service implementation text box fill **com.ashish.soap.HelloWorld** (fully qualified class name). Then move both the sliders to maximum level(i.e. Test service and Test Client level) as shown below
  
- <img src="https://cloud.githubusercontent.com/assets/11231867/7726539/87546c66-ff20-11e4-9486-69b312d1515b.png"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/7743401/06583abe-ffb8-11e4-8521-60db5a465ca3.png"/>
+ <!--img src="https://cloud.githubusercontent.com/assets/11231867/7726539/87546c66-ff20-11e4-9486-69b312d1515b.png"/-->
 
  * Click Next and select the style as document/literal as shown below
  
@@ -60,4 +61,4 @@ public class HelloWorld {
 
 SL NO | Issue | Solution
 :---: | :--- | :---
-1 | IWAB0014E Unexpected exception occurred. | Follow this URL:  http://stackoverflow.com/questions/28282734/iwab0014e-unexpected-exception-occurred
+1 | IWAB0014E Unexpected exception occurred. | Follow this URL:  <a href="http://stackoverflow.com/questions/28282734/iwab0014e-unexpected-exception-occurred"/>
