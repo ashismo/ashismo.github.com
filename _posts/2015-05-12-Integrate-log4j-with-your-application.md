@@ -57,6 +57,7 @@ Rank | Log Level | Description
 
 
  * Create 4 files as shown below
+ 
 SL No | File Name | Purpose
 :---: | --- | ---
 1 | **log4j.properties** | log4J configuration is defined here. This file should be created inside **src/main/resources** folder as shown above
@@ -72,7 +73,74 @@ Content of each file is given below. Please go through the inline comments with 
  * **log4j.properties: ** log4j configuration is done here. Please go through the inline comments to understand the configuration
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+########################################################
+# OBJECTIVES
+# 1. Log file path and it's properties 
+#	 (i.e. max log file size, max backup index etc) to be defined
+# 2. Two log files will get generated for two different packages
+# 3. The log will get printed on the CONSOLE as well
+# 4. Use of custom log file appender for the 2nd log file 
+#    instead of the default one. Custom appender will add 
+#	 the time stamp with the log file
+########################################################
 
+
+#****************************************************
+# Root logger option. To change log level, change here
+# Log level is TRACE. Log will be printed on CONSOLE and 
+# log file as configured in log4j.appender.logfile
+#****************************************************
+log4j.rootLogger=TRACE, CONSOLE, logfile
+
+#****************************************************
+# Package logger option
+# Log level is FATAL. Log will be printed on CONSOLE and 
+# log file as configured in log4j.appender.logfile
+#****************************************************
+log4j.logger.com.ashish.anotherpackage=FATAL, another
+
+
+########################################################
+# Redirect log messages to CONSOLE
+########################################################
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Target=System.out
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+ 
+
+########################################################
+# Redirect log messages to a log file, support file rolling.
+########################################################
+log4j.appender.logfile=org.apache.log4j.RollingFileAppender
+#log4j.appender.logfile=com.ashish.customlog4j.CustomLog4JAppender
+log4j.appender.logfile.File=D:\\logs\\output.log
+log4j.appender.logfile.Append=true
+log4j.appender.logfile.MaxFileSize=2MB
+log4j.appender.logfile.MaxBackupIndex=10
+log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+
+
+
+########################################################
+# Another Log file for another package
+########################################################
+
+log4j.appender.another=com.ashish.customlog4j.CustomLog4JAppender
+log4j.appender.another.File=D:\\logs\\output_another.log
+log4j.appender.another.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
 
 </code></pre>
   
@@ -86,7 +154,6 @@ package com.ashish.log4jIntegration;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.LogManager;
-
 import com.ashish.anotherpackage.AnotherClass;
 
 public class Log4JIntegration {
@@ -105,9 +172,9 @@ public class Log4JIntegration {
 		AnotherClass.anotherMethod();
 	}
 }
-</code></java>
- 
- 
+</code></pre>
+
+
  * **AnotherClass: ** Log level is set to **FATAL** so this class will print only LOG.fatal() and ignores other logs
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
@@ -131,8 +198,7 @@ public class AnotherClass {
 		LOG.fatal("FATAL: Rank 1");
 	}
 }
-
-</code></java>
+</code></pre>
 
 
  * **CustomLog4JAppender: ** In every execution this class creates new file by appending timestamp with the log file name.
@@ -206,7 +272,7 @@ public class CustomLog4JAppender extends RollingFileAppender  {
 			return null;
 		}
 }
-</code></java>
+</code></pre>
 
 #### Output of this project
 
