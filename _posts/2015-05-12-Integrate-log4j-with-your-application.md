@@ -36,6 +36,7 @@ Rank | Log Level | Description
 <img src="https://cloud.githubusercontent.com/assets/11231867/7747899/da6fa93a-ffdc-11e4-9993-8a0ca0843577.png"/>  
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
  * Add the following dependancies in your pom.xml for log4J integration
+
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
 	&lt;dependencies&gt;
@@ -68,6 +69,7 @@ SL No | File Name | Purpose
 Content of each file is given below. Please go through the inline comments with the code snippets
 
 **log4j.properties: **
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
 ########################################################
@@ -143,6 +145,7 @@ log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{
   
   
 **Log4JIntegration: ** Log level is set to **TRACE** so this class will print all logs.
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.log4jIntegration;
 
@@ -172,6 +175,7 @@ public class Log4JIntegration {
   
   
 **AnotherClass: ** Log level is set to **FATAL** so this class will print only LOG.fatal() and ignores other logs
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
 package com.ashish.anotherpackage;
@@ -197,6 +201,7 @@ public class AnotherClass {
 </code></java>
 
 **CustomLog4JAppender: ** In every execution this class creates new file by appending timestamp with the log file name.
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
 package com.ashish.customlog4j;
