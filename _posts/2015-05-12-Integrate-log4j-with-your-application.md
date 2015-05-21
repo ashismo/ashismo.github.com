@@ -38,7 +38,6 @@ Rank | Log Level | Description
  * Add the following dependancies in your pom.xml for log4J integration
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
-
 	&lt;dependencies&gt;
 		&lt;dependency&gt;
 			&lt;groupId&gt;commons-logging&lt;/groupId&gt;
@@ -51,8 +50,6 @@ Rank | Log Level | Description
 			&lt;version&gt;1.2.14&lt;/version&gt;
 		&lt;/dependency&gt;
 	&lt;/dependencies&gt;
-&lt;/project&gt;
-
 </code></pre>
 
 
@@ -72,7 +69,7 @@ Content of each file is given below. Please go through the inline comments with 
 
  * **log4j.properties: ** log4j configuration is done here. Please go through the inline comments to understand the configuration
 
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 ########################################################
 # OBJECTIVES
 # 1. Log file path and it's properties 
@@ -145,7 +142,7 @@ log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{
 </code></pre>
   
   
- * **Log4JIntegration: ** Log level is set to **TRACE** so this class will print all logs.
+ * **Log4JIntegration:** Log level is set to **TRACE** so this class will print all logs.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
@@ -175,7 +172,7 @@ public class Log4JIntegration {
 </code></pre>
 
 
- * **AnotherClass: ** Log level is set to **FATAL** so this class will print only LOG.fatal() and ignores other logs
+ * **AnotherClass:** Log level is set to **FATAL** so this class will print only LOG.fatal() and ignores other logs
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
@@ -201,7 +198,7 @@ public class AnotherClass {
 </code></pre>
 
 
- * **CustomLog4JAppender: ** In every execution this class creates new file by appending timestamp with the log file name.
+ * **CustomLog4JAppender:** In every execution this class creates new file by appending timestamp with the log file name.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
