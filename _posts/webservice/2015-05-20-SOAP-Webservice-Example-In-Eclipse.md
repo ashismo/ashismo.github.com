@@ -43,6 +43,7 @@ public class HelloWorld {
  * Download Binary distribution from [here](http://axis.apache.org/axis2/java/core/download.cgi){:target="_block"} and unzip to a location
  * Right click on the project->Properties->Project Facet -> Select **Axis2 Web Services** as shown below. Now Axis2 framework is integrated with your project.  
 <img src="https://cloud.githubusercontent.com/assets/11231867/7744133/6bdae14c-ffbe-11e4-9af8-e4ed3197f440.png"/>  
+ * Right click on the project->Configure->Conver to Maven Project
  * Right click on the project->new->web service -> Click on next
  * In service implementation text box fill **com.ashish.soap.HelloWorld** (fully qualified class name). Then move both the sliders to maximum level(i.e. Test service and Test Client level) as shown below
  
