@@ -267,3 +267,13 @@ public class CustomLog4JAppender extends RollingFileAppender  {
 		}
 }
 </code></java>
+
+#### Output of this project
+
+ * Console output will look like as shown below. Two classes, **Log4JIntegration** and **AnotherClass** have same log messages but log level is configured differently (**TRACE** and **FATAL** respectively) for two different classes. Hence the **Log4JIntegration** class is printing all log messages and **AnotherClass** is printing only one message.  
+ 
+<img src="https://cloud.githubusercontent.com/assets/11231867/7748321/11b61c22-ffe1-11e4-9fe2-a428dfdba058.png"/>  
+ * Two log files got created. One file name is without time stamp (e.g.: output.log) and another log file name is with time stamp appended (e.g. output_another-21-May-2015-16-39-59.log) in it and have multiple copies. Log files will get created under D:\logs\ folder as configured in the **log4j.properties** file. The log from **Log4JIntegration** class goes to **output.log** file and the logs from **AnotherClass** class goes to **output_another-21-May-2015-16-39-59.log** file. Also note that both the mentioned classes prints the log message in CONSOLE.
+ 
+<img src="https://cloud.githubusercontent.com/assets/11231867/7748453/67786ac4-ffe2-11e4-99eb-faaf6f652b1f.png"/>
+ 
