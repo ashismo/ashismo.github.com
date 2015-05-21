@@ -71,7 +71,7 @@ Content of each file is given below. Please go through the inline comments with 
 
  * **log4j.properties: ** log4j configuration is done here. Please go through the inline comments to understand the configuration
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
 ########################################################
 # OBJECTIVES
