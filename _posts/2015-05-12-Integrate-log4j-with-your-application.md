@@ -281,3 +281,68 @@ public class CustomLog4JAppender extends RollingFileAppender  {
  
 <img src="https://cloud.githubusercontent.com/assets/11231867/7748453/67786ac4-ffe2-11e4-99eb-faaf6f652b1f.png"/>
  
+
+## Steps to Integrate XML based Log4J
+
+Remove the **log4j.properties** file and create **log4j.xml** file at the same location with the below content
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"&gt;
+&lt;log4j:configuration debug="true"
+  xmlns:log4j='http://jakarta.apache.org/log4j/'&gt;
+ 
+ 	&lt;!-- Redirect log messages to CONSOLE --&gt;
+	&lt;appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender"&gt;
+		&lt;param name="target" value="System.out" /&gt;
+	    &lt;layout class="org.apache.log4j.PatternLayout"&gt;
+			&lt;param name="ConversionPattern" 
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" /&gt;
+	    &lt;/layout&gt;
+	&lt;/appender&gt;
+ 
+ 	&lt;!-- Redirect log messages to a log file, support file rolling. --&gt;
+	&lt;appender name="logfile" class="org.apache.log4j.RollingFileAppender"&gt;
+		&lt;param name="file" value="D:/logs/output.log" /&gt;
+	    &lt;param name="append" value="true" /&gt;
+	    &lt;param name="maxFileSize" value="2MB" /&gt;
+	    &lt;param name="maxBackupIndex" value="10" /&gt;
+	    &lt;layout class="org.apache.log4j.PatternLayout"&gt;
+			&lt;param name="ConversionPattern" 
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" /&gt;
+	    &lt;/layout&gt;
+	&lt;/appender&gt;
+	
+	&lt;!-- Another Log file for another package --&gt;
+	&lt;appender name="another" class="com.ashish.customlog4j.CustomLog4JAppender"&gt;
+		&lt;param name="file" value="D:/logs/output_another.log" /&gt;
+	    &lt;param name="append" value="true" /&gt;
+	    &lt;param name="maxFileSize" value="2MB" /&gt;
+	    &lt;param name="maxBackupIndex" value="10" /&gt;
+	    &lt;layout class="org.apache.log4j.PatternLayout"&gt;
+			&lt;param name="ConversionPattern" 
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" /&gt;
+	    &lt;/layout&gt;
+	&lt;/appender&gt;
+ 
+ 	&lt;!-- 
+ 		Package logger option Log level is FATAL. Log will be printed on CONSOLE and log file as configured in log4j.appender.logfile
+ 	--&gt;
+ 	&lt;logger name="com.ashish.anotherpackage.AnotherClass"&gt;
+	  	&lt;level value="FATAL"/&gt; 
+		&lt;appender-ref ref="another" /&gt;
+	&lt;/logger&gt;
+	
+	&lt;!-- 
+	Root logger option. To change log level, change here Log level is TRACE. Log will be printed on CONSOLE and log file as configured in log4j.appender.logfile
+	 --&gt;
+	&lt;root&gt;
+		&lt;level value="TRACE" /&gt;
+		&lt;appender-ref ref="CONSOLE" /&gt;
+		&lt;appender-ref ref="logfile" /&gt;
+	&lt;/root&gt;
+	
+&lt;/log4j:configuration&gt;
+
+</code></pre>
