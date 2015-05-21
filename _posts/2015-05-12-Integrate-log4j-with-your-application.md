@@ -73,7 +73,7 @@ Code inside the each file is given below. Please go through the inline comments 
 
  * **log4j.properties:** log4j configuration is done here. Please go through the inline comments to understand the configuration
  
-```java
+{% highlight java %}
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # OBJECTIVES
 # 1. Log file path and it's properties 
@@ -141,7 +141,7 @@ log4j.appender.another.layout=org.apache.log4j.PatternLayout
 #*****
 log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
 
-```
+{% endhighlight %}
 
  * **Log4JIntegration:** Log level is set to **TRACE** so this class will print all logs.
 
