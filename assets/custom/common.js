@@ -38,10 +38,27 @@ $(document).ready(function() {
 			var content = $(this).html();
 			content = content.substring(content.indexOf("-") + 1);
 			content = toTitleCase(content);
+			content = decorateMeaningfulWords(content);
 			$(this).html(content);
+			
 		  });
 		  
+		  // Modify each link
+		  $(".row").find("a").each(function(){
+			var content = $(this).html();
+			content = toTitleCase(content);
+			content = decorateMeaningfulWords(content);
+			$(this).html(content);
+		  });
 	  }
+	  
+	  // Decorate words in <h1> tags
+	  $("h1").each(function(){
+		  var content = $(this).html();
+		  content = decorateMeaningfulWords(content);
+		  $(this).html(content);
+	  });
+	  
       $(".copy-button").click(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
@@ -68,4 +85,28 @@ $(document).ready(function() {
          });
    }
 });
+
+function decorateMeaningfulWords(content)
+{
+	// Replace words where ever required.
+	var definedKeys = $.trim($("#replaceWords").html()).split(",");
+	
+	var temp = content.toLowerCase();
+	$.each(definedKeys, function( index, value ) {
+		var length = value.length;
+		var index = temp.indexOf(value.trim().toLowerCase());
+		if(index >= 0) {
+			var part1 = content.substr(0, index);
+			var part2 = content.substr(index+length);
+			content = part1 + value + part2;
+		}
+	});
+	return content;
+}
+
+function toTitleCase(str) {
+	return str.replace(/(?:^|\s)\w/g, function(match) {
+		return match.toUpperCase();
+	});
+}
 
