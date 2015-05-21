@@ -128,7 +128,10 @@ Go through the inline comments to understand WSDL components
 
 ### What is endpoints? 
 
-
+<!--div>
+If your WSDL URL is **http://localhost:8080/SOAPWebServices/services/HelloWorld?wsdl** then the end point reference (EPR) is 
+**http://localhost:8080/SOAPWebServices/services/HelloWorld**
+</div-->
 
 ### What is stub and skeleton?
 
