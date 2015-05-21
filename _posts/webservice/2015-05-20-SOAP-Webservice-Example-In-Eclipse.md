@@ -45,24 +45,24 @@ public class HelloWorld {
 <img src="https://cloud.githubusercontent.com/assets/11231867/7744133/6bdae14c-ffbe-11e4-9af8-e4ed3197f440.png"/>  
  * Right click on the project->Configure->Conver to Maven Project
  * Right click on the project->new->web service -> Click on next
- * In service implementation text box fill **com.ashish.soap.HelloWorld** (fully qualified class name). Then move both the sliders to maximum level(i.e. Test service and Test Client level) as shown below
+ * In service implementation text box fill **com.ashish.soap.HelloWorld** (fully qualified class name). Then move both the sliders to maximum level(i.e. Test service and Test Client level) and change Webservice runtime to **Apache Axis2** as shown below.
  
-<img src="https://cloud.githubusercontent.com/assets/11231867/7743401/06583abe-ffb8-11e4-8521-60db5a465ca3.png"/>
- <!--img src="https://cloud.githubusercontent.com/assets/11231867/7726539/87546c66-ff20-11e4-9486-69b312d1515b.png"/-->
+<img src="https://cloud.githubusercontent.com/assets/11231867/7744459/09626fd2-ffc1-11e4-9122-f430cd318e8d.png"/>
 
  * Click Next and select the style as document/literal as shown below
  
  <img src="https://cloud.githubusercontent.com/assets/11231867/7726772/e0a3605a-ff21-11e4-8d06-8b0cc815da40.png"/>
  <!--<img src="https://cloud.githubusercontent.com/assets/11231867/7726540/87607736-ff20-11e4-8e8c-f413dde71e00.png"/>-->
 
- * Click Next then click on **Start Server**
- 
- <img src="https://cloud.githubusercontent.com/assets/11231867/7726538/872af9ee-ff20-11e4-8605-9501ee378724.png"/>
-
- * After clicking start server,eclipse will open test web service API.With this test API,you can test your web service.
+ * Click next and select as shown below  
+ <img src="https://cloud.githubusercontent.com/assets/11231867/7744477/3c818312-ffc1-11e4-8ed8-bcee8cdec0ff.png"/>  
+ * Click on next, next, next... until the end.
+ * Another project,SOAPWebServicesClient will get automatically created as the client code.
+ * Finally a web browser will get opened in the Eclipse for your testing as shown below
+ <img src="https://cloud.githubusercontent.com/assets/11231867/7744573/3a25657e-ffc2-11e4-8a1a-cd399fbb4ae4.png"/>
  
 ## Issues you may face during setup
 
 SL NO | Issue | Solution
 :---: | :--- | :---
-1 | IWAB0014E Unexpected exception occurred. | Follow this URL:  <a href="http://stackoverflow.com/questions/28282734/iwab0014e-unexpected-exception-occurred"/>
+1 |  | 
