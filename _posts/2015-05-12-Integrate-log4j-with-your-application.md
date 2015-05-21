@@ -54,6 +54,11 @@ Rank | Log Level | Description
 
 
  * Create 4 files as shown below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7747961/aa7f830c-ffdd-11e4-98c5-bf3cf17eee3a.png"/>
+
+purpose of each file is described in the below table
+
  
 SL No | File Name | Purpose
 :---: | --- | ---
@@ -62,14 +67,14 @@ SL No | File Name | Purpose
 3 | **AnotherClass.java** | This class belongs to com.ashish.anotherpackage. For our testing we have enabled FATAL level for this class
 4 | **CustomLog4JAppender.java** | This is a custom log4j appender. This class creates new log file by appending time stamp in every execution. This custom log4J appender has been used for the logging from **AnotherClass** class
 
-<img src="https://cloud.githubusercontent.com/assets/11231867/7747961/aa7f830c-ffdd-11e4-98c5-bf3cf17eee3a.png"/>
 
-Content of each file is given below. Please go through the inline comments with the code snippets
+Code inside the each file is given below. Please go through the inline comments with the code snippets
 
 
  * **log4j.properties:** log4j configuration is done here. Please go through the inline comments to understand the configuration
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
 ########################################################
 # OBJECTIVES
 # 1. Log file path and it's properties 
@@ -136,6 +141,7 @@ log4j.appender.another.layout=org.apache.log4j.PatternLayout
 #Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
 ######
 log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
 </code></pre>
 
 
