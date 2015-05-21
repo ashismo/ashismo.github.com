@@ -7,6 +7,9 @@
 - url: /misc.html
   title: Miscellaneous
   group: navigation
+- url: /upcoming.html
+  title: Upcoming Topics
+  group: navigation
 - url: /archive.html
   title: Archive
   group: navigation
