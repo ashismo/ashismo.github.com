@@ -58,9 +58,212 @@ Rank | Log Level | Description
  * Create 4 files as shown below
 SL No | File Name | Purpose
 :---: | --- | ---
-1 | **log4j.properties** | log4J configuration is defined here
+1 | **log4j.properties** | log4J configuration is defined here. This file should be created inside **src/main/resources** folder as shown above
 2 | **Log4JIntegration.java** | Contains main() method of the class. This class belongs to com.ashish.log4jIntegration. For our testing we have enabled TRACE level for this class
 3 | **AnotherClass.java** | This class belongs to com.ashish.anotherpackage. For our testing we have enabled FATAL level for this class
 4 | **CustomLog4JAppender.java** | This is a custom log4j appender. This class creates new log file by appending time stamp in every execution. This custom log4J appender has been used for the logging from **AnotherClass** class
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7747961/aa7f830c-ffdd-11e4-98c5-bf3cf17eee3a.png"/>
+
+Content of each file is given below. Please go through the inline comments with the code snippets
+
+**log4j.properties: **
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+########################################################
+# OBJECTIVES
+# 1. Log file path and it's properties 
+#	 (i.e. max log file size, max backup index etc) to be defined
+# 2. Two log files will get generated for two different packages
+# 3. The log will get printed on the CONSOLE as well
+# 4. Use of custom log file appender for the 2nd log file 
+#    instead of the default one. Custom appender will add 
+#	 the time stamp with the log file
+########################################################
+
+
+#****************************************************
+# Root logger option. To change log level, change here
+# Log level is TRACE. Log will be printed on CONSOLE and 
+# log file as configured in log4j.appender.logfile
+#****************************************************
+log4j.rootLogger=TRACE, CONSOLE, logfile
+
+#****************************************************
+# Package logger option
+# Log level is FATAL. Log will be printed on CONSOLE and 
+# log file as configured in log4j.appender.logfile
+#****************************************************
+log4j.logger.com.ashish.anotherpackage=FATAL, another
+
+
+########################################################
+# Redirect log messages to CONSOLE
+########################################################
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Target=System.out
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+ 
+
+########################################################
+# Redirect log messages to a log file, support file rolling.
+########################################################
+log4j.appender.logfile=org.apache.log4j.RollingFileAppender
+#log4j.appender.logfile=com.ashish.customlog4j.CustomLog4JAppender
+log4j.appender.logfile.File=D:\\logs\\output.log
+log4j.appender.logfile.Append=true
+log4j.appender.logfile.MaxFileSize=2MB
+log4j.appender.logfile.MaxBackupIndex=10
+log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+
+
+
+########################################################
+# Another Log file for another package
+########################################################
+
+log4j.appender.another=com.ashish.customlog4j.CustomLog4JAppender
+log4j.appender.another.File=D:\\logs\\output_another.log
+log4j.appender.another.layout=org.apache.log4j.PatternLayout
+######
+#Below configuration append "2015-05-21 16:06:42 <LEVEL>  Log4JIntegration:16" before the message
+######
+log4j.appender.another.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+</code></pre>
+  
+  
+**Log4JIntegration: ** Log level is set to **TRACE** so this class will print all logs.
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.log4jIntegration;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.LogManager;
+
+import com.ashish.anotherpackage.AnotherClass;
+
+public class Log4JIntegration {
+	// org.apache.commons.logging.Log and org.apache.log4j.spi.LoggerFactory comes from commons-logging.jar
+	private static final Log LOG = LogFactory.getLog(Log4JIntegration.class);
+	public static void main(String args[]) {
+		// Want to print this below line always. So LOG.fatal() is used
+		LOG.fatal("Log level; for com.ashish.log4jIntegration package is : " + LogManager.getRootLogger().getLevel());
+		LOG.trace("TRACE: Rank 6");
+		LOG.debug("DEBUG: Rank 5");
+		LOG.info("INFO: Rank 4");
+		LOG.warn("WARN: Rank 3");
+		LOG.error("ERROR: Rank 2");
+		LOG.fatal("FATAL: Rank 1");
+		
+		AnotherClass.anotherMethod();
+	}
+}
+</code></java>
+  
+  
+**AnotherClass: ** Log level is set to **FATAL** so this class will print only LOG.fatal() and ignores other logs
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.anotherpackage;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.LogManager;
+
+public class AnotherClass {
+	// org.apache.commons.logging.Log and org.apache.log4j.spi.LoggerFactory comes from commons-logging.jar
+	private static final Log LOG = LogFactory.getLog(AnotherClass.class);
+	public static void anotherMethod() {
+		LOG.fatal("Log level; for com.ashish.anotherpackage package is : " + LogManager.getLogger(AnotherClass.class).getEffectiveLevel());
+		LOG.trace("TRACE: Rank 6");
+		LOG.debug("DEBUG: Rank 5");
+		LOG.info("INFO: Rank 4");
+		LOG.warn("WARN: Rank 3");
+		LOG.error("ERROR: Rank 2");
+		LOG.fatal("FATAL: Rank 1");
+	}
+}
+
+</code></java>
+
+**CustomLog4JAppender: ** In every execution this class creates new file by appending timestamp with the log file name.
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.customlog4j;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.log4j.Layout;
+import org.apache.log4j.RollingFileAppender;
+import org.apache.log4j.spi.ErrorCode;
+
+
+
+public class CustomLog4JAppender extends RollingFileAppender  {
+	public CustomLog4JAppender() {
+	}
+	
+	public CustomLog4JAppender(Layout layout, String filename,
+	        boolean append) throws IOException {
+	    super(layout, filename, append);
+	}
+
+	public CustomLog4JAppender(Layout layout, String filename)
+	        throws IOException {
+	    super(layout, filename);
+	}
+	
+	public void activateOptions() {
+		if (fileName != null) {
+		    try {
+		    	fileName = getNewLogFileName();
+		        setFile(fileName, fileAppend, bufferedIO, bufferSize);
+		    } catch (Exception e) {
+		        errorHandler.error("Error while activating log options", e,
+		                ErrorCode.FILE_OPEN_FAILURE);
+		    }
+		}
+		}
+
+		private String getNewLogFileName() {
+			DateFormat df = new SimpleDateFormat("dd-MMM-yyyy-HH-mm-ss");
+			
+			if (fileName != null) {
+			    final String DOT = ".";
+			    final String HIPHEN = "-";
+			    final File currentLogFile = new File(fileName);
+			    final String fileName = currentLogFile.getName();
+			    String newLogFileName = fileName;
+			    
+			    final int dotIndex = fileName.indexOf(DOT);
+			    if (dotIndex != -1) {
+			        // the file name has an extension. so, insert the time stamp
+			        // between the file name and the extension
+			        newLogFileName = fileName.substring(0, dotIndex)  + HIPHEN +
+			                   df.format(new Date())  + DOT +
+			                  fileName.substring(dotIndex+1);
+			    } else {
+			        // the file name has no extension. So, just append the timestamp
+			        // at the end.
+			        newLogFileName = fileName + HIPHEN  + System.currentTimeMillis();
+			    }
+			    return currentLogFile.getParent() + File.separator + newLogFileName;
+			}
+			return null;
+		}
+}
+</code></java>
