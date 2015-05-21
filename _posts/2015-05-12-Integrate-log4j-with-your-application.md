@@ -73,7 +73,7 @@ Code inside the each file is given below. Please go through the inline comments 
 
  * **log4j.properties:** log4j configuration is done here. Please go through the inline comments to understand the configuration
  
-```xml
+```java
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # OBJECTIVES
 # 1. Log file path and it's properties 
