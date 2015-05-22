@@ -18,15 +18,15 @@ Below are the important elements of Hibernate
  * **hbm.xml or Annotation:** Defines the database table mapping with POJO. Also defines the relation between tables in java way.
  * **SessionFactory:** 
    * There will be a session factory per database. 
-   * The SessionFacory is built once at startup
+   * The SessionFacory is built once at start-up
    * It is a **thread safe** class
    * SessionFactory will create a new Session object when requested
  * **Session:**
    * The Session object will get physical connection to the database.
-   * Session is the java object used for any DB operations.
+   * Session is the Java object used for any DB operations.
    * Session is not **thread safe**. Hence do not share hibernate session between threads
    * Session represents unit of work with database
-   * Sessino should be closed once the task is completed
+   * Session should be closed once the task is completed
 
 ## Standalone Hibernate program
 
