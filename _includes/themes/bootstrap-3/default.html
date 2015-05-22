@@ -90,6 +90,8 @@
 	<div id="replaceWords" class='hide'>
 		J2EE,SOAP,RESTful,SVN,PMD,SONAR,JaCoCo,HTTP,API,MAVEN,AngularJS,GitHub,LDAP
 	</div>
+	<div id='box-content' class='hide'>
+	</div>
     {% include JB/analytics %}
 
 	<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
@@ -101,5 +103,27 @@
     <script src="{{ ASSET_PATH }}/../../custom/ZeroClipboard/ZeroClipboard.min.js"></script>
 
     <script src="{{ ASSET_PATH }}/../../custom/common.js"></script>
+    
+    <script type="text/javascript">
+		window.addEvent("load",function() {
+			setTimeout(function() {
+				//set path
+				ZeroClipboard.setMoviePath('http://davidwalsh.name/dw-content/ZeroClipboard.swf');
+				//create client
+				var clip = new ZeroClipboard.Client();
+				//event
+				clip.addEventListener('mousedown',function() {
+					clip.setText(document.getElementById('box-content').value);
+				});
+				clip.addEventListener('complete',function(client,text) {
+					alert('copied: ' + text);
+				});
+				//glue it to the button
+				clip.glue('copy');
+			}, 2000);
+			
+		});
+		
+	</script>
   </body>
 </html>
