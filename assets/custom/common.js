@@ -17,7 +17,7 @@ $(document).ready(function() {
    // Add copy to clipboard button before every pre
    if($("pre") !== null) {
        $("pre").wrap("<div class='codeSnippet'></div>");
-       $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github" id="copy-button"></button></div><div style="color:red">Copy into Clipboard</div></div>');
+       $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github" id="copy-button" data-clipboard-text="sample"></button></div><div style="color:red">Copy into Clipboard</div></div>');
       // Copy text into clipboard
       $(".codeSnippet").hover(function() {
             $( this ).find("div:first").css("visibility", "visible");
@@ -64,47 +64,23 @@ $(document).ready(function() {
 	  });
 	  
       $(".copy-button").click(function() {
-            // If the button is visible
+            
+            var clientText = new ZeroClipboard( $('#copy-button'), {
+	              moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
+	              debug: false
+	        } );
+
+	        clientText.on( "load", function(clientText) {
+	                clientText.on( "complete", function(clientText, args) {
+	                    clientText.setText( args.text );
+	                } );
+	       	} );
+	    // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
-            	//alert("Clicked");
             	$(this).closest('.codeSnippet').find('pre').selectText();
             	$('#copy-button').attr('data-clipboard-text', getSelectionText());
             	
-            	/*//ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
-            	ZeroClipboard.setMoviePath('http://davidwalsh.name/dw-content/ZeroClipboard.swf');
-            	//create client
-		var clip = new ZeroClipboard.Client();
-		//event
-		clip.addEventListener('mousedown',function() {
-			//clip.setText(getSelectionText());
-			clip.setText(document.getElementById('box-content').value);
-		});
-		clip.addEventListener('complete',function(client,text) {
-			alert('copied: ' + text);
-		});
-		//glue it to the button
-		clip.glue('copy-button');*/
-		
-		
-	    var clientText = new ZeroClipboard( $('#copy-button'), {
-              moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
-              debug: false
-            } );
-
-            clientText.on( "load", function(clientText)
-            {
-                //$('#flash-loaded').fadeIn();
-
-                clientText.on( "complete", function(clientText, args) {
-                    clientText.setText( args.text );
-                    //alert('a');
-                    //$('#text-to-copy-text').fadeIn();
-                } );
-       	    } );
-
-		
-		
-		$(this).closest('.codeSnippet').find('pre').removeSelection();
+	    	$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
    }
