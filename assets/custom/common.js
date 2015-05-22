@@ -99,8 +99,8 @@ $(document).ready(function() {
                     clientText.setText( args.text );
                     //$('#text-to-copy-text').fadeIn();
                 } );
-            	} );
-            });
+       	    } );
+
 		
 		
 		$(this).closest('.codeSnippet').find('pre').removeSelection();
