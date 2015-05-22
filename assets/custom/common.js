@@ -96,8 +96,8 @@ $(document).ready(function() {
                 //$('#flash-loaded').fadeIn();
 
                 clientText.on( "complete", function(clientText, args) {
-                    //clientText.setText( args.text );
-                    alert('a');
+                    clientText.setText( getSelectionText() );
+                    //alert('a');
                     //$('#text-to-copy-text').fadeIn();
                 } );
        	    } );
