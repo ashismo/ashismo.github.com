@@ -67,7 +67,7 @@ $(document).ready(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
             	//alert("Clicked");
-            	$(this).parent('.codeSnippet').find('pre').selectText();
+            	$(this).closest('.codeSnippet').find('pre').selectText();
             }
          });
    }
