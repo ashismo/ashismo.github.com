@@ -36,3 +36,16 @@ Spring id an open source development framework for Enterprise Java. The core fea
 ### What is Spring Bean?
 
 Any normal Java class that is initialized by Spring IoC container is called **Spring Bean**. We use spring application context to get Spring Bean instance. **Spring IoC Container** manages the lifecycle of Spring Bean scope and injecting any required dependencies in the bean.
+
+#### Different scopes of Spring bean
+
+When we declare **&lt;bean&gt;**, we can specify **scope** of the bean to inform the IoC container when the bean will create and how long it will survive.  
+For any java application there are two different scopes called **singleton** and **prototype**  
+There are three different scopes i.e. **request**, **session** and **global-session** specially for spring based java Web applications.
+
+
+ * **Singleton** is the **default scope** of any bean. This means a single instance of the bean will get created per IoC container. Hence the **Singleton** beans are not **thread safe.**
+ * In **Prototype** scope a new instance will get created everytime the bean is requested.
+ * In **Request** scope, a bean is defined to an HTTP request. This scope is valid only in a web-aware spring ApplicationContext.
+ * In **Session** scope, a bean is defined to an HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
+ * In **global-session** scope, a bean is defined to a global HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
