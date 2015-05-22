@@ -32,7 +32,7 @@ $(document).ready(function() {
       });
       // Select code if double clicked
       $(".codeSnippet").dblclick(function() {
-	  $(this).selectText();
+	  $(this).find('pre').selectText();
 	});
 	  // Category formatting: example, java-build will be changed to Build
 	  var url = window.location.href;
