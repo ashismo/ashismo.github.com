@@ -45,7 +45,9 @@ There are three different scopes i.e. **request**, **session** and **global-sess
 
 
  * **Singleton** is the **default scope** of any bean. This means a single instance of the bean will get created per IoC container. Hence the **Singleton** beans are not **thread safe.**
- * In **Prototype** scope a new instance will get created everytime the bean is requested.
- * In **Request** scope, a bean is defined to an HTTP request. This scope is valid only in a web-aware spring ApplicationContext.
- * In **Session** scope, a bean is defined to an HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
+ * In **prototype** scope a new instance will get created everytime the bean is requested.
+ * In **request** scope, a bean is defined to an HTTP request. This scope is valid only in a web-aware spring ApplicationContext.
+ * In **session** scope, a bean is defined to an HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
  * In **global-session** scope, a bean is defined to a global HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
+
+To set the scope of the spring bean, we can use **scope** attibute in **&lt;bean&gt;** tag. **@scope** is used in annotation based DI.
