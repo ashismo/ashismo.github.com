@@ -17,7 +17,7 @@ $(document).ready(function() {
    // Add copy to clipboard button before every pre
    if($("pre") !== null) {
        $("pre").wrap("<div class='codeSnippet'></div>");
-       $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github"></button></div><div style="color:red">Copy into Clipboard</div></div>');
+       $(".codeSnippet").prepend('<div style="text-align:right; visibility:hidden;"><div><button class="copy-button github" id="copy-button"></button></div><div style="color:red">Copy into Clipboard</div></div>');
       // Copy text into clipboard
       $(".codeSnippet").hover(function() {
             $( this ).find("div:first").css("visibility", "visible");
