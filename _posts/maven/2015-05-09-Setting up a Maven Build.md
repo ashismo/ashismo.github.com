@@ -99,7 +99,7 @@ The maven must connect to the internet (or copy the working repository then inte
       &lt;port&gt;80&lt;/port&gt;
       &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
 &lt;/proxy&gt;
-</code><pre>
+</code></pre>
 
 #### Mention the maven repository in pom.xml
 
