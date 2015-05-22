@@ -67,8 +67,22 @@ $(document).ready(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
             	//alert("Clicked");
-            	//$(this).closest('.codeSnippet').find('pre').selectText();
-            	$(this).closest('.codeSnippet').find('pre').removeSelection();
+            	$(this).closest('.codeSnippet').find('pre').selectText();
+            	
+            	ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
+            	//create client
+		var clip = new ZeroClipboard.Client();
+		//event
+		clip.addEventListener('mousedown',function() {
+			clip.setText(getSelectionText());
+		});
+		clip.addEventListener('complete',function(client,text) {
+			alert('copied: ' + text);
+		});
+		//glue it to the button
+		clip.glue('copy');
+		
+		$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
    }
@@ -126,3 +140,14 @@ jQuery.fn.removeSelection = function(){
 	  document.selection.empty();
 	}
 };
+
+// This function returns the selected text
+function getSelectionText() {
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
