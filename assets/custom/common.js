@@ -68,22 +68,25 @@ $(document).ready(function() {
             if($( this ).parent().parent().is(':visible')) {
             	//alert("Clicked");
             	$(this).closest('.codeSnippet').find('pre').selectText();
+            	$('#box-content').html(getSelectionText());
             	
-            	/*ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
+            	//ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
+            	ZeroClipboard.setMoviePath('http://davidwalsh.name/dw-content/ZeroClipboard.swf');
             	//create client
 		var clip = new ZeroClipboard.Client();
 		//event
 		clip.addEventListener('mousedown',function() {
-			clip.setText(getSelectionText());
+			//clip.setText(getSelectionText());
+			clip.setText(document.getElementById('box-content').value);
 		});
-		clip.addEventListener('complete',function(client,text) {
+		/*clip.addEventListener('complete',function(client,text) {
 			alert('copied: ' + text);
-		});
+		});*/
 		//glue it to the button
 		clip.glue('copy');*/
 		
-		$('#box-content').html(getSelectionText());
-		getSelectionText
+		
+		
 		$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
