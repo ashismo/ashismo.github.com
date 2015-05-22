@@ -34,6 +34,12 @@ $(document).ready(function() {
       $(".codeSnippet").dblclick(function() {
 	  $(this).find('pre').selectText();
 	});
+	
+	// copy-button
+	 $(".copy-button").click(function() {
+	    alert("Clicked");
+	});
+	
 	  // Category formatting: example, java-build will be changed to Build
 	  var url = window.location.href;
 	  if(url.indexOf(".html") != -1) { // This is the main page
