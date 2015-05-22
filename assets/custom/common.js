@@ -35,11 +35,6 @@ $(document).ready(function() {
 	  $(this).find('pre').selectText();
 	});
 	
-	// copy-button
-	 $(".copy-button").click(function() {
-	    alert("Clicked");
-	});
-	
 	  // Category formatting: example, java-build will be changed to Build
 	  var url = window.location.href;
 	  if(url.indexOf(".html") != -1) { // This is the main page
@@ -71,7 +66,8 @@ $(document).ready(function() {
       $(".copy-button").click(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
-               //alert($(".selectedButton").parent().parent().parent().find("pre").html());
+            	alert("Clicked");
+               /*//alert($(".selectedButton").parent().parent().parent().find("pre").html());
                //alert($("#codeCopied").html());
 			   var clip = new ZeroClipboard.Client();
 			clip.setHandCursor( true );
@@ -89,7 +85,7 @@ $(document).ready(function() {
 				debugstr("Copied text to clipboard: " + text );
 			});
 			
-			clip.glue( 'clickedButton', 'codeCopied' );
+			clip.glue( 'clickedButton', 'codeCopied' );*/
             }
          });
    }
