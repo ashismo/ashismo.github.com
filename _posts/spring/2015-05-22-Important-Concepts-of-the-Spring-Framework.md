@@ -51,3 +51,13 @@ There are three different scopes i.e. **request**, **session** and **global-sess
  * In **global-session** scope, a bean is defined to a global HTTP session. This scope is valid only in a web-aware spring ApplicationContext.
 
 To set the scope of the spring bean, we can use **scope** attibute in **&lt;bean&gt;** tag. **@scope** is used in annotation based DI.
+
+### Spring IoC Container
+
+The **Spring container** is at the core of the Spring Framework. The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses dependency injection (DI) to manage the components that make up an application.  
+  
+There are two different types of containers
+
+
+ * **BeanFactory container:** This is the heart of the Spring container. org.springframework.beans.factory.**BeanFactory** is an interface and acts as a IoC container which instantiates, configures, and manages a number of beans
+ * **ApplicationContext container:** org.springframework.context.**ApplicationContext** interface also acts as the IoC container but the **ApplicationContext** interface is built on top of the **BeanFactory** interface to provides some extra functionality than BeanFactory such as simple integration with Spring's AOP, message resource handling (for I18N), event propagation, application layer specific context (e.g. WebApplicationContext) for web application. So it is better to use ApplicationContext than BeanFactory
