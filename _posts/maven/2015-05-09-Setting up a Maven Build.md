@@ -166,5 +166,6 @@ SL NO | Issue | Solution
 1 | Could not calculate build plan: Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved |Maven is not able to connect to the internet. Follow the step 5 or copy working repository into your system
 2 | 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing | Add <version> for the plugin. Use <br/> &lt;plugin&gt;<br/>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;<br/>&lt;version&gt;2.3.2&lt;/version&gt;<br/>INSTEAD OF<br/>&lt;plugin&gt;<br/>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
 3 | [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent! | Add the below line in your pom.xml<br/>&lt;properties&gt;<br/>&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;<br/>&lt;/properties&gt;
+4 | Internet is working but **maven install** is not able to download jars from internet | Check &lt;proxy&gt; settings in the settings.xml file. There might be a chance that your browser proxy settings and maven proxy settings are different
 
 
