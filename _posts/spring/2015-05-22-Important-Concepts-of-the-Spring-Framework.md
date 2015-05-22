@@ -39,7 +39,7 @@ Any normal Java class that is initialized by Spring IoC container is called **Sp
 
 #### Different scopes of Spring bean
 
-When we declare **&lt;bean&gt;**, we can specify **scope** of the bean to inform the IoC container when the bean will create and how long it will survive.  
+When we declare **&lt;bean&gt;**, we can specify **scope** of the bean to inform the IoC container about the creation of the bean and how long it will survive.  
 For any java application there are two different scopes called **singleton** and **prototype**  
 There are three different scopes i.e. **request**, **session** and **global-session** specially for spring based java Web applications.
 
