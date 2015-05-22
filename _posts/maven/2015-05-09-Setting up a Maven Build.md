@@ -80,15 +80,15 @@ The default location for the settings.xml is ${user.home}/.m2/settings.xml. Howe
 
 The default repository location is ${user.home}/.m2/repository. However, user can change this in settings.xml file as shown below
 
-```
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 <localRepository>path\to\repository</localRepository>
-```
+</code></pre>
 
 #### Internet connection
 
 The maven must connect to the internet (or copy the working repository then internet connection is not required) for the first time.  To connect to the internet: make sure the **proxy** tag is correct in your settings.xml 
 
-```
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 <proxy>
       <id>optional</id>
       <active>true</active>
@@ -99,21 +99,21 @@ The maven must connect to the internet (or copy the working repository then inte
       <port>80</port>
       <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
 </proxy>
-```
+</code><pre>
 
 #### Mention the maven repository in pom.xml
 
 In pom.xml, if repository is not mentioned then by default then it will look into local [repository](#repository). 
 	If not found then it will look into maven central repository (i.e. http://repo1.maven.org/maven2/). If not found then it will look for the maven remote repository. Below remote repository configuration is required in pom.xml
 
-````
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 <repositories>
 	<repository>
 	    <id>java.net</id>
 	    <url>https://maven.java.net/content/repositories/public/</url>
 	</repository>
 </repositories>
-````
+</code></pre>
 
 ## Create a maven project
 
