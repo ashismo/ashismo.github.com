@@ -64,8 +64,12 @@ $(document).ready(function() {
 	  });
 	  
       $(".copy-button").click(function() {
-            
-            var clientText = new ZeroClipboard( $('#copy-button'), {
+	    // If the button is visible
+            if($( this ).parent().parent().is(':visible')) {
+            	$(this).closest('.codeSnippet').find('pre').selectText();
+            	$('#copy-button').attr('data-clipboard-text', getSelectionText());
+            	
+		var clientText = new ZeroClipboard( $('#copy-button'), {
 	              moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
 	              debug: false
 	        } );
@@ -75,11 +79,7 @@ $(document).ready(function() {
 	                    clientText.setText( args.text );
 	                } );
 	       	} );
-	    // If the button is visible
-            if($( this ).parent().parent().is(':visible')) {
-            	$(this).closest('.codeSnippet').find('pre').selectText();
-            	$('#copy-button').attr('data-clipboard-text', getSelectionText());
-            	
+	       	
 	    	$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
