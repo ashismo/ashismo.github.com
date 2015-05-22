@@ -81,7 +81,9 @@ $(document).ready(function() {
 		});
 		//glue it to the button
 		clip.glue('copy');*/
-		alert(getSelectionText());
+		
+		$('#box-content').html(getSelectionText());
+		getSelectionText
 		$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
