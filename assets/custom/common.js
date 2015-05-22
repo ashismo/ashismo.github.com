@@ -117,13 +117,6 @@ jQuery.fn.selectText = function(){
 
 jQuery.fn.removeSelection = function(){
 	if (window.getSelection) {
-		var selection = window.getSelection();        
-	        var range = document.createRange();
-	        range.selectNodeContents(element);
-	        selection.removeAllRanges();
-	        selection.addRange(range);
-	        range.empty();
-	  /* Below commented code is a working code
 	  if (window.getSelection().empty) {  // Chrome
 	    window.getSelection().empty();
 	  } else if (window.getSelection().removeAllRanges) {  // Firefox
@@ -131,5 +124,5 @@ jQuery.fn.removeSelection = function(){
 	  }
 	} else if (document.selection) {  // IE?
 	  document.selection.empty();
-	}*/
+	}
 };
