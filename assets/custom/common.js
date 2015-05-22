@@ -69,7 +69,7 @@ $(document).ready(function() {
             	//alert("Clicked");
             	$(this).closest('.codeSnippet').find('pre').selectText();
             	
-            	ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
+            	/*ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
             	//create client
 		var clip = new ZeroClipboard.Client();
 		//event
@@ -80,8 +80,8 @@ $(document).ready(function() {
 			alert('copied: ' + text);
 		});
 		//glue it to the button
-		clip.glue('copy');
-		
+		clip.glue('copy');*/
+		alert(getSelectionText());
 		$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
