@@ -30,7 +30,10 @@ $(document).ready(function() {
           $( this ).find("div").find("button").removeAttr("id");
           $( this ).find("div:first").css("visibility", "hidden");
       });
-      
+      // Select code if double clicked
+      $(".codeSnippet").dblclick(function() {
+	  alert( "Double clicked!" );
+	});
 	  // Category formatting: example, java-build will be changed to Build
 	  var url = window.location.href;
 	  if(url.indexOf(".html") != -1) { // This is the main page
