@@ -31,3 +31,8 @@ Spring id an open source development framework for Enterprise Java. The core fea
  *  **Exception Handling:** Spring provides a convenient API to translate technology specific exceptions (thrown by JDBC, Hibernate etc) into consistent unchecked exceptions
  *  **Aspect Oriented Programming(AOP):** AOP breaks the program logic into distinct parts (called concerns). It is used to increase modularity by **cross-cutting concerns**. 
     A **cross-cutting concern** is a concern that can affect the whole application and should be centralized in one location in code as possible, such as transaction management, authentication, logging, security etc
+
+
+### What is Spring Bean?
+
+Any normal Java class that is initialized by Spring IoC container is called **Spring Bean**. We use spring application context to get Spring Bean instance. **Spring IoC Container** manages the lifecycle of Spring Bean scope and injecting any required dependencies in the bean.
