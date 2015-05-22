@@ -68,7 +68,7 @@ $(document).ready(function() {
             if($( this ).parent().parent().is(':visible')) {
             	//alert("Clicked");
             	$(this).closest('.codeSnippet').find('pre').selectText();
-            	$('#box-content').html(getSelectionText());
+            	$('#copy-button').attr('data-clipboard-text', getSelectionText());
             	
             	/*//ZeroClipboard.setMoviePath('../ZeroClipboard/ZeroClipboard.swf');
             	ZeroClipboard.setMoviePath('http://davidwalsh.name/dw-content/ZeroClipboard.swf');
@@ -86,7 +86,7 @@ $(document).ready(function() {
 		clip.glue('copy-button');*/
 		
 		
-	    var clientText = new ZeroClipboard( $('#box-content'), {
+	    var clientText = new ZeroClipboard( $('#copy-button'), {
               moviePath: "http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",
               debug: false
             } );
@@ -96,7 +96,7 @@ $(document).ready(function() {
                 //$('#flash-loaded').fadeIn();
 
                 clientText.on( "complete", function(clientText, args) {
-                    clientText.setText( getSelectionText() );
+                    clientText.setText( args.text );
                     //alert('a');
                     //$('#text-to-copy-text').fadeIn();
                 } );
