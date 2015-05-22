@@ -66,26 +66,8 @@ $(document).ready(function() {
       $(".copy-button").click(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
-            	alert("Clicked");
-               /*//alert($(".selectedButton").parent().parent().parent().find("pre").html());
-               //alert($("#codeCopied").html());
-			   var clip = new ZeroClipboard.Client();
-			clip.setHandCursor( true );
-			
-			clip.addEventListener('load', function (client) {
-				//debugstr("Flash movie loaded and ready.");
-			});
-			
-			clip.addEventListener('mouseOver', function (client) {
-				// update the text on mouse over
-				//clip.setText( $('fe_text').value );
-			});
-			
-			clip.addEventListener('complete', function (client, text) {
-				debugstr("Copied text to clipboard: " + text );
-			});
-			
-			clip.glue( 'clickedButton', 'codeCopied' );*/
+            	//alert("Clicked");
+            	$(this).parent().find('pre').selectText();
             }
          });
    }
