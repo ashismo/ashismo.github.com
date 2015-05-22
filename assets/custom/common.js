@@ -67,7 +67,8 @@ $(document).ready(function() {
             // If the button is visible
             if($( this ).parent().parent().is(':visible')) {
             	//alert("Clicked");
-            	$(this).closest('.codeSnippet').find('pre').selectText();
+            	//$(this).closest('.codeSnippet').find('pre').selectText();
+            	$(this).closest('.codeSnippet').find('pre').removeSelection();
             }
          });
    }
@@ -100,7 +101,7 @@ function toTitleCase(str) {
 jQuery.fn.selectText = function(){
    var doc = document;
    var element = this[0];
-   console.log(this, element);
+   //console.log(this, element);
    if (doc.body.createTextRange) {
        var range = document.body.createTextRange();
        range.moveToElementText(element);
@@ -114,3 +115,14 @@ jQuery.fn.selectText = function(){
    }
 };
 
+jQuery.fn.removeSelection = function(){
+	if (window.getSelection) {
+	  if (window.getSelection().empty) {  // Chrome
+	    window.getSelection().empty();
+	  } else if (window.getSelection().removeAllRanges) {  // Firefox
+	    window.getSelection().removeAllRanges();
+	  }
+	} else if (document.selection) {  // IE?
+	  document.selection.empty();
+	}
+};
