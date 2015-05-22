@@ -27,3 +27,8 @@ Below are the important elements of Hibernate
    * Session is not **thread safe**. Hence do not share hibernate session between threads
    * Session represents unit of work with database
    * Sessino should be closed once the task is completed
+
+## Standalone Hibernate program
+
+[Download](https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample.zip){:target="_blank"} the stand alone hibernate program which insert data into HSQLDB and select the same data from the DB.
+Check [here for github code](https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample){:target="_blank"}
