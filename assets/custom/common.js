@@ -32,7 +32,7 @@ $(document).ready(function() {
       });
       // Select code if double clicked
       $(".codeSnippet").dblclick(function() {
-	  alert( "Double clicked!" );
+	  $(this).selectText();
 	});
 	  // Category formatting: example, java-build will be changed to Build
 	  var url = window.location.href;
@@ -112,4 +112,21 @@ function toTitleCase(str) {
 		return match.toUpperCase();
 	});
 }
+
+jQuery.fn.selectText = function(){
+   var doc = document;
+   var element = this[0];
+   console.log(this, element);
+   if (doc.body.createTextRange) {
+       var range = document.body.createTextRange();
+       range.moveToElementText(element);
+       range.select();
+   } else if (window.getSelection) {
+       var selection = window.getSelection();        
+       var range = document.createRange();
+       range.selectNodeContents(element);
+       selection.removeAllRanges();
+       selection.addRange(range);
+   }
+};
 
