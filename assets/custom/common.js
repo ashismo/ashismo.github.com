@@ -83,7 +83,7 @@ $(document).ready(function() {
 			alert('copied: ' + text);
 		});*/
 		//glue it to the button
-		clip.glue('copy');*/
+		clip.glue('copy');
 		
 		
 		
