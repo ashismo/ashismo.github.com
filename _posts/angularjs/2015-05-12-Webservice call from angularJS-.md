@@ -5,6 +5,8 @@ tags : [AngularJS Tutorial]
 weight: 40
 ---
 
+{% include JB/setup %}
+
 ## Introduction
 
 AngularJS
@@ -28,10 +30,17 @@ The Objective of this blog is to call GET and POST RESTful webservice.
  
 ## Steps to write code
 
-Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/angularjs/AngularJS-RESTfulWS){:target="_blank"}
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/angularjs/AngularJS-RESTfulWS.zip" target="_blank">AngularJS-RESTfulWS zip(68kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/angularjs/AngularJS-RESTfulWS" target="_blank">AngularJS-RESTfulWS</a>
+	</span>
+</div>
  
 
- * Write [GET and POST RESTful webservices](/java-web%20service/2015/05/12/RESTful%20webservice/){:target="_block"} from my another blog
+ * Write [GET and POST RESTful webservices](/java-web%20service/2015/05/12/RESTful-Webservice-Example-In-Eclipse/){:target="_block"} from my another blog
  * replace **index.jsp** with the following content. From this JSP file we are calling GET and POST RESTful webservice. In the below file **&lt;html ng-app="empRecordApp"&gt;** indicates that this is the root element of angular JS application
  
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
