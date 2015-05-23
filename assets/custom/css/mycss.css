@@ -22,6 +22,7 @@ h5 {
 	color: #A52A2A;
 	font-weight: bold;
 }
+
 thead {
 	background-color: #660000;	
 }
@@ -92,4 +93,36 @@ img {
 
 #wrap {
 	background-color:#FFFFF0;
+}
+
+.download-view {
+	display: table;
+	width: 100%;
+}
+
+.download-view  > *{
+	display: table-cell;
+    width: 50%;
+}
+
+.download {
+	padding: 28px 80px;
+	border: 2px solid #CEEBCE;
+	background:
+	url('../../images/download.png') no-repeat 20px 15px #FFE4C4;
+	margin-bottom: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.view {
+	padding-left: 290px;
+	border: 2px solid #CEEBCE;
+	background:
+	url('../../images/view.png') no-repeat 490px 15px #FFE4C4;
+	margin-bottom: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }

@@ -60,6 +60,25 @@ There are two different types of containers
 
 
  * **BeanFactory container:** This is the heart of the Spring container. org.springframework.beans.factory.**BeanFactory** is an interface and acts as a IoC container which instantiates, configures, and manages a number of beans.  
- Check the **com.ashish.beanfactory.MainApp** class in [Spring BeanFactory example](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringBeanFactoryExample.zip){:target="_blank"}. To download the complete code, []click here ](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringBeanFactoryExample/src/main/java/com/ashish/beanfactory/MainApp.java){:target="_blank"}
+ Check the **com.ashish.beanfactory.MainApp** class in Spring BeanFactory example
+ 
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringBeanFactoryExample.zip" target="_blank">BeanFactory Example(15kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringBeanFactoryExample" target="_blank">BeanFactory Example</a>
+	</span>
+</div>
+
  * **ApplicationContext container:** org.springframework.context.**ApplicationContext** interface also acts as the IoC container but the **ApplicationContext** interface is built on top of the **BeanFactory** interface to provides some extra functionality than BeanFactory such as simple integration with Spring's AOP, message resource handling (for I18N), event propagation, application layer specific context (e.g. WebApplicationContext) for web application. So it is better to use ApplicationContext than BeanFactory  
- Check the **com.ashish.applicationcontext.MainApp** class in [Spring ApplicationContext example](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringApplicationContextExample.zip){:target="_blank"}. To download the complete code, []click here ](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringApplicationContextExample/src/main/java/com/ashish/applicationcontext/MainApp.java){:target="_blank"}
+ Check the **com.ashish.applicationcontext.MainApp** class in Spring ApplicationContext example
+
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringApplicationContextExample.zip" target="_blank">ApplicationContext Example(14kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringApplicationContextExample" target="_blank">ApplicationContext Example</a>
+	</span>
+</div>

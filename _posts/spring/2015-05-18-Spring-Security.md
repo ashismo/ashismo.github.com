@@ -26,9 +26,17 @@ Objectives of this project are
   
 ## Steps to write code
 
-Click here to see [my project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringSecurity){:target="_blank"} and click here to get the [zip file](https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringSecurity.zip){:target="_blank"}
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringSecurity.zip" target="_blank">Spring Security Example(33kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringSecurity" target="_blank">Spring Security Example</a>
+	</span>
+</div>
 
-The content of pom.xml, web.xml, security xml, jsp and controller classes are given below. Go through the in-line code comments to understand better.
+
+The content of pom.xml, web.xml, security xml, jsp and controller classes are given below. Go through the in-line code comments for better understanding.
 
 * **pom.xml**
 
