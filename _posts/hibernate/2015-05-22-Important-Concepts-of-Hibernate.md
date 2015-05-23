@@ -30,7 +30,7 @@ Below are the important elements of Hibernate
 
 ## Standalone Hibernate program
 
-The objectives of the program are to
+The objective of this program is to
 
 
  * refresh your knowledge of [hibernate.cfg.xml](https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample/src/main/resources/hibernate.cfg.xml){:target="_blank"} and [entity class](https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample/src/main/java/com/ashish/entity/EmployeeEntity.java){:target="_blank"}
