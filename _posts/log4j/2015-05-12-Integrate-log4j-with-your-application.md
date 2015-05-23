@@ -5,6 +5,8 @@ tags : [log4j]
 weight: 100
 ---
 
+{% include JB/setup %}
+
 ## Introduction
 
 Logging is the process of writing log messages during the execution of a program to a central place. Application log is very important for code debugging and data analysis. Log4J is the most populalar logging framework
@@ -31,8 +33,16 @@ Rank | Log Level | Description
   
 ## Steps to Integrate property file based Log4J
 
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/log4J/Log4JIntegration.zip" target="_blank">Log4J Integration zip(33kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/log4J/Log4JIntegration" target="_blank">Log4J Integration</a>
+	</span>
+</div>
 
- * The complete code is available in [this location](https://github.com/ashismo/repositoryForMyBlog/tree/master/log4J/Log4JIntegration){:target="_blank"} . You can also download the zip code from [here](https://github.com/ashismo/repositoryForMyBlog/blob/master/log4J/Log4JIntegration.zip){:target="_blank"}
+
  * Create a simple java project with **src/main/java, src/main/resources** as the source directory. Once project is created, you can add source directory from the below screen (Right click on project -> properties)  
 <img src="https://cloud.githubusercontent.com/assets/11231867/7747899/da6fa93a-ffdc-11e4-9993-8a0ca0843577.png"/>  
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)

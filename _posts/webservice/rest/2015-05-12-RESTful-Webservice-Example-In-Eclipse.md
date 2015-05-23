@@ -5,6 +5,8 @@ tags : [Webservice Tutorial]
 weight: 40
 ---
 
+{% include JB/setup %}
+
 ## What is RESTful webservice?
 
 REST stands for REpresentational State Transfer. REST is an architectural style and gaining popularity over SOAP webservices.
@@ -33,7 +35,14 @@ The objectives of this blog are
   
 ## Stepts to write code
 
-Click here to see my [project at github](https://github.com/ashismo/repositoryForMyBlog/tree/master/webservices/RestfulWebservice){:target="_blank"}
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/webservices/RestfulWebservice.zip" target="_blank">Restful Webservice zip(17kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/webservices/RestfulWebservice" target="_blank">Restful Webservice</a>
+	</span>
+</div>
 
 Below are the steps to write a simple RESTful webservice
 
@@ -55,7 +64,7 @@ The meaning of the below entry (as shown in the image) is that the dependent jar
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
 	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
 	&lt;groupId&gt;com.ashish.rest.controller&lt;/groupId&gt;
-	&lt;artifactId&gt;test&lt;/artifactId&gt;
+	&lt;artifactId&gt;RestfulWebservice&lt;/artifactId&gt;
 	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 
 	&lt;repositories&gt;

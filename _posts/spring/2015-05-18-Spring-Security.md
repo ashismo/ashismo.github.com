@@ -28,7 +28,7 @@ Objectives of this project are
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringSecurity.zip" target="_blank">Spring Security Example(33kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringSecurity.zip" target="_blank">Spring Security Example zip(33kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringSecurity" target="_blank">Spring Security Example</a>

@@ -39,7 +39,7 @@ The objective of this program is to
  
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample.zip" target="_blank">Hibernate Example(18kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample.zip" target="_blank">Hibernate Example zip(18kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/hibernate/HibernateExample" target="_blank">Hibernate Example</a>
