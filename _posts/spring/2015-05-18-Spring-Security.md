@@ -5,6 +5,8 @@ tags : [Spring Tutorial]
 weight: 100
 ---
 
+{% include JB/setup %}
+
 ## Introduction
 
 Spring security is a Java/J2EE framework that provides authentication and authorization for enterprise applications. 
