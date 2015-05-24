@@ -48,3 +48,7 @@ Below are the important terminologies in AOP
  * **Interceptor:** It is an aspect that contains only one advice.
  * **AOP Proxy:** It is used to implement aspect contracts, created by AOP framework. It will be a JDK dynamic proxy or CGLIB proxy in spring framework.
  * **Weaving:** It is the process of linking aspect with other application types or objects to create an advised object. Weaving can be done at compile time, load time or runtime. Spring AOP performs weaving at runtime.
+ 
+## AOP Example
+ 
+<a href="http://ashismo.github.io/java-spring/2015/05/25/Spring-AOP-Example/" target="_blank">Check my another blog</a> to understand the implementation of **Joint point, Advice and Pointcut**

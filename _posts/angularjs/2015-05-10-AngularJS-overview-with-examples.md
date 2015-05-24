@@ -106,7 +106,7 @@ Example of **ng-app, ng-model, ng-bind**
 		&lt;/p&gt;
 		ng-bind example:
 		&lt;p ng-bind="name"&gt;&lt;/p&gt;
-		An alternative to ng-bind is: {{name}}
+		An alternative to ng-bind is: { { name } }
 	&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -131,7 +131,7 @@ Defines **initial values** for an AngularJS application
 
 Repeats an HTML element
 
-Example of ** ng-bind, ng-init, ng-repeat**
+Example of **ng-bind, ng-init, ng-repeat**
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
@@ -196,7 +196,7 @@ Defines an AngularJS click event
 
 Defines condition
 
-Example of ** ng-show/ng-hide, ng-click, ng-if **
+Example of **ng-show/ng-hide, ng-click, ng-if**
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;body&gt;
