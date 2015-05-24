@@ -16,7 +16,16 @@ In this example AOP implementations are provided by
  
  * AspectJ
  * Spring AOP
-  
+
+## Required Software
+
+
+ * JDK 1.7
+ * Maven 2.2.x
+ * Eclipse for J2EE 
+
+## Steps to write code
+
 Below example shows the implementation of [**Joint point, Advice and Pointcut**](http://ashismo.github.io//java-spring/2015/05/24/Important-Concepts-of-the-Spring-AOP/){:target="_blank"}
 
 <div class="download-view">
