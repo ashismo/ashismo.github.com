@@ -23,10 +23,10 @@ One to many relationship in very common in relational database. In this relation
 
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample(24kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample zip(24kb)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample" target="_blank">HibernateOneToManyExample</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample" target="_blank">OneToManyExample</a>
 	</span>
 </div>
 
