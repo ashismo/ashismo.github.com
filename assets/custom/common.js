@@ -39,6 +39,7 @@ $(document).ready(function() {
 	  var url = window.location.href;
 	  if(url.indexOf(".html") != -1) { // This is the main page
 		  $("h3").each(function(){
+			$(this).css("color","black");
 			var content = $(this).html();
 			content = content.substring(content.indexOf("-") + 1);
 			content = toTitleCase(content);
