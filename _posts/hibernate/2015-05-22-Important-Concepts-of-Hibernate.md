@@ -196,8 +196,8 @@ Datasource is a name given to the connection set up to a Database from a server.
  * Provides the facilities of creating connection pool
  
 If you want to configure a BasicDataSource for MySQL, you would do something like this
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 BasicDataSource dataSource = new BasicDataSource();
 
 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
