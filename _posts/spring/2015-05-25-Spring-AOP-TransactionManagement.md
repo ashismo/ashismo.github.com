@@ -21,10 +21,10 @@ weight: 92
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringAOP-TransactionManagement.zip" target="_blank">SpringORMExample zip(33kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringAOP-TransactionManagement.zip" target="_blank">SpringAOP-TransactionManagement zip(33kb)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringAOP-TransactionManagement" target="_blank">SpringORMExample</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringAOP-TransactionManagement" target="_blank">SpringAOP-TransactionManagement</a>
 	</span>
 </div>
 
