@@ -20,6 +20,7 @@ One to many relationship in very common in relational database. In this relation
  * Maven 2.2.x
  * Eclipse for J2EE
  * Hibernate
+
 <div class="download-view">
 	<span class="download">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample(24kb)</a>
