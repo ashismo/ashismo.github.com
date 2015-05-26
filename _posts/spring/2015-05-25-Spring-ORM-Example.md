@@ -174,7 +174,7 @@ The purpose of each files are described in the below table
 
 SL NO | Class Name | Description
 :---: | --- | ---
-1 | spring-config.xml | This file contains data source and session factory configuration. This is the replacement of hibernate.cfg.xml file in traditinal hibernate programming
+1 | spring-config.xml | Data source and session factory is configured in this file. This is the replacement of hibernate.cfg.xml file in traditinal hibernate programming
 2 | com.ashish.entity.EmployeeEntity and com.ashish.entity.EmployeeAllocationEntity | These two hibernate entity classes are having one to many relationsship. In EmployeeEntity class @OneToMany and in EmployeeAllocationEntity class @ManyToOne annotations are used to established the relationship in hibernate
 3 | com.ashish.dao.EmployeeDAO and com.ashish.dao.EmployeeDAOImpl | EmployeeDAOImpl implements **insertRecords()** and **listRecords()** methods of EmployeeDAO interface.
 4 | com.ashish.main.MainApp | This class contains the main method and calls DAO services
