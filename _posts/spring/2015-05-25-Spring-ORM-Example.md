@@ -381,11 +381,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		this.sessionFactory = sessionFactory;
 	}
 }
-```java
+```
 
 * **MainApp.java:** This class contains the main method and calls DAO services.
 
-``` java
+```java
 package com.ashish.main;
 
 
