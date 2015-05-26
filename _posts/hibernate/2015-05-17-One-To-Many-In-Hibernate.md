@@ -13,6 +13,8 @@ One to many relationship in very common in relational database. In this relation
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7801287/f41de304-033f-11e5-9e3f-c678fa23812e.png"/>
 
+In my next blog the same example will be extended to implement many-to-many relationship where one more table will be introduced
+
 ## Required Software
 
 
@@ -20,6 +22,8 @@ One to many relationship in very common in relational database. In this relation
  * Maven 2.2.x
  * Eclipse for J2EE
  * Hibernate
+
+## Steps to write code
 
 <div class="download-view"> 
 	<span class="download">
