@@ -314,13 +314,6 @@ import com.ashish.entity.EmployeeEntity;
 public class EmployeeDAOImpl implements EmployeeDAO {
 	
 	private SessionFactory sessionFactory = null;
-//	private Session session = sf.openSession();
-    
-	@Override
-	public void setDataSource(DataSource ds) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void insertEmpRecords() {
@@ -380,22 +373,16 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		sessionFactory.close();
 	}
 
-	/**
-	 * @return the sessionFactory
-	 */
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
 
-	/**
-	 * @param sessionFactory the sessionFactory to set
-	 */
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-
 }
 </code></pre>
+
 
 ## Output
 
