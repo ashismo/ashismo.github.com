@@ -210,6 +210,67 @@ public class HibernateUtil
 }
 </code></pre>
 
+ * **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
+ 
+ <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID"),
+		@UniqueConstraint(columnNames = "EMAIL") })
+public class EmployeeEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer employeeId;
+	@Column(name = "EMAIL", unique = true, nullable = false, length = 100)
+	private String email;
+	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
+	private String firstName;
+	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
+	private String lastName;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "allocationId")
+	private Set<EmployeeAllocationEntity> empAllocations = new HashSet<EmployeeAllocationEntity>();
+
+	public EmployeeEntity(int empId, String firstName, String lastName, String emailId) {
+		this.employeeId = empId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = emailId;
+	}
+	
+	// All getter and setter methods
+}
+</code></pre>
+
+ * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID") })
+public class EmployeeAllocationEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer allocationId;
+	@Column(name = "ALLOCATION_NAME", unique = true, nullable = false, length = 100)
+	private String allocationName;
+	@ManyToOne
+	@JoinColumn(name="employeeId")
+	private EmployeeEntity empEntity;
+	
+	public EmployeeAllocationEntity(int allocationId, String allocationName, EmployeeEntity emp) {
+		this.allocationId = allocationId;
+		this.allocationName = allocationName;
+		this.empEntity = emp;
+	}
+	
+	// All getter and setter methods
+}
+</code></pre>
 
  * **MainApp.java:** This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
 
@@ -285,70 +346,6 @@ public class MainApp
 	     }
 	     
 	}
-}
-</code></pre>
-
- 
- * **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
- 
- <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-
-@Entity
-@org.hibernate.annotations.Entity(dynamicUpdate = true)
-@Table(name = "EMPLOYEE", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "ID"),
-		@UniqueConstraint(columnNames = "EMAIL") })
-public class EmployeeEntity implements Serializable {
-	private static final long serialVersionUID = -1798070786993154676L;
-	@Id
-	@Column(name = "ID", unique = true, nullable = false)
-	private Integer employeeId;
-	@Column(name = "EMAIL", unique = true, nullable = false, length = 100)
-	private String email;
-	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
-	private String firstName;
-	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
-	private String lastName;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "allocationId")
-	private Set<EmployeeAllocationEntity> empAllocations = new HashSet<EmployeeAllocationEntity>();
-
-	public EmployeeEntity(int empId, String firstName, String lastName, String emailId) {
-		this.employeeId = empId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = emailId;
-	}
-	
-	// All getter and setter methods
-}
-</code></pre>
-
- * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
-
- <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-
-@Entity
-@org.hibernate.annotations.Entity(dynamicUpdate = true)
-@Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "ID") })
-public class EmployeeAllocationEntity implements Serializable {
-	private static final long serialVersionUID = -1798070786993154676L;
-	@Id
-	@Column(name = "ID", unique = true, nullable = false)
-	private Integer allocationId;
-	@Column(name = "ALLOCATION_NAME", unique = true, nullable = false, length = 100)
-	private String allocationName;
-	@ManyToOne
-	@JoinColumn(name="employeeId")
-	private EmployeeEntity empEntity;
-	
-	public EmployeeAllocationEntity(int allocationId, String allocationName, EmployeeEntity emp) {
-		this.allocationId = allocationId;
-		this.allocationName = allocationName;
-		this.empEntity = emp;
-	}
-	
-	// All getter and setter methods
 }
 </code></pre>
 
