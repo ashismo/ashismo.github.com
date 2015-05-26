@@ -296,7 +296,7 @@ public class EmployeeAllocationEntity implements Serializable {
 
 * **EmployeeDAOImpl.java:** EmployeeDAOImpl implements **insertRecords()** and **listRecords()** methods of EmployeeDAO interface
  
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 package com.ashish.dao;
 
 import java.util.Iterator;
@@ -381,7 +381,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		this.sessionFactory = sessionFactory;
 	}
 }
-</code></pre>
+```java
 
 * **MainApp.java:** This class contains the main method and calls DAO services.
 
