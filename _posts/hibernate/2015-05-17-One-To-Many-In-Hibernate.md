@@ -210,7 +210,7 @@ public class HibernateUtil
 }
 </code></pre>
 
-* **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
+ * **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
  
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Entity
@@ -244,7 +244,7 @@ public class EmployeeEntity implements Serializable {
 }
 </code></pre>
 
-* **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
+ * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Entity
