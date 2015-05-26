@@ -218,6 +218,7 @@ public class HibernateUtil
 @Table(name = "EMPLOYEE", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "ID"),
 		@UniqueConstraint(columnNames = "EMAIL") })
+
 public class EmployeeEntity implements Serializable {
 	private static final long serialVersionUID = -1798070786993154676L;
 	@Id
@@ -250,6 +251,7 @@ public class EmployeeEntity implements Serializable {
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "ID") })
+		
 public class EmployeeAllocationEntity implements Serializable {
 	private static final long serialVersionUID = -1798070786993154676L;
 	@Id
