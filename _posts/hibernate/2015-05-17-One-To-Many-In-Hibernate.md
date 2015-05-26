@@ -165,7 +165,7 @@ SL NO | Class Name | Description
 
  * **HibernateUtil.java:** This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
  
-<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.util;
 
 import org.hibernate.SessionFactory;
@@ -209,9 +209,10 @@ public class HibernateUtil
 }
 </code></pre>
 
- * **EmployeeEntity.java**: This class has a set to hold the one to many relationship
+ * **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
  
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE", uniqueConstraints = {
@@ -242,9 +243,11 @@ public class EmployeeEntity implements Serializable {
 }
 </code></pre>
 
- * **EmployeeAllocationEntity.java**: @ManyToOne annotation is used to to establish the relationship.
+
+ * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
  
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
@@ -271,7 +274,7 @@ public class EmployeeAllocationEntity implements Serializable {
 </code></pre>
 
 
- * **MainApp.java**: This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
+ * **MainApp.java:** This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
  
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.main;
@@ -346,6 +349,7 @@ public class MainApp
 	}
 }
 </code></pre>
+
 
 ## Output
 
