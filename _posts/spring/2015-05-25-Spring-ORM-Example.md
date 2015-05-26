@@ -27,6 +27,8 @@ In this example, I have integrated Spring with Hibernate.
 
 ## Steps to write code
 
+In this example HSQLDB jar has been used. So no real database is required to run the stand alone application
+
 <div class="download-view">
 	<span class="download">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringORMExample.zip" target="_blank">SpringORMExample zip(24kb)</a>
@@ -37,6 +39,136 @@ In this example, I have integrated Spring with Hibernate.
 </div>
 
 
+ * Create a simple java project with src/main/java, src/main/resources as the source directory. Once project is created, you can add source directory from the below screen (Right click on project -> properties)
+<img src="https://cloud.githubusercontent.com/assets/11231867/7810036/6b2120de-03bc-11e5-8bc6-d10d31dc6409.png"/>
+ * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
+ * Add the following dependancies in your pom.xml for Hibernate One to Many example
+
+<pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;SpringORMExample&lt;/groupId&gt;
+	&lt;artifactId&gt;SpringORMExample&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+
+	&lt;properties&gt;
+		&lt;spring.version&gt;4.0.1.RELEASE&lt;/spring.version&gt;
+		&lt;aspectj.version&gt;1.7.4&lt;/aspectj.version&gt;
+		&lt;hibernate.version&gt;4.0.1.Final&lt;/hibernate.version&gt;
+	&lt;/properties&gt;
+
+	&lt;repositories&gt;
+		&lt;repository&gt;
+			&lt;id&gt;jboss&lt;/id&gt;
+			&lt;url&gt;http://repository.jboss.org/maven2&lt;/url&gt;
+		&lt;/repository&gt;
+	&lt;/repositories&gt;
+
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.7&lt;/source&gt;
+					&lt;target&gt;1.7&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- This dependancy is required for spring ApplicationContext container --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Spring datasource --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-orm&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Hibernate Dependencies --&gt;
+		&lt;!-- Hibernate core --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+			&lt;version&gt;${hibernate.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Hibernate annotation --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;hibernate-annotations&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-annotations&lt;/artifactId&gt;
+			&lt;version&gt;3.3.0.GA&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;hibernate-commons-annotations&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-commons-annotations&lt;/artifactId&gt;
+			&lt;version&gt;3.0.0.GA&lt;/version&gt;
+		&lt;/dependency&gt;
+		
+		&lt;!-- Hibernate library dependecy start --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;dom4j&lt;/groupId&gt;
+			&lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+			&lt;version&gt;1.6.1&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;commons-logging&lt;/groupId&gt;
+			&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;
+			&lt;version&gt;1.1.1&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;commons-collections&lt;/groupId&gt;
+			&lt;artifactId&gt;commons-collections&lt;/artifactId&gt;
+			&lt;version&gt;3.2.1&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;cglib&lt;/groupId&gt;
+			&lt;artifactId&gt;cglib&lt;/artifactId&gt;
+			&lt;version&gt;2.2&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;!-- Hibernate library dependecy end --&gt;
+
+		&lt;!-- HSQL database --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;hsqldb&lt;/groupId&gt;
+			&lt;artifactId&gt;hsqldb&lt;/artifactId&gt;
+			&lt;version&gt;1.8.0.10&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+
+ * Create other files as shown below
+<img src="https://cloud.githubusercontent.com/assets/11231867/7809927/82b723fc-03bb-11e5-8038-1520b27e7126.png"/>
 
 ## Output
 
