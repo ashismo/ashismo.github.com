@@ -9,6 +9,14 @@ weight: 70
 
 ## Introduction
 
+Spring provides API to integrate spring with ORM frameworks such as Hibernate, JPA(Java Persistence API), JDO(Java Data Objects), Oracle Toplink and iBATIS.  
+The main advantages of ORM framework with Spring are
+
+
+ * **Better exception handling** with the spring provided API for exception handling with ORM framework
+ * **Better transaction management** using explicit template wrapper class or AOP style method interceptor
+
+In this example, I have integrated Spring with Hibernate.
 
 ## Required Software
 
