@@ -176,7 +176,7 @@ SL NO | Class Name | Description
 :---: | --- | ---
 1 | spring-config.xml | This file contains data source and session factory configuration. This is the replacement of hibernate.cfg.xml file in traditinal hibernate programming
 2 | com.ashish.entity.EmployeeEntity and com.ashish.entity.EmployeeAllocationEntity | These two hibernate entity classes are having one to many relationsship. In EmployeeEntity class @OneToMany and in EmployeeAllocationEntity class @ManyToOne annotations are used to established the relationship in hibernate
-3 | com.ashish.dao.EmployeeDAO and com.ashish.dao.EmployeeDAOImpl | EmployeeDAOImpl implements insertRecords() and listRecords() methods of EmployeeDAO interface.
+3 | com.ashish.dao.EmployeeDAO and com.ashish.dao.EmployeeDAOImpl | EmployeeDAOImpl implements **insertRecords()** and **listRecords()** methods of EmployeeDAO interface.
 4 | com.ashish.main.MainApp | This class contains the main method and calls DAO services
 
 * **spring-config.xml**
@@ -228,6 +228,173 @@ SL NO | Class Name | Description
 		&lt;property name="sessionFactory" ref="sessionFactory"&gt;&lt;/property&gt;
 	&lt;/bean&gt;
 &lt;/beans&gt;
+</code></pre>
+
+* **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
+ 
+``` java
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID"),
+		@UniqueConstraint(columnNames = "EMAIL") })
+
+public class EmployeeEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer employeeId;
+	@Column(name = "EMAIL", unique = true, nullable = false, length = 100)
+	private String email;
+	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
+	private String firstName;
+	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
+	private String lastName;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "allocationId")
+	private Set<EmployeeAllocationEntity> empAllocations = new HashSet<EmployeeAllocationEntity>();
+
+	public EmployeeEntity(int empId, String firstName, String lastName, String emailId) {
+		this.employeeId = empId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = emailId;
+	}
+	
+	// All getter and setter methods
+}
+```
+
+ * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID") })
+		
+public class EmployeeAllocationEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer allocationId;
+	@Column(name = "ALLOCATION_NAME", unique = true, nullable = false, length = 100)
+	private String allocationName;
+	@ManyToOne
+	@JoinColumn(name="employeeId")
+	private EmployeeEntity empEntity;
+	
+	public EmployeeAllocationEntity(int allocationId, String allocationName, EmployeeEntity emp) {
+		this.allocationId = allocationId;
+		this.allocationName = allocationName;
+		this.empEntity = emp;
+	}
+	
+	// All getter and setter methods
+}
+</code></pre>
+
+
+* **EmployeeDAOImpl.java:** EmployeeDAOImpl implements **insertRecords()** and **listRecords()** methods of EmployeeDAO interface
+ 
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.dao;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import javax.sql.DataSource;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.ashish.entity.EmployeeAllocationEntity;
+import com.ashish.entity.EmployeeEntity;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+	
+	private SessionFactory sessionFactory = null;
+//	private Session session = sf.openSession();
+    
+	@Override
+	public void setDataSource(DataSource ds) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertEmpRecords() {
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+			
+		// Add new Employee object
+	      EmployeeEntity emp = new EmployeeEntity(1, "Ashish", "Mondal", "ashismo@gmail.com");
+	      
+	      // Ashish Mondal has two allocations called Project1 and Project2
+	      EmployeeAllocationEntity empAllocation = new EmployeeAllocationEntity(1, "Project1", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      empAllocation = new EmployeeAllocationEntity(2, "Project2", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      session.save(emp);
+	      
+	   // Add another Employee object
+	      emp = new EmployeeEntity(2, "Ujan", "Mondal", "ujanmo@gmail.com");
+	      
+	      // Ujan Mondal has two allocations called Project2 and Project3. 
+	      // Also note that: In project 2, Ashish and Ujan both are allocated
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      empAllocation = new EmployeeAllocationEntity(3, "Project3", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      session.save(emp);
+	      
+	      // After saving all employees, commit the transaction
+	      session.getTransaction().commit();
+	      session.close();
+	}
+
+	@Override
+	public void listEmployees() {
+		// Select Employee
+			Session session = sessionFactory.openSession();
+	     List<EmployeeEntity> empList = session.createQuery("from EmployeeEntity").list();
+	     for(EmployeeEntity emp : empList) {
+	    	 System.out.println("==================Employee Details======================");
+	    	 System.out.println("Employee Name: " + emp.getFirstName() + " " + emp.getLastName());
+	    	 System.out.println("Email : " + emp.getEmail());
+	    	 
+	    	 System.out.println("+++++++++++++Employee Allocation Details+++++++++++++");
+	    	 Set<EmployeeAllocationEntity> empAllocationSet = emp.getEmpAllocations();
+	    	 Iterator<EmployeeAllocationEntity> it = empAllocationSet.iterator();
+	    	 while(it.hasNext()) {
+	    		 System.out.println("Allocation: " + it.next().getAllocationName());
+	    	 }
+	     }
+	     session.close();
+	}
+
+	@Override
+	public void releaseResources() {
+		sessionFactory.close();
+	}
+
+	/**
+	 * @return the sessionFactory
+	 */
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	/**
+	 * @param sessionFactory the sessionFactory to set
+	 */
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+}
 </code></pre>
 
 ## Output
