@@ -44,7 +44,7 @@ In this example HSQLDB jar has been used. So no real database is required to run
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
  * Add the following dependancies in your pom.xml for Hibernate One to Many example
 
-<pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
 	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
@@ -169,6 +169,16 @@ In this example HSQLDB jar has been used. So no real database is required to run
 
  * Create other files as shown below
 <img src="https://cloud.githubusercontent.com/assets/11231867/7809927/82b723fc-03bb-11e5-8038-1520b27e7126.png"/>
+
+The purpose of each files are described in the below table
+
+SL NO | Class Name | Description
+:---: | --- | ---
+1 | spring-config.xml | This file contains data source and session factory configuration. This is the replacement of hibernate.cfg.xml file in traditinal hibernate programming
+2 | com.ashish.entity.EmployeeEntity and com.ashish.entity.EmployeeAllocationEntity | These two hibernate entity classes are having one to many relationsship. In EmployeeEntity class @OneToMany and in EmployeeAllocationEntity class @ManyToOne annotations are used to established the relationship in hibernate
+3 | com.ashish.dao.EmployeeDAO and com.ashish.dao.EmployeeDAOImpl | EmployeeDAOImpl implements insertRecords() and listRecords() methods of EmployeeDAO interface.
+4 | com.ashish.main.MainApp | This class contains the main method and calls DAO services
+
 
 ## Output
 
