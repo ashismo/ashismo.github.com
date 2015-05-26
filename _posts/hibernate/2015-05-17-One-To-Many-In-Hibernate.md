@@ -275,7 +275,7 @@ public class EmployeeAllocationEntity implements Serializable {
 
 * **MainApp.java:** This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+``` java
 package com.ashish.main;
 
 import java.util.Iterator;
@@ -343,7 +343,7 @@ public class MainApp
 	     
 	}
 }
-</code></pre>
+```
 
 
 ## Output
