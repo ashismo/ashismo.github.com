@@ -210,9 +210,9 @@ public class HibernateUtil
 }
 </code></pre>
 
- * **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
+* **EmployeeEntity.java:** This class has a set to hold the one to many relationship.
  
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+``` java
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE", uniqueConstraints = {
@@ -242,7 +242,7 @@ public class EmployeeEntity implements Serializable {
 	
 	// All getter and setter methods
 }
-</code></pre>
+```
 
  * **EmployeeAllocationEntity.java:** @ManyToOne annotation is used to to establish the relationship.
 
