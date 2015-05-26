@@ -84,3 +84,13 @@ There are two different types of containers
 		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/SpringApplicationContextExample" target="_blank">ApplicationContext Example</a>
 	</span>
 </div>
+
+### @Autowired
+
+For annotation based dependency injection, @Autowired annotation is used.
+If @Autowired is applied to
+
+
+ * **field:** for the field-based dependency injection
+ * **setter** for the setter dependency injection. Same as field-based dependency injection.
+ * **constructor** for constructor-based dependency injection
