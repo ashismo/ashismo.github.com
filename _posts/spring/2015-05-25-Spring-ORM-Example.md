@@ -179,6 +179,56 @@ SL NO | Class Name | Description
 3 | com.ashish.dao.EmployeeDAO and com.ashish.dao.EmployeeDAOImpl | EmployeeDAOImpl implements insertRecords() and listRecords() methods of EmployeeDAO interface.
 4 | com.ashish.main.MainApp | This class contains the main method and calls DAO services
 
+* **spring-config.xml**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context-3.0.xsd
+  http://www.springframework.org/schema/aop
+  http://www.springframework.org/schema/aop/spring-aop.xsd"&gt;
+
+	
+	&lt;bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+		&lt;property name="driverClassName" value="org.hsqldb.jdbcDriver" /&gt;
+		&lt;property name="url" value="jdbc:hsqldb:mem:ashish" /&gt;
+		&lt;property name="username" value="sa" /&gt;
+		&lt;property name="password" value="" /&gt;
+	&lt;/bean&gt;
+	
+	&lt;bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"&gt;
+    	&lt;property name="dataSource"&gt;
+    		&lt;ref bean="dataSource"/&gt;
+    	&lt;/property&gt;
+    	&lt;property name="hibernateProperties"&gt;
+    		&lt;props&gt;
+				&lt;prop key="hibernate.dialect"&gt;org.hibernate.dialect.HSQLDialect&lt;/prop&gt;
+				&lt;prop key="hibernate.show_sql"&gt;true&lt;/prop&gt;
+				&lt;prop key="hibernate.archive.autodetection"&gt;class&lt;/prop&gt;
+				&lt;prop key="hibernate.hbm2ddl.auto"&gt;create&lt;/prop&gt;
+    		&lt;/props&gt;
+    	&lt;/property&gt;
+    	
+		&lt;property name="annotatedClasses"&gt;
+			&lt;list&gt;
+				&lt;value&gt;com.ashish.entity.EmployeeEntity&lt;/value&gt;
+				&lt;value&gt;com.ashish.entity.EmployeeAllocationEntity&lt;/value&gt;
+			&lt;/list&gt;
+		&lt;/property&gt;
+		
+    &lt;/bean&gt;
+
+	&lt;bean id="employeeDao" class="com.ashish.dao.EmployeeDAOImpl"&gt;
+		&lt;property name="sessionFactory" ref="sessionFactory"&gt;&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
 
 ## Output
 
