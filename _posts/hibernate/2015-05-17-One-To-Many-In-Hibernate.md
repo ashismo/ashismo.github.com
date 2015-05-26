@@ -25,6 +25,7 @@ In my next blog the same example will be extended to implement many-to-many rela
 
 ## Steps to write code
 
+ In this example HSQLDB jar has been used. So no real database is required to run the stand alone application
 <div class="download-view"> 
 	<span class="download">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample zip(24kb)</a>
@@ -33,6 +34,320 @@ In my next blog the same example will be extended to implement many-to-many rela
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample" target="_blank">OneToManyExample</a>
 	</span>
 </div>
+
+
+ * Create a simple java project with src/main/java, src/main/resources as the source directory. Once project is created, you can add source directory from the below screen (Right click on project -> properties)
+<img src="https://cloud.githubusercontent.com/assets/11231867/7805744/7349b0b8-0395-11e5-9f41-b6dda9b1123f.png"/>
+ * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
+ * Add the following dependancies in your pom.xml for Hibernate One to Many example
+
+<pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+&gt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&lt;
+	&gt;modelVersion&lt;4.0.0&gt;/modelVersion&lt;
+	&gt;groupId&lt;HibernateOneToManyExample&gt;/groupId&lt;
+	&gt;artifactId&lt;HibernateOneToManyExample&gt;/artifactId&lt;
+	&gt;version&lt;0.0.1-SNAPSHOT&gt;/version&lt;
+
+	&gt;repositories&lt;
+		&gt;repository&lt;
+			&gt;id&lt;jboss&gt;/id&lt;
+			&gt;url&lt;http://repository.jboss.org/maven2&gt;/url&lt;
+		&gt;/repository&lt;
+	&gt;/repositories&lt;
+
+	&gt;build&lt;
+		&gt;plugins&lt;
+			&gt;plugin&lt;
+				&gt;artifactId&lt;maven-compiler-plugin&gt;/artifactId&lt;
+				&gt;version&lt;3.1&gt;/version&lt;
+				&gt;configuration&lt;
+					&gt;source&lt;1.7&gt;/source&lt;
+					&gt;target&lt;1.7&gt;/target&lt;
+				&gt;/configuration&lt;
+			&gt;/plugin&lt;
+		&gt;/plugins&lt;
+	&gt;/build&lt;
+
+	&gt;dependencies&lt;
+		&gt;!-- Hibernate Dependencies --&lt;
+		&gt;!-- Hibernate core --&lt;
+		&gt;dependency&lt;
+			&gt;groupId&lt;org.hibernate&gt;/groupId&lt;
+			&gt;artifactId&lt;hibernate-core&gt;/artifactId&lt;
+			&gt;version&lt;4.3.6.Final&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;!-- Hibernate annotation --&lt;
+		&gt;dependency&lt;
+			&gt;groupId&lt;hibernate-annotations&gt;/groupId&lt;
+			&gt;artifactId&lt;hibernate-annotations&gt;/artifactId&lt;
+			&gt;version&lt;3.3.0.GA&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;dependency&lt;
+			&gt;groupId&lt;hibernate-commons-annotations&gt;/groupId&lt;
+			&gt;artifactId&lt;hibernate-commons-annotations&gt;/artifactId&lt;
+			&gt;version&lt;3.0.0.GA&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;!-- Hibernate library dependecy start --&lt;
+		&gt;dependency&lt;
+			&gt;groupId&lt;dom4j&gt;/groupId&lt;
+			&gt;artifactId&lt;dom4j&gt;/artifactId&lt;
+			&gt;version&lt;1.6.1&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;dependency&lt;
+			&gt;groupId&lt;commons-logging&gt;/groupId&lt;
+			&gt;artifactId&lt;commons-logging&gt;/artifactId&lt;
+			&gt;version&lt;1.1.1&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;dependency&lt;
+			&gt;groupId&lt;commons-collections&gt;/groupId&lt;
+			&gt;artifactId&lt;commons-collections&gt;/artifactId&lt;
+			&gt;version&lt;3.2.1&gt;/version&lt;
+		&gt;/dependency&lt;
+
+		&gt;dependency&lt;
+			&gt;groupId&lt;cglib&gt;/groupId&lt;
+			&gt;artifactId&lt;cglib&gt;/artifactId&lt;
+			&gt;version&lt;2.2&gt;/version&lt;
+		&gt;/dependency&lt;
+		&gt;!-- Hibernate library dependecy end --&lt;
+
+		&gt;!-- HSQL database --&lt;
+		&gt;dependency&lt;
+			&gt;groupId&lt;hsqldb&gt;/groupId&lt;
+			&gt;artifactId&lt;hsqldb&gt;/artifactId&lt;
+			&gt;version&lt;1.8.0.10&gt;/version&lt;
+		&gt;/dependency&lt;
+	&gt;/dependencies&lt;
+&gt;/project&lt;
+</code></pre>
+
+
+ * Create other files as shown below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7806088/15b8fbc0-039a-11e5-93e0-905f1304a5a3.png"/>
+The purpose of each files are described in the below table
+
+SL NO | Class Name | Description
+:---: | --- | ---
+1 | com.ashish.util.HibernateUtil | This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
+2 | com.ashish.entity.EmployeeEntity and com.ashish.entity.EmployeeAllocationEntity | These two entity classes are having one to many relationsship. In EmployeeEntity class @OneToMany and in EmployeeAllocationEntity class @ManyToOne annotations are used to established the relationship in hibernate
+3 | com.ashish.main.MainApp | This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan
+
+ * **hibernate.cfg.xml**
+
+ <pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"&gt;
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+        &lt;property name="hibernate.archive.autodetection"&gt;class,hbm&lt;/property&gt; 
+        &lt;property name="hibernate.dialect"&gt;org.hibernate.dialect.HSQLDialect&lt;/property&gt; 
+        &lt;property name="hibernate.show_sql"&gt;true&lt;/property&gt;   
+        &lt;property name="hibernate.connection.driver_class"&gt;org.hsqldb.jdbcDriver&lt;/property&gt;   
+        &lt;property name="hibernate.connection.username"&gt;sa&lt;/property&gt;   
+        &lt;property name="hibernate.connection.password"&gt;&lt;/property&gt;   
+        &lt;property name="hibernate.connection.url"&gt;jdbc:hsqldb:mem:ashish&lt;/property&gt;   
+        &lt;property name="hibernate.hbm2ddl.auto"&gt;create&lt;/property&gt;   
+        &lt;mapping class="com.ashish.entity.EmployeeEntity"&gt;&lt;/mapping&gt;
+        &lt;mapping class="com.ashish.entity.EmployeeAllocationEntity"&gt;&lt;/mapping&gt;
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;
+</code></pre>
+
+
+ * **HibernateUtil.java:** This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
+ 
+<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+package com.ashish.util;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+ 
+public class HibernateUtil
+{
+   private static SessionFactory sessionFactory = buildSessionFactory();
+ 
+   private static SessionFactory buildSessionFactory()
+   {
+      try
+      {
+         if (sessionFactory == null)
+         {
+            Configuration configuration = new Configuration().configure(HibernateUtil.class.getResource("/hibernate.cfg.xml"));
+            StandardServiceRegistryBuilder serviceRegistryBuilder = new StandardServiceRegistryBuilder();
+            serviceRegistryBuilder.applySettings(configuration.getProperties());
+            ServiceRegistry serviceRegistry = serviceRegistryBuilder.build();
+            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+         }
+         return sessionFactory;
+      } catch (Throwable ex)
+      {
+         System.err.println("Initial SessionFactory creation failed." + ex);
+         throw new ExceptionInInitializerError(ex);
+      }
+   }
+ 
+   public static SessionFactory getSessionFactory()
+   {
+      return sessionFactory;
+   }
+ 
+   public static void shutdown()
+   {
+      getSessionFactory().close();
+   }
+}
+</code></pre>
+
+
+ * **EmployeeEntity.java**: This class has a set to hold the one to many relationship
+ 
+ <pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID"),
+		@UniqueConstraint(columnNames = "EMAIL") })
+public class EmployeeEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer employeeId;
+	@Column(name = "EMAIL", unique = true, nullable = false, length = 100)
+	private String email;
+	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
+	private String firstName;
+	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
+	private String lastName;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "allocationId")
+	private Set<EmployeeAllocationEntity> empAllocations = new HashSet<EmployeeAllocationEntity>();
+
+	public EmployeeEntity(int empId, String firstName, String lastName, String emailId) {
+		this.employeeId = empId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = emailId;
+	}
+	
+	// All getter and setter methods
+}
+</code></pre>
+
+
+ * **EmployeeAllocationEntity.java**: @ManyToOne annotation is used to to establish the relationship.
+ 
+<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+@Entity
+@org.hibernate.annotations.Entity(dynamicUpdate = true)
+@Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID") })
+public class EmployeeAllocationEntity implements Serializable {
+	private static final long serialVersionUID = -1798070786993154676L;
+	@Id
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer allocationId;
+	@Column(name = "ALLOCATION_NAME", unique = true, nullable = false, length = 100)
+	private String allocationName;
+	@ManyToOne
+	@JoinColumn(name="employeeId")
+	private EmployeeEntity empEntity;
+	
+	public EmployeeAllocationEntity(int allocationId, String allocationName, EmployeeEntity emp) {
+		this.allocationId = allocationId;
+		this.allocationName = allocationName;
+		this.empEntity = emp;
+	}
+	
+	// All getter and setter methods
+}
+</code></pre>
+
+
+ * **MainApp.java**: This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
+ 
+<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+package com.ashish.main;
+
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.hibernate.Session;
+
+import com.ashish.entity.EmployeeAllocationEntity;
+import com.ashish.entity.EmployeeEntity;
+import com.ashish.util.HibernateUtil;
+ 
+ 
+public class MainApp
+{
+   public static void main(String[] args)
+   {
+      Session session = HibernateUtil.getSessionFactory().openSession();
+      session.beginTransaction();
+      insertRecord(session);
+      selectRecord(session);
+      HibernateUtil.shutdown();
+   }
+
+	private static void insertRecord(Session session) {
+		// Add new Employee object
+	      EmployeeEntity emp = new EmployeeEntity(1, "Ashish", "Mondal", "ashismo@gmail.com");
+	      
+	      // Ashish Mondal has two allocations called Project1 and Project2
+	      EmployeeAllocationEntity empAllocation = new EmployeeAllocationEntity(1, "Project1", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      empAllocation = new EmployeeAllocationEntity(2, "Project2", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      session.save(emp);
+	      
+	   // Add another Employee object
+	      emp = new EmployeeEntity(2, "Ujan", "Mondal", "ujanmo@gmail.com");
+	      
+	      // Ujan Mondal has two allocations called Project2 and Project3. 
+	      // Also note that: In project 2, Ashish and Ujan both are allocated
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      empAllocation = new EmployeeAllocationEntity(3, "Project3", emp);
+	      emp.setEmpAllocations(empAllocation);
+	      
+	      session.save(emp);
+	      
+	      // After saving all employees, commit the transaction
+	      session.getTransaction().commit();
+	}
+	
+	private static void selectRecord(Session session) {
+		// Select Employee
+	     List<EmployeeEntity> empList = session.createQuery("from EmployeeEntity").list();
+	     for(EmployeeEntity emp : empList) {
+	    	 System.out.println("==================Employee Details======================");
+	    	 System.out.println("Employee Name: " + emp.getFirstName() + " " + emp.getLastName());
+	    	 System.out.println("Email : " + emp.getEmail());
+	    	 
+	    	 System.out.println("+++++++++++++Employee Allocation Details+++++++++++++");
+	    	 Set<EmployeeAllocationEntity> empAllocationSet = emp.getEmpAllocations();
+	    	 Iterator<EmployeeAllocationEntity> it = empAllocationSet.iterator();
+	    	 while(it.hasNext()) {
+	    		 System.out.println("Allocation: " + it.next().getAllocationName());
+	    	 }
+	     }
+	     
+	}
+}
+</code></pre>
 
 ## Output
 
