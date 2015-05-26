@@ -42,7 +42,7 @@ In my next blog the same example will be extended to implement many-to-many rela
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
  * Add the following dependancies in your pom.xml for Hibernate One to Many example
 
-<pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
 	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
@@ -142,7 +142,7 @@ SL NO | Class Name | Description
 
  * **hibernate.cfg.xml**
 
- <pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
+ <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
@@ -162,7 +162,6 @@ SL NO | Class Name | Description
     &lt;/session-factory&gt;
 &lt;/hibernate-configuration&gt;
 </code></pre>
-
 
  * **HibernateUtil.java:** This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
  
@@ -210,10 +209,9 @@ public class HibernateUtil
 }
 </code></pre>
 
-
  * **EmployeeEntity.java**: This class has a set to hold the one to many relationship
  
-<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE", uniqueConstraints = {
@@ -244,10 +242,9 @@ public class EmployeeEntity implements Serializable {
 }
 </code></pre>
 
-
  * **EmployeeAllocationEntity.java**: @ManyToOne annotation is used to to establish the relationship.
  
-<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE_ALLOCATION", uniqueConstraints = {
@@ -276,7 +273,7 @@ public class EmployeeAllocationEntity implements Serializable {
 
  * **MainApp.java**: This class contains the main method and creates two employees called Ashish, Ujan and three allocations called Project1, Project2, Project3. Attach Project1 and Project2 with Ashish and Project2 and Project3 with Ujan.
  
-<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.main;
 
 
