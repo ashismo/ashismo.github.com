@@ -26,6 +26,7 @@ In my next blog the same example will be extended to implement many-to-many rela
 ## Steps to write code
 
  In this example HSQLDB jar has been used. So no real database is required to run the stand alone application
+ 
 <div class="download-view"> 
 	<span class="download">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample zip(24kb)</a>
