@@ -42,89 +42,89 @@ In my next blog the same example will be extended to implement many-to-many rela
  * Add the following dependancies in your pom.xml for Hibernate One to Many example
 
 <pre class="prettyprint highlight prettyprinted"><code class="language-xml" data-lang="xml">
-&gt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&lt;
-	&gt;modelVersion&lt;4.0.0&gt;/modelVersion&lt;
-	&gt;groupId&lt;HibernateOneToManyExample&gt;/groupId&lt;
-	&gt;artifactId&lt;HibernateOneToManyExample&gt;/artifactId&lt;
-	&gt;version&lt;0.0.1-SNAPSHOT&gt;/version&lt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;HibernateOneToManyExample&lt;/groupId&gt;
+	&lt;artifactId&gt;HibernateOneToManyExample&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 
-	&gt;repositories&lt;
-		&gt;repository&lt;
-			&gt;id&lt;jboss&gt;/id&lt;
-			&gt;url&lt;http://repository.jboss.org/maven2&gt;/url&lt;
-		&gt;/repository&lt;
-	&gt;/repositories&lt;
+	&lt;repositories&gt;
+		&lt;repository&gt;
+			&lt;id&gt;jboss&lt;/id&gt;
+			&lt;url&gt;http://repository.jboss.org/maven2&lt;/url&gt;
+		&lt;/repository&gt;
+	&lt;/repositories&gt;
 
-	&gt;build&lt;
-		&gt;plugins&lt;
-			&gt;plugin&lt;
-				&gt;artifactId&lt;maven-compiler-plugin&gt;/artifactId&lt;
-				&gt;version&lt;3.1&gt;/version&lt;
-				&gt;configuration&lt;
-					&gt;source&lt;1.7&gt;/source&lt;
-					&gt;target&lt;1.7&gt;/target&lt;
-				&gt;/configuration&lt;
-			&gt;/plugin&lt;
-		&gt;/plugins&lt;
-	&gt;/build&lt;
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.7&lt;/source&gt;
+					&lt;target&gt;1.7&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
 
-	&gt;dependencies&lt;
-		&gt;!-- Hibernate Dependencies --&lt;
-		&gt;!-- Hibernate core --&lt;
-		&gt;dependency&lt;
-			&gt;groupId&lt;org.hibernate&gt;/groupId&lt;
-			&gt;artifactId&lt;hibernate-core&gt;/artifactId&lt;
-			&gt;version&lt;4.3.6.Final&gt;/version&lt;
-		&gt;/dependency&lt;
+	&lt;dependencies&gt;
+		&lt;!-- Hibernate Dependencies --&gt;
+		&lt;!-- Hibernate core --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+			&lt;version&gt;4.3.6.Final&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;!-- Hibernate annotation --&lt;
-		&gt;dependency&lt;
-			&gt;groupId&lt;hibernate-annotations&gt;/groupId&lt;
-			&gt;artifactId&lt;hibernate-annotations&gt;/artifactId&lt;
-			&gt;version&lt;3.3.0.GA&gt;/version&lt;
-		&gt;/dependency&lt;
+		&lt;!-- Hibernate annotation --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;hibernate-annotations&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-annotations&lt;/artifactId&gt;
+			&lt;version&gt;3.3.0.GA&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;dependency&lt;
-			&gt;groupId&lt;hibernate-commons-annotations&gt;/groupId&lt;
-			&gt;artifactId&lt;hibernate-commons-annotations&gt;/artifactId&lt;
-			&gt;version&lt;3.0.0.GA&gt;/version&lt;
-		&gt;/dependency&lt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;hibernate-commons-annotations&lt;/groupId&gt;
+			&lt;artifactId&gt;hibernate-commons-annotations&lt;/artifactId&gt;
+			&lt;version&gt;3.0.0.GA&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;!-- Hibernate library dependecy start --&lt;
-		&gt;dependency&lt;
-			&gt;groupId&lt;dom4j&gt;/groupId&lt;
-			&gt;artifactId&lt;dom4j&gt;/artifactId&lt;
-			&gt;version&lt;1.6.1&gt;/version&lt;
-		&gt;/dependency&lt;
+		&lt;!-- Hibernate library dependecy start --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;dom4j&lt;/groupId&gt;
+			&lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+			&lt;version&gt;1.6.1&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;dependency&lt;
-			&gt;groupId&lt;commons-logging&gt;/groupId&lt;
-			&gt;artifactId&lt;commons-logging&gt;/artifactId&lt;
-			&gt;version&lt;1.1.1&gt;/version&lt;
-		&gt;/dependency&lt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;commons-logging&lt;/groupId&gt;
+			&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;
+			&lt;version&gt;1.1.1&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;dependency&lt;
-			&gt;groupId&lt;commons-collections&gt;/groupId&lt;
-			&gt;artifactId&lt;commons-collections&gt;/artifactId&lt;
-			&gt;version&lt;3.2.1&gt;/version&lt;
-		&gt;/dependency&lt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;commons-collections&lt;/groupId&gt;
+			&lt;artifactId&gt;commons-collections&lt;/artifactId&gt;
+			&lt;version&gt;3.2.1&lt;/version&gt;
+		&lt;/dependency&gt;
 
-		&gt;dependency&lt;
-			&gt;groupId&lt;cglib&gt;/groupId&lt;
-			&gt;artifactId&lt;cglib&gt;/artifactId&lt;
-			&gt;version&lt;2.2&gt;/version&lt;
-		&gt;/dependency&lt;
-		&gt;!-- Hibernate library dependecy end --&lt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;cglib&lt;/groupId&gt;
+			&lt;artifactId&gt;cglib&lt;/artifactId&gt;
+			&lt;version&gt;2.2&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;!-- Hibernate library dependecy end --&gt;
 
-		&gt;!-- HSQL database --&lt;
-		&gt;dependency&lt;
-			&gt;groupId&lt;hsqldb&gt;/groupId&lt;
-			&gt;artifactId&lt;hsqldb&gt;/artifactId&lt;
-			&gt;version&lt;1.8.0.10&gt;/version&lt;
-		&gt;/dependency&lt;
-	&gt;/dependencies&lt;
-&gt;/project&lt;
+		&lt;!-- HSQL database --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;hsqldb&lt;/groupId&gt;
+			&lt;artifactId&gt;hsqldb&lt;/artifactId&gt;
+			&lt;version&gt;1.8.0.10&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
 </code></pre>
 
 
@@ -212,7 +212,7 @@ public class HibernateUtil
 
  * **EmployeeEntity.java**: This class has a set to hold the one to many relationship
  
- <pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight prettyprinted"><code class="language-java" data-lang="java">
 @Entity
 @org.hibernate.annotations.Entity(dynamicUpdate = true)
 @Table(name = "EMPLOYEE", uniqueConstraints = {
