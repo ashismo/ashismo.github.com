@@ -24,10 +24,10 @@ In this example, I am going to show you how to build and deploy an web applicati
  
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample.zip" target="_blank">HibernateOneToManyExample zip(24kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">WebAppMavenBuild_Deploy zip(11kb)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/HibernateOneToManyExample" target="_blank">OneToManyExample</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">WebAppMavenBuild_Deploy</a>
 	</span>
 </div>
 
