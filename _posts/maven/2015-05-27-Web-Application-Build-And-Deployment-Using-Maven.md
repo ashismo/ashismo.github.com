@@ -83,7 +83,7 @@ In this example, I am going to show you how to build and deploy an web applicati
 &lt;user username="root" password="root" roles="manager-script,manager-gui"/&gt;
 </code></pre>
 
- * Add the following lines in your pom.xml
+ * Add the following lines in your **pom.xml**
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 ..........
