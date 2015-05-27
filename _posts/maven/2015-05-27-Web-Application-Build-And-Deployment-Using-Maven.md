@@ -24,7 +24,7 @@ In this example, I am going to show you how to build and deploy an web applicati
  
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">WebAppMavenBuild_Deploy zip(11kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">WebAppMavenBuild_Deploy zip(11kb)</a> 
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">WebAppMavenBuild_Deploy</a>
