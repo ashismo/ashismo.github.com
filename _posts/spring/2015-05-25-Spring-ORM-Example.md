@@ -2,7 +2,7 @@
 layout: post
 category : java-Spring
 tags : [Spring Tutorial]
-weight: 70
+weight: 81
 ---
 
 {% include JB/setup %}
@@ -42,7 +42,7 @@ In this example HSQLDB jar has been used. So no real database is required to run
  * Create a simple java project with src/main/java, src/main/resources as the source directory. Once project is created, you can add source directory from the below screen (Right click on project -> properties)
 <img src="https://cloud.githubusercontent.com/assets/11231867/7810036/6b2120de-03bc-11e5-8bc6-d10d31dc6409.png"/>
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
- * Add the following dependancies in your pom.xml for Hibernate One to Many example
+ * Add the following dependencies in your pom.xml for Hibernate One to Many example
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
