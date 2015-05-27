@@ -33,12 +33,11 @@ In this example, I am going to show you how to build and deploy an web applicati
 
  * Create a dynamic web project (Fill information in the below screens as shown below. Other screens will have no change)
  <img src="https://cloud.githubusercontent.com/assets/11231867/7843123/2fd24166-04c5-11e5-9f3a-f9dc0494cec8.png"/>
- 
  <img src="https://cloud.githubusercontent.com/assets/11231867/7843126/3149553e-04c5-11e5-86a7-9b3d28dbda48.png"/>
  
  * Create a simple java project with src/main/java, src/main/resources as the source directory. Once project is created, you can add source directory from the below screen (Right click on project -> properties)
 
- <img src="https://cloud.githubusercontent.com/assets/11231867/7843024/a0ce8e98-04c4-11e5-98d1-33463b6e9502.PNG"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/7843024/a0ce8e98-04c4-11e5-98d1-33463b6e9502.PNG"/>
  
  * Convert the project into maven project (Right click on the project -> Configure -> Convert to Maven project)
  * Create the below **index.jsp** file as shown in the below image. Once this application is deployed and executed, **This project has been build and deployed in Tomcat server by MAVEN** message will be displayed
