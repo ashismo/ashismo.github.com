@@ -141,3 +141,23 @@ If your WSDL URL is **http://localhost:8080/SOAPWebServices/services/HelloWorld?
 
 **Bottom up approch:** Service code is written code then we generate the WSDL from it.
 **Top down approach:** WSDL is created first then the service code will be written
+
+### Securities in SOAP webservices
+
+In SOAP based webservice, the most common security scheme avaialable for today's webservice is **SSL (Secure Socket Layer)** which is typically based with HTTP. However, SSL has some limitations. To overcome these limitations, XML-based security initiatives are used.
+
+#### **SSL Limitations**
+
+
+ * The SSL is designed for **point-to-point** security and webservice needs end-to-end security.
+ * SSL secures communication at transport level rather than at message level. As a result messages are protected only when transit on the wire.
+
+#### **Message Level Security**
+
+To provide security at message level rather than at transit level, different XML based security schemes are used. These includes
+
+
+ * XML digital signature
+ * XML encryption: Encript the desiger data only (e.g. Credit card data)
+ * XKMS (XML Key Management Specification)
+ * WS-Security (Web services Security): It supports multiple security model such as user name/password based and certificate based models
