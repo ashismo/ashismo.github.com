@@ -12,6 +12,9 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 ## Steps to write the code
 
+Create all thress projects at the same folder in the workspace as shown below
+<img src=""/>
+
 ### Parent Maven Project
 
 
@@ -60,10 +63,92 @@ In real life maven projects, most of the cases you will see multi modules build 
 &lt;/project&gt;
 </code></pre>
 
+### Child Java Project
+
+
+ * Create **ChildJavaProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse. Project structure is shown below.
+<img src="https://cloud.githubusercontent.com/assets/11231867/7978098/66f31716-0aaf-11e5-8c35-32626b2e8ed6.png"/>
+ * **pom.xml** file should be as shown below. Please go through the inline comments for better understanding.
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+
+	&lt;!-- Parent pom.xml has to be specified to inherit configuration from parent 
+		pom.xml --&gt;
+	&lt;parent&gt;
+		&lt;groupId&gt;com.ashish.maven&lt;/groupId&gt;
+		&lt;artifactId&gt;ParentMavenProject&lt;/artifactId&gt;
+		&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+		&lt;relativePath&gt;../ParentMavenProject/pom.xml&lt;/relativePath&gt;
+	&lt;/parent&gt;
+
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;artifactId&gt;ChildJavaProject&lt;/artifactId&gt;
+	&lt;pluginRepositories&gt;
+		&lt;pluginRepository&gt;
+			&lt;id&gt;maven-repository.dev.java.net&lt;/id&gt;
+			&lt;name&gt;Java.net Maven 2 Repository&lt;/name&gt;
+			&lt;url&gt;http://download.java.net/maven/2&lt;/url&gt;
+		&lt;/pluginRepository&gt;
+	&lt;/pluginRepositories&gt;
+	&lt;dependencies&gt;
+		&lt;!-- Only dependency has to be mentioned. Version not required to specify 
+			here. Version will get inherited from pom.xml --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+			&lt;artifactId&gt;servlet-api&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.7&lt;/source&gt;
+					&lt;target&gt;1.7&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+
+
+
+ * **com.ashish.servlet.ServletInOtherModule**
+ 
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ServletInOtherModule extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public ServletInOtherModule() {
+        super();
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.sendRedirect("newJSP.jsp");
+	}
+
+}
+</code></pre>
+
+ 
 ### Child Web project
 
 
- * Create **ChildWebProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse. You can follow this <a href="/java-build/2015/05/27/Web-Application-Build-And-Deployment-Using-Maven/">Web Application Build And Deployment Using Maven</a> post.
+ * Create **ChildWebProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse. You can follow this <a href="/java-build/2015/05/27/Web-Application-Build-And-Deployment-Using-Maven/">Web Application Build And Deployment Using Maven</a> post. Below is the project structure
+<img src="https://cloud.githubusercontent.com/assets/11231867/7978086/480530d2-0aaf-11e5-8033-e14a11cdd3b8.png"/>
  * Create a **index.jsp** file with the below content. Once you click on the button it will call a servlet (**com.ashish.servlet.ServletInOtherModule**) which is present in another project (*ChildJavaProject.jar**)
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
@@ -106,6 +191,33 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 
  * **web.xml**
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0"&gt;
+	&lt;display-name&gt;ChildWebProject&lt;/display-name&gt;
+	&lt;welcome-file-list&gt;
+		&lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+		&lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;
+		&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+		&lt;welcome-file&gt;default.html&lt;/welcome-file&gt;
+		&lt;welcome-file&gt;default.htm&lt;/welcome-file&gt;
+		&lt;welcome-file&gt;default.jsp&lt;/welcome-file&gt;
+	&lt;/welcome-file-list&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;ServletInOtherModule&lt;/servlet-name&gt;
+		&lt;!-- This servlet class belongs to another project which will get packaged 
+			into this war --&gt;
+		&lt;servlet-class&gt;com.ashish.servlet.ServletInOtherModule&lt;/servlet-class&gt;
+	&lt;/servlet&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;ServletInOtherModule&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/ServletInOtherModule&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
 
 
  * Your pom.xml should be like this. Please go through the inline comments for better understanding.
