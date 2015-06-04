@@ -149,7 +149,7 @@ public class ServletInOtherModule extends HttpServlet {
 
  * Create **ChildWebProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse. You can follow this <a href="/java-build/2015/05/27/Web-Application-Build-And-Deployment-Using-Maven/">Web Application Build And Deployment Using Maven</a> post. Below is the project structure
 <img src="https://cloud.githubusercontent.com/assets/11231867/7978086/480530d2-0aaf-11e5-8033-e14a11cdd3b8.png"/>
- * Create a **index.jsp** file with the below content. Once you click on the button it will call a servlet (**com.ashish.servlet.ServletInOtherModule**) which is present in another project (*ChildJavaProject.jar**)
+ * Create a **index.jsp** file with the below content. Once you click on the button it will call a servlet (**com.ashish.servlet.ServletInOtherModule**) which is present in another project (**ChildJavaProject.jar**)
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -291,3 +291,10 @@ public class ServletInOtherModule extends HttpServlet {
 	&lt;/build&gt;
 &lt;/project&gt;
 </code></pre>
+
+
+## Output
+
+Once you deploy the **ChildWebProject** in tomcat then you can see the below output.
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/7978315/aafe9744-0ab1-11e5-8c84-a6a798f2e3e8.png"/>
