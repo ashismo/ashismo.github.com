@@ -12,8 +12,8 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 ## Steps to write the code
 
-Create all thress projects at the same folder in the workspace as shown below
-<img src=""/>
+Create all three projects in the workspace at same level as shown below
+<img src="https://cloud.githubusercontent.com/assets/11231867/7978153/e1765566-0aaf-11e5-9340-a32a688c8d71.png"/>
 
 ### Parent Maven Project
 
