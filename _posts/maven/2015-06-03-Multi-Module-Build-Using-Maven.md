@@ -14,28 +14,28 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ParentMavenProject zip(11kb)</a> 
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/ParentMavenProject.zip" target="_blank">ParentMavenProject zip(3kb)</a> 
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ParentMavenProject</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/ParentMavenProject" target="_blank">ParentMavenProject</a>
 	</span>
 </div>
 
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ChildJavaProject zip(11kb)</a> 
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/ChildJavaProject.zip.zip" target="_blank">ChildJavaProject zip(13kb)</a> 
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ChildJavaProject</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/ChildJavaProject.zip" target="_blank">ChildJavaProject</a>
 	</span>
 </div>
 
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ChildWebProject zip(11kb)</a> 
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/ChildWebProject.zip.zip" target="_blank">ChildWebProject zip(22kb)</a> 
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ChildWebProject</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/maven/ChildWebProject.zip" target="_blank">ChildWebProject</a>
 	</span>
 </div>
 Create all three projects in the workspace at same level as shown below
