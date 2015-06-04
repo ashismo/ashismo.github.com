@@ -12,6 +12,32 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 ## Steps to write the code
 
+<div class="download-view"> 
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ParentMavenProject zip(11kb)</a> 
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ParentMavenProject</a>
+	</span>
+</div>
+
+<div class="download-view"> 
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ChildJavaProject zip(11kb)</a> 
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ChildJavaProject</a>
+	</span>
+</div>
+
+<div class="download-view"> 
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy.zip" target="_blank">ChildWebProject zip(11kb)</a> 
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/maven/WebAppMavenBuild_Deploy" target="_blank">ChildWebProject</a>
+	</span>
+</div>
 Create all three projects in the workspace at same level as shown below
 <img src="https://cloud.githubusercontent.com/assets/11231867/7978153/e1765566-0aaf-11e5-9340-a32a688c8d71.png"/>
 
