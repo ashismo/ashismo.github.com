@@ -12,6 +12,56 @@ In real life maven projects, most of the cases you will see multi modules build 
 
 ## Steps to write the code
 
+### Parent Maven Project
+
+
+* Create **ParentMavenProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse
+* **pom.xml** file should be as shown below. Please go through the inline comments for better understanding. The parent project includes the child projects. All dependency jars to be added in this POM and child projects will use required dependency without version. Whenever version needs to be changed, just change in the parent project. Child projects will automatically get them during compilation.
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.maven&lt;/groupId&gt;
+	&lt;artifactId&gt;ParentMavenProject&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+	&lt;!-- packaging pom is required to include other modules --&gt;
+	&lt;packaging&gt;pom&lt;/packaging&gt;
+
+	&lt;pluginRepositories&gt;
+		&lt;pluginRepository&gt;
+			&lt;id&gt;maven-repository.dev.java.net&lt;/id&gt;
+			&lt;name&gt;Java.net Maven 2 Repository&lt;/name&gt;
+			&lt;url&gt;http://download.java.net/maven/2&lt;/url&gt;
+		&lt;/pluginRepository&gt;
+	&lt;/pluginRepositories&gt;
+	&lt;dependencyManagement&gt;
+		&lt;dependencies&gt;
+			&lt;!-- All dependencies to be added in the parent pom.xml. Version to be 
+				specified here. Child projects will add the required dependencies without 
+				version --&gt;
+			&lt;dependency&gt;
+				&lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+				&lt;artifactId&gt;servlet-api&lt;/artifactId&gt;
+				&lt;version&gt;2.3&lt;/version&gt;
+				&lt;!-- scope "provided" means the jar will be used during compile time 
+					but will not get packaged --&gt;
+				&lt;scope&gt;provided&lt;/scope&gt;
+			&lt;/dependency&gt;
+		&lt;/dependencies&gt;
+	&lt;/dependencyManagement&gt;
+
+	&lt;!-- Included both the child projects to build. Order of dependency should 
+		be maintained --&gt;
+	&lt;modules&gt;
+		&lt;module&gt;../ChildJavaProject&lt;/module&gt;
+		&lt;module&gt;../ChildWebProject&lt;/module&gt;
+	&lt;/modules&gt;
+&lt;/project&gt;
+</code></pre>
+
+### Child Web project
+
 
  * Create **ChildWebProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse. You can follow this <a href="/java-build/2015/05/27/Web-Application-Build-And-Deployment-Using-Maven/">Web Application Build And Deployment Using Maven</a> post.
  * Create a **index.jsp** file with the below content. Once you click on the button it will call a servlet (**com.ashish.servlet.ServletInOtherModule**) which is present in another project (*ChildJavaProject.jar**)
@@ -55,7 +105,10 @@ In real life maven projects, most of the cases you will see multi modules build 
 </code></pre>
 
 
- * Your pom.xml should be like this. Read the inline comments which is self explainatory.
+ * **web.xml**
+
+
+ * Your pom.xml should be like this. Please go through the inline comments for better understanding.
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
