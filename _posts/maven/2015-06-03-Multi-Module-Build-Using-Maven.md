@@ -45,7 +45,7 @@ Create all three projects in the workspace at same level as shown below
 
 
 * Create **ParentMavenProject** project and convert into maven project (Right click on the project->Configure->Convert into Maven project) in eclipse
-* **pom.xml** file should be as shown below. Please go through the inline comments for better understanding. The parent project includes the child projects. All dependency jars to be added in this POM and child projects will use required dependency without version. Whenever version needs to be changed, just change in the parent project. Child projects will automatically get them during compilation.
+* **pom.xml** file should be as shown below. Please go through the inline comments for better understanding. The parent project includes the child projects. All dependencies (jars) to be added in this parent POM and child projects will use the required dependencies without specifying version in the child POM. Whenever version needs to be changed, just change in the parent project. Child projects will automatically inherit them during compilation and packaging.
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -54,7 +54,7 @@ Create all three projects in the workspace at same level as shown below
 	&lt;groupId&gt;com.ashish.maven&lt;/groupId&gt;
 	&lt;artifactId&gt;ParentMavenProject&lt;/artifactId&gt;
 	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
-	&lt;!-- packaging pom is required to include other modules --&gt;
+	&lt;!-- packaging should be "pom" in the parent POM to include child modules --&gt;
 	&lt;packaging&gt;pom&lt;/packaging&gt;
 
 	&lt;pluginRepositories&gt;
@@ -217,6 +217,7 @@ public class ServletInOtherModule extends HttpServlet {
 
 
  * **web.xml**
+
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -246,7 +247,7 @@ public class ServletInOtherModule extends HttpServlet {
 </code></pre>
 
 
- * Your pom.xml should be like this. Please go through the inline comments for better understanding.
+ * Your **pom.xml** should be like this. Please go through the inline comments for better understanding.
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
