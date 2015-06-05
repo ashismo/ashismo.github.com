@@ -39,12 +39,12 @@ SL NO | File Name | Description
 :---: | --- | ---
 1 | **pom.xml** | Hibernate and EHCache dependency added in this file
 2 | **hibernate.cfg.xml** | EHCache second level caching is plugged into this file
-3 | **ehCache.xml** | EHCache secong level configuration is done in this file
+3 | **ehCache.xml** | EHCache second level configuration is done in this file
 4 | **com.ashish.entity.EmployeeEntity** | This is the entity class where the concurrency strategy (**Read only, read write, Nonrestricted Read Write, Transactional**) is defined.
 5 | **com.ashish.util.HibernateUtil** | This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
 6 | **com.ashish.main.MainApp** | This class contains the main method and inserts the record of two employees called Ashish, Ujan. Data is retrieved from the database using secong level caching strategy
 
-**pom.xml**
+**pom.xml:** Hibernate and EHCache dependency added in this file
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -150,7 +150,7 @@ SL NO | File Name | Description
 &lt;/project&gt;
 </code></pre>
 
-**hibernate.cfg.xml**
+**hibernate.cfg.xml:** EHCache second level caching is plugged into this file
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
@@ -181,7 +181,7 @@ SL NO | File Name | Description
 &lt;/hibernate-configuration&gt;
 </code></pre>
 
-**ehCache.xml**
+**ehCache.xml:** EHCache second level configuration is done in this file
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
