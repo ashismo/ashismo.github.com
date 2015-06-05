@@ -58,6 +58,7 @@ The performance of the database access is handled using **caching techniques**. 
    * OS Cache
    * Swarm Cache
    * JBoss Tree Cache
+   * Infinispan
    
 ## load() vs get() in hibernate
 
