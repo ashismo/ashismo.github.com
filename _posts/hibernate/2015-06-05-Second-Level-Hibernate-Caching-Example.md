@@ -37,7 +37,7 @@ Create a maven project as shown below. If you are new to create maven project th
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/8007241/22d2407a-0bb8-11e5-8528-da40eeb2654d.png"/>
 
-The description of the files given below
+The description of the files are given below
 
 SL NO | File Name | Description
 :---: | --- | ---
