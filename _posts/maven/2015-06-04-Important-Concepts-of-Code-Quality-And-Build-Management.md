@@ -48,7 +48,7 @@ SL NO | tag name | Description
 4 | **packaging** | This indicates the type of the module/project. Values are **pom,war,jar, ear, ejb etc**. For the parent module **pom** should be the packaging type. Similarly, for the war project the packaging is of type war.
 5 | **repository** | If the added dependencies not found in the local repository then the pom will try to relove the dependency from the URL mentioned in this tag
 
-```xml
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
   &lt;groupId&gt;HibernateExample&lt;/groupId&gt;
@@ -130,4 +130,4 @@ SL NO | tag name | Description
     &lt;/dependency&gt;
   &lt;/dependencies&gt;
 &lt;/project&gt;
-```
+</code></pre>
