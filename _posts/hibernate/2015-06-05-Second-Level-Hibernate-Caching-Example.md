@@ -19,7 +19,31 @@ Also note that in this example in memory database (HSQLDB) is used.
  * Eclipse
  * Hibernate
  * EH Cache for second level caching
+
+## Step to write Code
+
+In this example HSQLDB jar has been used. So no real database is required to run the stand alone application. Two employee records have been inserted into the in memory database using one session and retrieved the same data from the different session.
  
+<div class="download-view"> 
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/Hibernate2ndLevelCaching.zip" target="_blank">Hibernate2ndLevelCaching zip(24kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/Hibernate2ndLevelCaching" target="_blank">Hibernate2ndLevelCaching</a>
+	</span>
+</div>
+
+The description of the files given below
+
+SL NO | File Name | Description
+:---: | --- | ---
+1 | **pom.xml** | Hibernate and EHCache dependency added in this file
+2 | **hibernate.cfg.xml** | EHCache second level caching is plugged into this file
+3 | **ehCache.xml** | EHCache secong level configuration is done in this file
+4 | **com.ashish.entity.EmployeeEntity** | This is the entity class where the concurrency strategy (**Read only, read write, Nonrestricted Read Write, Transactional**) is defined.
+5 | **com.ashish.util.HibernateUtil** | This class will read configuration from hibernate.cfg.xml file and returns SessionFactory
+6 | **com.ashish.main.MainApp** | This class contains the main method and inserts the record of two employees called Ashish, Ujan. Data is retrieved from the database using secong level caching strategy
+
 ## Output
 
 Below is the output of the above program. Go through the output and match with the MainApp.loadRecords() method to understand the concept.
