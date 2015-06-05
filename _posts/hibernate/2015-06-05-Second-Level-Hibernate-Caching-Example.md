@@ -33,6 +33,10 @@ In this example HSQLDB jar has been used. So no real database is required to run
 	</span>
 </div>
 
+Create a maven project as shown below. If you are new to create maven project then [follow this blog](http://ashismo.github.io/java-build/2015/05/09/Setting%20up%20a%20Maven%20Build/){:target="_blank"}
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/8007241/22d2407a-0bb8-11e5-8528-da40eeb2654d.png"/>
+
 The description of the files given below
 
 SL NO | File Name | Description
