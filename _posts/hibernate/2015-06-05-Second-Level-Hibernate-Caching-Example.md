@@ -26,7 +26,7 @@ In this example HSQLDB jar has been used. So no real database is required to run
  
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/Hibernate2ndLevelCaching.zip" target="_blank">Hibernate2ndLevelCaching zip(24kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/Hibernate2ndLevelCaching.zip" target="_blank">Hibernate2ndLevelCaching zip(26kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/hibernate/Hibernate2ndLevelCaching" target="_blank">Hibernate2ndLevelCaching</a>

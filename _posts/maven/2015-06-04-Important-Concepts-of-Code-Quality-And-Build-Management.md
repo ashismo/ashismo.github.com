@@ -131,3 +131,34 @@ SL NO | tag name | Description
   &lt;/dependencies&gt;
 &lt;/project&gt;
 </code></pre>
+
+### Maven Repository
+
+#### Maven Local Repository
+
+Local repository is a local folder used to resolve the required dependencies. New dependencies will get downloaded in this location. Default local repository is %USER_HOME%\.m2\repository. However, it can be changed from settings.xml file in %MAVEN_PATH%\conf\ path.
+
+#### Maven Central Repository
+
+To resolve dependencies, maven checks the local repository. If not found then search in the central repository. The default central repository is : <a href="http://repo1.maven.org/maven2/" target="_blank">http://repo1.maven.org/maven2/</a>
+
+#### Maven Remote Repository
+
+The dependencies mentioned in the pom.xml will be searched in the following order
+
+
+ * Local Repository. If not found then
+ * Central Repository. If not found then
+ * Remote repository
+ 
+Suppose your company is developing a multi module application which has 4 JAR and 1 WAR. The WAR has the dependency with 4 JARs which are developed by some other team in your company. Now the other team will publish their JARs in the remote repository which you need to use in your pom.xml as shown below
+
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;company.repository&lt;/id&gt;
+        &lt;url&gt;http://yourcompany.com/repository&lt;/url&gt;
+    &lt;/repository&gt;
+  &lt;/repositories&gt;
+</code></pre>
