@@ -24,4 +24,4 @@ Extract the zip into some folder which is goint to be considered as your **Weblo
  * In the next page specify domain that you have just created
 <img src="https://cloud.githubusercontent.com/assets/11231867/8036171/c39f7786-0e13-11e5-99f3-c6ed2104d840.png"/>
  * Follow screens it till the end. Start the server if it is not automatically started. Then hit [http://localhost:7001/console](http://localhost:7001/console){:target="_blank"} URL to open the admin console.
- * Create a simple web project with index.jsp as welcome file and right click on the project and deploy in weblogic. Hit the **http://localhost:7001/<your context root>** URL to test your deployment.
+ * Create a simple web project with index.jsp as welcome file and right click on the project and deploy in weblogic. Hit the **http://localhost:7001/your_context_root** URL to test your deployment.
