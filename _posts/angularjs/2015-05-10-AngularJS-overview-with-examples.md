@@ -301,3 +301,8 @@ AngularJS parser parses the angular directives and render the HTML output. Angul
 Above mentioned three steps happens in two phases called **Compile** and **Link**  
 **Compile:** In this phase the angular parser parses the DOM and creates a function as soon as it encounters ng-directives. These functions are called as **template or compiled function**. In this phase we do not have access to the **$scope** data  
 **Link:** In this phase **$scope** will get attached with the template function and gets executed to get the final HTML output.
+
+
+## AngularJS Routes
+
+AngularJS routes enable you to create different URLs for different content in your application. Having different URLs for different content enables the user to bookmark and share URLs to specific content. In AngularJS each such bookmarkable URL is called a route.
