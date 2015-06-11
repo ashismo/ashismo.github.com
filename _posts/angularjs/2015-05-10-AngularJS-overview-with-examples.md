@@ -292,4 +292,12 @@ myFilterController.controller('myFilterController', function($scope) {
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7700282/36d69c4a-fe3b-11e4-987a-28c322dba086.png"/>
 
+## Compile and Link phase in AngularJS
 
+AngularJS parser parses the angular directives and render the HTML output. Angular parser works in three steps  
+**Step 1:** HTML browser parses the HTML and creates a DOM
+**Step 2:** Angular framework runs over the DOM to find out the ng-directives and manipulates the DOM
+**Step 3:** This manipulated DOM will be rendered as HTML in the browser.  
+Above mentioned three steps happens in two phases called **Compile** and **Link**  
+**Compile:** In this phase the angular parser parses the DOM and creates a function as soon as it encounters ng-directives. These functions are called as **template or compiled function**. In this phase we do not have access to the **$scope** data  
+**Link:** In this phase **$scope** will get attached with the template function and gets executed to get the final HTML output.
