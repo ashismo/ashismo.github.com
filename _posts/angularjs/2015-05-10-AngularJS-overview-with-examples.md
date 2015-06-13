@@ -42,7 +42,7 @@ AngularJS application has two major parts called **modules** and **controllers**
 First Name: &lt;input type="text" ng-model="firstName"&gt;&lt;br/&gt;
 Last Name: &lt;input type="text" ng-model="lastName"&gt;&lt;br/&gt;
 &lt;br/&gt;
-Full Name: {{firstName + " " + lastName}}
+Full Name: { { firstName + " " + lastName } }
 
 &lt;/div&gt;
 
