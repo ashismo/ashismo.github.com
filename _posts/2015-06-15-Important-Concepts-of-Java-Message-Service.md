@@ -1,7 +1,7 @@
 ---
 layout: post
-category : java-JMS
-tags : [JMS Tutorial]
+category : java-Java/J2EE Popular Topics
+tags : [Java/J2EE Popular Topics]
 weight: 120
 ---
 
