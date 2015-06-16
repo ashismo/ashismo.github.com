@@ -15,4 +15,10 @@ We are quite familiar with the tomcat server setup in eclipse for our developmen
  * Download the zip distribution from [this url](http://www.oracle.com/technetwork/middleware/ias/downloads/wls-main-097127.html){:target="_blank"}.  
 Extract the zip into some folder which is goint to be considered as your **Weblogic Home**
 <img src="https://cloud.githubusercontent.com/assets/11231867/8182282/91de0fe4-144b-11e5-8108-65a72f7147a9.png"/>
- * Go to the folder -> Press Shift + Right click -> Open Command Window Here -> set JAVA_HOME to **JDK1.6 path** because WLS 11g supports JDK1.6 -> execute **configure.cmd**
+ * Lets say I have extracted my zip file into **D:\ashish\softwares\wls1036_dev** folder so open command prompt (Go to the folder -> Press Shift + Right click -> Open Command Window Here) -> set the following 
+   * JAVA_HOME to **JDK1.6 path** because WLS 11g supports JDK1.6 (set JAVA_HOME=C:\Progra~1\Java\jdk1.6.0_85)
+   * set PATH=%JAVA_HOME%\bin;%PATH%
+   * set MW_HOME=D:\ashish\softwares\wls1036_dev
+   * execute **configure.cmd**
+ * Setup WLS environment in the current shell. Execute the following command: **%MW_HOME%\wlserver\server\bin\setWLSEnv.cmd**
+ * Create a folder called **mydomain** inside MW_HOME and cd mydomain folder. Then execute the following command: **%JAVA_HOME%\bin\java.exe -Xmx1024m -XX:MaxPermSize=128m weblogic.Server**. This will create weblogic domain inside **%MW_HOME%\mydomain**. You need to set user name and password
