@@ -89,7 +89,7 @@ In this example, we shall be sending message from sender to receiver via JMS que
 
 <div class="download-view"> 
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/jms/JMSProject.zip" target="_blank">JMSProject zip(13kb)</a> 
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/jms/JMSProject.zip" target="_blank">JMSProject zip(34kb)</a> 
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/jms/JMSProject.zip" target="_blank">JMSProject</a>
