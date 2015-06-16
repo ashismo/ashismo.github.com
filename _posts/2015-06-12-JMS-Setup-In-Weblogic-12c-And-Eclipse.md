@@ -14,9 +14,9 @@ weight: 110
  * JMS is mainly used to send and receive message from one application to another.
  * Following are the messaging domain in JMS
    * **Point-to-Point messaging domain:** In this model, one message is delivered to one receiver only. There will be a **QUEUE** to hold the message until the receiver is ready.
- <img src="https://cloud.githubusercontent.com/assets/11231867/8129517/97f8b2ca-1127-11e5-8cc8-490508a724d3.png"/>
-   * **Publisher/Subscriber (Pub/Sub) Messaging domain:** In this model, one message is delivered to all the subscribers. There will be a **TOPIC** to hold and deliver messages.
  <img src="https://cloud.githubusercontent.com/assets/11231867/8129519/9a5422ac-1127-11e5-9ba7-c1106f4320e9.png"/>
+   * **Publisher/Subscriber (Pub/Sub) Messaging domain:** In this model, one message is delivered to all the subscribers. There will be a **TOPIC** to hold and deliver messages.
+ <img src="https://cloud.githubusercontent.com/assets/11231867/8129517/97f8b2ca-1127-11e5-8cc8-490508a724d3.png"/>
 
 ## JMS Programming Model
 <img src="https://cloud.githubusercontent.com/assets/11231867/8129596/6427c390-1128-11e5-9da5-f3f962f5f270.png"/>
