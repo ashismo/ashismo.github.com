@@ -20,5 +20,6 @@ Extract the zip into some folder which is goint to be considered as your **Weblo
    * set PATH=%JAVA_HOME%\bin;%PATH%
    * set MW_HOME=D:\ashish\softwares\wls1036_dev
    * execute **configure.cmd**
- * Setup WLS environment in the current shell. Execute the following command: **%MW_HOME%\wlserver\server\bin\setWLSEnv.cmd**
- * Create a folder called **mydomain** inside MW_HOME and cd mydomain folder. Then execute the following command: **%JAVA_HOME%\bin\java.exe -Xmx1024m -XX:MaxPermSize=128m weblogic.Server**. This will create weblogic domain inside **%MW_HOME%\mydomain**. You need to set user name and password
+ * Execute the following command: **%MW_HOME%\wlserver\server\bin\setWLSEnv.cmd** to setup WLS environment in the current shell. 
+ * Create a folder called **mydomain** inside MW_HOME and cd mydomain folder. Then execute the following command: **%JAVA_HOME%\bin\java.exe -Xmx1024m -XX:MaxPermSize=128m weblogic.Server**. This will create weblogic domain inside **%MW_HOME%\mydomain**. You need to set user name and password. Once done, automatically the server will startup.
+ * Once done hit the following URL from browser **http://localhost:7001/console** to open the admin console of 11g
