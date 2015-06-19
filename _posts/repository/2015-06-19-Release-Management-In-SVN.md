@@ -16,5 +16,13 @@ You can plan to create
  * Single repository for multiple projects OR
  * Mix and match of the above approach
 
-All the abobe mentioned approaches have some pros and cons. **multiple repository** is more moduler but maintainability of the projects is very difficult. Where as the **single repository** approach will help you to manage projects more smoothly. However, if you set triggr of checked-in files, then there is a chance that unrelated people or group of perople will receive email notifications as multiple projects are managed under same repository. In case of **Mix and match** approach, you can goup logical projects into single repository so number of repository will get reduced.
+All the abobe mentioned approaches have some pros and cons. 
+**multiple repository** is more moduler but maintainability of the projects is very difficult.  
+Where as the **single repository** approach will help you to manage projects more smoothly. However, if you set triggr of checked-in files, then there is a chance that unrelated people or group of perople will receive email notifications as multiple projects are managed under same repository.  
+In case of **Mix and match** approach, you can goup logical projects into single repository so number of repository will get reduced.
+
+## Repository Layout
+
+Suppose you have three projects called Calculator, calendar and spreadsheet. You can layout your project in one of the following ways
+
  
