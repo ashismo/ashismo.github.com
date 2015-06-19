@@ -58,3 +58,5 @@ svn mkdir svn://localhost/medicalStore
 #### Access your SVN repository by SVN client (Tortoise SVN)
 
 * Right click on desktop-> tortoizeSVN -> repo-browser -> svn://localhost
+
+You are done with the setup. Follow the next blog to understand SVN release management
