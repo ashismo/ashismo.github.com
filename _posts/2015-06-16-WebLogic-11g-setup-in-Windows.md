@@ -33,7 +33,7 @@ By default, oracle 11g supports JPA1. To enable JPA 2 in windows, follow the bel
  * Copy the following JARs from the %MW_HOME%\modules path into your domain. If not available then download from the internet
     * com.oracle.jpa2support_1.0.0.0_2-0.jar
     * javax.persistence_1.0.0.0_2-0-0.jar
- * create a cmd file (e.g. setJPA2.cmd) and add the following content
+ * create a cmd file (e.g. setJPA2.cmd) in mydomain folder (D:\ashish\softwares\wls1036_dev\mydomain) and add the following content
 
 ```
 set wls_modules=D:\ashish\softwares\wls1036_dev\mydomain
