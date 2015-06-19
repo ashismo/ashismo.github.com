@@ -11,7 +11,7 @@ weight: 100
 
 * Google and Install 
   * **tortoise SVN** (TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi) and 
-  * **SVN for windows** (e.g. http://sourceforge.net/projects/win32svn/)
+  * **SVN for windows** (e.g. http://sourceforge.net/projects/win32svn/). You can also download zip distribution which works without installation. URL is : [https://www.visualsvn.com/files/Apache-Subversion-1.8.13.zip](https://www.visualsvn.com/files/Apache-Subversion-1.8.13.zip)
 * Create a repository from cmd prompt
 
 ```
@@ -19,7 +19,7 @@ svnadmin create "F:\ashish.mondal\mySVN\MyProjectRepo"
 ```
 * Modifying Security and Authentication Settings
     
-Go to D:\Project\Repository\conf location
+Go to F:\ashish.mondal\mySVN\MyProjectRepo\conf location
 	For our purposes, just uncomment out the following lines from **svnserv.conf** file in configuration
 
 ```
