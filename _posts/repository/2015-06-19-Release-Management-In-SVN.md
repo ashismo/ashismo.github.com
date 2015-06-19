@@ -24,5 +24,5 @@ In case of **Mix and match** approach, you can goup logical projects into single
 ## Repository Layout
 
 Suppose you have three projects called Calculator, calendar and spreadsheet. You can layout your project in one of the following ways
-
+<img src="https://cloud.githubusercontent.com/assets/11231867/8251503/b22fc2aa-169a-11e5-8670-449b110b1607.png"/>
  
