@@ -9,7 +9,9 @@ weight: 100
 ## SVN Setup
 
 
-* Google and Install **tortoise SVN** and **SVN for windows**(TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi)
+* Google and Install 
+  * **tortoise SVN** (TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi) and 
+  * **SVN for windows** (e.g. http://sourceforge.net/projects/win32svn/)
 * Create a repository from cmd prompt
 
 ```
