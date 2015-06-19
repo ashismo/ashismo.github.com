@@ -20,7 +20,7 @@ svnadmin create "F:\ashish.mondal\mySVN\MyProjectRepo"
 * Modifying Security and Authentication Settings
     
 Go to F:\ashish.mondal\mySVN\MyProjectRepo\conf location
-	For our purposes, just uncomment out the following lines from **svnserv.conf** file in configuration
+	For our purposes, just uncomment out the following lines from **svnserve.conf** file in configuration
 
 ```
 [general]
@@ -47,11 +47,12 @@ svnserve --daemon --root "F:\ashish.mondal\mySVN\MyProjectRepo"
 ```
 
 
-* Creating your First Project folder
-
+* Create your First Project folder either from cmd prompt or from Tortoise SVN client
+  * **cmd prompt**
 ```
 svn mkdir svn://localhost/medicalStore  
 ```
 
+  * **Tortoise SVN**: Right click on desktop-> tortoizeSVN -> repo-browser -> svn://localhost -> Right click on **svn:\\localhost** and Create Forder
 
 * Right click on desktop-> tortoizeSVN -> repo-browser -> svn://localhost
