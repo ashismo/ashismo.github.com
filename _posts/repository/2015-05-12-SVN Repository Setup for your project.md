@@ -6,9 +6,6 @@ weight: 100
 ---
 {% include JB/setup %}
 
-## SVN Setup
-
-
 #### Installation and Setup
   * **tortoise SVN** (TortoiseSVN-1.6.10.19898-win32-svn-1.6.12.msi) and 
   * **SVN for windows** (e.g. http://sourceforge.net/projects/win32svn/). You can also download zip distribution which works without installation. URL is : [https://www.visualsvn.com/files/Apache-Subversion-1.8.13.zip](https://www.visualsvn.com/files/Apache-Subversion-1.8.13.zip)
