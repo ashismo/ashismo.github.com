@@ -34,3 +34,12 @@ Also know the below important terminologies
 * **Branch tags:** Places on the branch that mark beta versions, release candidates and the final version(s). Branch tags look like software version numbers of the form ''major''.''minor''.''change'' ''[modifier]'' where ''modifier'' is ''b'' for beta or ''rc'' for a release candidate.
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/8252824/121c8598-16a7-11e5-97e9-f923203c8fcb.png"/>
+
+## Recomended Approaches
+
+The trunk will have the stable code. Once you branch out from trunk, continue your development in branch. Once done, merge back to the trunk. Then, if possible kill/destroy the branch as your code is available in trunk. Below are the steps to merge your code from branch to trunk.
+
+
+ * Checkout trunk code. Right click on the trunk parent folder that you have checked out.->TortoiseSVN->merge->Select merge a range of rivision (radio button) -> Next
+ * Select the branch that you want to merge with trunk (select the other options most suitable for you) -> Merge
+ * Commit code into trunk.
