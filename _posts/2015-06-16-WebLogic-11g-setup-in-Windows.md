@@ -7,7 +7,7 @@ weight: 99
 
 ## Introduction
 
-We are quite familiar with the tomcat server setup in eclipse for our development and deployment. By default eclipse provides the adapter for tomcat server. In this tutorial I am going to show how to use weblogic 11g in eclipse in Windows platform.
+In this tutorial I am going to show how to setup weblogic 11g in Windows platform.
 
 ## Steps to setup
 
