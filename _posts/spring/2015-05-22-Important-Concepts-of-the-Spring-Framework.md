@@ -13,7 +13,7 @@ This blog will help you to refresh your spring knowledge. I have tried to cover 
 
 ### What is Spring?
 
-Spring is an open source development framework for Enterprise Java. The core feature of the Spring framework can be used in developing any java application. The core modules of the Spring framework are
+Spring is an open source development framework for Enterprise Java. The core features of the Spring framework can be used in developing any java application. The core modules of the Spring framework are
 
  * **Spring Context:** For Dependency Injection (DI)
  * **Spring DAO:** For database operation using DAO pattern
@@ -27,7 +27,7 @@ Spring is an open source development framework for Enterprise Java. The core fea
 
  * **Lightweight:** Spring is light weight. The basic version of the Spring framework is around 2MB
  * **Dependency Injection/Inversion of Control (IoC):** This helps to achieve loose coupling by wiring of independent components/objects
- *  **Spring Container:** containsand manages the lifecycle of the application objects
+ *  **Spring Container:** contains and manages the lifecycle of the application objects
  *  **Transaction Management:** Spring supports the transaction management i.e. JDBC operation, File uploading, Exception Handling etceither by spring annotation or bean configuration
  *  **Spring MVC:** Spring MVC can be used to create Web application as well as restful webservices which is capable of returning XML or JSON response
  *  **Exception Handling:** Spring provides a convenient API to translate technology specific exceptions (thrown by JDBC, Hibernate etc) into consistent unchecked exceptions
