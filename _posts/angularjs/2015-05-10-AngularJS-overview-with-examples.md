@@ -313,12 +313,16 @@ Bootstapping is equivalent to the initializing or starting of AngularJS applicat
 
 
 * By using **ng-app** to an HTML element
+
 ```xml
 <html ng-app="myApp">
 ...
 </html>
 ```
+
+
 * From java script also you can bootstrap angularJS application as shown below
+
 ```
 angular.module('myApp',[]);
 ```
