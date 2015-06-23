@@ -306,3 +306,19 @@ Above mentioned three steps happens in two phases called **Compile** and **Link*
 ## AngularJS Routes
 
 AngularJS routes enable you to create different URLs for different content in your application. Having different URLs for different content enables the user to bookmark and share URLs to specific content. In AngularJS each such bookmarkable URL is called a route.
+
+## Bootstrapping in angular JS
+
+Bootstapping is equivalent to the initializing or starting of AngularJS application. Below are the ways of bootstrapping the angularJS application automatically.
+
+
+* By using **ng-app** to an HTML element
+```xml
+<html ng-app="myApp">
+...
+</html>
+```
+* From java script also you can bootstrap angularJS application as shown below
+```
+angular.module('myApp',[]);
+```
