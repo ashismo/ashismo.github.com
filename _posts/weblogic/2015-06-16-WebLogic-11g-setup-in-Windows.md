@@ -41,3 +41,26 @@ set PRE_CLASSPATH=%wls_modules%\javax.persistence_1.0.0.0_2-0-0.jar;%wls_modules
 ```
  
  * Execute this script before running **startWebLogic.cmd** script.
+
+## Run server in development mode
+
+
+* Go to D:\ashish\softwares\wls1036_dev\mydomain\bin folder and open **setDomainEnv.cmd** then search for PRODUCTION_MODE and set **PRODUCTION_MODE=false**
+* Go to D:\ashish\softwares\wls1036_dev\mydomain and execute **startWebLogic.cmd** to start the server. Once the server is restarted then you will see the below message
+<img src="https://cloud.githubusercontent.com/assets/11231867/8323992/1e416a4e-1a69-11e5-9b1f-b3f63ed280a0.png"/>
+
+## Autodeploy your war
+
+
+* To autodeploy your code, make sure your server is running in development mode as shown above.
+* Open admin console and make sure the web application that you want to autodeploy is not already deployed from admin console
+* Add the following line in your **WEBINF/weblogic.xml** incase you are deploying WAR. Otherwise, for EAR, make the same change in **weblogic-application.xml** file
+
+```xml
+<fast-swap>
+		<enabled>true</enabled>
+</fast-swap>
+```
+
+
+* Build and copy your WAR file into the following location: **D:\ashish\softwares\wls1036_dev\mydomain\autodeploy**
