@@ -49,7 +49,7 @@ set PRE_CLASSPATH=%wls_modules%\javax.persistence_1.0.0.0_2-0-0.jar;%wls_modules
 * Go to D:\ashish\softwares\wls1036_dev\mydomain and execute **startWebLogic.cmd** to start the server. Once the server is restarted then you will see the below message
 <img src="https://cloud.githubusercontent.com/assets/11231867/8323992/1e416a4e-1a69-11e5-9b1f-b3f63ed280a0.png"/>
 
-## Autodeploy your war
+## Autodeploy your WAR
 
 
 * To autodeploy your code, make sure your server is running in development mode as shown above.
@@ -58,7 +58,7 @@ set PRE_CLASSPATH=%wls_modules%\javax.persistence_1.0.0.0_2-0-0.jar;%wls_modules
 
 ```xml
 <fast-swap>
-		<enabled>true</enabled>
+	<enabled>true</enabled>
 </fast-swap>
 ```
 
