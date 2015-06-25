@@ -212,6 +212,7 @@ dataSource.setValidationQuery("SELECT 1");
 
 </code></pre>
 
+
 ## Dirty read, Phantom Read and Non Repeatable Read
 
 
