@@ -212,3 +212,6 @@ dataSource.setValidationQuery("SELECT 1");
 
 </code></pre>
 
+## Dirty read, Phantom Read and Non Repeatable Read problem
+
+Dirty read occurs when one transaction is changing records/tuple and second transaction is trying to read this tuple/record before the original change has been committed or rolled back.
