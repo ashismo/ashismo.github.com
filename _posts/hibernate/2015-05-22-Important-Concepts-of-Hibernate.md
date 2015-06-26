@@ -212,7 +212,7 @@ dataSource.setMaxIdle(5);
 dataSource.setInitialSize(5);
 dataSource.setValidationQuery("SELECT 1");
 
-<% endhighlight %>  
+{% endhighlight %}  
 
 
 ## Dirty read, Phantom Read and Non Repeatable Read
