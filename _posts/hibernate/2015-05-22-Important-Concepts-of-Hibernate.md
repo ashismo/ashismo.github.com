@@ -199,8 +199,8 @@ Datasource is a name given to the connection set up to a Database from a server.
 If you want to configure a BasicDataSource for MySQL, you would do something like this
 
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
+{% highlight java %}
 BasicDataSource dataSource = new BasicDataSource();
 
 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -212,7 +212,7 @@ dataSource.setMaxIdle(5);
 dataSource.setInitialSize(5);
 dataSource.setValidationQuery("SELECT 1");
 
-</code></pre>  
+<% endhighlight %>
 
 
 ## Dirty read, Phantom Read and Non Repeatable Read
