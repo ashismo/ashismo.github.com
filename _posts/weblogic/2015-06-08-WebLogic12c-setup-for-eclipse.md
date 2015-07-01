@@ -46,7 +46,7 @@ set PRE_CLASSPATH=%wls_modules%\javax.persistence_1.0.0.0_2-0-0.jar;%wls_modules
 
 
 * Go to D:\ashish\softwares\wls1213_dev\wls12130\user_projects\domains\mydomain\bin folder and open **setDomainEnv.cmd** then search for PRODUCTION_MODE and set **PRODUCTION_MODE=false**
-* Once you start the server from eclipse or from D:\ashish\softwares\wls1213_dev\wls12130\user_projects\domains\mydomain\startWebLogic.cmd, you will see the server has started in the development mode
+* Once you start the server from eclipse or from **D:\ashish\softwares\wls1213_dev\wls12130\user_projects\domains\mydomain\startWebLogic.cmd**, you will see the server has started in the development mode
 
 ## Autodeploy your WAR
 
