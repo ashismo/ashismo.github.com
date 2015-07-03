@@ -118,4 +118,18 @@ Spring suppoprts two different types of transaction management called **Programa
 
 
 * **Programatic:** This means, you need to manage the transaction in your code. It is hard to maintain
-* **Declarative:** This means you seperate the transaction management code from your business logic. You need to use XML or annotation based configuration to manage the transactions.
+* **Declarative:** This means you seperate the transaction management code from your business logic. You need to use XML or annotation based configuration to manage the transactions. **Spring AOP** module supports declarative transaction management
+ 
+
+### Dirty read, Phantom Read and Non Repeatable Read
+
+
+* **Dirty read** occurs when one transaction is changing records/tuple and second transaction is trying to read this tuple/record before the original change has been committed or rolled back. This is known as a dirty read scenario because there is always the possibility that the first transaction may rollback the change, resulting in the second transaction having read an invalid value.
+* **Phantom read** occurs where in a transaction same query executes twice, and the second result set includes rows that weren’t visible in the first result set. This situation is caused by another transaction inserting new rows between the execution of the two queries
+* **Non Repeatable Reads** happen when in a same transaction same query yields different results. This happens when another transaction updates the data returned by other transaction.
+
+###Isolation and Propagation
+
+
+* **Isolation:** The degree to which this transaction is isolated from the work of other transactions. For example, can this transaction see uncommitted writes from other transactions?
+* **Propagation:** In case of propagation, the code will always run in a transaction scope. Create a new transaction or reuse one if availble.
