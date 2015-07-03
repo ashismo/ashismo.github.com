@@ -105,3 +105,9 @@ Database transaction is a set of actions treated as the unit of work. Main princ
  * **Consistency:** This ensures that a transaction will bring the database from one valid state to another valid state by maintaining the referencial integrity of the database
  * **Isolation:** Each transaction should be isolated from other transactions even though they are working on the same set of data.
  * **Durability:** This ensures that once a transaction is completed, the data will be made permanent in the database. The data will not get lost even after power loss or system crash
+ 
+**Spring** supports both **Programatic** and **Declarative** transaction management. It also supports **Global** and **Local** transactions.
+
+### Global vs Local Transaction
+Local transaction deals with single data source (e.g. JDBC) in a centralized system
+Global transaction deals with multiple data sources (e.g. JDBC, JMS) in a distributed system
