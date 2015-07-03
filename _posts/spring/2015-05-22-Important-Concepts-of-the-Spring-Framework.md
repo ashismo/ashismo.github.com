@@ -128,7 +128,7 @@ Spring suppoprts two different types of transaction management called **Programa
 * **Phantom read** occurs where in a transaction same query executes twice, and the second result set includes rows that weren’t visible in the first result set. This situation is caused by another transaction inserting new rows between the execution of the two queries
 * **Non Repeatable Reads** happen when in a same transaction same query yields different results. This happens when another transaction updates the data returned by other transaction.
 
-###Isolation and Propagation
+### Isolation and Propagation
 
 
 * **Isolation:** The degree to which this transaction is isolated from the work of other transactions. For example, can this transaction see uncommitted writes from other transactions?
