@@ -95,6 +95,12 @@ If @Autowired is applied to
  * **setter** for the setter dependency injection. Same as field-based dependency injection.
  * **constructor** for constructor-based dependency injection
 
+### Difference between <context:annotation-config> vs <context:component-scan>
+
+**<context:annotation-config>** is used to activate annotations in beans already registered in the application context
+**<context:component-scan>** can also do what **<context:annotation-config>** does but <context:component-scan> also scans packages to find and register beans within the application context.
+
+<a href='http://stackoverflow.com/questions/7414794/difference-between-contextannotation-config-vs-contextcomponent-scan' target='_blank'>Check here for more details</a>
 
 ## Transaction management in Spring
 
