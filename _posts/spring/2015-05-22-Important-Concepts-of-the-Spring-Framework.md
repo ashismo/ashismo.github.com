@@ -114,7 +114,7 @@ However, it is good idea to use @Service for service layer classes, and @Control
 
 ### Validation in Spring MVC
 
-**org.springframework.validation.Validator** interface supports spring MVC validation.
+**org.springframework.validation.Validator** interface supports spring MVC validation. Some of the util menthods to validate a form are **rejectIfEmptyOrWhitespace()** and **rejectIfEmpty()** in the ValidationUtils class
 
 ```java
 
