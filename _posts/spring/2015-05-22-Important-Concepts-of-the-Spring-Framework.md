@@ -112,6 +112,29 @@ However, it is good idea to use @Service for service layer classes, and @Control
 **ViewResolver** is used to resolve view by name. This interface is implemented by InternalResourceViewResolver
 **MultipartResolver** is used to handle file upload in web application.
 
+### Validation in Spring MVC
+
+**org.springframework.validation.Validator** interface supports spring MVC validation.
+
+```java
+
+@Component
+public class EmployeeValidator implements Validator
+{
+    public boolean supports(Class clazz) {
+        return EmployeeVO.class.isAssignableFrom(clazz);
+    }
+  
+    public void validate(Object target, Errors errors)
+    {
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "error.firstName", "First name is required.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastName", "error.lastName", "Last name is required.");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "error.email", "Email is required.");
+    }
+}
+
+```
+
 ## Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
