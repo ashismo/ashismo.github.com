@@ -135,6 +135,11 @@ public class EmployeeValidator implements Validator
 
 ```
 
+### Spring MVC interceptor
+
+**HandlerInterceptor** interface acts as a spring MVC interceptor. It intercepts before and after serving the request. preHandle(), postHandle() and afterCompletion() are the methods to be overridden in case you implement **HandlerInterceptor** interface. However, to avoid overriding, you can use HandlerInterceptorAdapter class.
+
+
 ## Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
