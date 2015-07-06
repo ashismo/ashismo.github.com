@@ -26,3 +26,6 @@ Adding resource is the most common way of enhancing scalability of an applicatio
 
 * **Scaling Up:** Add more resources (e.g. RAM, storage, processing power etc) to the existing node
 * **Scaling Out:** Adding more nodes to support more users
+
+An architect should take a call considering the cost of scaling up/out a system. Poorly designed application is always expensive to scaling up/out an application because the required resource/user is very high
+
