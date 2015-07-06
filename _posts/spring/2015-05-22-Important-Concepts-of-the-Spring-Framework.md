@@ -102,10 +102,15 @@ If @Autowired is applied to
 
 <a href='http://stackoverflow.com/questions/7414794/difference-between-contextannotation-config-vs-contextcomponent-scan' target='_blank'>Check here for more details</a>
 
-## Difference between @Component, @Controller, @Repository & @Service annotations
+### Difference between @Component, @Controller, @Repository & @Service annotations
 
 If a class is marked with @Component/@Controller/@Service/@Repository annotation then the spring DI container can identify the class during component scan mechanism.
 However, it is good idea to use @Service for service layer classes, and @Controller should be used in spring mvc web controller. @Repository is used to import DAOs into DI container. Also any unchecked exception will get translated into Spring **DataAccessException**
+
+### ViewResolver vs MultipartResolver
+
+**ViewResolver** is used to resolve view by name. This interface is implemented by InternalResourceViewResolver
+**MultipartResolver** is used to handle file upload in web application.
 
 ## Transaction management in Spring
 
