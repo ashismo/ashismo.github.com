@@ -158,6 +158,34 @@ Exception in Spring is handled declaratively using **SimpleMappingExceptionResol
 
 ```
 
+## How to get ServletContext and ServletConfig object in a Spring Bean?
+
+Implement ServletContextAware and ServletConfigAware interfaces and override below methods
+
+```java
+@Controller
+@RequestMapping(value = "/magic")
+public class SimpleController implements ServletContextAware, ServletConfigAware {
+ 
+    private ServletContext context;
+    private ServletConfig config;
+ 
+    @Override
+    public void setServletConfig(final ServletConfig servletConfig) {
+        this.config = servletConfig;
+ 
+    }
+ 
+    @Override
+    public void setServletContext(final ServletContext servletContext) {
+        this.context = servletContext;
+    }
+     
+    //other code
+}
+
+```
+
 ## Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
