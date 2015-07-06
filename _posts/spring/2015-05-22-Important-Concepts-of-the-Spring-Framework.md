@@ -158,9 +158,9 @@ Exception in Spring is handled declaratively using **SimpleMappingExceptionResol
 
 ```
 
-## How to get ServletContext and ServletConfig object in a Spring Bean?
+### How to get ServletContext and ServletConfig object in a Spring Bean?
 
-Implement ServletContextAware and ServletConfigAware interfaces and override below methods
+Implement **ServletContextAware** and **ServletConfigAware** interfaces and override below methods
 
 ```java
 @Controller
