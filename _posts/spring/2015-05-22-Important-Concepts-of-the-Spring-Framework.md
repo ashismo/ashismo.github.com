@@ -102,6 +102,11 @@ If @Autowired is applied to
 
 <a href='http://stackoverflow.com/questions/7414794/difference-between-contextannotation-config-vs-contextcomponent-scan' target='_blank'>Check here for more details</a>
 
+## Difference between @Component, @Controller, @Repository & @Service annotations
+
+If a class is marked with @Component/@Controller/@Service/@Repository annotation then the spring DI container can identify the class during component scan mechanism.
+However, it is good idea to use @Service for service layer classes, and @Controller should be used in spring mvc web controller. @Repository is used to import DAOs into DI container. Also any unchecked exception will get translated into Spring **DataAccessException**
+
 ## Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
