@@ -18,3 +18,21 @@ weight: 100
 
 By design, RESTful is stateless for better scalability. However, you can add state, but it's at a trade-off in scalability.  
 One of the most common reasons to add state to REST is for authentication. Once a secure connection is established, a secure cookie can be sent to the client. This cookie is then added by the client to all requests for the session. The server maintains state and then loads that state in with every request based on the cookie
+
+### Security in RESTful webservice
+
+There are many ways to secure a RESTful webservice. Few of the common approaches are
+
+**(TLS)HTTPS +**
+* HTTP Basic authentication
+* HTTP Digest
+* Cookie based approach
+* OAuth
+
+The most popular security is HTTPS + HTTP Basic authentication. This approach will
+
+
+* secure the transport layer +
+* Requester needs to pass the authentication (**Basic YWRtaW46YWRtaW4=**) token in the request header
+
+Another approach could be that we can use Spring provided RESTful webservice and integrate the **spring-security**.
