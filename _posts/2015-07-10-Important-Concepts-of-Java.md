@@ -7,4 +7,6 @@ weight: 1
 
 {% include JB/setup %}
 
+## Class level lock vs Object level lock in multithreading
+
 ## Concept behind putting wait(),notify() methods in Object class
