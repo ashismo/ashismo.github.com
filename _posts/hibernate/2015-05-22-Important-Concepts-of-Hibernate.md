@@ -200,7 +200,7 @@ If you want to configure a BasicDataSource for MySQL, you would do something lik
 
 
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
+{% highlight java %}  
 BasicDataSource dataSource = new BasicDataSource();
 
 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -211,7 +211,8 @@ dataSource.setMaxActive(10);
 dataSource.setMaxIdle(5);
 dataSource.setInitialSize(5);
 dataSource.setValidationQuery("SELECT 1");
-</code></pre> 
+
+{% endhighlight %}  
 
 
 ## Dirty read, Phantom Read and Non Repeatable Read
