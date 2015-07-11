@@ -39,3 +39,11 @@ The output shows that the non static, synchronized method got called from two di
 
 
 ## Concept behind putting wait(),notify() methods in Object class
+
+In multi threading programming, threads use resources (instances of classes) to perform a set of tasks. Once a thread enters into a synchronized block means the thread acquires the object level/class level lock (as applicable) then no other thread .
+
+Now, lets assume wait() and notify in Object class and Thread class seperately. 
+
+We wait() on a particular instance of an "Object" -- a monitor assigned to that object to be precise. If you want to send a signal to a single thread that is waiting on that specific object instance then you call notify() on that object. If you want to send a signal to all threads that are waiting on that object instance, you use notifyAll() on that object.
+
+If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread. How would thread1 know that thread2 was waiting for access to a particular resource? If thread1 needed to call thread2.notify() it would have to somehow find out that thread2 was waiting. There would need to be some mechanism for threads to register the resources or actions that they need so others could signal them when stuff was ready or available
