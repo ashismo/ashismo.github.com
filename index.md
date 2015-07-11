@@ -3,7 +3,7 @@ layout: page
 title: Technical Blog!
 tagline: Sharing Knowledge
 ---
-{% include JB/setup %}
+{% include JB/setup %} 
 
 ![Ashish]({{ site.url }}/assets/images/ashish.jpg)
 
