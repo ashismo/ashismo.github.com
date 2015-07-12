@@ -40,3 +40,6 @@ All of these work for distributed system (application requires communication wit
 JAX-RPC was the standard for SOAP web services. However JAX-RPC is obsole now once JAX-WS standard has been evolved.
 
 **CORBA** is much faster and much secure than RMI
+
+
+## JAX-RPC, JAX-WS vs JAX-RS
