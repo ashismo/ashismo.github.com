@@ -10,7 +10,7 @@ tagline: Sharing Knowledge
 
 #### About the Author
 
-Ashish has more than 9 years of experience in Java/J2EE. He likes to learn different technologies and share his knowledge in this blog.
+Ashish has more than 9 years of experience in Java/J2EE. He likes to learn different technologies and shares his knowledge in this blog.
 
   
 #### About the Blog
