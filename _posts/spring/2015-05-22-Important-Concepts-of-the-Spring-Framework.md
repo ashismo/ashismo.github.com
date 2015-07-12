@@ -230,7 +230,7 @@ Spring suppoprts two different types of transaction management called **Programa
 
 In older version of spring and hibernate integration, HibernateDAOSupport and HibernateTemplate were required. However, the newer version of Spring does not recommend to use these two classes.
 
-Normally we extend our DAO class from HibernateDAOSupport and getHibernateTemplate() method would be available to CRUD operation in the hibernate session. Since this is not recomended approach so we inject session factory in a DAO. Below code snippet will give you sort of this idea about HibernateDAOSupport and HibernateTemplate
+Normally we extend our DAO class from HibernateDAOSupport and getHibernateTemplate() method would be available for the CRUD operation in the hibernate session. Since this is not recomended approach so we inject session factory in a DAO. Below code snippet will give you sort of this idea about HibernateDAOSupport and HibernateTemplate
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 public class EmployeeHibernateDao extends HibernateDaoSupport implements EmployeeDao {
