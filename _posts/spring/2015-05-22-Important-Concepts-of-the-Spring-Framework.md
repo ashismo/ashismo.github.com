@@ -143,20 +143,20 @@ public class EmployeeValidator implements Validator
 
 Exception in Spring is handled declaratively using **SimpleMappingExceptionResolver** class. List of the exceptions that you want to handle is configured against **exceptionMapping** property. If any one of the exceptions occurs anywhere in the flow will be caught and respective view will be displayed. For all other exceptions you can catch them against **defaultErrorView** property. Sample configuration is given below
 
-```xml
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 
-<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-    <property name="exceptionMappings">
-        <props>
-            <prop key="com.ashish.exception.XYZException">
+&lt;bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"&gt;
+    &lt;property name="exceptionMappings"&gt;
+        &lt;props&gt;
+            &lt;prop key="com.ashish.exception.XYZException"&gt;
                 error/xyzExceptionView
-            </prop>
-        </props>
-    </property>
-    <property name="defaultErrorView" value="error/genericExceptionView"/>
-</bean>
+            &lt;/prop&gt;
+        &lt;/props&gt;
+    &lt;/property&gt;
+    &lt;property name="defaultErrorView" value="error/genericExceptionView"/&gt;
+&lt;/bean&gt;
 
-```
+</code></pre>
 
 ### How to get ServletContext and ServletConfig object in a Spring Bean?
 
