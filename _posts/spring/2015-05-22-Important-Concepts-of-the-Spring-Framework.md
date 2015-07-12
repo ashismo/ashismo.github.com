@@ -226,23 +226,6 @@ Spring suppoprts two different types of transaction management called **Programa
 * **Isolation:** The degree to which this transaction is isolated from the work of other transactions. For example, can this transaction see uncommitted writes from other transactions?
 * **Propagation:** In case of propagation, the code will always run in a transaction scope. Create a new transaction or reuse one if availble.
 
-### Difference between Spring DAO and Spring ORM
-
-**DAO** is a design pattern to minimize coupling between the application an the backend  
-**ORM** deals with how to  map objects into an object relationation database which reduess coupling between the database and application.  
-If you use **ORM** without **DAO** then your application will become ORM dependent so it would be hard to move from one ORM (say hibernate) to another ORM (e.g. NoSQL).
-
-Spring DAO is implemented using @Repository annotation. Spring repository extends JPARepository and passes JPA entity and its primary key.
-
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-@Repository
-public interface PersonRepository extends JPARepository<Person, PersonPK> {
-    public List<Person> findByFirstName(String firstName);
-    @Query("Your SQL query")
-    public List<Person> findByAddress(String firstName);
-}
-<code></pre>
-
 ### HibernateDAOSupport and HibernateTemplate
 
 In older version of spring and hibernate integration, HibernateDAOSupport and HibernateTemplate were required. However, the newer version of Spring does not recommend to use these two classes.
