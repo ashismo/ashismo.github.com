@@ -188,7 +188,7 @@ public class SimpleController implements ServletContextAware, ServletConfigAware
 
 
 
-## Transaction management in Spring
+### Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
 
@@ -200,11 +200,11 @@ Database transaction is a set of actions treated as the unit of work. Main princ
  
 **Spring** supports both **Programatic** and **Declarative** transaction management. It also supports **Global** and **Local** transactions.
 
-### Global vs Local Transaction
+#### Global vs Local Transaction
 **Local transaction** deals with single data source (e.g. JDBC) in a centralized system  
 **Global transaction** deals with multiple data sources (e.g. JDBC, JMS) in a distributed system. A global transaction is the collection of multiple local transactions
 
-### Programatic vs Declarative transaction
+#### Programatic vs Declarative transaction
 
 Spring suppoprts two different types of transaction management called **Programatic** and **Declarative** transaction management
 
@@ -213,14 +213,14 @@ Spring suppoprts two different types of transaction management called **Programa
 * **Declarative:** This means you seperate the transaction management code from your business logic. You need to use XML or annotation based configuration to manage the transactions. **Spring AOP** module supports declarative transaction management
  
 
-### Dirty read, Phantom Read and Non Repeatable Read
+#### Dirty read, Phantom Read and Non Repeatable Read
 
 
 * **Dirty read** occurs when one transaction is changing records/tuple and second transaction is trying to read this tuple/record before the original change has been committed or rolled back. This is known as a dirty read scenario because there is always the possibility that the first transaction may rollback the change, resulting in the second transaction having read an invalid value.
 * **Phantom read** occurs where in a transaction same query executes twice, and the second result set includes rows that weren’t visible in the first result set. This situation is caused by another transaction inserting new rows between the execution of the two queries
 * **Non Repeatable Reads** happen when in a same transaction same query yields different results. This happens when another transaction updates the data returned by other transaction.
 
-### Isolation and Propagation
+#### Isolation and Propagation
 
 
 * **Isolation:** The degree to which this transaction is isolated from the work of other transactions. For example, can this transaction see uncommitted writes from other transactions?
