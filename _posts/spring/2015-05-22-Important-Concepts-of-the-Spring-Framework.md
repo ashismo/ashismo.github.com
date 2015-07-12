@@ -162,7 +162,7 @@ Exception in Spring is handled declaratively using **SimpleMappingExceptionResol
 
 Implement **ServletContextAware** and **ServletConfigAware** interfaces and override below methods
 
-```java
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Controller
 @RequestMapping(value = "/magic")
 public class SimpleController implements ServletContextAware, ServletConfigAware {
@@ -184,7 +184,7 @@ public class SimpleController implements ServletContextAware, ServletConfigAware
     //other code
 }
 
-```
+</code></pre>
 
 ### Difference between Spring DAO and Spring ORM
 
@@ -194,7 +194,7 @@ If you use **ORM** without **DAO** then your application will become ORM depende
 
 Spring DAO is implemented using @Repository annotation. Spring repository extends JPARepository and passes JPA entity and its primary key.
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 @Repository
 public interface PersonRepository extends JPARepository<Person, PersonPK> {
     public List<Person> findByFirstName(String firstName);
@@ -202,7 +202,7 @@ public interface PersonRepository extends JPARepository<Person, PersonPK> {
     public List<Person> findByAddress(String firstName);
 }
 
-</code></pre>
+```
 
 ### Transaction management in Spring
 
