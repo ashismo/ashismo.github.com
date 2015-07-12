@@ -194,7 +194,7 @@ If you use **ORM** without **DAO** then your application will become ORM depende
 
 Spring DAO is implemented using @Repository annotation. Spring repository extends JPARepository and passes JPA entity and its primary key.
 
-```java
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @Repository
 public interface PersonRepository extends JPARepository<Person, PersonPK> {
     public List<Person> findByFirstName(String firstName);
@@ -202,17 +202,17 @@ public interface PersonRepository extends JPARepository<Person, PersonPK> {
     public List<Person> findByAddress(String firstName);
 }
 
-```
+<code></pre>
 
-### Transaction management in Spring
+## Transaction management in Spring
 
 Database transaction is a set of actions treated as the unit of work. Main principle of a transaction is either commit the all actions or rollback everyting in case of failure. While commiting data in a trasanction, we need to ensure the trancation agreement/properties called **ACID (Atomicity-Consistency-Isolation-Durability)** 
 
 
- * **Atomicity:** All operations in a transaction is considered as a unit of work. Hence, a transaction will be either commited or roll backed.
- * **Consistency:** This ensures that a transaction will bring the database from one valid state to another valid state by maintaining the referencial integrity of the database
- * **Isolation:** Each transaction should be isolated from other transactions even though they are working on the same set of data.
- * **Durability:** This ensures that once a transaction is completed, the data will be made permanent in the database. The data will not get lost even after power loss or system crash
+* **Atomicity:** All operations in a transaction is considered as a unit of work. Hence, a transaction will be either commited or roll backed.
+* **Consistency:** This ensures that a transaction will bring the database from one valid state to another valid state by maintaining the referencial integrity of the database
+* **Isolation:** Each transaction should be isolated from other transactions even though they are working on the same set of data.
+* **Durability:** This ensures that once a transaction is completed, the data will be made permanent in the database. The data will not get lost even after power loss or system crash
  
 **Spring** supports both **Programatic** and **Declarative** transaction management. It also supports **Global** and **Local** transactions.
 
