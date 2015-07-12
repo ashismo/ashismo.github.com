@@ -52,8 +52,8 @@ If wait() and notify() were on the Thread instead then each thread would have to
 
 Both Enumeration vs Iterator gives successive elements. However, Iterator allows the caller to remove element. So Iterator giver you more features compared to Enumerator.
 
-Enumerator                                    Iterator
+Enumerator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterator
 ____________________________________________________________
-hasMoreElements()                             hasNext()
-nextElement()                                 next()
-N/A                                           **remove()**
+hasMoreElements()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hasNext()
+nextElement()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next()
+N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**remove()**
