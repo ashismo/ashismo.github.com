@@ -40,10 +40,10 @@ The output shows that the non static, synchronized method got called from two di
 
 ## Concept behind putting wait(),notify() methods in Object class
 
-In multi threading programming, threads use resources (instances of classes) to perform a set of tasks. Once a thread enters into a synchronized block means the thread acquires the object level/class level lock (as applicable) then no other thread .
+In multi threading programming, threads use resources (instances of classes) to perform a set of tasks. Once a thread enters into a synchronized block means the thread acquires the object level/class level lock (as applicable) then no other thread can access the resource.
 
-Now, lets assume wait() and notify in Object class and Thread class seperately. 
+Now, lets assume wait() and notify in **Object** class and **Thread** class seperately. 
 
-We wait() on a particular instance of an "Object" -- a monitor assigned to that object to be precise. If you want to send a signal to a single thread that is waiting on that specific object instance then you call notify() on that object. If you want to send a signal to all threads that are waiting on that object instance, you use notifyAll() on that object.
+wait(), notify() and notifyAll() are the used for inter thread communication. As mentioned above, once a thread acquires the lock of an object/class (which internally is inherited from **Object** class) then other threads will wait until the lock gets released. Once the lock gets released then it is the responsibility of the resource to notify (using notify() or notifyAll()) other threads which are waiting for the resource. That is why these methods are the part of the **Object** class.
 
 If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread. How would thread1 know that thread2 was waiting for access to a particular resource? If thread1 needed to call thread2.notify() it would have to somehow find out that thread2 was waiting. There would need to be some mechanism for threads to register the resources or actions that they need so others could signal them when stuff was ready or available
