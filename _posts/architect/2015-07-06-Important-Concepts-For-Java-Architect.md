@@ -29,3 +29,14 @@ Adding resource is the most common way of enhancing scalability of an applicatio
 
 An architect should take a call considering the cost of scaling up/out a system. Poorly designed application is always expensive to scaling up/out an application because the required resource/user is very high
 
+### RPC vs RMI vs CORBA
+
+RPC - Remote Procedure Call
+RMI - Remote Method Invocation
+CORBA - Common Object Request Broket Architecture
+
+All of these work for distributed system (application requires communication with multiple systems). **RPC** is used for Java and C based system. **RMI** is for Java based system. **CORBA** supports communication with multiple systems having many different languages.
+
+JAX-RPC was the standard for SOAP web services. However JAX-RPC is obsole now once JAX-WS standard has been evolved.
+
+**CORBA** is much faster and much secure than RMI
