@@ -86,7 +86,8 @@ public static void main(String args[]){
 
 ## Enumeration vs Iterator
 
-Both Enumeration vs Iterator gives successive elements. However, Iterator allows the caller to remove element. So Iterator giver you more features compared to Enumerator.
+Both Enumeration vs Iterator gives successive elements. However, Iterator allows the caller to remove element. So Iterator giver you more features compared to Enumerator.  
+Below are the available methods in both Enumerator and Iterator class
 
 Enumerator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterator
 _____________________________________________________________________________
