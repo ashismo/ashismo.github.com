@@ -188,33 +188,6 @@ for(int i=0; i<result.size(); i++){
 }
 </code></pre>
 
-## Datasource
-
-Datasource is a name given to the connection set up to a Database from a server. The name is commonly used when creating a query to the database. The advantages of using datasource are
-
-
- * Improves performance as the connections are created and managed by the application server
- * Provides the facilities of creating connection pool
- 
-If you want to configure a BasicDataSource for MySQL, you would do something like this
-
-
-
-{% highlight java %}  
-BasicDataSource dataSource = new BasicDataSource();
-
-dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-dataSource.setUsername("username");
-dataSource.setPassword("password");
-dataSource.setUrl("jdbc:mysql://<host>:<port>/<database>");
-dataSource.setMaxActive(10);
-dataSource.setMaxIdle(5);
-dataSource.setInitialSize(5);
-dataSource.setValidationQuery("SELECT 1");
-
-{% endhighlight %}  
-
-
 ## Dirty read, Phantom Read and Non Repeatable Read
 
 
@@ -228,3 +201,29 @@ dataSource.setValidationQuery("SELECT 1");
 
 * **Isolation:** The degree to which this transaction is isolated from the work of other transactions. For example, can this transaction see uncommitted writes from other transactions?
 * **Propagation:** In case of propagation, the code will always run in a transaction scope. Create a new transaction or reuse one if availble.
+
+## Datasource
+
+Datasource is a name given to the connection set up to a Database from a server. The name is commonly used when creating a query to the database. The advantages of using datasource are
+
+
+ * Improves performance as the connections are created and managed by the application server
+ * Provides the facilities of creating connection pool
+ 
+If you want to configure a BasicDataSource for MySQL, you would do something like this
+
+
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+BasicDataSource dataSource = new BasicDataSource();
+
+dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+dataSource.setUsername("username");
+dataSource.setPassword("password");
+dataSource.setUrl("jdbc:mysql://<host>:<port>/<database>");
+dataSource.setMaxActive(10);
+dataSource.setMaxIdle(5);
+dataSource.setInitialSize(5);
+dataSource.setValidationQuery("SELECT 1");
+
+</code></pre>
