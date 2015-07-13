@@ -48,6 +48,37 @@ wait(), notify() and notifyAll() are the used for inter thread communication. As
 
 If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread. How would thread1 know that thread2 was waiting for access to a particular resource? If thread1 needed to call thread2.notify() it would have to somehow find out that thread2 was waiting. There would need to be some mechanism for threads to register the resources or actions that they need so others could signal them when stuff was ready or available
 
+## join() in thread
+It causes the currently running threads to stop executing until the thread it joins with completes its task.  
+In the below example t1 thread will complete its task then t2 and t3 will start.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+class JoinTest extends Thread {  
+ public void run(){  
+  for(int i=1;i<=5;i++){  
+   try{  
+       Thread.sleep(1000);  
+   } catch(Exception e){System.out.println(e);}  
+  System.out.println(i);  
+  }  
+ }  
+public static void main(String args[]){  
+ 	JoinTest t1=new JoinTest();  
+ 	JoinTest t2=new JoinTest();  
+ 	JoinTest t3=new JoinTest();  
+ 	t1.start();  
+ 	try{  
+		t1.join();  
+	} catch(Exception e){
+		System.out.println(e);
+	}  
+  
+ 	t2.start();  
+ 	t3.start();  
+   }  
+}  
+</code></pre>
+
 ## Enumeration vs Iterator
 
 Both Enumeration vs Iterator gives successive elements. However, Iterator allows the caller to remove element. So Iterator giver you more features compared to Enumerator.
