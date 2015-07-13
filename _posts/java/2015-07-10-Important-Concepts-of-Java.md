@@ -48,6 +48,11 @@ wait(), notify() and notifyAll() are the used for inter thread communication. As
 
 If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread. How would thread1 know that thread2 was waiting for access to a particular resource? If thread1 needed to call thread2.notify() it would have to somehow find out that thread2 was waiting. There would need to be some mechanism for threads to register the resources or actions that they need so others could signal them when stuff was ready or available
 
+## sleep() vs wait()
+
+sleep() belongs to **Thread** class and wait() belongs to **Object** class (reason is given above)
+sleep() method does not releases the lock but wait() method releases the lock
+
 ## join() in thread
 It causes the currently running threads to stop executing until the thread it joins with completes its task.  
 In the below example t1 thread will complete its task then t2 and t3 will start.
