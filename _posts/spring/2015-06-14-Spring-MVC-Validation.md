@@ -31,7 +31,9 @@ This is simple 2 pages application. In the first page it is going to **validate*
 	</span>
 </div>
 
-Important file details are given below  
+The project structure and important file details are given below  
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/8668713/9e7ba482-2a2b-11e5-977d-9b22e501327c.png"/>
 
 SL No | File Name | Description
 :---: | --- | ---
