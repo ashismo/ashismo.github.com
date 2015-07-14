@@ -350,6 +350,6 @@ public class StudentController {
 
 ## Output
 
-Below is the output of the application
+Below is the output of the application. The first screen is the default input screen. 2nd screen shows validation error and 3rd screen shows the user's valid input
 
-<img src=""/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/8668524/b0603430-2a29-11e5-9568-0098beba9cd3.png"/>
