@@ -224,7 +224,7 @@ public class Student {
 }
 </code></pre>
 
-* Controller to display validate data and display right jsp to the user. Go through the java doc comments for better understanding
+* **StudentController.java**: Controler to choose valid screen for the user. The user input is validated in this controller class. Http Request handling also shown in this controller. Go through the java doc comments for better understanding
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
 package com.ashish.controller;
