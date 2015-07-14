@@ -24,7 +24,7 @@ This is simple 2 pages application. In the first page it is going to **validate*
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringMVCValidation.zip" target="_blank">SpringMVCValidation zip(16kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringMVCValidation.zip" target="_blank">SpringMVCValidation zip(20kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringMVCValidation" target="_blank">SpringMVCValidation</a>
