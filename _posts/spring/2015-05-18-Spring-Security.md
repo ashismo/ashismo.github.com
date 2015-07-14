@@ -25,6 +25,7 @@ Objectives of this project are
  * Eclipse for J2EE
  * JDK 1.7
  * Maven 2.2.x or above
+ * Tomcat 7
   
 ## Steps to write code
 
