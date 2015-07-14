@@ -18,6 +18,7 @@ This is simple 2 pages application. In the first page it is going to **validate*
 * Eclipse for J2EE
 * JDK 1.7
 * Maven 2.2.x or above
+* Tomcat 7
 
 ## Steps to write code
 
@@ -34,7 +35,7 @@ Important file details are given below
 
 SL No | File Name | Description
 :---: | --- | ---
-1 | **WEB-INF/applicationContext.xml** | component-scan and **InternalResourceViewResolver** are configured
+1 | **WEB-INF/applicationContext.xml** | This file has annotation-driven, component-scan and **InternalResourceViewResolver** configurations. **annotation-driven** configuration is must for the annotation driven validation
 2 | **com.ashish.beans.Student** | age, name and id properties are declared and validation annotation added against each property
 3 | **com.ashish.controller.StudentController** | Controller to display two different screens. Validation check is present in this class
 4 | **WEB-INF/jsp/student.jsp** | Screen to take name, age and id as input from user. Validation errors are displayed in this same screen
@@ -141,6 +142,33 @@ SL No | File Name | Description
 		&lt;/dependency&gt;
 	&lt;/dependencies&gt;
 &lt;/project&gt;
+</code></pre>
+
+* **WEB-INF/applicationContext.xml** has annotation-driven, component-scan and **InternalResourceViewResolver** configurations. **annotation-driven** configuration is must for the annotation driven validation
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml"> 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd  	
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd"&gt;
+
+	&lt;!-- This configuraton is must for the annotation driven validation --&gt;
+	&lt;mvc:annotation-driven /&gt;
+	&lt;context:component-scan base-package="com.ashish" /&gt;
+	
+	&lt;bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+		&lt;property name="prefix" value="WEB-INF/jsp/" /&gt;
+      	&lt;property name="suffix" value=".jsp" /&gt;
+	&lt;/bean&gt;
+
+&lt;/beans&gt;
 </code></pre>
 
 * Create student bean to bind data between jsp and controller
@@ -319,3 +347,9 @@ public class StudentController {
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
+## Output
+
+Below is the output of the application
+
+<img src=""/>
