@@ -37,7 +37,7 @@ SL No | File Name | Description
 :---: | --- | ---
 1 | **WEB-INF/applicationContext.xml** | This file has annotation-driven, component-scan and **InternalResourceViewResolver** configurations. **annotation-driven** configuration is must for the annotation driven validation
 2 | **com.ashish.beans.Student** | age, name and id properties are declared and validation annotation added against each property
-3 | **com.ashish.controller.StudentController** | Controller to display two different screens. Validation check is present in this class
+3 | **com.ashish.controller.StudentController** | Controller to display two different screens. User input validation is done in this class
 4 | **WEB-INF/jsp/student.jsp** | Screen to take name, age and id as input from user. Validation errors are displayed in this same screen
 5 | **WEB-INF/jsp/result.jsp** | Displays user's valid input in this screen
 
