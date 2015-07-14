@@ -44,7 +44,7 @@ SL No | File Name | Description
 5 | **WEB-INF/jsp/result.jsp** | Displays user's valid input in this screen
 
 
-* Create a maven project and update the pom.xml with the below content
+* Create a maven project and update the **pom.xml** with the below content
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml"> 
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
