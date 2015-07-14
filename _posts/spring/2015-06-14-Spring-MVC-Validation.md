@@ -171,7 +171,7 @@ SL No | File Name | Description
 &lt;/beans&gt;
 </code></pre>
 
-* Create student bean to bind data between jsp and controller
+* Create **Student.java** bean to bind data between jsp and controller
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
 package com.ashish.beans;
