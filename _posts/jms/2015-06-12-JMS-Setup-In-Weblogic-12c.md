@@ -159,7 +159,9 @@ public class JMSUtil {
 
 #### com.ashish.jms.sender.JMSSender
 
-```java
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
 package com.ashish.jms.sender;
 
 import java.io.BufferedReader;
@@ -258,7 +260,8 @@ public class JMSSender
 
  }
 }
-```
+</code></pre>
+
 
 #### com.ashish.jms.receiver.JMSReceiver
 
