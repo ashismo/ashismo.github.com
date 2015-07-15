@@ -135,6 +135,12 @@ public class EmployeeValidator implements Validator
 
 </code></pre>
 
+**Another approach** to validate form in Spring MVC is
+1. use hibernate validation (e.g. @NotNull, @Size etc) for the properties of the model bean
+2. Use @Valid, BindingResult in the method signature of the controller.
+3. BindingResult.hasErrors() methods to validate the model bean. 
+<a href="http://ashismo.github.io/java-spring/2015/06/14/Spring-MVC-Validation/">Follow my another blog to understand this validation</a>
+
 ### Spring MVC interceptor
 
 **HandlerInterceptor** interface acts as a spring MVC interceptor. It intercepts before and after serving the request. preHandle(), postHandle() and afterCompletion() are the methods to be overridden in case you implement **HandlerInterceptor** interface. However, to avoid overriding, you can use HandlerInterceptorAdapter class.
