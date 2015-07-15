@@ -159,7 +159,7 @@ public class JMSUtil {
 
 #### com.ashish.jms.sender.JMSSender
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 package com.ashish.jms.sender;
 
 import java.io.BufferedReader;
@@ -258,11 +258,11 @@ public class JMSSender
 
  }
 }
-</pre></code>
+```
 
 #### com.ashish.jms.receiver.JMSReceiver
 
-```java
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.jms.receiver;
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -365,7 +365,7 @@ public class JMSReceiver implements MessageListener
     qr.close();
  }
 }
-```
+</code></pre>
 
 ### Output
 
