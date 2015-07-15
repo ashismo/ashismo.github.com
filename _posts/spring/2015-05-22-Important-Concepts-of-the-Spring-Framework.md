@@ -87,13 +87,22 @@ There are two different types of containers
 
 ### @Autowired
 
-For annotation based dependency injection, @Autowired annotation is used.
-If @Autowired is applied to
+For annotation based dependency injection, @Autowired annotation is used. The classes marked with **@Component/@Service/@Repository** etc can be injected to the property which is marked with **@Autowired**
+
+@Autowired is applied to
 
 
  * **field:** for the field-based dependency injection
  * **setter** for the setter dependency injection. Same as field-based dependency injection.
  * **constructor** for constructor-based dependency injection
+
+### Difference between constructor based and setter based DI
+
+
+* Injection of dependencies can be optional or mandatory. For mandatory injection we use constructor based DI. While for the optional dependencies we can use setter based DI. However, we can mark a setter based DI with @Required annotation.
+* In case of cyclic dependency, constructure based DI won't be able to inject but setter based DI would be able to inject
+* If more number of parameters to be injected then it is advisable to use constructor based DI
+
 
 ### Difference between context:annotation-config and context:component-scan
 
@@ -139,7 +148,7 @@ public class EmployeeValidator implements Validator
 1. use hibernate validation (e.g. @NotNull, @Size etc) for the properties of the model bean
 2. Use @Valid, BindingResult in the method signature of the controller.
 3. BindingResult.hasErrors() methods to validate the model bean. 
-<a href="http://ashismo.github.io/java-spring/2015/06/14/Spring-MVC-Validation/">Follow my another blog to understand this validation</a>
+<a href="http://ashismo.github.io/java-spring/2015/06/14/Spring-MVC-Validation/" target="_blank">Follow my another blog to understand this validation</a>
 
 ### Spring MVC interceptor
 
