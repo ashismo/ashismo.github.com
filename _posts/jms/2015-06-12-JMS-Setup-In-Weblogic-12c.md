@@ -124,7 +124,7 @@ Note that both **com.ashish.jms.sender.JMSSender** and **com.ashish.jms.receiver
 
 #### com.ashish.jms.JMSUtil
 
-```java
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.jms;
 
 import java.util.Hashtable;
@@ -155,7 +155,7 @@ public class JMSUtil {
 		return new InitialContext(env);
 	}
 }
-```
+</code></pre>
 
 #### com.ashish.jms.sender.JMSSender
 
