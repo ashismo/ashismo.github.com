@@ -482,6 +482,42 @@ public class EmployeeServiceImpl implements EmployeeService {
 }
 {% endhighlight %}
 
+* **LoggingAspect.java:** Audit Logging is done in this file. @Before and @AfterThrowing advises are implemented in this file
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.aop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class LoggingAspect {
+
+	@Before("execution(* com.ashish.service.EmployeeService.insert*(..))")
+	public void beforeExecution(JoinPoint jp) {
+		System.out.println("Before method: " + jp.getSignature().getName()
+				+ ". Class: " + jp.getTarget().getClass().getSimpleName());
+	}
+
+	@AfterThrowing(pointcut = "execution(* com.ashish.service.EmployeeService.insert*(..))", throwing = "ex")
+	public void afterThrowingExecution(JoinPoint jp, Exception ex) {
+		System.out.println("After throwing advice: "
+				+ jp.getSignature().getName() + ". Class: "
+				+ jp.getTarget().getClass().getSimpleName());
+		System.out.println("Exception: " + ex.getMessage());
+	}
+}
+
+</code></pre>
+
 * **MainApp.java:** This class contains the main method and calls DAO services.
 
 {% highlight java %}
