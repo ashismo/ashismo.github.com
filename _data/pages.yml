@@ -7,7 +7,7 @@
 - url: /bigdata.html
   title: Big Data
   group: navigation
-  url: /aws.html
+- url: /aws.html
   title: Amazon Webservices
   group: navigation
 - url: /misc.html
