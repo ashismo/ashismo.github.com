@@ -43,23 +43,48 @@ sudo service httpd start
 ```
 sudo yum install mod_dav_svn subversion
 ```
-* Edit virtual host file
+* Edit the Apache configuration file for subversion
 ```
-sudo vi /etc/httpd/conf.d/vhosts.conf
+sudo vi /etc/httpd/conf.d/subversion.conf
 ```
 * Add virtual host and edit the subversion access information
 ```xml
-<VirtualHost *:80>
-        ServerName svn.yourdomain.com
-        ServerAlias svn.yourdomain.com
-        <Location "/" >
-            DAV svn
-            SVNPath /data/svn/repos
-            AuthType Basic
-            AuthName "Subversion repos"
-            AuthUserFile /data/login/svn-auth-conf
-            Require valid-user
-       </Location>
-</VirtualHost>
+LoadModule dav_svn_module     modules/mod_dav_svn.so
+LoadModule authz_svn_module   modules/mod_authz_svn.so
+<Location /repos>
+   DAV svn
+   SVNParentPath /var/www/svn
+   # Limit write permission to list of valid users.
+   AuthType Basic
+   AuthName "Authorization Realm"
+   AuthUserFile /var/www/svn-auth/passwd
+   AuthzSVNAccessFile  /var/www/svn-auth/access
+   Require valid-user
+</Location>
 ```
-
+* Create the directory which will contain the subversion repository
+```
+sudo mkdir /var/www/svn
+```
+* Create the directory which will contain the permissions files
+```
+sudo mkdir /var/www/svn-auth
+```
+* Create the permission file
+```
+sudo vi /var/www/svn-auth/access
+```
+and fill this with your users. Example is given below
+```
+[/]
+ashish=rw
+```
+* Create and add to the password file
+```
+sudo htpasswd -cb /var/www/svn-auth/passwd ashish xxxxPassword
+```
+* Create a repository (cooperative is the name of your repository eg rebuild):
+```
+cd /var/www/svn
+sudo svnadmin create cooperative
+```
