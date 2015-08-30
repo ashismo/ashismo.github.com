@@ -1,0 +1,18 @@
+---
+layout: page
+title : Amazon Webservices
+header : AWS
+group: navigation
+---
+{% include JB/setup %}
+
+{% for category in site.categories %} 
+  {% if category[0] contains 'aws' %} 
+    <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
+    <ul>
+      {% assign pages_list = category[1] %}  
+	  {% assign pages_list = pages_list | sort:"weight" %}  
+      {% include JB/pages_list %}
+    </ul>
+  {% endif %}
+{% endfor %}
