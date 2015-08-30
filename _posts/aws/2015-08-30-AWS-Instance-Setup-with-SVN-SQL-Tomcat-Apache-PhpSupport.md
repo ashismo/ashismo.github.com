@@ -26,4 +26,40 @@ weight: 100
 sudo yum update -y
 ```
 
+#### Install required software
+
+
+* Install apache and PHP support
+```
+sudo yum groupinstall -y "Web Server" "PHP Support"
+```
+* Start the apache services
+```
+sudo service httpd start
+```
+* Now test if the web server is accessible from outside by hitting the public domain URL. (e.g. ec2-52-88-8-150.us-west-2.compute.amazonaws.com). Below page shows that the webserver is up and running.
+<img src="https://cloud.githubusercontent.com/assets/11231867/9568500/fe2bb34c-4f68-11e5-845d-6ecd476b999e.PNG"/>
+* Install the subversion
+```
+sudo yum install mod_dav_svn subversion
+```
+* Edit virtual host file
+```
+sudo vi /etc/httpd/conf.d/vhosts.conf
+```
+* Add virtual host and edit the subversion access information
+```xml
+<VirtualHost *:80>
+        ServerName svn.yourdomain.com
+        ServerAlias svn.yourdomain.com
+        <Location "/" >
+            DAV svn
+            SVNPath /data/svn/repos
+            AuthType Basic
+            AuthName "Subversion repos"
+            AuthUserFile /data/login/svn-auth-conf
+            Require valid-user
+       </Location>
+</VirtualHost>
+```
 
