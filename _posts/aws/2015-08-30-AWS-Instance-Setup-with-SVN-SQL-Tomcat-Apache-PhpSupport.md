@@ -48,7 +48,7 @@ sudo yum install mod_dav_svn subversion
 sudo vi /etc/httpd/conf.d/subversion.conf
 ```
 * Add virtual host and edit the subversion access information
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+```
 LoadModule dav_svn_module     modules/mod_dav_svn.so
 LoadModule authz_svn_module   modules/mod_authz_svn.so
 &lt;Location /repos&gt;
@@ -60,7 +60,7 @@ LoadModule authz_svn_module   modules/mod_authz_svn.so
    AuthUserFile /var/www/svn-auth/passwd
    AuthzSVNAccessFile  /var/www/svn-auth/access
    Require valid-user
-</code></pre>
+```
 * Create the directory which will contain the subversion repository
 ```
 sudo mkdir /var/www/svn
