@@ -51,7 +51,7 @@ sudo vi /etc/httpd/conf.d/subversion.conf
 ``` xml
 LoadModule dav_svn_module     modules/mod_dav_svn.so
 LoadModule authz_svn_module   modules/mod_authz_svn.so
-&lt;Location /repos&gt;
+<Location /repos>
    DAV svn
    SVNParentPath /var/www/svn
    # Limit write permission to list of valid users.
@@ -60,6 +60,7 @@ LoadModule authz_svn_module   modules/mod_authz_svn.so
    AuthUserFile /var/www/svn-auth/passwd
    AuthzSVNAccessFile  /var/www/svn-auth/access
    Require valid-user
+</Location>
 ```
 * Create the directory which will contain the subversion repository
 ```
