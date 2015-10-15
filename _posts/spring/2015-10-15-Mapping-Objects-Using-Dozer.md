@@ -18,4 +18,17 @@ Dozer supports
 * bi-directional mapping, 
 * implicit-explicit mapping, as well as 
 * recursive mapping. 
-This includes mapping collection attributes that also need mapping at the element level
+This includes mapping collection attributes that also need mapping at the element level.  
+
+Dozer is mainly used when your model in UI is different from the JPA Entities. Dozer sits between UI model and JPA Entities and maps UI data into entities or vice versa.
+
+In this example, I am going to cover the basics of dozer configuration and custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used.
+
+## Required Software
+
+
+* Eclipse
+* JDK 1.7 or above
+* Maven 2.2.x or above
+ 
+## Steps to write code
