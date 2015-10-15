@@ -51,4 +51,5 @@ SL No | File Name | Description
 2 | **com.business.MapDozerImpl** | This class has business logic to map values from source to destination
 3 | **com.dozerbean.*** | Lets assume the classes inside this package represents UI models in any real time project. ParentBean has the details of parents and Child bean has the details of child and included into parent bean as a list
 4 | **com.entity.*** | Lets assume the classes inside this package represents JPA Entities in any real time project
-5 | **com.custom.converter.ChildCustomConverter** | custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used. In this scenario, we are copying parent
+5 | **com.custom.converter.ChildCustomConverter** | custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used. In this scenario, we are copying mother id into the list of children.
+6 | **Main** | This is the entry point of this dozer mapper application. This class creates an ParentBean objects (lets assume it is a UI model in real time project) and calls doxer framework to map into entities.
