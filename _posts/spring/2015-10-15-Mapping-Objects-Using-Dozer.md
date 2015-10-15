@@ -47,7 +47,7 @@ The project structure and important files are shown below
 
 SL No | File Name | Description
 :---: | --- | ---
-1 | **com.config.DozerConfig** | This is the spring boot configuration file which loads the dozer mapping file.
+1 | **com.config.DozerConfig** | This is the spring annotation based configuration file which loads the dozer mapping file.
 2 | **com.business.MapDozerImpl** | This class has business logic to map values from source to destination
 3 | **com.dozerbean.*** | Lets assume the classes inside this package represents UI models in any real time project. ParentBean has the details of parents and Child bean has the details of child and included into parent bean as a list
 4 | **com.entity.*** | Lets assume the classes inside this package represents JPA Entities in any real time project
