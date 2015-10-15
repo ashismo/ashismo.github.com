@@ -53,3 +53,7 @@ SL No | File Name | Description
 4 | **com.entity.*** | Lets assume the classes inside this package represents JPA Entities in any real time project
 5 | **com.custom.converter.ChildCustomConverter** | custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used. In this scenario, we are copying mother id into the list of children.
 6 | **Main** | This is the entry point of this dozer mapper application. This class creates an ParentBean objects (lets assume it is a UI model in real time project) and calls doxer framework to map into entities.
+
+The purpose of this application is to copy from ParentBean to Parent object
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/10510854/0e517afa-7353-11e5-8f49-b778d46d47ec.png"/>
