@@ -35,10 +35,10 @@ In this example, I am going to cover the basics of dozer configuration and custo
 
 <div class="download-view">
 	<span class="download">
-		<a href="#" target="_blank">DoZerMapper zip(0kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/DoZerMapper.zip" target="_blank">DoZerMapper zip(11kb)</a>
 	</span>
 	<span class="view">
-		<a href="#" target="_blank">DoZerMapper</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring" target="_blank">DoZerMapper</a>
 	</span>
 </div>
 
