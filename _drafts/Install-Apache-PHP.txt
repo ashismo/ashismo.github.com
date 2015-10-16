@@ -1,0 +1,30 @@
+1. Download and configure PHP support in windows
+ a. Download: http://php.net/downloads
+ b: Extract file into some location
+ c. Copy php.ini-development to php.ini
+ d. Define in php.ini file
+ extension_dir = "ext"
+ e. in the same file load the required modules
+ extension=php_curl.dll
+extension=php_gd2.dll
+extension=php_mbstring.dll
+extension=php_mysql.dll
+extension=php_mysqli.dll
+extension=php_pdo.dll
+extension=php_pdo_mysql.dll
+extension=php_xmlrpc.dll
+
+f. Add the PHP location in PATH environment variable
+ 
+ 
+
+2. Download ZIP for apache webserver from http://httpd.apache.org/download.cgi
+
+3. Extract the zip into some directory. Then open the conf/httpd.conf file to check document root folder. By default it is htdocs
+
+4. To run php in apache the following configuration is required in conf/httpd.conf file
+# PHP5 module
+LoadModule php5_module "c:/php/php5apache2_2.dll"
+AddType application/x-httpd-php .php
+PHPIniDir "C:/php"
+
