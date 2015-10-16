@@ -38,7 +38,7 @@ In this example, I am going to cover the basics of dozer configuration and custo
 		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/DoZerMapper.zip" target="_blank">DoZerMapper zip(11kb)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring" target="_blank">DoZerMapper</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/DoZerMapper" target="_blank">DoZerMapper</a>
 	</span>
 </div>
 
