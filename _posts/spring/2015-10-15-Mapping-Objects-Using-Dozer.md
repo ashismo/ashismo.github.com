@@ -57,3 +57,101 @@ SL No | File Name | Description
 The purpose of this application is to copy from ParentBean to Parent object
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/10510854/0e517afa-7353-11e5-8f49-b778d46d47ec.png"/>
+
+
+* **POM.xml**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.dozer&lt;/groupId&gt;
+	&lt;artifactId&gt;DoZerMapper&lt;/artifactId&gt;
+	&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+	&lt;build&gt;
+		&lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source /&gt;
+					&lt;target /&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+	&lt;properties&gt;
+		&lt;spring.version&gt;4.1.4.RELEASE&lt;/spring.version&gt;
+	&lt;/properties&gt;
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
+			&lt;artifactId&gt;gson&lt;/artifactId&gt;
+			&lt;version&gt;2.3.1&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;!-- Dozer dependency START --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;net.sf.dozer&lt;/groupId&gt;
+			&lt;artifactId&gt;dozer&lt;/artifactId&gt;
+			&lt;version&gt;5.5.1&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;!-- Dozer dependency END --&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+			&lt;version&gt;${spring.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
+			&lt;artifactId&gt;jaxb2-basics-runtime&lt;/artifactId&gt;
+			&lt;version&gt;0.9.4&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+
+
+* **DozerConfig.java**: This is the spring annotation based configuration file which loads the dozer mapping file.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
+package com.config;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.dozer.DozerBeanMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(value={"com.business"})
+public class DozerConfig {
+	
+	@Bean(name = "org.dozer.Mapper")
+	  public DozerBeanMapper dozerBean() {
+	    List<String> mappingFiles = Arrays.asList(
+	      "globalMapping.xml", 
+	      "dozerMapping.xml"
+	    );
+	
+	    DozerBeanMapper dozerBean = new DozerBeanMapper();
+	    dozerBean.setMappingFiles(mappingFiles);
+	    return dozerBean;
+	  }
+}
+
+</code></pre>
