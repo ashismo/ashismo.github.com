@@ -124,6 +124,7 @@ The purpose of this application is to copy from ParentBean to Parent object
 </code></pre>
 
 * **DozerConfig.java**: This is the spring annotation based configuration file which loads the dozer mapping file.
+
 ```
 package com.config;
 
@@ -154,7 +155,9 @@ public class DozerConfig {
 
 ```
 
-* **MapDozerImpl.java**: This class has business logic to map values from source to destination.
+
+ * **MapDozerImpl.java**: This class has business logic to map values from source to destination.
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
 package com.business;
 
