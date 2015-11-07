@@ -155,3 +155,154 @@ public class DozerConfig {
 }
 
 </code></pre>
+
+
+* **MapDozerImpl.java**: This class has business logic to map values from source to destination.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
+package com.business;
+
+import org.dozer.DozerBeanMapper;
+import org.dozer.Mapper;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+
+import com.config.DozerConfig;
+import com.dozerbean.ParentBean;
+import com.entity.Parent;
+
+@Component
+public class MapDozerImpl implements MapDozer{
+
+	public void mapBean(ParentBean srcParent, Parent destParent) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DozerConfig.class);
+		Mapper dozerBeanMapper = (Mapper) context.getBean("org.dozer.Mapper", DozerBeanMapper.class);
+		dozerBeanMapper.map(srcParent, destParent, "parentChildMapping");
+	}
+}
+
+</code></pre>
+
+
+* **ChildCustomConverter.java**: custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used. In this scenario, we are copying mother id into the list of children.
+
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
+package com.custom.converter;
+
+import java.util.List;
+
+import org.dozer.DozerConverter;
+import org.dozer.Mapper;
+import org.dozer.MapperAware;
+
+import com.entity.Child;
+
+public class ChildCustomConverter extends DozerConverter<Integer, List> implements MapperAware {
+
+	public ChildCustomConverter() {
+		super(Integer.class, List.class);
+	}
+	
+	public ChildCustomConverter(Class<Integer> prototypeA, Class<List> prototypeB) {
+		super(prototypeA, prototypeB);
+	}
+	
+	public void setMapper(Mapper arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Integer convertFrom(List src, Integer dest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Child> convertTo(Integer src, List dest) {
+		// TODO Auto-generated method stub
+		if(src != null && dest != null && dest.size() > 0) {
+				for(Object o : dest) {
+					if(o instanceof Child) {
+						Child c = (Child)o;
+//						c.setfId(src);
+						c.setmId(src);
+					}
+			}
+		}
+		return dest;
+	}
+
+}
+</code></pre>
+
+
+* **Main.java**: This is the entry point of this dozer mapper application. This class creates an ParentBean objects (lets assume it is a UI model in real time project) and calls doxer framework to map into entities.
+
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.business.MapDozerImpl;
+import com.config.DozerConfig;
+import com.dozerbean.ChildBean;
+import com.dozerbean.ParentBean;
+import com.entity.Parent;
+import com.google.gson.Gson;
+
+
+public class Main {
+
+	public static void main(String args[]) {
+		Main main = new Main();
+		main.loadBean();
+	}
+
+	private static ParentBean getParentBean() {
+		ParentBean pb = new ParentBean();
+		pb.setfId(10);
+		pb.setmId(11);
+		pb.setmAge(40);
+		pb.setfAge(40);
+		pb.setfName("XYZ");
+		pb.setmName("ABC");
+		
+		List<ChildBean> childList = new ArrayList<ChildBean>();
+		for(int i = 0; i < 3; i++) {
+			ChildBean c = new ChildBean();
+			c.setId(i + 1);
+			c.setfId(10);
+			c.setmId(11);
+			c.setName("MNO" + i);
+			c.setAge(12 + i);
+			
+			childList.add(c);
+		}
+		pb.setChild(childList);
+		return pb;
+	}
+	
+	public void loadBean() {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DozerConfig.class);
+        MapDozerImpl app = context.getBean(MapDozerImpl.class);
+        ParentBean pb = getParentBean();
+        
+        Gson gson = new Gson();
+		String json = gson.toJson(pb);
+		System.out.println("Input Parent Bean JSON: " + json);
+		
+		
+        Parent p = new Parent();
+        app.mapBean(pb, p);
+        System.out.println("Output Parent JSON: " + gson.toJson(p));
+	}
+	
+}
+</code></pre>
+
+
+* **com.dozerbean.*** and **com.entity.*** Refer the above image for the respective object structures and download the code to get details about these bean classes.
