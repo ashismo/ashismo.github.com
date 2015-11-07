@@ -186,7 +186,6 @@ public class MapDozerImpl implements MapDozer{
 
 * **ChildCustomConverter.java**: custom dozer converter which helps to map data for exceptional scenarios when a simple way can not be used. In this scenario, we are copying mother id into the list of children.
 
-
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
 package com.custom.converter;
 
@@ -239,7 +238,6 @@ public class ChildCustomConverter extends DozerConverter<Integer, List> implemen
 
 
 * **Main.java**: This is the entry point of this dozer mapper application. This class creates an ParentBean objects (lets assume it is a UI model in real time project) and calls doxer framework to map into entities.
-
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java"> 
 import java.util.ArrayList;
