@@ -79,10 +79,11 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 
 </code></pre>
 
+
 **x2js.js**
 This utility tools converts JSON to XML and vice versa
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+<pre class="prettyprint highlight"><code class="language-javascript" data-lang="javascript">
 
 /*
  Copyright 2011-2013 Abdulla Abdurakhmanov
