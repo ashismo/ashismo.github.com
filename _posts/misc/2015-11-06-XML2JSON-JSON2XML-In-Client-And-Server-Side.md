@@ -18,8 +18,6 @@ There are situations when we need to convert XML to JSON or vice versa. For exam
 
 ## Steps to write code
 
-Below example shows the implementation of [**XML to JSON or JSON to XML**](){:target="_blank"}
-
 <div class="download-view">
 	<span class="download">
 		<a href="" target="_blank">JSON2XML_XML2JSON zip(0kb)</a>
