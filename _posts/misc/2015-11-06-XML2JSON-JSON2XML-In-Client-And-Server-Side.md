@@ -67,7 +67,7 @@ There are situations when we need to convert XML to JSON or vice versa. For exam
 
 
 **x2js.js**
-This utility tools converts JSON to XML and vice versa
+This third party utility converts JSON to XML and vice versa. This utility has been included along with minified jquery in the html page
 
 <pre class="prettyprint highlight"><code class="language-javascript" data-lang="javascript">
 
