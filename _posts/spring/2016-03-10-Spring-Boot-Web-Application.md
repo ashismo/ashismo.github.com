@@ -361,6 +361,8 @@ public class WebserviceTest1 {
 </code></pre>
 
 **com.ashish.test.junit.WebserviceTest2:** Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.test.junit;
 
 import static org.junit.Assert.assertEquals;
@@ -423,3 +425,5 @@ public class WebserviceTest2 {
 	}
 	
 }
+
+</code></pre>
