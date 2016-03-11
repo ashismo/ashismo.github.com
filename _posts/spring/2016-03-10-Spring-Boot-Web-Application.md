@@ -24,3 +24,83 @@ Spring is a configuration (annotation/xml) based framework. One annotation in sp
   * Deploy Spring boot application in tomcat
   * Integration of Junit with Spring boot application
   * Exception handling for Spring Restful webservices
+
+## Steps to write code
+
+<div class="download-view">
+	<span class="download">
+		<a href="#" target="_blank">Spring Boot WebApp zip(33kb)</a>
+	</span>
+	<span class="view">
+		<a href="#" target="_blank">Spring Boot WebApp</a>
+	</span>
+</div>
+
+
+#### Required files
+Below are the minimum required files to achieve the goals defined above
+
+SL NO | Class Name | Description
+:---: | --- | ---
+1 | pom.xml | Build files having required dependencies added
+2 | 
+
+
+**pom.xml**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.spring.boot&lt;/groupId&gt;
+	&lt;artifactId&gt;SpringBootAppWS&lt;/artifactId&gt;
+	&lt;version&gt;1.0-BETA&lt;/version&gt;
+	&lt;packaging&gt;war&lt;/packaging&gt;
+
+	&lt;parent&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+		&lt;version&gt;1.3.3.RELEASE&lt;/version&gt;
+	&lt;/parent&gt;
+
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.3&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.8&lt;/source&gt;
+					&lt;target&gt;1.8&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+				&lt;version&gt;2.6&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;warSourceDirectory&gt;WebContent&lt;/warSourceDirectory&gt;
+					&lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		
+		&lt;!-- Below dependency has provided scope defined because during deployment in tomcat this jar is not required.
+			This jar is required to execute the stand alone application with embedded tomcat--&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+			&lt;scope&gt;provided&lt;/scope&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
