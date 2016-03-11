@@ -435,7 +435,9 @@ This application can be run in one of the following ways
 
 
   * **Stanalone mode** : This application can be run as normal java class as it has a public static void main(). By default this application will run in embedded tomcat environment.
-    * Run **com.ashish.config.WebConfig** as normal java class and hit the following URL to test: (http://localhost:8080/rest/getPNR)
+    * Run **com.ashish.config.WebConfig** as normal java class and hit the following URL to test: [http://localhost:8080/rest/getPNR](http://localhost:8080/rest/getPNR)
   * **WAR deployment mode** : The created war can be deployed and run in tomcat server
-  * **Junit mode**: The application can be run and unit tested using Junit
+    * Deploy the WAR in any tomcat server and hit the following URL : [http://localhost:8080/SpringBootAppWS/rest/getPNR](http://localhost:8080/SpringBootAppWS/rest/getPNR). Note that the context root is present in the URL
+  * **Junit mode**: The application can be run and unit tested using Junit.
+    * Execute **com.ashish.test.junit.WebserviceTestSuite** Junit class to test the application
  
