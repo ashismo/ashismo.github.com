@@ -111,7 +111,7 @@ SL NO | Class Name | Description
 </code></pre>
 
 
-**com.ashish.config.WebConfig** : This configuration file is useful to run the spring boot application stand-alone or in real tomcat server.
+**com.ashish.config.WebConfig** : This configuration file is useful to run the spring boot application stand-alone or in real tomcat server. Note that @ComponentScan has not been used. Instead it provides aliases to customize the attributes of **@EnableAutoConfiguration** and **@ComponentScan**
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.config;
