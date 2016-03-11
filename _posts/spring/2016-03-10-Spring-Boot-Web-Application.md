@@ -51,8 +51,8 @@ SL NO | Class Name | Description
 6 | **com.ashish.test.junit.WebserviceTest1** | Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions. MockMVC is used to call the webservices directly.
 7 | **com.ashish.test.junit.WebserviceTest2** | Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service. MockMVC is used to call the webservices directly.
 
-
-**pom.xml**
+    
+#####**pom.xml**: This file is having required dependencies added
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
