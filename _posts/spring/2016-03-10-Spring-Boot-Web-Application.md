@@ -109,3 +109,37 @@ SL NO | Class Name | Description
 	&lt;/dependencies&gt;
 &lt;/project&gt;
 </code></pre>
+
+
+**com.ashish.config.WebConfig** : This configuration file is useful to run the spring boot application stand-alone or in real tomcat server.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.config;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
+
+@SpringBootApplication(scanBasePackages="com.ashish")
+public class WebConfig extends SpringBootServletInitializer {
+
+	/**
+	 * This method configures the web application
+	 */
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(WebConfig.class);
+    }
+
+    /**
+     * Run the spring boot application in embedded tomcat 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(WebConfig.class, args);
+    }
+
+}
+</code></pre>
