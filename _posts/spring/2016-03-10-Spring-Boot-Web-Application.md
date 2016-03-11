@@ -46,7 +46,7 @@ Below are the minimum required files to achieve the goals defined above
 
 SL NO | Class Name | Description
 :---: | --- | ---
-1 | pom.xml | Build files having required dependencies added
+1 | **pom.xml** | Build files having required dependencies added
 2 | **com.ashish.config.WebConfig** | This configuration file is useful to run the spring boot application stand-alone or in real tomcat server.
 3 | **com.ashish.config.SpringBootAppWS** | This is a dummy rest controller publishes restful web service.
 4 | **com.ashish.config.GlobalDefaultExceptionHandler** | This class handles any exception occurs during the service invocation.
@@ -55,7 +55,8 @@ SL NO | Class Name | Description
 7 | **com.ashish.test.junit.WebserviceTest2** | Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service. MockMVC is used to call the webservices directly.
 
     
-**pom.xml:** This file is having required dependencies added
+##### pom.xml: 
+This file is having required dependencies added
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -115,7 +116,8 @@ SL NO | Class Name | Description
 </code></pre>
 
 
-**com.ashish.config.WebConfig** : This configuration file is useful to run the spring boot application stand-alone or in real tomcat server. Note that @ComponentScan has not been used. Instead it provides aliases to customize the attributes of **@EnableAutoConfiguration** and **@ComponentScan**
+##### com.ashish.config.WebConfig: 
+This configuration file is useful to run the spring boot application stand-alone or in real tomcat server. Note that @ComponentScan has not been used. Instead it provides aliases to customize the attributes of **@EnableAutoConfiguration** and **@ComponentScan**
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.config;
@@ -149,7 +151,8 @@ public class WebConfig extends SpringBootServletInitializer {
 </code></pre>
 
 
-**com.ashish.config.SpringBootAppWS** : This is a dummy rest controller publishes few restful web services.
+##### com.ashish.config.SpringBootAppWS: 
+This is a dummy rest controller publishes few restful web services.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.app;
@@ -192,7 +195,8 @@ public class SpringBootAppWS {
 
 </code></pre>
 
-**com.ashish.config.GlobalDefaultExceptionHandler**: Checked and un-checked exception handing is shown in this class. For any Custom uncaught exception in the program code will get caught in this class and it retuns meaningful error message with HTTP status code accordingly.
+##### com.ashish.config.GlobalDefaultExceptionHandler: 
+Checked and un-checked exception handing is shown in this class. For any Custom uncaught exception in the program code will get caught in this class and it retuns meaningful error message with HTTP status code accordingly.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.config;
@@ -238,7 +242,8 @@ public class GlobalDefaultExceptionHandler {
 }
 </code></pre>
 
-**com.ashish.test.junit.WebserviceTestSuite: ** Junit test suite to run WebserviceTest1 and WebserviceTest2 junit classes.
+##### com.ashish.test.junit.WebserviceTestSuite: 
+Junit test suite to run WebserviceTest1 and WebserviceTest2 junit classes.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.test.junit;
@@ -257,7 +262,8 @@ public class WebserviceTestSuite {
 
 </code></pre>
 
-**com.ashish.test.junit.WebserviceTest1: ** Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions.
+##### com.ashish.test.junit.WebserviceTest1: 
+Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions.
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.test.junit;
