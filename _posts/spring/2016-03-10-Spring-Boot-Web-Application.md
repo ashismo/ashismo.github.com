@@ -143,3 +143,48 @@ public class WebConfig extends SpringBootServletInitializer {
 
 }
 </code></pre>
+
+
+**com.ashish.config.SpringBootAppWS** : This is a dummy rest controller publishes few restful web services.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.app;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ashish.exception.CustomException;
+
+@RestController
+@RequestMapping("/rest")
+public class SpringBootAppWS {
+	@RequestMapping(path="/getPNR", method = RequestMethod.GET, headers="Accept=application/json",produces="application/json")
+    public String getPNR() {
+        return "PNR";
+    }
+
+	@RequestMapping(path="/getAdv", method = RequestMethod.GET, headers="Accept=application/json",produces="application/json")
+    public String getAdv() {
+        return "Adv#";
+    }
+	
+	@RequestMapping(path="/getDefaultException", method = RequestMethod.GET, headers="Accept=application/json",produces="application/json")
+    public String getDefaultException() {
+        String name = null;
+        System.out.println(name.toLowerCase());   // Null pointer exception will be thrown from here
+		return null;
+    }
+	
+	@RequestMapping(path="/getCustomException", method = RequestMethod.GET, headers="Accept=application/json",produces="application/json")
+    public String getCustomException() throws CustomException {
+		System.out.println("Testing Custom Exception"); 
+		if(true) {
+        	throw new CustomException("Custom Exception");
+        }
+		return null;
+    }
+}
+
+</code></pre>
+
