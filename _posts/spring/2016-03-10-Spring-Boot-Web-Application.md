@@ -24,6 +24,7 @@ Spring is a configuration (annotation/xml) based framework. One annotation in sp
   * Deploy Spring boot application in tomcat
   * Integration of Junit with Spring boot application
   * Exception handling for Spring Restful webservices
+  * Configuration of the MockMVC to call the webservices directly.
 
 ## Steps to write code
 
@@ -47,8 +48,8 @@ SL NO | Class Name | Description
 3 | **com.ashish.config.SpringBootAppWS** | This is a dummy rest controller publishes restful web service.
 4 | **com.ashish.config.GlobalDefaultExceptionHandler** | This class handles any exception occurs during the service invocation.
 5 | **com.ashish.test.junit.WebserviceTestSuite** | Junit test suite to run WebserviceTest1 and WebserviceTest2 junit classes
-6 | **com.ashish.test.junit.WebserviceTest1** | Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions
-7 | **com.ashish.test.junit.WebserviceTest2** | Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service.
+6 | **com.ashish.test.junit.WebserviceTest1** | Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions. MockMVC is used to call the webservices directly.
+7 | **com.ashish.test.junit.WebserviceTest2** | Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service. MockMVC is used to call the webservices directly.
 
 
 **pom.xml**
@@ -427,3 +428,14 @@ public class WebserviceTest2 {
 }
 
 </code></pre>
+
+## Run the application
+
+This application can be run in one of the following ways
+
+
+  * **Stanalone mode** : This application can be run as normal java class as it has a public static void main(). By default this application will run in embedded tomcat environment.
+    * Run **com.ashish.config.WebConfig** as normal java class and hit the following URL to test: http://localhost:8080/rest/getPNR
+  * **WAR deployment mode** : The created war can be deployed and run in tomcat server
+  * **Junit mode**: The application can be run and unit tested using Junit
+ 
