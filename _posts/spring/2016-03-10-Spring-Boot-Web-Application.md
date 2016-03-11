@@ -36,7 +36,10 @@ Spring is a configuration (annotation/xml) based framework. One annotation in sp
 		<a href="#" target="_blank">Spring Boot WebApp</a>
 	</span>
 </div>
+  
+The spring boot project structure is given below  
 
+<img src="https://cloud.githubusercontent.com/assets/11231867/13700028/503a2618-e7a4-11e5-9d41-e4032b03857a.png"/>
 
 #### Required files
 Below are the minimum required files to achieve the goals defined above
