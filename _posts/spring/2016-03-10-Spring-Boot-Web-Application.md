@@ -43,7 +43,12 @@ Below are the minimum required files to achieve the goals defined above
 SL NO | Class Name | Description
 :---: | --- | ---
 1 | pom.xml | Build files having required dependencies added
-2 | 
+2 | **com.ashish.config.WebConfig** | This configuration file is useful to run the spring boot application stand-alone or in real tomcat server.
+3 | **com.ashish.config.SpringBootAppWS** | This is a dummy rest controller publishes restful web service.
+4 | **com.ashish.config.GlobalDefaultExceptionHandler** | This class handles any exception occurs during the service invocation.
+5 | **com.ashish.test.junit.WebserviceTestSuite** | Junit test suite to run WebserviceTest1 and WebserviceTest2 junit classes
+6 | **com.ashish.test.junit.WebserviceTest1** | Junit test class tests PNR service (exposed in SpringBootAppWS class) and exception services which throws default exception and custom exceptions
+7 | **com.ashish.test.junit.WebserviceTest2** | Junit test class tests Advantage service ( (exposed in SpringBootAppWS class) and a dummy service.
 
 
 **pom.xml**
