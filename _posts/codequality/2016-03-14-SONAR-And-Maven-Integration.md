@@ -23,7 +23,7 @@ Below are the steps to integrate SONAR with maven build
  
 
 #### Install Sonar
-Install SONAR in your machine and run SONAR server. Make sure http://localhost:9000 is accessible. Follow this [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer){"_target":"blank"}
+Install SONAR in your machine and run SONAR server. Make sure http://localhost:9000 is accessible. Follow this [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer){:target="_blank"}
 
 #### Add configuration in maven's setting.xml
 
@@ -62,4 +62,4 @@ clean install sonar:sonar
 
 #### Check your SONAR dashboard
 
-Once the maven build is successful, the project will get visible in the SONAR dashboard as mentioned in my other [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer){"_target":"blank"}
+Once the maven build is successful, the project will get visible in the SONAR dashboard as mentioned in my other [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer){:target="_blank"}
