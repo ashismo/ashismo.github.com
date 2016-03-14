@@ -1,8 +1,8 @@
 ---
 layout: post
-category : Java-Code Quality Analyzer
+category : Java-Code-Quality-Analyzer
 tags : [Code Quality Tutorial]
-weight: 101
+weight: 100
 ---
 {% include JB/setup %}
 
