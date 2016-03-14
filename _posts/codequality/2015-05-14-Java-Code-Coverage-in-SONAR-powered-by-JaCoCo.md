@@ -8,7 +8,7 @@ weight: 120
 
 ## Introduction
 
-In my another [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer/), I have covered how to test code quality using SONAR. Analyzing the code coverage is another 
+In my another [blog](/java-code%20quality%20analyzer/2015/05/12/SONAR-the-Java-Code-Analyzer), I have covered how to test code quality using SONAR. Analyzing the code coverage is another 
 important aspect in the industry. To achieve the code coverage in SONAR dashboard we need to integrate JaCoCo plugin. 
 In this blog I am going to discuss about the code coverage by JaCoCo and display the report in SONAR.
 
