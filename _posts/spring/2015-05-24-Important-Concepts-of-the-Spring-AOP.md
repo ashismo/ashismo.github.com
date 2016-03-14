@@ -51,4 +51,4 @@ Below are the important terminologies in AOP
  
 ## AOP Example
  
-<a href="http://ashismo.github.io/java-spring/2015/05/25/Spring-AOP-Example/" target="_blank">Check my another blog</a> to understand the implementation of **Joint point, Advice and Pointcut**
+<a href="http://ashismo.github.io/java-spring/2015/05/25/Spring-AOP-Example" target="_blank">Check my another blog</a> to understand the implementation of **Joint point, Advice and Pointcut**
