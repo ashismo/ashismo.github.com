@@ -1,6 +1,6 @@
 ---
 layout: post
-category : Java-Code Quality Analyzer
+category : java-Code Quality Analyzer
 tags : [Code Quality Tutorial]
 weight: 120
 ---
