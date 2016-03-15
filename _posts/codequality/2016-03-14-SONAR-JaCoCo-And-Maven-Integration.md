@@ -135,3 +135,8 @@ Add the same goal (as mentioned above) to generate code coverage report
 clean install sonar:sonar
 ```
 
+#### Check your SONAR dashboard for code coverage report
+
+The code coverage report will look like below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/13774992/0b638cce-eac8-11e5-9acf-3e236ececaf4.png"/>
