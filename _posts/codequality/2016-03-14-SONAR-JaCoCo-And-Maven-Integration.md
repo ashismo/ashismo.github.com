@@ -10,7 +10,7 @@ weight: 125
 
 This blog describe how to integrate SONAR with maven build. As a result, once a maven build is complete, the code quality will be visible in the SONAR dashboard.
 
-## Steps to configure
+## Steps to configure SONAR with Maven
 
 Below are the steps to integrate SONAR with maven build
 
