@@ -1,4 +1,3 @@
-
 ---
 layout: post
 category : java-Code Quality Analyzer
