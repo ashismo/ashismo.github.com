@@ -68,8 +68,6 @@ The URL to see SONAR dashboard is : http://localhost:9000/
 
 ## Steps to integrate JaCoCo with SONAR
 
-**Note:** The latest version of JaCoCo plugin (0.7.6.201602180812) does not support JDK1.8.
-
 Below are the steps to integrate JaCoCo with SONAR
 
 
