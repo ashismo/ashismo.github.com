@@ -19,3 +19,9 @@ Snapshot of the code coverage in Eclipse is shown below
 Download the latest eclemma zip file from [this location](http://eclemma.org/download.html){:target="_blank"} and extract the content into dropins folder. Copy the dropins folder into eclipse folder. Restart the eclipse. On successful installation, the following image will be visible.
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/13877951/0a04de6e-ed34-11e5-9687-6fae9a82263d.png"/>
+
+## Test the Code Coverage
+
+Open any junit test suite, right click on the file-> coverage as -> junit test.  
+Open **Coverage view** from Window->Showview->Other->Coverage to see the report.  
+You can export the report from **Coverage View**.
