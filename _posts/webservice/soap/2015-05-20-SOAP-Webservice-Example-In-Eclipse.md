@@ -41,6 +41,11 @@ public class HelloWorld {
 </code></pre>
 
  * Download Binary distribution from [here](http://axis.apache.org/axis2/java/core/download.cgi){:target="_block"} and unzip to a location
+ * Attach Axis2 with eclipse
+ ```
+ Window -> Preferences -> Web Services -> Axis2 Preference->Select the unzip folder as Axis2 runtime location
+ ```
+ 
  * Right click on the project->Properties->Project Facet -> Select **Axis2 Web Services** as shown below. Now Axis2 framework is integrated with your project.  
 <img src="https://cloud.githubusercontent.com/assets/11231867/7744133/6bdae14c-ffbe-11e4-9af8-e4ed3197f440.png"/>  
  * Right click on the project->Configure->Conver to Maven Project
