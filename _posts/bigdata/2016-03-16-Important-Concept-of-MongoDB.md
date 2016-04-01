@@ -25,3 +25,5 @@ SL NO | RDBMS | MongoDB
 4 | Column | Field
 5 | Table Join | Embedded Documents
 6 | Primary Key | Primary Key (Default key _id provided by mongodb itself)
+
+* Unlike RDBMS, the mongoDB schema is more of UI pattern intutive.
