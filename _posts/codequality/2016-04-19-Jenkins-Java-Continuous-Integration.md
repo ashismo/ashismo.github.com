@@ -8,8 +8,13 @@ weight: 130
 
 ## Introduction
 
-Jenkins is an open source continuous integration tool written in Java. The project was formerly known as Hudson. Jenkins is a server-based system running in application server/web container like Apache Tomcat. It supports Software Configuration Management(SCM) tools including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC.
+Jenkins is an open source continuous integration tool written in Java. The project was formerly known as Hudson. Jenkins is a java based tool so it runs into server/web container like Apache Tomcat. It supports Software Configuration Management(SCM) tools including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC.  
 
+
+* Jenkins works with other tools (Maven, Sonar, JaCoCo, SVN, Selenium) to continuously integrate and deliver code.
+* Code builds are performed on a triggering events.
+* Jenkins uses pipeline to break down into smaller manageable piece which are configurable by the build manager.
+* 
 ## Important Terminologies
 
 SL NO | Terminology | Description
