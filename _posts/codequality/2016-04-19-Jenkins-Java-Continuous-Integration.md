@@ -1,6 +1,6 @@
 ---
 layout: post
-category : java-Jenkins
+category : java-Code Quality Analyzer
 tags : [Continuous Integration]
 weight: 130
 ---
