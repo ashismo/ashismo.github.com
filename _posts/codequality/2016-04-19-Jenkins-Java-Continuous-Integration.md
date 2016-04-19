@@ -14,7 +14,8 @@ Jenkins is an open source continuous integration tool written in Java. The proje
 * Jenkins works with other tools (Maven, Sonar, JaCoCo, SVN, Selenium) to continuously integrate and deliver code.
 * Code builds are performed on a triggering events.
 * Jenkins uses pipeline to break down into smaller manageable piece which are configurable by the build manager.
-* 
+
+
 ## Important Terminologies
 
 SL NO | Terminology | Description
