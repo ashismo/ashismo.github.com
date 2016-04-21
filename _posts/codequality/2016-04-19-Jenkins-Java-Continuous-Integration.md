@@ -29,5 +29,6 @@ SL NO | Terminology | Description
 ## Jenkins setup
 
 
-* Install Jenkins from sources available in the internet. You can download the war file and place it in webapps in tomcat and hit [a link](http://localhost:8080/jenkins/)
-* 
+* Install Jenkins from sources available in the internet. You can download the war file and place it in webapps in tomcat and hit ![http://localhost:8080/jenkins/](http://localhost:8080/jenkins/)
+* Follow the below steps as shown in the image
+<img src="https://cloud.githubusercontent.com/assets/11231867/14704213/381e7b5e-07d1-11e6-82d9-61332b26efc8.png"/>
