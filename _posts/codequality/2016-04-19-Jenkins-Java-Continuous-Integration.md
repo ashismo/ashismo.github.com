@@ -24,3 +24,10 @@ SL NO | Terminology | Description
 2 | Continuos Integration | It refers to the modified code getting added into the pipeline continuously.
 3 | Continuous Delivery | It refers to the logical step to ship the production ready code
 4 | Continous Deployment | Production ready code gets deployed at this stage automatically.
+
+
+## Jenkins setup
+
+
+* Install Jenkins from sources available in the internet. You can download the war file and place it in webapps in tomcat and hit [a link](http://localhost:8080/jenkins/)
+* 
