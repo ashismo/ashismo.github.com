@@ -30,5 +30,6 @@ SL NO | Terminology | Description
 
 
 * Install Jenkins from sources available in the internet. You can download the war file and place it in webapps in tomcat and hit [http://localhost:8080/jenkins/](http://localhost:8080/jenkins/)
-* Follow the below steps as shown in the image
-<img src="https://cloud.githubusercontent.com/assets/11231867/14704213/381e7b5e-07d1-11e6-82d9-61332b26efc8.png"/>
+* Follow the below steps as shown in the image to setup a maven project from SVN.
+<img src="https://cloud.githubusercontent.com/assets/11231867/14704213/381e7b5e-07d1-11e6-82d9-61332b26efc8.png"/> <br/><br/>
+![jenkinssetup1](https://cloud.githubusercontent.com/assets/11231867/14704639/551fb3f6-07d3-11e6-8f4c-6532bdf52178.png)
