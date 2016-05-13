@@ -44,4 +44,8 @@ Key sections in an RFP are
 
 * **Submission Details:** Provides deadlines, PoC for any clarifications
 * **Introduction:** Brief overview of the company and requirement for the product/services
+* **Business overview and background:** Provides the brief overview of the business, products and market sectors.
 * **Detailed Specification:** Provides the parameter details (e.g. qualitative measure and requirement) about the vendor selection process.
+* **Assumptions and Constrains:** Assumptions/Constrains that the prospective vendors to be made aware of
+* **Terms and Conditions: ** All terms and conditions to be listed to make fair and honest response from the vendor like pricing option, payment terms, renewal, delivery penalties etc. 
+* **Selection Criteria: ** Vendor Selection criteria is described here.
