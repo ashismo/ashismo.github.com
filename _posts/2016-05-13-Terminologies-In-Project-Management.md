@@ -7,4 +7,41 @@ weight: 1
 
 ## Introduction
 
-Procure Management
+#### Procure Management:
+Procurement management is one such form of management, where goods and services are acquired from a different organization or firm. All organizations deal with this form of management at some point in the life of their businesses.
+
+**Procure Management Process:**
+Procurement Management process will help you to purchase goods and services from external suppliers.
+Procure management deals with 
+
+* how to issue Purchase Orders, 
+* receive and approve deliveries, 
+* endorse supplier payments and 
+* manage suppliers against their contracts
+ 
+
+Followings are the steps of procurements
+
+* Identify the goods and services to procure
+* Complete Purchase Orders and issue to suppliers
+* Agree on delivery timeframes and methods
+* Receive goods and services from suppliers
+* Review and accept the items procured
+* Approve supplier payments
+* 
+
+Generally, as a part of procurement, all financial aspects (like payment terms, cost of the services/products, penalty if delivery date is missed etc) should be clearly mentioned to avoid confusion in future and to maintain good and sustainable relationship with vendors.
+
+**Request for Proposal (RFP)**
+A request for proposal (RFP) is a document that an organization posts to elicit bids from potential vendors for a desired IT solution. The RFP specifies what the customer is looking for and establishes evaluation criteria for assessing proposals.  
+
+An RFP
+
+* may include SOW (Statement of Work), which describes the tasks to be performed by the winning bidder and a timeline for providing deliverables.
+* Alerts suppliers that the selection process is competetive.
+
+Key sections in an RFP are
+
+* **Submission Details:** Provides deadlines, PoC for any clarifications
+* **Introduction:** Brief overview of the company and requirement for the product/services
+* **Detailed Specification:** Provides the parameter details (e.g. qualitative measure and requirement) about the vendor selection process.
