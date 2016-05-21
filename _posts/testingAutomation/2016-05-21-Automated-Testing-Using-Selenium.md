@@ -59,24 +59,9 @@ Selenium RC stands for Selenium Remote Control which is outdated by now.
 * Selenium WebDriver supports various operating systems like Windows, Linux, Mac etc
 * For the execution of test cases in different browsers, the WebDriver changes but the test cases remain same. 
 
-_______________________  
-| Web application     |  
-_______________________  
-          |  
-		 \/  
-__________________________________________  
-| Web browsers IE, Firefox, Chrome etc   |  
-__________________________________________  
-          |  
-		 \/  
-________________________  
-| Selenium WebDriver   |  
-________________________  
-          |  
-		 \/  
-____________________________________________  
-| Selenium Test (Java, C#, Ruby, Python)   |  
-____________________________________________  
+Selenium architecture is given below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/15449972/72ef4c12-1fab-11e6-9a86-08d222bcb620.PNG"/>
 
 #### Selenium Grid
 
