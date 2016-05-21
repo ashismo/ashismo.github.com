@@ -56,6 +56,8 @@ Selenium RC stands for Selenium Remote Control which is outdated by now.
 
 * This sends commands directly to the web browser and retrieves results. It is a programming interface to create and execute test cases. 
 * Selenium WebDrivers supports Java, C#, PHP, Python, Ruby, Perl
+* Selenium WebDriver supports various operating systems like Windows, Linux, Mac etc
+* For the execution of test cases in different browsers, the WebDriver changes but the test cases remain same. 
 
 _______________________
 | Web application     |
@@ -75,3 +77,9 @@ ________________________
 ____________________________________________
 | Selenium Test (Java, C#, Ruby, Python)   |
 ____________________________________________
+
+#### Selenium Grid
+
+
+* Selenium Grid can execute testcases in multiple browsers in multiple operating systems in parallel.
+* Selenium Grid is used only for test case execution but not gor test case design.
