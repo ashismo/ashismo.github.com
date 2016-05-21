@@ -49,3 +49,29 @@ Few drawbacks of Selenim IDE includes
 
 
 #### Selenium RC
+Selenium RC stands for Selenium Remote Control which is outdated by now. 
+
+#### Selenium WebDriver
+
+
+* This sends commands directly to the web browser and retrieves results. It is a programming interface to create and execute test cases. 
+* Selenium WebDrivers supports Java, C#, PHP, Python, Ruby, Perl
+
+_______________________
+| Web application     |
+_______________________
+          |
+		 \/
+__________________________________________
+| Web browsers IE, Firefox, Chrome etc   |
+__________________________________________
+          |
+		 \/
+________________________
+| Selenium WebDriver   |
+________________________
+          |
+		 \/
+____________________________________________
+| Selenium Test (Java, C#, Ruby, Python)   |
+____________________________________________
