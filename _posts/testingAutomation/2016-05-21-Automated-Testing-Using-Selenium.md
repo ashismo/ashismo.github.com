@@ -82,4 +82,4 @@ ____________________________________________
 
 
 * Selenium Grid can execute testcases in multiple browsers in multiple operating systems in parallel.
-* Selenium Grid is used only for test case execution but not gor test case design.
+* Selenium Grid is used only for test case execution but not for test case design.
