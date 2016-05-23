@@ -76,6 +76,7 @@ The below sample program opens https://university.mongodb.com/ URL and login usi
 #### Required software
 
 
+* Mozilla Firefox
 * Eclipse
 * JDK 1.8
 * Selenium jars frm maven repository.
