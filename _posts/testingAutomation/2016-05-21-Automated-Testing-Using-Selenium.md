@@ -68,3 +68,26 @@ Selenium architecture is given below
 
 * Selenium Grid can execute testcases in multiple browsers in multiple operating systems in parallel.
 * Selenium Grid is used only for test case execution but not for test case design.
+
+## Example
+
+The below sample program opens https://university.mongodb.com/ URL and login using correct credential and incorrect credential
+
+#### Required software
+
+
+* Eclipse
+* JDK 1.8
+* Selenium jars frm maven repository.
+
+#### Steps to write code
+
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/selenium/SeleniumTesting.zip" target="_blank">SeleniumTesting zip(4.23kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/selenium/SeleniumTesting" target="_blank">SeleniumTesting</a>
+	</span>
+</div>
+
