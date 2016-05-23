@@ -84,7 +84,7 @@ The below sample program opens https://university.mongodb.com/ URL and login usi
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/selenium/SeleniumTesting.zip" target="_blank">SeleniumTesting zip(4.23kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/selenium/SeleniumTesting.zip" target="_blank">SeleniumTesting zip(4kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/selenium/SeleniumTesting" target="_blank">SeleniumTesting</a>
