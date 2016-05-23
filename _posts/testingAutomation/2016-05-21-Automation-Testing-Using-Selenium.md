@@ -94,3 +94,44 @@ The below sample program opens https://university.mongodb.com/ URL and login usi
 
 * Write a maven project. You can follow my [**another blog to create maven project**](http://ashismo.github.io/java-build/2015/05/27/Web-Application-Build-And-Deployment-Using-Maven .The structure will look like below  
 ![Selenium Project](https://cloud.githubusercontent.com/assets/11231867/15458787/efe124d2-20bb-11e6-8135-220621b49de9.png)
+* Add selenium and junit dependencies in **pom.xml**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml"> 
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.selenium&lt;/groupId&gt;
+	&lt;artifactId&gt;SeleniumTesting&lt;/artifactId&gt;
+	&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+	
+	&lt;properties&gt;
+		&lt;springframework.version&gt;4.1.6.RELEASE&lt;/springframework.version&gt;
+	&lt;/properties&gt;
+	
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.8&lt;/source&gt;
+					&lt;target&gt;1.8&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+			&lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+			&lt;version&gt;2.53.0&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;junit&lt;/groupId&gt;
+			&lt;artifactId&gt;junit&lt;/artifactId&gt;
+			&lt;version&gt;4.11&lt;/version&gt;
+			&lt;scope&gt;compile&lt;/scope&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
