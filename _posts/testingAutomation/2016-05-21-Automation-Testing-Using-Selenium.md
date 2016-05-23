@@ -91,3 +91,6 @@ The below sample program opens https://university.mongodb.com/ URL and login usi
 	</span>
 </div>
 
+
+* Write a maven project. The structure will look like below
+![Selenium Project](https://cloud.githubusercontent.com/assets/11231867/15458787/efe124d2-20bb-11e6-8135-220621b49de9.png)
