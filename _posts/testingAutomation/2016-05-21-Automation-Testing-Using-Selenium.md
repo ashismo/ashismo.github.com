@@ -81,7 +81,7 @@ The below sample program opens https://university.mongodb.com/ URL and login usi
 * JDK 1.8
 * Selenium jars frm maven repository.
 
-#### Steps to write code
+#### Steps to Write Selenium Code
 
 <div class="download-view">
 	<span class="download">
