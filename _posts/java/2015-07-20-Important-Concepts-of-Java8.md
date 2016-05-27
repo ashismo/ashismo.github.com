@@ -17,4 +17,119 @@ Java 8 is a major release for JAVA programming language. The new features in Jav
 * **Method reference** : Referencing functions by their names instead of invoking them directly
 * **Javascript engine:** A Java based engine to execute Javascript code
 * **Date time API:** New set of API o manipulate date and time
-* 
+
+<div class="download-view"> 
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/java/Java8Features.zip" target="_blank">Java8 Features ZIP(7kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/java/Java8Features" target="_blank">Java8 Features</a>
+	</span>
+</div>
+
+
+#### Default Method Example
+
+Suppose there are two different companies Sony and Erricson manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have makeCall() default method implemented. Now while manufacturing Sony Experia C phone by default ErricsonPhoneIntf.make() call default implementation will get inherited.  
+While manufacturing Sony Experia Z, the company wants to add some additional features then makeCall() method has to be inherited.  
+Now suppose these two brands merged and rebranded as SonyErricson. Now SonyErricson will inherit from both SonyIntf and ErricsonIntf. Now there will be a confusion in makeCall() method selection. This problem is called **Diamond Problem** in java. In Java8, this problem is addressed. Please have a look into **SonyErricsonPhone** class given below.
+
+**SonyPhoneIntf.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public interface SonyPhoneIntf {
+	default void makeCall() {
+		System.out.println("Make call implemented by Sony");
+	}
+}
+</code></pre>
+<br/>
+
+**SonyExperiaCPhone.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public class SonyExperiaCPhone implements SonyPhoneIntf {
+	
+}
+
+</code></pre>
+<br/>
+
+**SonyExperiaZPhone.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public class SonyExperiaZPhone implements SonyPhoneIntf {
+	
+	/**
+	 * Below method overrides the makeCall() method in parent interface
+	 */
+	@Override
+	public void makeCall() {
+		System.out.println("Make call implemented by Sony. Also some new features added");
+	}
+}
+</code></pre>
+<br/>
+
+**ErricsonPhoneIntf.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public interface ErricsonPhoneIntf {
+	default void makeCall() {
+		System.out.println("Make call implemented by Erricson");
+	}
+}
+</code></pre>
+<br/>
+
+**SonyErricsonPhone.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public class SonyErricsonPhone implements SonyPhoneIntf, ErricsonPhoneIntf {
+	
+	/**
+	 * This method breaks the java diamond problem at the time of multiple inheritance.
+	 * This method clearly specifies the which version of makeCall() method to be taken
+	 */
+	public void makeCall() {
+		ErricsonPhoneIntf.super.makeCall();
+	}
+}
+
+</code></pre>
+<br/>
+
+**DefaultMainMethod.java**
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+package com.ashish.java8.defaultMethods;
+
+public class DefaultMainMethod {
+	public static void main(String args[]) {
+		SonyErricsonPhone sonyErricsonPhone = new SonyErricsonPhone();
+		sonyErricsonPhone.makeCall();
+		
+		SonyExperiaCPhone sonyExperiaCPhone = new SonyExperiaCPhone();
+		sonyExperiaCPhone.makeCall();
+		
+		SonyExperiaZPhone sonyExperiaZPhone = new SonyExperiaZPhone();
+		sonyExperiaZPhone.makeCall();
+	}
+}
+
+</code></pre>
+
+###### Output
+The output of the program is given below
+
+<src img="https://cloud.githubusercontent.com/assets/11231867/15616453/7a9b9050-2461-11e6-9f7a-83033512d80d.PNG"/>
