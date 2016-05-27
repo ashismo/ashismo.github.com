@@ -38,4 +38,5 @@ By default there are four main tables required to implement ACL i.e.
 <img src="https://cloud.githubusercontent.com/assets/11231867/15608800/d8497636-2439-11e6-8a22-cfbdba857f53.png"/>
 
 * **ACL_ENTRY** : This table stores individual permission to each recipient. In this table we specify what action can be performed on each domain object instance by the desired user/role.
+  * One of the most important field in this table is **MASK** this represents the permissions like CREATE, READ, UPDATE, DELETE, ADMINISTER. This is represnted by 32 bits. Each of these bits represents a permission, and by default the permissions are READ (bit 0), WRITE(bit 1), CREATE(bit 2), DELETE(bit 3) and ADMINISTER (bit 4). It is easy to implement your own permission also.
 <img src="https://cloud.githubusercontent.com/assets/11231867/15608801/daf6e850-2439-11e6-9bb2-4ccbbb78fb32.png"/>
