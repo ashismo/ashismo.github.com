@@ -30,9 +30,9 @@ Java 8 is a major release for JAVA programming language. The new features in Jav
 
 #### Default Method Example
 
-Suppose there are two different companies Sony and Erricson manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have makeCall() default method implemented. Now while manufacturing Sony Experia C phone by default ErricsonPhoneIntf.make() call default implementation will get inherited.  
-While manufacturing Sony Experia Z, the company wants to add some additional features then makeCall() method has to be inherited.  
-Now suppose these two brands merged and rebranded as SonyErricson. Now SonyErricson will inherit from both SonyIntf and ErricsonIntf. Now there will be a confusion in makeCall() method selection. This problem is called **Diamond Problem** in java. In Java8, this problem is addressed. Please have a look into **SonyErricsonPhone** class given below.
+Suppose there are two different companies **Sony** and **Erricson** manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have **makeCall()** default method implemented. Now while manufacturing **Sony Experia C** model by default **ErricsonPhoneIntf.makeCall()** default implementation will get inherited.  
+While manufacturing **Sony Experia Z** model, the company wants to add some additional features then **makeCall()** method has to be inherited.  
+Now suppose these two brands merged and rebranded as **SonyErricson**. Now **SonyErricson** will inherit from both **SonyIntf** and **ErricsonIntf**. Now there will be a confusion in **makeCall()** method selection. This problem is called **Diamond Problem** in java. In Java8, this problem is addressed. Please have a look into **SonyErricsonPhone** class given below.
 
 **SonyPhoneIntf.java**
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
@@ -132,4 +132,4 @@ public class DefaultMainMethod {
 ###### Output
 The output of the program is given below
 
-<src img="https://cloud.githubusercontent.com/assets/11231867/15616453/7a9b9050-2461-11e6-9f7a-83033512d80d.PNG"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/15616453/7a9b9050-2461-11e6-9f7a-83033512d80d.PNG"/>
