@@ -31,3 +31,5 @@ By default there are four main tables required to implement ACL i.e.
 * **ACL_CLASS** : This table allow us to uniquely identify any domain object class in the system. This table has two columns
  * **ID** : Primary key
  * **CLASS** : Fully qualified class name for domain objects
+
+* **ACL_OBJECT_IDENTITY** : This table stores each and every domain object instance in the system. So there is a one-to-many relation between ACL_CLASS and ACL_OBJECT_IDENTITY. Each object must have an owner and the owner's SID (user or role)
