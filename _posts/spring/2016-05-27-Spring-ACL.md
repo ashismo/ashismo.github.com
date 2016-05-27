@@ -27,10 +27,15 @@ By default there are four main tables required to implement ACL i.e.
  * **ID** : Primary key
  * **PRINCIPLE**: boolean field. True means the SID is a user and false means SID is a granted authority (typically a role)
  * **SID**: SID stands for Security ID. It is assigned to each user or role. SID is attached with ACL to specify which actions can the user with that SID perform on the desired objects
+<img src="https://cloud.githubusercontent.com/assets/11231867/15608796/d05f2614-2439-11e6-9637-d6d0b1667349.png"/>
 
 * **ACL_CLASS** : This table allow us to uniquely identify any domain object class in the system. This table has two columns
  * **ID** : Primary key
  * **CLASS** : Fully qualified class name for domain objects
+<img src="https://cloud.githubusercontent.com/assets/11231867/15608799/d4da94ee-2439-11e6-93c5-d8a3414dbfcb.png"/>
 
 * **ACL_OBJECT_IDENTITY** : This table stores each and every domain object instance in the system. So there is a one-to-many relation between ACL_CLASS and ACL_OBJECT_IDENTITY. Each object must have an owner and the owner's SID (user or role)
+<img src="https://cloud.githubusercontent.com/assets/11231867/15608800/d8497636-2439-11e6-8a22-cfbdba857f53.png"/>
+
 * **ACL_ENTRY** : This table stores individual permission to each recipient. In this table we specify what action can be performed on each domain object instance by the desired user/role.
+<img src="https://cloud.githubusercontent.com/assets/11231867/15608801/daf6e850-2439-11e6-9bb2-4ccbbb78fb32.png"/>
