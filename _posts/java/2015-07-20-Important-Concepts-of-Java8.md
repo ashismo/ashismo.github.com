@@ -129,7 +129,7 @@ public class DefaultMainMethod {
 
 </code></pre>
 
-###### Output
+##### Output
 The output of the program is given below
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/15616453/7a9b9050-2461-11e6-9f7a-83033512d80d.PNG"/>
