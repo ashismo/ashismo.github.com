@@ -24,14 +24,14 @@ weight: 107
 By default there are four main tables required to implement ACL i.e.
 
 * **ACL_SID**: This table lists all users in the system. In Spring security, a "Security Id" (SID) is assigned to each user role. So SID may correspond to a granted authority such as role. This table has following columns
- * **ID** : Primary key
- * **PRINCIPLE**: boolean field. True means the SID is a user and false means SID is a granted authority (typically a role)
- * **SID**: SID stands for Security ID. It is assigned to each user or role. SID is attached with ACL to specify which actions can the user with that SID perform on the desired objects
+  * **ID** : Primary key
+  * **PRINCIPLE**: boolean field. True means the SID is a user and false means SID is a granted authority (typically a role)
+  * **SID**: SID stands for Security ID. It is assigned to each user or role. SID is attached with ACL to specify which actions can the user with that SID perform on the desired objects
 <img src="https://cloud.githubusercontent.com/assets/11231867/15608796/d05f2614-2439-11e6-9637-d6d0b1667349.png"/>
 
 * **ACL_CLASS** : This table allow us to uniquely identify any domain object class in the system. This table has two columns
- * **ID** : Primary key
- * **CLASS** : Fully qualified class name for domain objects
+  * **ID** : Primary key
+  * **CLASS** : Fully qualified class name for domain objects
 <img src="https://cloud.githubusercontent.com/assets/11231867/15608799/d4da94ee-2439-11e6-93c5-d8a3414dbfcb.png"/>
 
 * **ACL_OBJECT_IDENTITY** : This table stores each and every domain object instance in the system. So there is a one-to-many relation between ACL_CLASS and ACL_OBJECT_IDENTITY. Each object must have an owner and the owner's SID (user or role)
