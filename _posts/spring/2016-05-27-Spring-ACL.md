@@ -12,6 +12,6 @@ weight: 107
 
 * ACL stands for Access Control List
 * In Spring, access control can be done at
-  * Web request level
-  * Method invocation level
+  * Web request level (URL pattern authorization)
+  * Method invocation level (Specific URL authorization)
   * At domain object instance level (record level permission check)
