@@ -27,3 +27,7 @@ By default there are four main tables required to implement ACL i.e.
  * **ID** : Primary key
  * **PRINCIPLE**: boolean field. True means the SID is a user and false means SID is a granted authority (typically a role)
  * **SID**: SID stands for Security ID. It is assigned to each user or role. SID is attached with ACL to specify which actions can the user with that SID perform on the desired objects
+
+* **ACL_CLASS** : This table allow us to uniquely identify any domain object class in the system. This table has two columns
+ * **ID** : Primary key
+ * **CLASS** : Fully qualified class name for domain objects
