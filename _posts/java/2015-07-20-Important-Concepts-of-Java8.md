@@ -67,8 +67,8 @@ public class ForEachLoopMain {
 		System.out.println("ForEach Loop END");
 	}
 }
-</code></pre>
-<br/>
+</code></pre>  
+<br/>  
 
 #### Default Method Example
 
