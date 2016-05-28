@@ -40,7 +40,7 @@ In traditional java programing there are some limitations. E.g.
   * a way to save effort in writing method (in a class) which may not be used repeatedly. The method is defined at the same place.
 * Few different types of **Lamda Expression** examples are given below.
 
-##### Foreach loop
+**Foreach loop**
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.java8.lamda.expr;
 
