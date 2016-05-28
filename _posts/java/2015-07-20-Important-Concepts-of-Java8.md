@@ -41,7 +41,7 @@ In traditional java programing there are some limitations. E.g.
 * Few different types of **Lamda Expression** examples are given below.  
 
 
-```java
+``` java
 package com.ashish.java8.lamda.expr;
 
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class ForEachLoopMain {
 	}
 }
 ``` 
-
+<br/><br/>
 #### Default Method Example
 
 Suppose there are two different companies **Sony** and **Erricson** manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have **makeCall()** default method implemented. Now while manufacturing **Sony Experia C** model by default **ErricsonPhoneIntf.makeCall()** default implementation will get inherited.  
