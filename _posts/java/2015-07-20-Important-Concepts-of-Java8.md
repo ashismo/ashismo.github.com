@@ -41,6 +41,7 @@ In traditional java programing there are some limitations. E.g.
 * Few different types of **Lamda Expression** examples are given below.  
 
 
+**Foreach loop**
 ``` java
 package com.ashish.java8.lamda.expr;
 
