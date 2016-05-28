@@ -41,6 +41,7 @@ In traditional java programing there are some limitations. E.g.
 * Few different types of **Lamda Expression** examples are given below.
 
 ##### Foreach loop
+
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.java8.lamda.expr;
 
@@ -68,6 +69,9 @@ public class ForEachLoopMain {
 	}
 }
 </code></pre>
+
+
+
 
 #### Default Method Example
 
