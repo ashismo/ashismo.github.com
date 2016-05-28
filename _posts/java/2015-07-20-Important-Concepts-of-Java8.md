@@ -73,7 +73,7 @@ public class ForEachLoopMain {
 
 
 
-#### Default Method Example
+<h1>Default Method Example</h1>
 
 Suppose there are two different companies **Sony** and **Erricson** manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have **makeCall()** default method implemented. Now while manufacturing **Sony Experia C** model by default **ErricsonPhoneIntf.makeCall()** default implementation will get inherited.  
 While manufacturing **Sony Experia Z** model, the company wants to add some additional features then **makeCall()** method has to be inherited.  
