@@ -38,35 +38,11 @@ In traditional java programing there are some limitations. E.g.
   * an anonymous function
   * a method without declaration, i.e. access modifier, return value declaration, and names
   * a way to save effort in writing method (in a class) which may not be used repeatedly. The method is defined at the same place.
-* Few different types of **Lamda Expression** examples are given below.
+* Few different types of **Lamda Expression** examples are given below.  
+
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 
-package com.ashish.java8.lamda.expr;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class ForEachLoopMain {
-	public static void main(String args[]) {
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(10);
-		list.add(20);
-		list.add(30);
-		
-		System.out.println("Traditional Loop START");
-		for(int i : list) {
-			System.out.println(i);
-		}
-		System.out.println("Traditional Loop END");
-		
-		System.out.println("ForEach Loop START");
-		
-		list.forEach(n -> {System.out.println(n);});
-		
-		System.out.println("ForEach Loop END");
-	}
-}
 </code></pre>
 <br/>
 
