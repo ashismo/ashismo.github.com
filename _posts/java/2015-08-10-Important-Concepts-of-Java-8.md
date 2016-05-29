@@ -117,7 +117,41 @@ public class SomeImplClass {
 }
 
 </code></pre>
-  
+
+
+**FunctionalIntfMain.java**: This class shows how to call SomeImplClass.execute() method in traditional approach and in Java 8 way.
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.java8.lamda.expr.functional.intf;
+
+public class FunctionalIntfMain {
+
+	public static void main(String[] args) {
+		// **************************************
+		// Traditional approach - Anonymous class
+		// **************************************
+		SomeImplClass someImplClass = new SomeImplClass();
+		someImplClass.execute(new FunctionalIntf() {
+
+			@Override
+			public void doSomeWork() {
+				System.out.println("Traditional approach: Do some work using anonymous class");
+			}
+		});
+
+		// **************************************
+		// Java8 approach - Using Lamda Expression
+		// **************************************
+		someImplClass.execute(() -> {
+			System.out.println("Java8: Do some work using Lamda Expression");
+		});
+	}
+
+}
+
+</code></pre>
+
+
+
 #### Default Method Example
 
 Suppose there are two different companies **Sony** and **Erricson** manufactures cell phones. Hence they have two seperate interfaces called **ErricsonPhoneIntf** and **SonyPhoneIntf**. In both the interfaces have **makeCall()** default method implemented. Now while manufacturing **Sony Experia C** model by default **ErricsonPhoneIntf.makeCall()** default implementation will get inherited.  
