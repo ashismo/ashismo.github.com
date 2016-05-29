@@ -27,7 +27,7 @@ Java 8 is a major release for JAVA programming language. The new features in Jav
 	</span>
 </div>
 
-#### Functunal Programming
+#### Functional Programming
 
 In traditional java programing there are some limitations. E.g.
 
