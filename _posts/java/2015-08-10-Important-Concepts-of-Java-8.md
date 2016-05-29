@@ -105,7 +105,18 @@ public interface FunctionalIntf {
 
 </code></pre>
 
+**SomeImplClass.java** : This class implements a method having reference to functional interface.
 
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.java8.lamda.expr.functional.intf;
+
+public class SomeImplClass {
+	public void execute(FunctionalIntf functionalIntf) {
+		functionalIntf.doSomeWork();
+	}
+}
+
+</code></pre>
   
 #### Default Method Example
 
