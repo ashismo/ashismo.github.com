@@ -78,7 +78,34 @@ public class ForEachLoopMain {
 }
 {% endhighlight %}
 
-  
+
+#####  Functional Interface
+
+Functional Interface has been introduced in Java 8. In functional interface, only one abstract method is allowed.
+
+**FunctionalIntf.java**: This is an functional interface having one and only one abstruct interface. Remaining interfaces must have default implementation.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.java8.lamda.expr.functional.intf;
+
+@FunctionalInterface
+public interface FunctionalIntf {
+	/**
+	 * Only one abstract interface is allowed in a functional interface
+	 */
+	public abstract void doSomeWork();
+	
+	/**
+	 * More than one interface needs to have default implementation
+	 */
+	public default void doSomeWork1() {
+		System.out.println("Some default implementation in functional interface");
+	}
+}
+
+</code></pre>
+
+
   
 #### Default Method Example
 
