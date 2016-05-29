@@ -30,10 +30,10 @@ Spring is a configuration (annotation/xml) based framework. One annotation in sp
 
 <div class="download-view">
 	<span class="download">
-		<a href="#" target="_blank">Spring Boot WebApp zip(33kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringBootAppWS.zip" target="_blank">Spring Boot WebApp zip(16kb)</a>
 	</span>
 	<span class="view">
-		<a href="#" target="_blank">Spring Boot WebApp</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringBootAppWS" target="_blank">Spring Boot WebApp</a>
 	</span>
 </div>
   
