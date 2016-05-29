@@ -42,9 +42,9 @@ In traditional java programing there are some limitations. E.g.
 
 
 
-**Foreach loop**
+##### Foreach loop
 
-```java
+{% highlight java %}
 package com.ashish.java8.lamda.expr;
 
 import java.util.ArrayList;
@@ -70,7 +70,8 @@ public class ForEachLoopMain {
 		System.out.println("ForEach Loop END");
 	}
 }
-``` 
+{% endhighlight %}
+
   
   
 #### Default Method Example
