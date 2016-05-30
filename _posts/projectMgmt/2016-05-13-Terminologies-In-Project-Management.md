@@ -48,3 +48,20 @@ Key sections in an RFP are
 * **Detailed Specification:** Provides the parameter details (e.g. qualitative measure and requirement) about the vendor selection process.
 * **Assumptions and Constrains:** Assumptions/Constrains that the prospective vendors to be made aware of
 * **Terms and Conditions:** All terms and conditions to be listed to make fair and honest response from the vendor like pricing option, payment terms, renewal, delivery penalties etc. 
+
+
+#### WBS Estimation
+
+
+* WBS stands for **Work Breakdown Structure**
+* In a large scale project multiple vendors and large number of tasks/activities are involved. In such scenarios, requirement based estimation techniques like **Test Step Point (TSP)**, **Test Case Point (TCP)** are not ideal.
+* In WBS, a relatively complex project is divided into simpler and manageable tasks. These small chunks are supervised and estimated.
+* Again tasks are further divided into sub tasks.
+* The dependencies to be identified for activities, tasks and sub-tasks.
+* The team needs to be identified for individual tasks/sub tasks and ownership to be assigned
+* Then estimation to be done for each sub tasks.
+* 3 point approach for estimation is followed i.e.
+  * **Best Case Estimate (BC)**
+  * **Worst Case Estimate (WC)**
+  * **Most Likely Estimate (MC)**
+  * The final estimattion is calculated as **[ BC + (4 x MC) + WC ] / 6**
