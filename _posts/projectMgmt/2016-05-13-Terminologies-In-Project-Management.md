@@ -65,4 +65,13 @@ Key sections in an RFP are
   * **Worst Case Estimate (WC)**
   * **Most Likely Estimate (MC)**
   * The final estimattion is calculated as **[ BC + (4 x MC) + WC ] / 6**
-* The challanges includes in identifying right tasks to break it down further and tasks/subtasks are kept low enough to track the work and should require no more than 80Hrs to complete.
+
+##### Advantages
+
+
+* Risks and dependencies are identified during the initial stage of the estimation
+* Realistic estimation because it considers Best Case, Worst case and Most likely cases as mentioned above
+
+##### Disadvantages
+
+The challanges includes in identifying right tasks to break it down further and tasks/subtasks are kept low enough to track the work and should require no more than 80Hrs to complete.
