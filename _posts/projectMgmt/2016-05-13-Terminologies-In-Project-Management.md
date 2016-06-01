@@ -88,7 +88,7 @@ The challanges includes in identifying right tasks to break it down further and 
 * There are two types of functions
   * **Data Function:** There are two types of data functions
     * **Internal Logic Files (ILF):** is a logical data or control information that resides with the application boundary being measured using Function Point
-    * * **External Logic Files (ELF):** is a logical data or control information that resides outside the application boundary but used by the application being measured using Function Point
+    * **External Logic Files (ELF):** is a logical data or control information that resides outside the application boundary but used by the application being measured using Function Point
   * **Transaction Functions:** There are three types of transaction functions
     * **External Inputs:** This transaction function mainly deals with the data from UI or other application. This data is used to maintain one or more **Internal Logic Files (ELF)**
     * **External Outputs:** This transaction function mainly deals with the data that comes out of the system.
