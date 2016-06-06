@@ -93,3 +93,17 @@ The challanges includes in identifying right tasks to break it down further and 
     * **External Inputs:** This transaction function mainly deals with the data from UI or other application. This data is used to maintain one or more **Internal Logic Files (ELF)**
     * **External Outputs:** This transaction function mainly deals with the data that comes out of the system.
     * **External Inquiries:** This transaction function mainly deals with the both input and output components that result in data retrieval.
+
+#### Use Case Point Estimation
+
+
+* Use case point estimation technique is primarily used in OOPs based project
+* This technique primarily measures the sizes of the functional requirement and NFRs (Non Functional Requirements) are not major consideration here.
+* The principle of this estimation methodologies are 
+  * break down the functional requirements into Use cases
+  * Break use cases further down into transactions.
+  * Generally, count modules as use cases and simple CRUD as transactions within the use cases
+  * Complex CRUD can be broken down as a seperate use cases on a case by case basis. Generally discussion required for such cases.
+  * Validations, Error Messages, Notification messages can not be counted as transactions
+  * Re-usable components/repeated transactions or functionality should be counted once at an application level. For example use of date picker in multiple screens.
+  * Data element/ UI complexity can not be counted as transaction
