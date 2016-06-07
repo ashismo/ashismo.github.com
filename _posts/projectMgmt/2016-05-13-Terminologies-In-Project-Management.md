@@ -67,8 +67,17 @@ There are two most popular approaches for estimation, namely Bottom Up and Top D
 
 * This estimation is derived from someone who uses experience and/or information to determine the project duration and total cost.
 * This type of estimations are made by top managers who have little knowledge to the processes used to complete the project.
-* 
+* This technique is not very accurate. This is good for rough estimation
 
+##### Bottom-up vs Top-down approach 
+
+Conditions | Macro Estimate (Top-down) | Micro Estimate (Bottom-up)
+:---: | --- | ---
+Cost and time important | | X
+Internal, small project | X | 
+Fixed-price contract | | X
+Customer wants details | | X
+Unstable scope | X | 
 
 #### WBS Estimation
 
