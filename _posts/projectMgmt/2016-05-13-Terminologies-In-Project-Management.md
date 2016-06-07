@@ -139,7 +139,7 @@ The challanges includes in identifying right tasks to break it down further and 
   * Re-usable components/repeated transactions or functionality should be counted once at an application level. For example use of date picker in multiple screens.
   * Data element/ UI complexity can not be counted as transaction
 
-#### Few More Important Estimation Techniques
+#### Few Important Estimation Techniques
 
 ##### Delphi Technique
 
