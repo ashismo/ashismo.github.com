@@ -73,7 +73,7 @@ There are two most popular approaches for estimation, namely Bottom Up and Top D
 ##### Bottom-up vs Top-down approach 
 
 Conditions | Macro Estimate (Top-down) | Micro Estimate (Bottom-up)
-:---: | --- | ---
+:--- | :---: | :---:
 Cost and time important | | X
 Internal, small project | X | 
 Fixed-price contract | | X
