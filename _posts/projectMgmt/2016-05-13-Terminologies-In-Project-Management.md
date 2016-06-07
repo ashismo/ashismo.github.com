@@ -68,6 +68,7 @@ There are two most popular approaches for estimation, namely Bottom Up and Top D
 * This estimation is derived from someone who uses experience and/or information to determine the project duration and total cost.
 * This type of estimations are made by top managers who have little knowledge to the processes used to complete the project.
 * This technique is not very accurate. This is good for rough estimation
+* Function Point (FP) and Use Case Point (UCP) are the example of topdown estimation technique
 
 ##### Bottom-up vs Top-down approach 
 
@@ -78,6 +79,7 @@ Internal, small project | X |
 Fixed-price contract | | X
 Customer wants details | | X
 Unstable scope | X | 
+
 
 #### WBS Estimation
 
