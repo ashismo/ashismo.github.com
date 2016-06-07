@@ -50,6 +50,26 @@ Key sections in an RFP are
 * **Terms and Conditions:** All terms and conditions to be listed to make fair and honest response from the vendor like pricing option, payment terms, renewal, delivery penalties etc. 
 
 
+#### Estimation Technique
+
+There are two most popular approaches for estimation, namely Bottom Up and Top Down estimation techniques.
+
+##### Bottom up estimation technique
+
+
+* In the Bottom-up estimation technique the amount of work, duration and cost are set at the task level. Then the task level cost and duration will be aggregated to determine the total cost of the project. 
+* Bottom-up estimating is the most accurate approach to estimating cost and duration. 
+* The drawback of this technique is, it requires more time for estimation. **Work Breakdown Structure (WBS)** is an example of the bottom-up technique. 
+* This technique relies on the project team members identifying the tasks and organizing them into specific group or work packages.
+
+##### Top down estimation technique
+
+
+* This estimation is derived from someone who uses experience and/or information to determine the project duration and total cost.
+* This type of estimations are made by top managers who have little knowledge to the processes used to complete the project.
+* 
+
+
 #### WBS Estimation
 
 
