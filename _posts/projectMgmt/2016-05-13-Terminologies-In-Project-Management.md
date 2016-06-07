@@ -138,3 +138,13 @@ The challanges includes in identifying right tasks to break it down further and 
   * Validations, Error Messages, Notification messages can not be counted as transactions
   * Re-usable components/repeated transactions or functionality should be counted once at an application level. For example use of date picker in multiple screens.
   * Data element/ UI complexity can not be counted as transaction
+
+#### Few More Important Estimation Techniques
+
+##### Delphi Technique
+
+
+* The Delphi Method is based on surveys and basically collects the information experts.
+* Multiple rounds of survey held hp to reach the final estimation
+
+##### Parametric Estimation Technique
