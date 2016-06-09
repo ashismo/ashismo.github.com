@@ -390,3 +390,11 @@ public class AvoidSmallerLengthVariableNameRule extends BaseTreeVisitor implemen
 	}
 }
 </code></pre>
+
+
+#### Build and deployment
+
+Build the maven application and place the Jar into %SONAR_QUBE_PATH%\extensions\plugins location.  
+Now, open the SonarQube application in browser->Go to rules->Select CustomRepo-> You would be able to see the rule that has been written in this application as shown below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/15941542/4b04a024-2e9e-11e6-8d04-2a71b85484d6.PNG"/>  
