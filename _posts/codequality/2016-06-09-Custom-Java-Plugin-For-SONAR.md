@@ -213,3 +213,32 @@ public class CustomJavaRulesEntry extends SonarPlugin {
   }
 }
 </code></pre>
+
+
+* **com.ashish.custom.sonar.java.plugin.CustomRulesDefinition:** This class is a Server extension which gets instanciated at the time of sonarqube startup. The repository name and supported language name is mentioned in this class
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.custom.sonar.java.plugin;
+
+import org.sonar.api.server.rule.RulesDefinition;
+import org.sonar.plugins.java.Java;
+import org.sonar.squidbridge.annotations.AnnotationBasedRulesDefinition;
+
+/**
+ * Declare rule metadata in server repository of rules. 
+ * That allows to list the rules in the page "Rules".
+ */
+public class CustomRulesDefinition implements RulesDefinition {
+
+  public static final String REPOSITORY_KEY = "customRepo";
+
+  @Override
+  public void define(Context context) {
+    NewRepository repository = context.createRepository(REPOSITORY_KEY, Java.KEY);
+    repository.setName("CustomRepo");
+
+    AnnotationBasedRulesDefinition.load(repository, "java", RulesList.getChecks());
+    repository.done();
+  }
+}	
+</code></pre>
