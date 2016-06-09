@@ -289,3 +289,105 @@ public class CustomJavaFileCheckRegistrar implements CheckRegistrar {
   }
 }
 </code></pre>
+
+
+* **com.ashish.custom.sonar.java.plugin.RulesList:** This class lists all custom rules and provides the list to the CustomJavaFileCheckRegistrar class to register them with sonarqube
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.custom.sonar.java.plugin;
+
+import java.util.List;
+
+import org.sonar.plugins.java.api.JavaCheck;
+
+import com.ashish.custom.sonar.java.rules.AvoidSmallerLengthVariableNameRule;
+import com.google.common.collect.ImmutableList;
+
+public final class RulesList {
+
+  private RulesList() {
+  }
+
+  public static List<Class> getChecks() {
+    return ImmutableList.<Class>builder().addAll(getJavaChecks()).addAll(getJavaTestChecks()).build();
+  }
+
+  public static List<Class<? extends JavaCheck>> getJavaChecks() {
+    return ImmutableList.<Class<? extends JavaCheck>>builder()
+      .add(AvoidSmallerLengthVariableNameRule.class)
+      .build();
+  }
+
+  public static List<Class<? extends JavaCheck>> getJavaTestChecks() {
+    return ImmutableList.<Class<? extends JavaCheck>>builder()
+      .build();
+  }
+}
+</code></pre>
+
+
+* **com.ashish.custom.sonar.java.rules.AvoidSmallerLengthVariableNameRule:** This is the sample custom rule that I have implemented in this example i.e. the lenth of the variable name should be more than 4 characters long. The rule is tagged with **coding-guideline** and the priority of this rule is **MINOR**
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.custom.sonar.java.rules;
+
+import java.util.List;
+
+import org.sonar.api.server.rule.RulesDefinition;
+import org.sonar.check.Priority;
+import org.sonar.check.Rule;
+import org.sonar.check.RuleProperty;
+import org.sonar.plugins.java.api.JavaFileScanner;
+import org.sonar.plugins.java.api.JavaFileScannerContext;
+import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
+import org.sonar.plugins.java.api.tree.MethodTree;
+import org.sonar.plugins.java.api.tree.VariableTree;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
+
+@Rule(key = "AvoidSmallerLengthLocalVariableName",
+  name = "Avoid usage of the smaller length in local variable name",
+  description = "This rule detects usage of smaller length local variable name. Variable name should not be smaller than 4 characters.",
+  tags = {"coding-guideline"},
+  priority = Priority.MINOR)
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.ARCHITECTURE_CHANGEABILITY)
+@SqaleConstantRemediation("10min")
+public class AvoidSmallerLengthVariableNameRule extends BaseTreeVisitor implements JavaFileScanner {
+
+  private static final String DEFAULT_VALUE = "SmallerLengthLocalVariable";
+
+  private JavaFileScannerContext context;
+
+  /**
+   * Avoid usage of the smaller length in local variable name in Quality profiles.
+   * The key
+   */
+  @RuleProperty(
+    defaultValue = DEFAULT_VALUE,
+    description = "Avoid usage of the smaller length in local variable name")
+  protected String name;
+
+  @Override
+  public void scanFile(JavaFileScannerContext context) {
+    this.context = context;
+
+    scan(context.getTree());
+
+    System.out.println(PrinterVisitor.print(context.getTree()));
+  }
+
+  
+  @Override
+	public void visitVariable(VariableTree tree) {
+		
+	  	String variableName = tree.simpleName().name();
+	  	System.out.println("Scanning the variable : " + variableName);
+	  	
+	  	if(variableName.length() < 4) {
+	  		context.addIssue(tree, this, "Variable length is less than 4 characters");
+		  }
+	  
+		super.visitVariable(tree);
+	}
+}
+</code></pre>
