@@ -373,7 +373,6 @@ public class AvoidSmallerLengthVariableNameRule extends BaseTreeVisitor implemen
 
     scan(context.getTree());
 
-    System.out.println(PrinterVisitor.print(context.getTree()));
   }
 
   
