@@ -26,10 +26,10 @@ Suppose, the lenth of variable name less than 4 characters does not follow the c
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/sonar/custom-sonar-java-plugin.zip" target="_blank">custom-sonar-java-plugin</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/sonar/SonarJavaCustomPlugin.zip" target="_blank">custom-sonar-java-plugin Zip (12.5 KB)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/sonar/custom-sonar-java-plugin" target="_blank">custom-sonar-java-plugin</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/sonar/SonarJavaCustomPlugin" target="_blank">custom-sonar-java-plugin</a>
 	</span>
 </div>  
 
