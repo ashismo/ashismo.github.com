@@ -31,10 +31,10 @@ Suppose, the lenth of variable name less than 4 characters does not follow the c
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/sonar/custom-sonar-java-plugin" target="_blank">custom-sonar-java-plugin</a>
 	</span>
-</div>
+</div>  
 
-* Create a simple maven project with the following files (described below)  
-
+* Create a simple maven project with the following files (described below). **Build the code and place the jar into **extensions\plugins** folder in SonarQube.  
+  
 SL No | Class/File Name | Description
 :---: | --- | ---
 1 | pom.xml | Required dependencies are added in this file. The packaging type of the plugin is **sonar-plugin**. Sonar plugin version is 3.13.1 in this case.
@@ -43,9 +43,9 @@ SL No | Class/File Name | Description
 4 | **com.ashish.custom.sonar.java.plugin.CustomJavaFileCheckRegistrar** | This class is the **batch extension** which gets instanciated during the code analysis. This class registers all custom rule classes.
 5 | **com.ashish.custom.sonar.java.plugin.RulesList** | This class lists all custom rules and provides the list to the **CustomJavaFileCheckRegistrar** class to register them with sonarqube
 6 | **com.ashish.custom.sonar.java.rules.AvoidSmallerLengthVariableNameRule** | This is the sample custom rule that I have implemented in this example i.e. the lenth of the variable name should be more than 4 characters long.
-
-
-**pom.xml** : Packaging type is **sonar-plugin**
+  
+  
+**pom.xml** : Packaging type is **sonar-plugin**  
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 	&lt;?xml version="1.0" encoding="UTF-8"?&gt;
