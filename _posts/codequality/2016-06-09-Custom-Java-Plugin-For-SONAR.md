@@ -293,7 +293,7 @@ public class CustomJavaFileCheckRegistrar implements CheckRegistrar {
 
 * **com.ashish.custom.sonar.java.plugin.RulesList:** This class lists all custom rules and provides the list to the CustomJavaFileCheckRegistrar class to register them with sonarqube
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 package com.ashish.custom.sonar.java.plugin;
 
 import java.util.List;
@@ -323,7 +323,7 @@ public final class RulesList {
       .build();
   }
 }
-</code></pre>
+```
 
 
 * **com.ashish.custom.sonar.java.rules.AvoidSmallerLengthVariableNameRule:** This is the sample custom rule that I have implemented in this example i.e. the lenth of the variable name should be more than 4 characters long. The rule is tagged with **coding-guideline** and the priority of this rule is **MINOR**
