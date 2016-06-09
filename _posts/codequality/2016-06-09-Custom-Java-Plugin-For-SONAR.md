@@ -44,4 +44,144 @@ SL No | Class/File Name | Description
 6 | **com.ashish.custom.sonar.java.rules.AvoidSmallerLengthVariableNameRule** | This is the sample custom rule that I have implemented in this example i.e. the lenth of the variable name should be more than 4 characters long.
 
 
-**pom.xml**
+**pom.xml** : Packaging type is **sonar-plugin**
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+	&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+	&lt;groupId&gt;com.ashish.sonar.custom.java&lt;/groupId&gt;
+	&lt;artifactId&gt;java-custom-rules&lt;/artifactId&gt;
+	&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+	&lt;packaging&gt;sonar-plugin&lt;/packaging&gt;
+
+	&lt;properties&gt;
+		&lt;java.plugin.version&gt;3.13.1&lt;/java.plugin.version&gt;
+	&lt;/properties&gt;
+
+	&lt;name&gt;Java Custom Rules&lt;/name&gt;
+	&lt;description&gt;Java Custom Rules&lt;/description&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.codehaus.sonar&lt;/groupId&gt;
+			&lt;artifactId&gt;sonar-plugin-api&lt;/artifactId&gt;
+			&lt;version&gt;4.5.6&lt;/version&gt;
+			&lt;scope&gt;provided&lt;/scope&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.sonarsource.java&lt;/groupId&gt;
+			&lt;artifactId&gt;sonar-java-plugin&lt;/artifactId&gt;
+			&lt;type&gt;sonar-plugin&lt;/type&gt;
+			&lt;version&gt;${java.plugin.version}&lt;/version&gt;
+			&lt;scope&gt;provided&lt;/scope&gt;
+		&lt;/dependency&gt;
+		
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.sonarsource.java&lt;/groupId&gt;
+			&lt;artifactId&gt;java-frontend&lt;/artifactId&gt;
+			&lt;version&gt;${java.plugin.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.sonarsource.sslr-squid-bridge&lt;/groupId&gt;
+			&lt;artifactId&gt;sslr-squid-bridge&lt;/artifactId&gt;
+			&lt;version&gt;2.6.1&lt;/version&gt;
+			&lt;exclusions&gt;
+				&lt;exclusion&gt;
+					&lt;groupId&gt;org.codehaus.sonar.sslr&lt;/groupId&gt;
+					&lt;artifactId&gt;sslr-core&lt;/artifactId&gt;
+				&lt;/exclusion&gt;
+			&lt;/exclusions&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.sonarsource.java&lt;/groupId&gt;
+			&lt;artifactId&gt;java-checks-testkit&lt;/artifactId&gt;
+			&lt;version&gt;${java.plugin.version}&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.codehaus.sonar.sslr&lt;/groupId&gt;
+			&lt;artifactId&gt;sslr-testing-harness&lt;/artifactId&gt;
+			&lt;version&gt;1.19.2&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;junit&lt;/groupId&gt;
+			&lt;artifactId&gt;junit&lt;/artifactId&gt;
+			&lt;version&gt;4.11&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.easytesting&lt;/groupId&gt;
+			&lt;artifactId&gt;fest-assert&lt;/artifactId&gt;
+			&lt;version&gt;1.4&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;
+			&lt;artifactId&gt;logback-classic&lt;/artifactId&gt;
+			&lt;version&gt;0.9.30&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+
+	&lt;build&gt;
+		&lt;plugins&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.sonarsource.sonar-packaging-maven-plugin&lt;/groupId&gt;
+				&lt;artifactId&gt;sonar-packaging-maven-plugin&lt;/artifactId&gt;
+				&lt;version&gt;1.15&lt;/version&gt;
+				&lt;extensions&gt;true&lt;/extensions&gt;
+				&lt;configuration&gt;
+					&lt;pluginClass&gt;com.ashish.custom.sonar.java.plugin.CustomJavaRulesEntry&lt;/pluginClass&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.1&lt;/version&gt;
+				&lt;configuration&gt;
+					&lt;source&gt;1.7&lt;/source&gt;
+					&lt;target&gt;1.7&lt;/target&gt;
+				&lt;/configuration&gt;
+			&lt;/plugin&gt;
+
+			&lt;plugin&gt;
+				&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+				&lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+				&lt;version&gt;2.10&lt;/version&gt;
+				&lt;executions&gt;
+					&lt;execution&gt;
+						&lt;id&gt;copy&lt;/id&gt;
+						&lt;phase&gt;test-compile&lt;/phase&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;copy&lt;/goal&gt;
+						&lt;/goals&gt;
+						&lt;configuration&gt;
+							&lt;artifactItems&gt;
+								&lt;artifactItem&gt;
+									&lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+									&lt;artifactId&gt;commons-collections4&lt;/artifactId&gt;
+									&lt;version&gt;4.0&lt;/version&gt;
+									&lt;type&gt;jar&lt;/type&gt;
+								&lt;/artifactItem&gt;
+							&lt;/artifactItems&gt;
+							&lt;outputDirectory&gt;${project.build.directory}/test-jars&lt;/outputDirectory&gt;
+						&lt;/configuration&gt;
+					&lt;/execution&gt;
+				&lt;/executions&gt;
+			&lt;/plugin&gt;
+		&lt;/plugins&gt;
+	&lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+
+
