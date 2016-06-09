@@ -149,8 +149,8 @@ SL No | Class/File Name | Description
 				&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
 				&lt;version&gt;3.1&lt;/version&gt;
 				&lt;configuration&gt;
-					&lt;source&gt;1.7&lt;/source&gt;
-					&lt;target&gt;1.7&lt;/target&gt;
+					&lt;source&gt;1.8&lt;/source&gt;
+					&lt;target&gt;1.8&lt;/target&gt;
 				&lt;/configuration&gt;
 			&lt;/plugin&gt;
 
