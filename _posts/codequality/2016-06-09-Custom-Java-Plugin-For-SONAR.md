@@ -33,7 +33,8 @@ Suppose, the lenth of variable name less than 4 characters does not follow the c
 	</span>
 </div>
 
-* Create a simple maven project with the following files (described below)
+* Create a simple maven project with the following files (described below)  
+
 SL No | Class/File Name | Description
 :---: | --- | ---
 1 | pom.xml | Required dependencies are added in this file. The packaging type of the plugin is **sonar-plugin**. Sonar plugin version is 3.13.1 in this case.
@@ -185,3 +186,30 @@ SL No | Class/File Name | Description
 </code></pre>
 
 
+* **com.ashish.custom.sonar.java.plugin.CustomJavaRulesEntry** : This class is the entry point for the SONAR plugin. This class is extended from org.sonar.api.SonarPlugin class. This class includes server extension which gets instanciated during sonarqube startup and batch extensions which gets instantiated during the code analysis.
+ 
+
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+package com.ashish.custom.sonar.java.plugin;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.sonar.api.SonarPlugin;
+
+/*********************************
+ * Entry point of the sonar plugin
+ ********************************/
+public class CustomJavaRulesEntry extends SonarPlugin {
+
+  @Override
+  public List getExtensions() {
+    return Arrays.asList(
+      // server extensions -> objects are instantiated during sonarqube startup
+      CustomRulesDefinition.class,
+
+      // batch extensions -> objects are instantiated during the code analysis
+      CustomJavaFileCheckRegistrar.class);
+  }
+}
+</code></pre>
