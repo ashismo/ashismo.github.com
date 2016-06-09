@@ -189,7 +189,7 @@ SL No | Class/File Name | Description
 * **com.ashish.custom.sonar.java.plugin.CustomJavaRulesEntry** : This class is the entry point for the SONAR plugin. This class is extended from org.sonar.api.SonarPlugin class. This class includes server extension which gets instanciated during sonarqube startup and batch extensions which gets instantiated during the code analysis.
  
 
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.custom.sonar.java.plugin;
 
 import java.util.Arrays;
