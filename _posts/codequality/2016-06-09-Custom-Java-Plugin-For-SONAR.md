@@ -19,8 +19,8 @@ Suppose, the lenth of variable name less than 4 characters does not follow the c
  * JDK 1.8
  * Eclipse for J2EE
  * Maven 3.x or above
- * SonarQube 5.4 or above
- * Sonar-runner-dist 2.4
+ * SonarQube 5.6
+ * sonar-runner-dist 2.4
   
 ## Stepts to write code
 
