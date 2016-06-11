@@ -29,7 +29,10 @@ Swagger is a simple yet powerful representation of your RESTful API. Swagger is 
 
   * springfox dependency to be added
   * Configuration file (**WebConfig.java** in this example) has to be marked with @EnableSwagger2 annotation.
-  * Enable CORS for your application
+  * CORS to be enabled in your application
 
 * Run the spring boot application and access **http://localhost:8080/v2/api-docs** from your browser. If you get the response then you are done with your integration.
-* Open Swagger-UI. If you do not have Swagger-UI then download it from <a href="https://github.com/swagger-api/swagger-ui/releases" target="_blank">here</a>, unzip and go to dist folder and open index.html file in a browser.
+* Open Swagger-UI. If you do not have Swagger-UI then download it from <a href="https://github.com/swagger-api/swagger-ui/releases" target="_blank">here</a>, unzip and go to dist folder and open index.html file in a browser.  
+The swagger UI (index.html) will look like below
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/15984331/9f489b94-2fe4-11e6-907b-a1e8e6f449de.PNG"/>
