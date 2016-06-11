@@ -50,12 +50,36 @@ Below are the three changes to integrate Swagger with Spring application
 	&lt;!-- SWAGGER Integration END --&gt;
 </code></pre>
 
-* In our previous example we have marked the configuration file (**WebConfig.java** in this example) with @EnableSwagger2 annotation. The code snippet is given below
+* In our previous example we have marked the configuration file (**WebConfig.java** in this example) with **@EnableSwagger2** annotation. The code snippet is given below
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 @SpringBootApplication(scanBasePackages="com.ashish")
 @EnableSwagger2
 public class WebConfig extends SpringBootServletInitializer {
+
+</code></pre>
+
+
+* Create a new file to **allow CORS**
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+@Configuration
+@EnableWebMvc
+public class WebMvcInitializer extends WebMvcConfigurerAdapter {
+ 
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**");
+	}
+}
+
 
 </code></pre>
 
