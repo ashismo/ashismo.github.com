@@ -16,7 +16,7 @@ Swagger is a simple yet powerful representation of your RESTful API. Swagger is 
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringBootAppWS.zip" target="_blank">Spring Boot WebApp zip(16kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringBootAppWS.zip" target="_blank">Spring Boot WebApp zip(22kb)</a>
 	</span>
 	<span class="view">
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringBootAppWS" target="_blank">Spring Boot WebApp</a>
