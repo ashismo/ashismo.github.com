@@ -84,6 +84,6 @@ public class WebMvcInitializer extends WebMvcConfigurerAdapter {
 </code></pre>
 
 
-The swagger UI (index.html) will look like below
+The response from **http://localhost:8080/v2/api-docs** URL will get displayed in swagger UI as shown below. It lists all the available services automatically. You would be able to test your services as well from the swagger UI
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/15984331/9f489b94-2fe4-11e6-907b-a1e8e6f449de.PNG"/>
