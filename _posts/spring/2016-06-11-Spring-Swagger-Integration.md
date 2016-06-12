@@ -24,7 +24,7 @@ Swagger is a simple yet powerful representation of your RESTful API. Swagger is 
 </div>
 
 
-* In this example, I am going to show how to integrate Swagger with a Spring boot applicaton. In my previous <a href="http://ashismo.github.io/java-spring/2016/03/10/Spring-Boot-Web-Application" target="_blank">blog</a>, I have shown how to create a spring boot application. In this blog, I shall integrate swagger just making 2 changes in the previous code i.e.
+* In this example, I am going to show how to integrate Swagger with a Spring boot applicaton. In my previous <a href="http://ashismo.github.io/java-spring/2016/03/10/Spring-Boot-Web-Application" target="_blank">blog</a>, I have shown how to create a spring boot application. In this blog, I shall integrate swagger just making 3 changes in the previous code i.e.
 
 
   * springfox dependency to be added
