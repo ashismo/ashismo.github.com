@@ -9,7 +9,7 @@ weight: 105
 
 ## Introduction
 
-Swagger is a simple yet powerful representation of your RESTful API. Swagger is an open source software. With a Swagger-enabled API, you get interactive documentation.Swagger supports almost every modern programming language and deployment environment.
+Swagger is a simple yet powerful representation of your RESTful API. Swagger is an open source software. With a Swagger-enabled API, you get interactive documentation.Swagger supports almost every modern programming language and deployment environment. From Swagger-UI, developer can test the exposed REST services as well.
 
 
 ## Steps to write code
