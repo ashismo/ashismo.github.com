@@ -20,4 +20,15 @@ The requirement elicitation process consists the followings
 * **Requirement Gathering:** Developers understand from client/end user about the expectation from the software.
 * **Organizing Requirements:** Developers prioritize the requirements based on the criticallity of the requirements.
 * **Negotiation and discussion:** Ambiguous or unrealistic requirements require discussion with various stakeholders. 
-* **Documentation:** Functional and non functional requirements need to be documented and made available for the next step
+* **Documentation:** Functional and non functional requirements need to be documented and made available for the next phase processing.
+ 
+
+There are different requirement elicitation techniques. Few important techniques are listed below
+
+
+* **Brainstorming:** An informal debate is held among the various stakeholders and all their inputs are recorded for further requirement analysis. 
+* **Interface Analysis:**
+* **Interviews, Survey and Questionnaire:**
+* **Prototyping:**
+* **Requirement Workshops:**
+* **Delphi Techniques:**
