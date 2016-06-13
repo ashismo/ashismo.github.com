@@ -31,4 +31,4 @@ There are different requirement elicitation techniques. Few important techniques
 * **Interviews, Survey and Questionnaire:**
 * **Prototyping:**
 * **Requirement Workshops:**
-* **Delphi Techniques:** This is very famous technique of requirement elicitation. This techniques involves structured interaction among a group of experts on the requirements. The identity of the participating experts are kept confidential to avoid influent on the process. There can be round of inputs from the experts till the process is finalized.
+* **Delphi Techniques:** This is very famous technique of requirement elicitation. This techniques involves structured interaction among a group of experts on the requirements. The identity of the participating experts are kept confidential to avoid influent on the process. There can be round of inputs from the experts till the process is finalized. The facilitator will have multi round **one to one interview** with each expert on the questionnaires and collect their opinions and answers.
