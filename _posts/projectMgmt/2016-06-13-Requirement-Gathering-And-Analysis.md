@@ -74,3 +74,19 @@ There are different requirement elicitation techniques. Few important techniques
 * In interface analysis, the user expectation is also documented.
 * The **disadvantage** for the interface analysis technique is it does not provide an understanding of the underlying business process
 
+
+#### Software Prototyping
+
+
+* It is an activity of creating prototype of the software i.e. incomplete version of the software program. A prototype typically simulates only a few aspects of, and may be completely different from, the final product.
+* Prototype is a working model of software with some limited functionality
+* The prototype does not always hold the exact logic used in the actual software application and is an extra effort to be considered under effort estimation.
+* **Dimensions of prototypes**
+  * **Horizontal Prototype**: It provides the broad view of the entire system. It focuses more on user interface than low-level system functionality, such as database access
+  * **Vertical Prototype**: It is more complete elaboration of a single subsystem or function. 
+* Types of prototyping
+  * **Throwaway prototyping**: This type of prototype gets discarded rather than becoming part of the final delivered software.
+  * **Evolutionary Prototyping**: The objective of this type of prototyping is to build very robust and structured prototype which can be refined later.
+
+* Prototyping is used to allow the users evaluate developer proposals and try them out before implementation.
+* 
