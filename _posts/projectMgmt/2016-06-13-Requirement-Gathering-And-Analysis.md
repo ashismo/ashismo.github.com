@@ -45,3 +45,11 @@ There are different requirement elicitation techniques. Few important techniques
 * **Consideration for Brainstorming techniques**
   * Brainstorming is useful early in the requirements elicitation process.
   * Brainstorming can help to generate wide variety of views of the problem and solution.
+* Brainstorming sessions are ideally divided into two phases
+  * **Idea Generation Phase**: It focuses on the gathering all possible ideas within the time limit
+  * **Idea Consolidation phase**: In this phase, the ideas are getting revised, organizing and reviewed. In this phase, each idea gets evaluated, then combine ideas after removing duplicate ideas. Finally, ideas will be rated and ranked after discussing with the team
+* Different types of brainstorming techniques
+  * **Open Brainstorming**: Participants call out the ideas and are capture by the meeting facilitator
+  * **Individual Brainstorming**: Project team member creates a list of features/ideas concerning project issue/risk and shares with the facilitator
+  * **Structured Brainstorming**: Meeting participant silently write down their ideas and facilitator requests
+* 
