@@ -91,4 +91,10 @@ There are different requirement elicitation techniques. Few important techniques
   * **Extreme prototyping**: This type of prototyping is used for developing web application. It breaks down the web devolopment into three phases one after another. In the **first phase**, the static prototypes i.e. HTML pages gets developed. In the **second phase**, the screens are integrated with the simulated services layer. In the **last phase** the actual services are implemented.
 
 * Prototyping is used to allow the users evaluate developer proposals and try them out before implementation.
-* 
+* **Advantages**
+  * Increases user involvement in the product even before the actual implementation
+  * User gets a better and visual understanding of the system.
+  * Defects get identified in much earlier phase of the development
+* **Disadvantages**
+  * If the scope of the actual system changes in the later phase of the development then the complexity gets increase since the prototyping gets started with very basic and less understanding abount the system.
+  * Developers may try to reuse the existing prototypes to build the actual system, even when its not technically feasible
