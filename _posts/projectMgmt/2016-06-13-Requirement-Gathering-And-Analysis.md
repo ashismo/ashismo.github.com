@@ -55,3 +55,11 @@ There are different requirement elicitation techniques. Few important techniques
   * **Open Brainstorming**: Participants call out the ideas and are capture by the meeting facilitator
   * **Individual Brainstorming**: Project team member creates a list of features/ideas concerning project issue/risk and shares with the facilitator
   * **Structured Brainstorming**: Meeting participant silently write down their ideas and facilitator requests
+
+
+#### Interface Analysis technique
+
+
+* When a system takes input from multiple systems then the interface analysis techniques is preferred for the enhancement/change in that system. 
+* **Context Diagram** helps in interface analysis because it defines the boundary between a system and its environment, showing the entities that interact with it.
+* Interface analysis helps in sizing and estimations as well. As far as sizing is concern, the interfaces are considered as non-functional requirements
