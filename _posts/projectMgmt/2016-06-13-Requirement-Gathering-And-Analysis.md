@@ -63,7 +63,12 @@ There are different requirement elicitation techniques. Few important techniques
 * Interfaces would include user interface, interfaces with external applications and interfaces with external hardware devices.
 * Interface analysis helps to clarify the boundaries of the interacting application, identify the functionality, input and output of the each interface.
 * When a system takes input from multiple systems then the interface analysis techniques is preferred for the enhancement/change in that system. 
-* **Context Diagram** helps in interface analysis because it defines the boundary between a system and its environment, showing the entities that interact with it.
+* Interface analysis techniques can not be used to identify hardware interfaces with software applications.
+* **Context Diagram** helps in interface analysis because it defines the boundary between a system and its environment, showing the entities that interact with it. This interface analysis tool is used as a part of the **Prepare for Interface Analysis** phase and NOT as a part of the **Conduct Interface Analysis**
+* Steps in interface analysis are
+  * Prepare for interface analysis
+  * Conduct interface analysis
+  * Define interface requirement
 * Interface analysis helps in sizing and estimations as well. As far as sizing is concern, the interfaces are considered as non-functional requirements.
 * In interface analysis, the **description** of each interface, **batch feed**, transactional files and interfaces to and from the systems (**input and output of each interface**) are very important factors. Also the **validation rules** that govern the interfaces and **events** that might trigger the interaction will be documented.
 * In interface analysis, the user expectation is also documented.
