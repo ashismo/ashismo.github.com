@@ -41,6 +41,7 @@ There are different requirement elicitation techniques. Few important techniques
 * **Advantages**
   * Helps to generate new ideas
   * Helps to encourage involvement of participants
+  * Focuses on a topic or problem and coming up with many ideas or solutions
 * **Consideration for Brainstorming techniques**
   * Brainstorming is useful early in the requirements elicitation process.
   * Brainstorming can help to generate wide variety of views of the problem and solution.
