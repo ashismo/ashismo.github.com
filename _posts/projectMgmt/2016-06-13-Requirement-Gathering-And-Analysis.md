@@ -94,7 +94,9 @@ There are different requirement elicitation techniques. Few important techniques
 * **Advantages**
   * Increases user involvement in the product even before the actual implementation
   * User gets a better and visual understanding of the system.
-  * Defects get identified in much earlier phase of the development
+  * Defects get identified in much earlier phase of the development.
 * **Disadvantages**
   * If the scope of the actual system changes in the later phase of the development then the complexity gets increase since the prototyping gets started with very basic and less understanding abount the system.
   * Developers may try to reuse the existing prototypes to build the actual system, even when its not technically feasible
+  * A prototype may create unrealistic expectation in clients and customers about the functionality, reliability or performance.
+  * In the early stage of prototyping, one has to make assumption about underlying technologies
