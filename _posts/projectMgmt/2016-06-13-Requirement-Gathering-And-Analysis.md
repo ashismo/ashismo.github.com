@@ -72,4 +72,5 @@ There are different requirement elicitation techniques. Few important techniques
 * Interface analysis helps in sizing and estimations as well. As far as sizing is concern, the interfaces are considered as non-functional requirements.
 * In interface analysis, the **description** of each interface, **batch feed**, transactional files and interfaces to and from the systems (**input and output of each interface**) are very important factors. Also the **validation rules** that govern the interfaces and **events** that might trigger the interaction will be documented.
 * In interface analysis, the user expectation is also documented.
+* The **disadvantage** for the interface analysis technique is it does not provide an understanding of the underlying business process
 
