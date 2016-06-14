@@ -63,4 +63,5 @@ There are different requirement elicitation techniques. Few important techniques
 * When a system takes input from multiple systems then the interface analysis techniques is preferred for the enhancement/change in that system. 
 * **Context Diagram** helps in interface analysis because it defines the boundary between a system and its environment, showing the entities that interact with it.
 * Interface analysis helps in sizing and estimations as well. As far as sizing is concern, the interfaces are considered as non-functional requirements.
-* In interface analysis, the description of each interface, batch feed, transactional files and interfaces to and from the systems are very important factors.
+* In interface analysis, the **description** of each interface, **batch feed**, transactional files and interfaces to and from the systems (**input and output of each interface**) are very important factors. Also the **validation rules** that govern the interfaces and **events** that might trigger the interaction will be documented.
+
