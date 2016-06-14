@@ -85,7 +85,7 @@ There are different requirement elicitation techniques. Few important techniques
   * **Horizontal Prototype**: It provides the broad view of the entire system. It focuses more on user interface than low-level system functionality, such as database access
   * **Vertical Prototype**: It is more complete elaboration of a single subsystem or function. 
 * **Types of prototyping**
-  * **Throwaway prototyping**: This type of prototype gets discarded rather than becoming part of the final delivered software.
+  * **Throwaway prototyping**: This type of prototype gets discarded rather than becoming part of the final delivered software. When you need to come up with quick hand drawn prototype then the throw-away prototyping is the best choice.
   * **Evolutionary Prototyping**: The objective of this type of prototyping is to build very robust and structured prototype which can be refined later.
   * **Incremental Prototyping**:  Incremental prototyping refers to building multiple functional prototypes of the various sub systems and then integrating all the available prototypes to form a complete system
   * **Extreme prototyping**: This type of prototyping is used for developing web application. It breaks down the web devolopment into three phases one after another. In the **first phase**, the static prototypes i.e. HTML pages gets developed. In the **second phase**, the screens are integrated with the simulated services layer. In the **last phase** the actual services are implemented.
