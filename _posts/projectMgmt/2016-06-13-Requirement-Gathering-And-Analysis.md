@@ -38,6 +38,7 @@ There are different requirement elicitation techniques. Few important techniques
 
 
 * An informal debate is held among the various stakeholders and all their inputs are recorded for further requirement analysis. 
+* Brainstorming session will have a facilitator and will have time limit for the discussion. 
 * **Advantages**
   * Helps to generate new ideas
   * Helps to encourage involvement of participants
@@ -52,4 +53,3 @@ There are different requirement elicitation techniques. Few important techniques
   * **Open Brainstorming**: Participants call out the ideas and are capture by the meeting facilitator
   * **Individual Brainstorming**: Project team member creates a list of features/ideas concerning project issue/risk and shares with the facilitator
   * **Structured Brainstorming**: Meeting participant silently write down their ideas and facilitator requests
-* 
