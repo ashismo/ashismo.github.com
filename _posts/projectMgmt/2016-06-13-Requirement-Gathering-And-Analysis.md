@@ -100,3 +100,12 @@ There are different requirement elicitation techniques. Few important techniques
   * Developers may try to reuse the existing prototypes to build the actual system, even when its not technically feasible
   * A prototype may create unrealistic expectation in clients and customers about the functionality, reliability or performance.
   * In the early stage of prototyping, one has to make assumption about underlying technologies
+
+
+#### Interview/Survey/Questionnaire
+
+
+* One of the best ways to gather requirements is to interview with the stakeholders. The interview can be
+  * **Structured interview**
+  * **Unstructured interview**
+* Interviewer should handle interviewee's concerns by clarifying them / recording for the future folloup
