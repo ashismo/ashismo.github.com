@@ -145,3 +145,9 @@ Below are the followup phases of an interview/survey
 * **Disadvantages**
   * Sometimes it is difficult to get the stakeholders available and arrange the required logistics. 
   * Also it is very time consuming to organize
+* Activities required to conduct a requirement workshops
+  * Facilitate the workshop
+  * Identify with stakeholders need to participate in the workshop
+  * Set the stage and expectation
+  * Clarify the requirements and scope for the workshop
+  * Follow-up on the workshop tasks and requirements, to generate final deliverables.
