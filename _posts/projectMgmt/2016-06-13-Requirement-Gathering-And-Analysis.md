@@ -118,3 +118,10 @@ There are different requirement elicitation techniques. Few important techniques
   * **Open-ended survey:** Survey held on overall application
   * **Close ended survey:** Survey held on a specific area of the application
 * 
+
+Below are the followup phases of an interview/survey
+* After an interview, the interviewer collates the scribing done during the interview and shares with the interviewee.
+* For open ended surveys, themes that run across the responses are identified
+* Statistical summary is provided for close ended surveys
+* Survey results are summarized and shared with the project sponsor.
+* An interviewee reviews the notes and identified issues in documentation and any uncovered areas.
