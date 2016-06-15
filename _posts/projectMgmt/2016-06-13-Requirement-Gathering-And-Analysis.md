@@ -124,7 +124,6 @@ There are different requirement elicitation techniques. Few important techniques
 * Servey is also another way to improve the software considering the feedback from the stakeholders. Survey can be 
   * **Open-ended survey:** Survey held on overall application
   * **Close ended survey:** Survey held on a specific area of the application
-* 
 
 Below are the followup phases of an interview/survey
 * After an interview, the interviewer collates the scribing done during the interview and shares with the interviewee.
@@ -132,3 +131,11 @@ Below are the followup phases of an interview/survey
 * Statistical summary is provided for close ended surveys
 * Survey results are summarized and shared with the project sponsor.
 * An interviewee reviews the notes and identified issues in documentation and any uncovered areas.
+
+
+#### Requirements Workshop
+
+
+* **Requirement workshop** is a technique of **requirement gathering** or **requirement elicitation**.
+* **Requirement workshop** technique works best when it is led by a trained facilitator and supported by a **scribe**
+* **Requirement workshop** technique yields optimum results when it is open to all. Successful requirements workshop requires BA's to carefully select the stakeholders and SMEs to attend this short and intensive meeting.
