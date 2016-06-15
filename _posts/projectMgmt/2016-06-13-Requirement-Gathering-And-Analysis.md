@@ -115,7 +115,8 @@ There are different requirement elicitation techniques. Few important techniques
     * Determine the areas to be covered in the interview
     * determine the progression of the interview
 * Interviewer should handle interviewee's concerns by clarifying them / recording for the future folloup
-* An interview can have close ended questions but interviewer should try to get a precise answer for those
+* An interview can have close ended questions but interviewer should try to get a precise answer for those.
+* The important activity done while conducting interview is Scribing for better understanding of covered topic - scribing allows for effective documentation of the responses and details.
 
 ##### Survey
 
