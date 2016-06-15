@@ -104,8 +104,17 @@ There are different requirement elicitation techniques. Few important techniques
 
 #### Interview/Survey/Questionnaire
 
+##### Interview
 
 * One of the best ways to gather requirements is to interview with the stakeholders. The interview can be
   * **Structured interview**
   * **Unstructured interview**
 * Interviewer should handle interviewee's concerns by clarifying them / recording for the future folloup
+
+##### Survey
+
+
+* Servey is also another way to improve the software considering the feedback from the stakeholders. Survey can be 
+  * **Open-ended survey:** Survey held on overall application
+  * **Close ended survey:** Survey held on a specific area of the application
+* 
