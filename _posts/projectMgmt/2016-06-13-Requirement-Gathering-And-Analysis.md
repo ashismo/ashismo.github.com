@@ -139,3 +139,9 @@ Below are the followup phases of an interview/survey
 * **Requirement workshop** is a technique of **requirement gathering** or **requirement elicitation**.
 * **Requirement workshop** technique works best when it is led by a trained facilitator and supported by a **scribe**
 * **Requirement workshop** technique yields optimum results when it is open to all. Successful requirements workshop requires BA's to carefully select the stakeholders and SMEs to attend this short and intensive meeting.
+* **Advantages**
+  * This technique helps to get the broad view of areas under investigation.
+  * It helps to increase productivity
+* **Disadvantages**
+  * Sometimes it is difficult to get the stakeholders available and arrange the required logistics. 
+  * Also it is very time consuming to organize
