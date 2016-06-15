@@ -107,9 +107,15 @@ There are different requirement elicitation techniques. Few important techniques
 ##### Interview
 
 * One of the best ways to gather requirements is to interview with the stakeholders. The interview can be
-  * **Structured interview**
-  * **Unstructured interview**
+  * **Structured interview**: In structured interview
+    * Design open and close ended questions
+    * Define a logical flow of the questions
+    * word the questions conciously and unambiguously
+  * **Unstructured interview**: In unstructured interview
+    * Determine the areas to be covered in the interview
+    * determine the progression of the interview
 * Interviewer should handle interviewee's concerns by clarifying them / recording for the future folloup
+* An interview can have close ended questions but interviewer should try to get a precise answer for those
 
 ##### Survey
 
