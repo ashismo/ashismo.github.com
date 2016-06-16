@@ -161,6 +161,7 @@ Below are the followup phases of an interview/survey
   * define the expected behavior of the system.
 * Business analysts validate business rule prior to the requirement analysis
 * Business Analysts typically use three **Solution Development Methodologies(SDM)** during requirement analysis which depends on the types of project, culture and standard of the organization.
-  * Business process analysis
+  * **Business process analysis:** is done using
+    * **Activity Diagram:** 
   * object-oriented analysis
   * structured analysis
