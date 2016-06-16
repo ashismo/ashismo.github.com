@@ -151,3 +151,16 @@ Below are the followup phases of an interview/survey
   * Set the stage and expectation
   * Clarify the requirements and scope for the workshop
   * Follow-up on the workshop tasks and requirements, to generate final deliverables.
+
+## Requirement Analysis
+
+
+* Business analysts uses different models to analysis the gathered requirements.
+* Analyzing requirements using models will help to 
+  * identify gaps during the requirement elicitation phase.
+  * define the expected behavior of the system.
+* Business analysts validate business rule prior to the requirement analysis
+* Business Analysts typically use three **Solution Development Methodologies(SDM)** during requirement analysis which depends on the types of project, culture and standard of the organization.
+  * Business process analysis
+  * object-oriented analysis
+  * structured analysis
