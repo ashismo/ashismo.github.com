@@ -161,7 +161,7 @@ Below are the followup phases of an interview/survey
   * define the expected behavior of the system.
 * Business analysts validate business rule prior to the requirement analysis
 * Business Analysts typically use three **Solution Development Methodologies(SDM)** during requirement analysis which depends on the types of project, culture and standard of the organization.
-  * **Business process analysis:** is done using
+  * **Business process analysis:** focuses on the process improvement. It is done using
     * **Activity Diagram:** It is a graphical representations of workflows of stepwise activities and actions. An activity diagram will have a starting point, actions, decisions, splits and joins to show concurrent activities, and ending points. An activity diagram is also a type of flow chart.
     * **Flow chart**: represents an algorithm, workflow or process. The difference between **flow chart** and **activity diagram** is that the former is limited to the sequential process with condition checking points whereas the later helps us to understand the concurrent or parallel processes as well.
     * **Workflow model:** this model depicts the flow of work in a specific business area.
@@ -170,4 +170,7 @@ Below are the followup phases of an interview/survey
     * **Activity Diagram:** It is a graphical representations of workflows of stepwise activities and actions.
     * **Class diagram:** depicts the elements relevant to the solution. It also depicts the relationship between elements.
     * **Sequence diagram:** depicts the logic of use case descriptions.
-  * **Structured Analysis**
+  * **Structured Analysis** This technique focuses on the functional decomposition and data-flow analysis. It is achieved using one of the following
+    * **flowchart:** represents an algorithm, workflow or process. 
+    * **dataflow diagram:** It depicts how information flows through a system. How it is input, processed, stored and output from a system.
+    * **entity relationship diagram:** It depicts the data structre of an application.
