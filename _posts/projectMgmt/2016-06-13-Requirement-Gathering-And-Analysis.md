@@ -175,9 +175,9 @@ Below are the followup phases of an interview/survey
     * **dataflow diagram:** It depicts how information flows through a system. How it is input, processed, stored and output from a system.
     * **entity relationship diagram:** It depicts the data structre of an application.
 
-#### Benifit of the process and flow models
+#### Process and flow models
 
-Benifit of knowing the process and flow models
+Process and flow models helps BA to understand how system behaves through time. Benifit of knowing the process and flow models
 
 
 * helps to understand the information expressed in the model
