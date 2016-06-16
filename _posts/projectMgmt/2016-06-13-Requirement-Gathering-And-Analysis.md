@@ -162,6 +162,7 @@ Below are the followup phases of an interview/survey
 * Business analysts validate business rule prior to the requirement analysis
 * Business Analysts typically use three **Solution Development Methodologies(SDM)** during requirement analysis which depends on the types of project, culture and standard of the organization.
   * **Business process analysis:** is done using
-    * **Activity Diagram:** 
+    * **Activity Diagram:** It is a graphical representations of workflows of stepwise activities and actions. An activity diagram will have a starting point, actions, decisions, splits and joins to show concurrent activities, and ending points. An activity diagram is also a type of flow chart.
+    * **Flow chart**: represents an algorithm, workflow or process. The difference between **flow chart** and **activity diagram** is that the former is limited to the sequential process with condition checking points whereas the later helps us to understand the concurrent or parallel processes as well.
   * object-oriented analysis
   * structured analysis
