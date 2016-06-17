@@ -192,4 +192,5 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **disadvantages**
   * In dataflow diagram decisions and user interactions are not described. It only describes what system does.
   * DFD is not useful for the projects trying to improve processes or create interactive user-based system.
+  * If a project requires knowledge of how system works and how people interact with the systems - in such cases can be described using DFD.
 
