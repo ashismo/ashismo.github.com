@@ -197,7 +197,7 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **External Entity:** can send or receive data from data process within the system. External entity is represented using rectangle
   * **Data process:** processes data that can be used in the system. Data process is represented using circle.
   * **data flow:** is an arrow headed line represents the data flow from external entity to data process or data process to data store.
-  * **data store:** stores the data. It does not transform further. It is represented by a label inside two parallel lines.
+  * **data store:** stores the data. It does not transform/change data further. It is represented by a label inside two parallel lines.
 * The functions of the **key elements** in DFD are
   * Sending or receiving data
   * Moving data
