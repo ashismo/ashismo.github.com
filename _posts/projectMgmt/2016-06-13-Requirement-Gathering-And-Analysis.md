@@ -177,9 +177,19 @@ Below are the followup phases of an interview/survey
 
 #### Process and flow models
 
-Process and flow models helps BA to understand how system behaves through time. Benifit of knowing the process and flow models
+Process and flow models helps BA to understand how system behaves through time. Benefit of knowing the process and flow models
 
 
 * helps to understand the information expressed in the model
 * helps you to choose the right model for your project
 * helps you to effectively communicate project requirements
+
+##### Dataflow diagram
+
+
+* The dataflow diagram depicts how information flows through a system. How it is input, processed, stored and output from a system.
+* Dataflow diagram is an ideal choice when solution involves the complex data processing.
+* **disadvantages**
+  * In dataflow diagram decisions and user interactions are not described. It only describes what system does.
+  * DFD is not useful for the projects trying to improve processes or create interactive user-based system.
+
