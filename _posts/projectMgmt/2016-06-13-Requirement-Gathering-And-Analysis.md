@@ -193,4 +193,8 @@ Process and flow models helps BA to understand how system behaves through time. 
   * In dataflow diagram decisions and user interactions are not described. It only describes what system does.
   * DFD is not useful for the projects trying to improve processes or create interactive user-based system.
   * If a project requires knowledge of how system works and how people interact with the systems - in such cases can be described using DFD.
-
+* **Key elements** of dataflow diagram are
+  * **External Entity:** can send or receive data from data process within the system. External entity is represented using rectangle
+  * **Data process:** processes data that can be used in the system. Data process is represented using circle.
+  * **data flow:** is an arrow headed line represents the data flow from external entity to data process or data process to data store.
+  * **data store:** stores the data. It does not transform further. It is represented by a label inside two parallel lines.
