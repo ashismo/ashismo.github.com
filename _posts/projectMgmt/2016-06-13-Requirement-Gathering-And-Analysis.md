@@ -272,5 +272,5 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **user interface design:** helps users to navigate specific system features
   * **user profile**: describes user requirement based on the user type
   * **user stories:** describes functional requirements from the user's perspective. End users write these stories.
-  * **use case descriptions:** describe the behavior - who, what, how and why - of the system being modeled
+  * **use case descriptions:** describe the behavior - who (actor), what (behavioral requirements), how (events and conditions) and why(use case goals) - of the system being modeled
   * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modeled.
