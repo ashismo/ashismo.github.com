@@ -18,7 +18,7 @@ The requirement elicitation process consists the followings
 
 
 * **Requirement Gathering:** Developers understand from client/end user about the expectation from the software.
-* **Organizing Requirements:** Developers prioritize the requirements based on the criticallity of the requirements.
+* **Organizing Requirements:** Developers prioritize the requirements based on the criticality of the requirements.
 * **Negotiation and discussion:** Ambiguous or unrealistic requirements require discussion with various stakeholders. 
 * **Documentation:** Functional and non functional requirements need to be documented and made available for the next phase processing.
  
@@ -88,7 +88,7 @@ There are different requirement elicitation techniques. Few important techniques
   * **Throwaway prototyping**: This type of prototype gets discarded rather than becoming part of the final delivered software. When you need to come up with quick hand drawn prototype then the throw-away prototyping is the best choice.
   * **Evolutionary Prototyping**: The objective of this type of prototyping is to build very robust and structured prototype which can be refined later.
   * **Incremental Prototyping**:  Incremental prototyping refers to building multiple functional prototypes of the various sub systems and then integrating all the available prototypes to form a complete system
-  * **Extreme prototyping**: This type of prototyping is used for developing web application. It breaks down the web devolopment into three phases one after another. In the **first phase**, the static prototypes i.e. HTML pages gets developed. In the **second phase**, the screens are integrated with the simulated services layer. In the **last phase** the actual services are implemented.
+  * **Extreme prototyping**: This type of prototyping is used for developing web application. It breaks down the web development into three phases one after another. In the **first phase**, the static prototypes i.e. HTML pages gets developed. In the **second phase**, the screens are integrated with the simulated services layer. In the **last phase** the actual services are implemented.
 
 * Prototyping is used to allow the users evaluate developer proposals and try them out before implementation.
 * **Advantages**
@@ -110,7 +110,7 @@ There are different requirement elicitation techniques. Few important techniques
   * **Structured interview**: In structured interview
     * Design open and close ended questions
     * Define a logical flow of the questions
-    * word the questions conciously and unambiguously
+    * word the questions consciously and unambiguously
   * **Unstructured interview**: In unstructured interview
     * Determine the areas to be covered in the interview
     * determine the progression of the interview
@@ -121,11 +121,11 @@ There are different requirement elicitation techniques. Few important techniques
 ##### Survey
 
 
-* Servey is also another way to improve the software considering the feedback from the stakeholders. Survey can be 
+* Survey is also another way to improve the software considering the feedback from the stakeholders. Survey can be 
   * **Open-ended survey:** Survey held on overall application
   * **Close ended survey:** Survey held on a specific area of the application
 
-Below are the followup phases of an interview/survey
+Below are the follow-up phases of an interview/survey
 * After an interview, the interviewer collates the scribing done during the interview and shares with the interviewee.
 * For open ended surveys, themes that run across the responses are identified
 * Statistical summary is provided for close ended surveys
@@ -156,9 +156,9 @@ Below are the followup phases of an interview/survey
 
 
 * Business analysts uses different models to analysis the gathered requirements.
-* Analyzing requirements using models will help to 
+* Analysing requirements using models will help to 
   * identify gaps during the requirement elicitation phase.
-  * define the expected behavior of the system.
+  * define the expected behaviour of the system.
 * Business analysts validate business rule prior to the requirement analysis
 * Business Analysts typically use three **Solution Development Methodologies(SDM)** during requirement analysis which depends on the types of project, culture and standard of the organization.
   * **Business process analysis:** focuses on the process improvement. It is done using
@@ -219,15 +219,27 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **Sequence diagram:** uses a class diagram to depict how a usage scenario is executed.
 
 
-#### Data and behavior model
+#### Data and behaviour model
 
 
-* Data and behavior model provides a way of understanding data and the relationship between data.
-* This model does **NOT** show the data and process flow. Also does not depitcs the user interaction
-* Commong techniques used to generate data and behavior model are
+* Data and behaviour model provides a way of understanding data and the relationship between data.
+* This model does **NOT** show the data and process flow. Also does not depicts the user interaction
+* Common techniques used to generate data and behaviour model are
   *  **Entity relationship diagram(ERD):** From ERD, a business analysts get the associated data with the entities and conducts structural analysis on their relationship
   *  **Class diagram(ERD):** This diagram helps software engineers to build a system. It gives simplified views of business classes and the data associated with them. This is very popular technique of object oriented analysis.
   *  **Data dictionary:** The glossary of the technical terms. So all stake holders understand the terms consistently.
   *  **Metadata definition:**
   *  **Data transformation and mapping:** helps business analysts to reuse data from legacy system to the target system
-  *  **CRUD matrix:** helps business analysys to verify and track access rights to data stores within a system.
+  *  **CRUD matrix:** helps business analysts to verify and track access rights to data stores within a system.
+
+
+#### Entity Relationship Diagram
+
+
+* ERD is one of the most commonly used data modelling technique.
+* To create ERD, following components are very important
+  * **Entity:** 
+  * **Relationship:**
+  * **Cardinality:**
+    <img src="https://cloud.githubusercontent.com/assets/11231867/16189110/5eab9c30-36f6-11e6-9f16-3cdb59afd843.png"/>
+  * **Attributes:**
