@@ -228,7 +228,7 @@ Process and flow models helps BA to understand how system behaves through time. 
   *  **Entity relationship diagram(ERD):** From ERD, a business analysts get the associated data with the entities and conducts structural analysis on their relationship
   *  **Class diagram(ERD):** This diagram helps software engineers to build a system. It gives simplified views of business classes and the data associated with them. This is very popular technique of object oriented analysis.
   *  **Data dictionary:** The glossary of the technical terms. So all stake holders understand the terms consistently.
-  *  **Metadata definition:**
+  *  **Metadata definition:** describes the context in which data is used.
   *  **Data transformation and mapping:** helps business analysts to reuse data from legacy system to the target system
   *  **CRUD matrix:** helps business analysts to verify and track access rights to data stores within a system.
 
