@@ -217,3 +217,17 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **Data flow diagram:** depicts how information flows through the system
 * **Workflow model:** depicts the flow of work in a specific business area.
 * **Sequence diagram:** uses a class diagram to depict how a usage scenario is executed.
+
+
+#### Data and behavior model
+
+
+* Data and behavior model provides a way of understanding data and the relationship between data.
+* This model does **NOT** show the data and process flow. Also does not depitcs the user interaction
+* Commong techniques used to generate data and behavior model are
+  *  **Entity relationship diagram(ERD):** From ERD, a business analysts get the associated data with the entities and conducts structural analysis on their relationship
+  *  **Class diagram(ERD):** This diagram helps software engineers to build a system. It gives simplified views of business classes and the data associated with them. This is very popular technique of object oriented analysis.
+  *  **Data dictionary:** The glossary of the technical terms. So all stake holders understand the terms consistently.
+  *  **Metadata definition:**
+  *  **Data transformation and mapping:** helps business analysts to reuse data from legacy system to the target system
+  *  **CRUD matrix:** helps business analysys to verify and track access rights to data stores within a system.
