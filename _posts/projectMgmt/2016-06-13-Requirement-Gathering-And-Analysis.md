@@ -246,3 +246,14 @@ Process and flow models helps BA to understand how system behaves through time. 
 <br /><br />
 In the below example, there are two entities called Artists and Songs. One song will have one and only artist but one artist may perform zero or more songs.
 <img src="https://cloud.githubusercontent.com/assets/11231867/16189764/a2eca580-36f9-11e6-8344-1389b0dde674.png"/>
+
+
+#### Class diagram
+
+
+* The class diagram is a static diagram. It represents the static view of an application.
+* The class relationship can be depicted in a class diagram are
+  * **Association:** explains how one class is associated with another class via some business rules.
+  * *Generalization:** represents IS-A relationship. **Savings account** and **Credit accounts** are generalized by **Account**
+  * **Aggregation:** represents HAS-A relationship. Suppose a class HAS-A students so Class is an aggregator and the lifetime of the students does not depends on the aggregator i.e. class. Another example is A school HAS-A classes. If school shuts down then all classes will also get closed. so the lifttime of the school depends on school.
+  * **Multiplicity:** is similar to the cardinality in ERD. It represents one-to-many or many-to-one or many-to-many or many-to-one relationships.
