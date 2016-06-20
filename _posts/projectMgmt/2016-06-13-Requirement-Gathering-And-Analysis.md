@@ -243,3 +243,5 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **Cardinality:**
     <img src="https://cloud.githubusercontent.com/assets/11231867/16189110/5eab9c30-36f6-11e6-9f16-3cdb59afd843.png"/>
   * **Attributes:**
+In the below example, there are two entities called Artists and Songs. One song will have one and only artist but one artist may perform zero or more songs.
+<img src="https://cloud.githubusercontent.com/assets/11231867/16189764/a2eca580-36f9-11e6-8344-1389b0dde674.png"/>
