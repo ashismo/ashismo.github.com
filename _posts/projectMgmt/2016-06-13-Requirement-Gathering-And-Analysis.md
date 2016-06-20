@@ -207,3 +207,13 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **level 0 DFD:** referred to as a context diagram, defines the system boundaries. Each level 0 DFD depicts the system as a single, usually complex process (the tasks that a system performs).
   * **level 1 DFD:** will be created once the system boundaries are defined in level 0 DFD. The process will further broken down into multiple processes. Sometimes data processed by one process need to store before moving the data to another process. This intermediate storage is done in data store.
   * **breaking down complex processes** A complex process is further broken down into multiple processes. They are sometimes called Level 2 DFD.
+
+#### Summary of different types of diagrams
+
+
+* **Flow Chart:** depicts according to ISO standard, the sequence and logic of a set of related activities
+* **Activity diagram:** depicts according to the UML standards, a sequence of related activities and the decision that controls the flow.
+* **State machine diagram** decpics all possible states an object may be in
+* **Data flow diagram:** depicts how information flows through the system
+* **Workflow model:** depicts the flow of work in a specific business area.
+* **Sequence diagram:** uses a class diagram to depict how a usage scenario is executed.
