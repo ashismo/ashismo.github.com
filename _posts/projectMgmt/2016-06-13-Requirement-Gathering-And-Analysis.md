@@ -261,3 +261,16 @@ Process and flow models helps BA to understand how system behaves through time. 
   * *Generalization:** represents IS-A relationship. **Savings account** and **Credit accounts** are generalized by **Account**
   * **Aggregation:** represents HAS-A relationship. Suppose a class HAS-A students so Class is an aggregator and the lifetime of the students does not depends on the aggregator i.e. class. Another example is A school HAS-A classes. If school shuts down then all classes will also get closed. so the lifttime of the school depends on school.
   * **Multiplicity:** is similar to the cardinality in ERD. It represents one-to-many or many-to-one or many-to-many or many-to-one relationships.
+
+#### Usage models
+
+
+* Usage models focuses on solution from the users prospectives.
+* This models describes only what is visible to the end user
+* The most common usage models are
+  * **prototypes:** is a simplified representation of proposed software
+  * **user interface design:** helps users to navigate specific system features
+  * **user profile**: describes user requirement based on the user type
+  * **user stories:** describes functional requirements from the user's perspective. End users write these stories.
+  * **use case descriptions:** describe the behavior - who, what, how and why - of the system being modeled
+  * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modeled.
