@@ -286,3 +286,22 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **Describe alternate and exception flow:** Focus is on the alternate scenarios (variation of the successful scenario) and exceptions scenarios.
 * Below example clarify some of the important understanding. In the below image, the **make appointment** use case includes **check patient record** use case. Which means the later use case gets executed along with the former use case. Here both the cases are the part of the **basic flow**. **Defer payment** use case is the extended use case of **pay bill** use cases. So **Defer payment** does not occur always. In some cases **extended** use cases gets executed. **Bill insurance** use case depends on the **more treatment** use case. Hence these generalized use cases are part of the **alternate** flow as described above.  
 <img src="https://cloud.githubusercontent.com/assets/11231867/16223332/64bc7f58-37ba-11e6-93c5-ee70bfc67c56.png"/>
+
+
+## Non-Functional Requirements (NFR)
+
+
+* Quality of a software i.e. accuracy, performance, security and modifiability are the important consideration in NFR
+* **SNAP**(Software Non-functional Assessment Process) provides the quantifiable measure for NFR. SNAP helps to determine the NFR size and effort to address NFRs
+
+#### Design consideration and NFRs
+
+
+* **Extensibility:** 
+  * Can the database schema flex to accomodate changes?
+  * Can end user extens the system - scripts, user defined fields etc?
+* **Portability:** 
+  * For web applications, which browsers are needed to be supported?
+  * In which OS the system will work?
+* **Availability:** How long the system will run without failure?
+* **Scalability:** What is the peak load that system must be able to handle?
