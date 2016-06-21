@@ -280,4 +280,7 @@ Process and flow models helps BA to understand how system behaves through time. 
     * **Tasks:** are the goals an actor accomplishes through the interaction with the system. Each task is a system use case.
     * **Events:** Systems responds to the events. Each response is a use case
     * **Automated requests:** get originated from the system and each request is a use case.
-  * 
+  * **Create use case diagram:** Add actors and use cases into a diagram to create use case diagram.
+  * **Describe Context:** Context includes the information about the actors, pre-conditions and post-conditions.
+  * **Describe the basic flow:** Focus is on the success scenarios.
+  * **Describe alternate and exception flow:** Focus is on the alternate scenarios (variation of the successful scenario) and exceptions scenarios.
