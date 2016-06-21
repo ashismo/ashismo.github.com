@@ -271,8 +271,8 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **prototypes:** is a simplified representation of proposed software
   * **user interface design:** helps users to navigate specific system features
   * **user profile**: describes user requirement based on the user type
-  * **user stories:** describes functional requirements from the user's perspective. End users write these stories. It includes **Description**, **Estimates** and **Priority**
-  * **use case descriptions:** describe the behavior - who (actor), what (behavioral requirements), how (events and conditions) and why(use case goals) - of the system being modeled. It includes **Actor**, **Post Conditions** and **Flow of events**
+  * **user stories:** describes functional requirements from the user's perspective. End users write these stories. It includes **Description**, **Estimates**, **Priority** and **Unique Identifier**
+  * **use case descriptions:** describe the behavior - who (actor), what (behavioral requirements), how (events and conditions) and why(use case goals) - of the system being modeled. It includes **Actor**, **Post Conditions**, **Flow of events**, **Pre-conditions** and **name**
   * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modeled.
 * Following are the important steps to write usage models
   * **Identify actors**
