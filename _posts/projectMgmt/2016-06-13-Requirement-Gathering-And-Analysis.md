@@ -258,7 +258,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 * The class diagram is a static diagram. It represents the static view of an application.
 * The class relationship can be depicted in a class diagram are
   * **Association:** explains how one class is associated with another class via some business rules.
-  * *Generalization:** represents IS-A relationship. **Savings account** and **Credit accounts** are generalized by **Account**
+  * **Generalization:** represents IS-A relationship. **Savings account** and **Credit accounts** are generalized by **Account**
   * **Aggregation:** represents HAS-A relationship. Suppose a class HAS-A students so Class is an aggregator and the lifetime of the students does not depends on the aggregator i.e. class. Another example is A school HAS-A classes. If school shuts down then all classes will also get closed. so the lifttime of the school depends on school.
   * **Multiplicity:** is similar to the cardinality in ERD. It represents one-to-many or many-to-one or many-to-many or many-to-one relationships.
 
@@ -293,6 +293,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 * Quality of a software i.e. accuracy, performance, security and modifiability are the important consideration in NFR
 * **SNAP**(Software Non-functional Assessment Process) provides the quantifiable measure for NFR. SNAP helps to determine the NFR size and effort to address NFRs
+* If NFRs are not given proprt importance then the amount of rework in the later stage would be huge.
 
 #### Design consideration and NFRs
 
