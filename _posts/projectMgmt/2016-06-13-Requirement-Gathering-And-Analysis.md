@@ -274,3 +274,10 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **user stories:** describes functional requirements from the user's perspective. End users write these stories. It includes **Description**, **Estimates** and **Priority**
   * **use case descriptions:** describe the behavior - who (actor), what (behavioral requirements), how (events and conditions) and why(use case goals) - of the system being modeled. It includes **Actor**, **Post Conditions** and **Flow of events**
   * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modeled.
+* Following are the important steps to write usage models
+  * **Identify actors**
+  * **Identify use cases:** There are three types of use cases as shown below
+    * **Tasks:** are the goals an actor accomplishes through the interaction with the system. Each task is a system use case.
+    * **Events:** Systems responds to the events. Each response is a use case
+    * **Automated requests:** get originated from the system and each request is a use case.
+  * 
