@@ -310,5 +310,5 @@ Process and flow models helps BA to understand how system behaves through time. 
   * In which OS the system will work?
 * **Availability:** How long the system will run without failure?
 * **Scalability:** What is the peak load that system must be able to handle?
-* **Security:** Prevents unauthorized access and ensures system integrity from the malicious damages. E.g. all external communications between server and client should be encrypted.
+* **Security:** Prevents unauthorized access and ensures system integrity from the malicious damages. E.g. all external communications between server and client should be encrypted. Another example is backup should be taken in every 24 hrs and backup copy should be stored in another location.
 * **Compatibility:** Compatible to run the application when sharing resources with other applications running in the same system.
