@@ -210,6 +210,11 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **level 1 DFD:** will be created once the system boundaries are defined in level 0 DFD. The process will further broken down into multiple processes. Sometimes data processed by one process need to store before moving the data to another process. This intermediate storage is done in data store.
   * **breaking down complex processes** A complex process is further broken down into multiple processes. They are sometimes called Level 2 DFD.
 * A DFD can be broken down into further levels, depending upon the complexity of the process involved. This process is called **DFD Levelling**
+* **Validation rules** of a DFD are
+  * Each process must have one input and one output
+  * Each datastore must have one input and one output
+  * All dataflow must start or end at a process
+  * No entity should be allowed direct access i.e. read or write to the data store.
 
 #### Summary of different types of diagrams
 
