@@ -296,7 +296,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 * Quality of a software i.e. accuracy, performance, security and modifiability are the important consideration in NFR
 * **SNAP**(Software Non-functional Assessment Process) provides the quantifiable measure for NFR. SNAP helps to determine the NFR size and effort to address NFRs
 * If NFRs are not given proper importance then the amount of rework in the later stage would be huge.
-* **FP GSC:** When only function points are used for sizing, FP General System Characteristics are expected to cover NFRs.
+* **FP GSC:** When only function points are used for sizing, **Functional Point(FP) General System Characteristics (GSC)** are expected to cover NFRs.
 * SNAP always give better quantifiable measures for NFR sizing than FP GSC.
 
 #### Design consideration and NFRs
