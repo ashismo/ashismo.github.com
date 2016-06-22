@@ -215,7 +215,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 * **Flow Chart:** depicts according to ISO standard, the sequence and logic of a set of related activities
 * **Activity diagram:** depicts according to the UML standards, a sequence of related activities and the decision that controls the flow.
-* **State machine diagram** decpics all possible states an object may be in
+* **State machine diagram** depicts all possible states an object may be in
 * **Data flow diagram:** depicts how information flows through the system
 * **Workflow model:** depicts the flow of work in a specific business area.
 * **Sequence diagram:** uses a class diagram to depict how a usage scenario is executed.
@@ -274,8 +274,8 @@ Process and flow models helps BA to understand how system behaves through time. 
   * **user interface design:** helps users to navigate specific system features
   * **user profile**: describes user requirement based on the user type
   * **user stories:** describes functional requirements from the user's perspective. End users write these stories. It includes **Description**, **Estimates**, **Priority**, **Unique Identifier** and **story card**
-  * **use case descriptions:** describe the behavior - who (actor), what (behavioral requirements), how (events and conditions) and why(use case goals) - of the system being modeled. It includes **Actor**, **Post Conditions**, **Flow of events**, **Pre-conditions** and **Name**
-  * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modeled.
+  * **use case descriptions:** describe the behaviour - who (actor), what (behavioural requirements), how (events and conditions) and why(use case goals) - of the system being modeled. It includes **Actor**, **Post Conditions**, **Flow of events**, **Pre-conditions** and **Name**
+  * **use case diagrams:** show the actors, use cases and the relationship that exists between the key elements of the system being modelled.
 * Following are the important steps to write usage models
   * **Identify actors**
   * **Identify use cases:** There are three types of use cases as shown below
@@ -295,7 +295,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 * Quality of a software i.e. accuracy, performance, security and modifiability are the important consideration in NFR
 * **SNAP**(Software Non-functional Assessment Process) provides the quantifiable measure for NFR. SNAP helps to determine the NFR size and effort to address NFRs
-* If NFRs are not given proprt importance then the amount of rework in the later stage would be huge.
+* If NFRs are not given proper importance then the amount of rework in the later stage would be huge.
 * **FP GSC:** When only function points are used for sizing, FP General System Characteristics are expected to cover NFRs.
 * SNAP always give better quantifiable measures for NFR sizing than FP GSC.
 
@@ -303,8 +303,8 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 
 * **Extensibility:** 
-  * Can the database schema flex to accomodate changes?
-  * Can end user extens the system - scripts, user defined fields etc?
+  * Can the database schema flex to accommodate changes?
+  * Can end user extends the system - scripts, user defined fields etc.?
 * **Portability:** 
   * For web applications, which browsers are needed to be supported?
   * In which OS the system will work?
