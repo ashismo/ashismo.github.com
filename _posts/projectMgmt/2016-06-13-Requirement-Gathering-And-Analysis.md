@@ -353,3 +353,6 @@ Process and flow models helps BA to understand how system behaves through time. 
   * Business analysts creates the RTM documents
   * Solution architect updates the design specification details during the design phase
   * Test analysts updates the test case information and developers update the source code details
+* Types of RTM
+  * **Forward tracibility matrix:** maps requirements into test cases
+  * **Backword tracibility matrix:** maps test cases into requirements
