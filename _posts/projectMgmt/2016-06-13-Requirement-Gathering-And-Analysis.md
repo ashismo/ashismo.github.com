@@ -324,3 +324,15 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **Scalability:** What is the peak load that system must be able to handle?
 * **Security:** Prevents unauthorized access and ensures system integrity from the malicious damages. E.g. all external communications between server and client should be encrypted. Another example is backup should be taken in every 24 hrs and backup copy should be stored in another location.
 * **Compatibility:** Compatible to run the application when sharing resources with other applications running in the same system.
+
+
+## Requirements Traceability Matrix (RTM)
+
+
+* Requirements Traceability Matrix (RTM) is a tool used to trace each requirements of a given business case.
+* RTM captures all requirements and their tracibility in a single document
+* RTM also is used to record the relationship of the requirements
+* RTM work flow includes
+  * Business analysts talk to the end user and gather the requirements
+  * Solution architects creates the design specification
+  * Developers starts implementing the requirements
