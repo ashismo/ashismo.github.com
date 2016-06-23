@@ -333,6 +333,12 @@ Process and flow models helps BA to understand how system behaves through time. 
 * RTM captures all requirements and their tracibility in a single document
 * RTM also is used to record the relationship of the requirements.
 * RTM documents are created during the analyze phase of the project and updated and maintained throughout the lifecycle of the project.
+* RTM ensures
+  * requirements are prioritized
+  * requirements are examined for the system impact
+  * requirements are uniquely numbered
+  * requirements can be traced forward and backword.
+  * coverage between requirements, features and use cases
 * RTM keeps track of the connection between 
   * user requirements
   * functional specification
