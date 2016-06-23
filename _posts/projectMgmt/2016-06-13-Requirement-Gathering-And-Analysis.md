@@ -331,8 +331,19 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 * Requirements Traceability Matrix (RTM) is a tool used to trace each requirements of a given business case.
 * RTM captures all requirements and their tracibility in a single document
-* RTM also is used to record the relationship of the requirements
+* RTM also is used to record the relationship of the requirements.
+* RTM documents are created during the analyze phase of the project and updated and maintained throughout the lifecycle of the project.
+* RTM keeps track of the connection between 
+  * user requirements
+  * functional specification
+  * design specifications
+  * test cases and
+  * use cases
 * RTM work flow includes
   * Business analysts talk to the end user and gather the requirements
   * Solution architects creates the design specification
   * Developers starts implementing the requirements
+* RTM stakeholders
+  * Business analysts creates the RTM documents
+  * Solution architect updates the design specification details during the design phase
+  * Test analysts updates the test case information and developers update the source code details
