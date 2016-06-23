@@ -217,6 +217,10 @@ Process and flow models helps BA to understand how system behaves through time. 
   * No entity should be allowed direct access i.e. read or write to the data store.
   * Entity can not communicate to another entity. A process has to be in between them.
   * Datastore can not communicate to another datastore. A process has to be in between them.
+* Black holes, Grey holes and miracles in DFD
+  * **Black Holes:** A Process may have input flow but no output flow called black holes.
+  * **Grey Holes:** A process may have outputs that are greater than the sum of its inputs are called grey holes
+  * **Miracles:** A Process may have output flow but no input flow called black holes.  
 
 #### Summary of different types of diagrams
 
