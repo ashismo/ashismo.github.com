@@ -215,6 +215,8 @@ Process and flow models helps BA to understand how system behaves through time. 
   * Each datastore must have one input and one output
   * All dataflow must start or end at a process
   * No entity should be allowed direct access i.e. read or write to the data store.
+  * Entity can not communicate to another entity. A process has to be in between them.
+  * Datastore can not communicate to another datastore. A process has to be in between them.
 
 #### Summary of different types of diagrams
 
