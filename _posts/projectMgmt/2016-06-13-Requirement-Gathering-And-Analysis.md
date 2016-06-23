@@ -208,7 +208,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **DFD** analysis involves three steps
   * **level 0 DFD:** referred to as a context diagram, defines the system boundaries. Each level 0 DFD depicts the system as a single, usually complex process (the tasks that a system performs).
   * **level 1 DFD:** will be created once the system boundaries are defined in level 0 DFD. The process will further broken down into multiple processes. Sometimes data processed by one process need to store before moving the data to another process. This intermediate storage is done in data store.
-  * **breaking down complex processes** A complex process is further broken down into multiple processes. They are sometimes called Level 2 DFD.
+  * **breaking down complex processes** A complex process is further broken down into multiple processes. They are sometimes called Level 2 DFD. Leve 2 DFD also can be further broken down to Level 3 DFD. Lowest level DFD may sometimes captures the error messages.
 * A DFD can be broken down into further levels, depending upon the complexity of the process involved. This process is called **DFD Levelling**
 * **Validation rules** of a DFD are
   * Each process must have one input and one output
