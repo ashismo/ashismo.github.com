@@ -310,6 +310,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 * If NFRs are not given proper importance then the amount of rework in the later stage would be huge.
 * **FP GSC:** When only function points are used for sizing, **Functional Point(FP) General System Characteristics (GSC)** are expected to cover NFRs.
 * SNAP always give better quantifiable measures for NFR sizing than FP GSC.
+* **Usability** is a metric to measure percentage of users who find it comfortable to use the system.
 
 #### Design consideration and NFRs
 
