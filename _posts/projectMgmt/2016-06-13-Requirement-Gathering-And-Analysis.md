@@ -364,3 +364,10 @@ Process and flow models helps BA to understand how system behaves through time. 
 
 * **MoSCoW** analysis is a technique to prioritize requirements
 * **M** - Must Have, **S** - Should Have, **C** - Could have, **W** - Won't/Would have
+* MoSCoW analysis is helpful when the priority of the requirements from multiple stakeholders varies. Steps of this analysis includes
+  * Gather all requirements from all stakeholders
+  * Call out a meeting with all stakeholders
+  * All requirements will be labelled with M,S,C,W
+  * In case of disagreement in setting priority then voting can be used to arrive at some decision
+  * Finalize on the priorities
+  * Notify the prioritized list to all stakeholders.
