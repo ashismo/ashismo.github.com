@@ -311,6 +311,7 @@ Process and flow models helps BA to understand how system behaves through time. 
 * **FP GSC:** When only function points are used for sizing, **Functional Point(FP) General System Characteristics (GSC)** are expected to cover NFRs.
 * SNAP always give better quantifiable measures for NFR sizing than FP GSC.
 * **Usability** is a metric to measure percentage of users who find it comfortable to use the system.
+* **Changibility** is a metric to measure the reliability factor of a system.
 
 #### Design consideration and NFRs
 
