@@ -358,3 +358,9 @@ Process and flow models helps BA to understand how system behaves through time. 
 * Types of RTM
   * **Forward tracibility matrix:** maps requirements into test cases
   * **Backword tracibility matrix:** maps test cases into requirements
+
+## Requirement prioritization technique using MoSCoW
+
+
+* **MoSCoW** analysis is a technique to prioritize requirements
+* **M** - Must Have, **S** - Should Have, **C** - Could have, **W** - Won't/Would have
