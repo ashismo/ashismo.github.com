@@ -15,4 +15,7 @@ weight: 10
 * There are different types of software design
   * **Architechtural Design:** 
     * Shows relationship between major modules.
-    * Finalizes on the design pattern to be used
+    * Finalizes on the design pattern to be used.
+  * **Design Design:** Focuses on the data structure representation
+  * **Interface Design:**
+  * **Component Design:**
