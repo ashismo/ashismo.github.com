@@ -17,5 +17,5 @@ weight: 10
     * Shows relationship between major modules.
     * Finalizes on the design pattern to be used.
   * **Design Design:** Focuses on the data structure representation
-  * **Interface Design:**
-  * **Component Design:**
+  * **Interface Design:** Shows the flow of the information
+  * **Component Design:** 
