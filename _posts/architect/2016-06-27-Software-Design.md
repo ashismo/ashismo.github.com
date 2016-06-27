@@ -9,3 +9,10 @@ weight: 10
 
 
 ## Introduction
+
+
+* Software Design helps developers to develop and implement the user requirements in the form of software.
+* There are different types of software design
+  * **Architechtural Design:** 
+    * Shows relationship between major modules.
+    * Finalizes on the design pattern to be used
