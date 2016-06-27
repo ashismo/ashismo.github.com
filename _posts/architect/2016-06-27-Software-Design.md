@@ -30,3 +30,4 @@ weight: 10
   * **Coupling:**  is the degree of interdependencies between modules
   * **Cohesion:**  cohesion measures the strength of relationship between pieces of functionality within a given module
   * A good design will be loosely coupled and tight cohesion
+  * A focused class which performs its own responsibility is considered highly cohesive class. In contrast, suppose you are using 2 independent classes. Change in one class requires change in another class. This is considered that both the classes are tightly coupled.
