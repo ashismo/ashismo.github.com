@@ -31,3 +31,7 @@ weight: 10
   * **Cohesion:**  cohesion measures the strength of relationship between pieces of functionality within a given module
   * A good design will be loosely coupled and tight cohesion
   * A focused class which performs its own responsibility is considered highly cohesive class. In contrast, suppose you are using 2 independent classes. Change in one class requires change in another class. This is considered that both the classes are tightly coupled.
+* **Abstraction**
+  * Suppose there are two projects managed by one project manager. The team under him has two leads and developers under leads. Each lead manages one project each. If we build a system then there will be following level of abstractions\
+    * Project manager can see information of 2 projects. He can also see employee information as well.
+    * Leads can see th project where he is assigned.
