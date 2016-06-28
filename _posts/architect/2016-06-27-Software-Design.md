@@ -51,5 +51,7 @@ Below image shows vertical and horizontal partitioning
 <img src="https://cloud.githubusercontent.com/assets/11231867/16405095/8d34ca5e-3d22-11e6-968c-c3369b51b2ab.png"/>
 
 
-#### Forward Engineering
+#### Forward Engineering vs Reverse Engineering
 
+* Forward engineering refers to taking a high-level model and using it to build a more complex lower-level implementation. **Example** Write java classes from UML class diagram.
+* Reverse engineering takes a complex implementation and try and convert it into a higher level abstraction. **Example** Create UML diagram from implementated java classes.
