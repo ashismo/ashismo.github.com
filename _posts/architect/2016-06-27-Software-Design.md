@@ -48,4 +48,8 @@ weight: 10
   * There could be some processes common among the sub systems. In **horizontal partitioning** these common processes connect all sub-systems. With horizontal partitioning thought is given to the whole at design time.
   * In case of **vertical partitioning** there is no connection between the individual sub systems.
 Below image shows vertical and horizontal partitioning  
-<img src="https://cloud.githubusercontent.com/assets/11231867/16405030/fcef41ae-3d21-11e6-9e9f-3dd9e9c259e6.png"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/16405095/8d34ca5e-3d22-11e6-968c-c3369b51b2ab.png"/>
+
+
+#### Forward Engineering
+
