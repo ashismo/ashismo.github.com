@@ -63,4 +63,7 @@ Below image shows vertical and horizontal partitioning
 * State transition diagram describes the behavior of a single object in response to a series of events in a system
 * The difference between flowchart and state transition diagram is - Flow chart shows the processes that changes the state of an object but does not show what state change has happened in the object
 * States are used to represent the behavior models of a single object
-* State of a object changes when any action or pre conditions get applied on it
+* State of a object changes when any action or pre conditions get applied on it  
+
+Below is an example of the state diagram  
+<img src="https://cloud.githubusercontent.com/assets/11231867/16407574/0c0fce32-3d32-11e6-85e9-ba9cbbc41759.png"/>
