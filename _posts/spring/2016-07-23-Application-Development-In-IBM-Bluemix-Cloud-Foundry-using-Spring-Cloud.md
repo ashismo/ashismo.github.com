@@ -8,8 +8,22 @@ weight: 107
 {% include JB/setup %}
 
 ## Introduction
-Cloud Foundry is an open source cloud computing platform as a service (PaaS) originally developed by VMware and now owned by Pivotal Software - a joint venture by EMC, VMware and General Electric. 
 
+**Cloud Foundry** is an open source cloud computing platform as a service (PaaS) originally developed by VMware and now owned by Pivotal Software - a joint venture by EMC, VMware and General Electric.  
+**Cloud Foundry** gives companies the speed, simplicity and control they need to develop and deploy applications faster and easier. There are several companies provide Cloud Foundry platform such as Amazon AWS, GE's Predix, IBM Bluemix, CenturyLink Cloud, ActiveState, HP Helion, anynines, and Swisscom.
+In this blog, I am going to show the deployment of the microservices application in IBM bluemix cloud foundry platform using spring cloud. 
+
+## Implementation details
+I have developed two microservices applications in Cloud Foundry platform. One application provides debit card service and the other application provides the credit card service. Both of the applications are independent from each other however, a common database has been used for both of the microservices in this example.
+
+Both of the mentioned applications are developed in Java using Spring. The major spring modules are Spring Core, Spring Web, Spring Cloud, Spring JPA.  
+
+The Spring web and JPA have been used to implement webapplication and database conectivity respectively. The main focus in this blog is given on **Spring Cloud** to implement the following major functionalities
+
+1. Configuration Management
+2. Service Discovery
+3. Circuit Breakers
+ 
 ## Steps to write code
 
 <div class="download-view">
@@ -29,68 +43,3 @@ Cloud Foundry is an open source cloud computing platform as a service (PaaS) ori
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/DebitCardCloudAppWS" target="_blank">Debit Card Cloud App</a>
 	</span>
 </div>
-
-
-* In this example, I am going to show how to integrate Swagger with a Spring boot applicaton. In my previous <a href="http://ashismo.github.io/java-spring/2016/03/10/Spring-Boot-Web-Application" target="_blank">blog</a>, I have shown how to create a spring boot application. In this blog, I shall integrate swagger just making 3 changes in the previous code i.e.
-
-
-  * springfox dependency to be added
-  * Configuration file (**WebConfig.java** in this example) has to be marked with @EnableSwagger2 annotation.
-  * CORS to be enabled in your application
-
-* Run the spring boot application and access **http://localhost:8080/v2/api-docs** from your browser. If you get the response then you are done with your integration.
-* Open Swagger-UI. If you do not have Swagger-UI then download it from <a href="https://github.com/swagger-api/swagger-ui/releases" target="_blank">here</a>, unzip and go to dist folder and open index.html file in a browser.  
-
-
-#### Change details
-Below are the three changes to integrate Swagger with Spring application
-
-* springfox dependancy in **pom.xml**
-
-<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
-	&lt;!-- SWAGGER Integration START --&gt;
-	&lt;dependency&gt;
-		&lt;groupId&gt;io.springfox&lt;/groupId&gt;
-		&lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
-		&lt;version&gt;2.2.2&lt;/version&gt;
-	&lt;/dependency&gt;
-	&lt;!-- SWAGGER Integration END --&gt;
-</code></pre>
-
-* In our previous example we have marked the configuration file (**WebConfig.java** in this example) with **@EnableSwagger2** annotation. The code snippet is given below
-
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-@SpringBootApplication(scanBasePackages="com.ashish")
-@EnableSwagger2
-public class WebConfig extends SpringBootServletInitializer {
-
-</code></pre>
-
-
-* Create a new file to **allow CORS**
-
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
-package com.ashish.config;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-@Configuration
-@EnableWebMvc
-public class WebMvcInitializer extends WebMvcConfigurerAdapter {
- 
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/**");
-	}
-}
-
-
-</code></pre>
-
-
-The response from **http://localhost:8080/v2/api-docs** URL will get displayed in swagger UI as shown below. It lists all the available services automatically. You would be able to test your services as well from the swagger UI
-
-<img src="https://cloud.githubusercontent.com/assets/11231867/15984331/9f489b94-2fe4-11e6-907b-a1e8e6f449de.PNG"/>
