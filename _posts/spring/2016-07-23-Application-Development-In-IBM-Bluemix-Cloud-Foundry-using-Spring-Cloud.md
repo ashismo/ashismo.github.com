@@ -18,11 +18,14 @@ I have developed two microservices applications in Cloud Foundry platform. One a
 
 Both of the mentioned applications are developed in Java using Spring. The major spring modules are Spring Core, Spring Web, Spring Cloud, Spring JPA.  
 
-The Spring web and JPA have been used to implement webapplication and database conectivity respectively. The main focus in this blog is given on **Spring Cloud** to implement the following major functionalities
+The Spring web and JPA have been used to implement webapplication and database conectivity respectively. The main focus in this blog is given on **Spring Cloud** to implement the following major functionalities  
 
-1. Configuration Management
-2. Service Discovery
-3. Circuit Breakers
+1. Deployment of same code in Local and cloud foundry using Spring cloud  
+2. Circuit Breakers
+
+Also I shall describe  
+1. how to inject MySQL database as a service into spring web application  
+2. how to deploy the code into IBM bluemix
  
 ## Steps to write code
 
@@ -43,3 +46,10 @@ The Spring web and JPA have been used to implement webapplication and database c
 		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/DebitCardCloudAppWS" target="_blank">Debit Card Cloud App</a>
 	</span>
 </div>
+
+
+## IBM Bluemix account setup
+
+
+* Create an account in IBM bluemix. It will be mostly free for one month.
+* 
