@@ -1,14 +1,14 @@
 ---
 layout: post
 category : java-Spring
-tags : [Spring Swagger Integration Tutorial]
+tags : [Spring Cloud,Cloud Foundry, IBM Bluemix]
 weight: 107
 ---
 
 {% include JB/setup %}
 
 ## Introduction
-
+Cloud Foundry is an open source cloud computing platform as a service (PaaS) originally developed by VMware and now owned by Pivotal Software - a joint venture by EMC, VMware and General Electric. 
 
 ## Steps to write code
 
