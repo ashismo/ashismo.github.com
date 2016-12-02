@@ -493,3 +493,9 @@ public class HelloWorldController {
 The screen navigation or page flow for the above is shown below
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/7680858/5107ce9e-fd88-11e4-8e0d-8b968283dd5a.png" style="maxheight:550px; maxwidth: 750px"/>
+
+## Common issues during POST/GET call
+
+SL NO | Issue | Solution
+:---:|:---|:---
+1|Exception handling in http tag redirects to some other page, i.e. access denied page. In such scenario if you are getting "405 Method Not Allowed" error. | You won't get actual reason for the issue until you remove the exception handling in http tag. Once exception handling attribute is removed then you will get this error "Invalid CSRF Token 'null' was found on the request parameter '_csrf' or header 'X-CSRF-TOKEN'." To solve this error, pass _csfr as a query parameter and  &lt;input type="hidden" name="${_csrf.parameterName}"	value="${_csrf.token}" /&gt; to be added in jsp page.
