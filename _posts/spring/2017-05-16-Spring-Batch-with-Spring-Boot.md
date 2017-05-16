@@ -32,3 +32,35 @@ One of the very important aspect of spring batch is schedule a job. Scheduling o
   * **Simple:** Set of batch program runs independently
   * **Medium:** Batch program will have some soft of relation among them. Such as, one job must follow another (serial). One job must run at the same time as another (parallel) and One job must run if the previous job is successful(Conditional). 
   * **Complex:** Nested Conditions and dependent comditions
+  
+  ## Required Software
+
+
+* Eclipse for J2EE
+* JDK 1.7
+* Maven 2.2.x or above
+* Tomcat 7
+
+## Steps to write code
+
+<div class="download-view">
+	<span class="download">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringMVCValidation.zip" target="_blank">SpringMVCValidation zip(20kb)</a>
+	</span>
+	<span class="view">
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/SpringMVCValidation" target="_blank">SpringMVCValidation</a>
+	</span>
+</div>
+
+The project structure and important file details are given below  
+
+<img src="https://cloud.githubusercontent.com/assets/11231867/8668713/9e7ba482-2a2b-11e5-977d-9b22e501327c.png"/>
+
+SL No | File Name | Description
+:---: | --- | ---
+1 | **WEB-INF/applicationContext.xml** | This file has annotation-driven, component-scan and **InternalResourceViewResolver** configurations. **annotation-driven** configuration is must for the annotation driven validation
+2 | **com.ashish.beans.Student** | age, name and id properties are declared and validation annotation added against each property
+3 | **com.ashish.controller.StudentController** | Controller to display two different screens. User input validation is done in this class
+4 | **WEB-INF/jsp/student.jsp** | Screen to take name, age and id as input from user. Validation errors are displayed in this same screen
+5 | **WEB-INF/jsp/result.jsp** | Displays user's valid input in this screen
+
