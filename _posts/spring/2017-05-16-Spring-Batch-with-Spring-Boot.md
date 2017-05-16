@@ -22,6 +22,6 @@ weight: 130
  * **Core:** Core controls a batch job. It has JabLauncher, Job and Steps implementations
  * **Infrastructure:** Both Core and Application is built on top of the batch infrastructure. Readers, Writers and services are the typical example of infrastructure.
 
-Below domain language of batch is referred from the spring official documentation. A job consists of multiple **steps**. Each **step** will have a **ItemReader**, **ItemProcessor** and **ItemWriter**. There might be interdepence between steps. Suppose there are a total of 4 steps for a job and Step4 runs if step3 fails.
+Below domain language of batch is referred from the spring official documentation. A job consists of multiple **steps**. Each **step** will have a **ItemReader**, **ItemProcessor** and **ItemWriter**. There might be interdepence between steps. Suppose there are a total of 4 steps for a job and Step4 runs if step3 fails. JobRepository provides CRUD operations for JobLauncher, Job and Steps implementation. When a **Job** is launched, a **JobExecution** is obtained from the repository and during the course of execution **StepExecution** and **JobExecution** implementations are persisted by passing them to the repository
 
 <img src="https://cloud.githubusercontent.com/assets/11231867/26121880/abce9462-3a43-11e7-8e80-90d7b38e39ff.png"/>
