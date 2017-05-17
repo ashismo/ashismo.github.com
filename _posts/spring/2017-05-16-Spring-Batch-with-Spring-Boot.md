@@ -53,16 +53,16 @@ One of the very important aspect of spring batch is schedule a job. Scheduling o
 
 The project structure and important file details are given below  
 
-<img src="https://cloud.githubusercontent.com/assets/11231867/26129487/64c3f3d0-3a5e-11e7-9d21-14cb93fa5bb9.png"/>
+<img src="https://cloud.githubusercontent.com/assets/11231867/26134317/be77837a-3a7b-11e7-8eb6-700de3546f0e.GIF"/>
 
 SL No | File Name | Description
 :---: | --- | ---
-1 | **com.ashish.batch.config.WebConfig** | This file configures the Spring boot application, enables batch processing and scheduling.
-2 | **com.ashish.batch.config.BatchConfig** | This file configures the JobLauncher, Job and Steps.
-3 | **com.ashish.batch.listener.BatchJobCompletionListener** | Continuously monitors (listen) the application. Once job is executed prints a message.
-4 | **com.ashish.batch.step.BatchItemReader** | Item Reader reads input for a given batch step.
-5 | **com.ashish.batch.step.BatchItemProcessor** | Item Processor process the data read by the item reader.
-6 | **com.ashish.batch.step.BatchItemWriter** | Item Writer writes the processed data.
+1 | **com.ashish.spring.batch.config.WebConfig** | This file configures the Spring boot application, enables batch processing and scheduling.
+2 | **com.ashish.spring.batch.config.BatchConfig** | This file configures the JobLauncher, Job and Steps.
+3 | **com.ashish.spring.batch.listener.BatchJobCompletionListener** | Continuously monitors (listen) the application. Once job is executed prints a message.
+4 | **com.ashish.spring.batch.step.BatchItemReader** | Item Reader reads input for a given batch step.
+5 | **com.ashish.spring.batch.step.BatchItemProcessor** | Item Processor process the data read by the item reader.
+6 | **com.ashish.spring.batch.step.BatchItemWriter** | Item Writer writes the processed data.
 7 | **src/main/resources/application.properties** | database url, server port and log level property is defined in this file
 
 
