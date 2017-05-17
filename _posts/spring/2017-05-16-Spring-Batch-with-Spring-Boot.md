@@ -1,7 +1,7 @@
 ---
 layout: post
 category : java-Spring
-tags : [Spring Tutorial]
+tags : [Spring Batch Tutorial]
 weight: 130
 ---
 
