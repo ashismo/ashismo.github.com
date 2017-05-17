@@ -293,7 +293,7 @@ public class SpringBootAppWS {
 #### BatchItemReader.java
 Item Reader reads input for a given batch step
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 package com.ashish.spring.batch.step;
 
 import org.springframework.batch.item.ItemReader;
@@ -322,7 +322,7 @@ public class BatchItemReader implements ItemReader<String> {
 	}
 
 }
-</code></pre>
+```
 
 
 #### BatchItemProcessor.java
