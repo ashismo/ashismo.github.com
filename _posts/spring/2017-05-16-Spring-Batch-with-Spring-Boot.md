@@ -40,6 +40,10 @@ One of the very important aspect of spring batch is schedule a job. Scheduling o
 * JDK 1.7
 * Maven 2.2.x or above
 
+## High level description about the code
+
+This application is written in spring boot. The spring batch is integraed on top of the spring boot application. A job is scheduled in every 5 seconds. Item reader reads some constant values. Item processor process it to upper case. Item writer writes into console. Once a task is completed the listener mark the job as completed. The whole process again runs after 5 seconds 
+
 ## Steps to write code
 
 <div class="download-view">
