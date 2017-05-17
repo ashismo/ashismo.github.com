@@ -326,7 +326,7 @@ public class BatchItemReader implements ItemReader<String> {
 
 
 #### BatchItemProcessor.java
-Item Processor process the data read by the item reader.
+Item Processor process the data read by the item reader
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.spring.batch.step;
@@ -345,7 +345,7 @@ public class BatchItemProcessor implements ItemProcessor<String, String> {
 
 
 #### BatchItemWriter.java
-Item Writer writes the processed data.
+Item Writer writes the processed data
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.spring.batch.step;
