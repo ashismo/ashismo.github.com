@@ -135,7 +135,8 @@ SL No | File Name | Description
 &lt;/project&gt;
 </code></pre>
 
-#### WebConfig.java : Spring boot application configuration and batch configuration is present in this file
+#### WebConfig.java : 
+Spring boot application configuration and batch configuration is present in this file
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.spring.batch.config;
@@ -246,6 +247,119 @@ public class BatchConfig {
 	@Bean
 	public ResourcelessTransactionManager transactionManager() {
 		return new ResourcelessTransactionManager();
+	}
+
+}
+</code></pre>
+
+
+#### SpringBootAppWS.java
+This file has commented out entry for now. However, provision is there to add restful service if reqired
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+
+</code></pre>
+
+#### BatchItemReader.java
+Item Reader reads input for a given batch step.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.spring.batch.step;
+
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+
+public class BatchItemReader implements ItemReader<String> {
+
+	private String[] messages = { "Hello World",
+			"Welcome to Spring Batch using Spring boot Example",
+			"H2 Database has been used in this example" };
+
+	private int count = 0;
+
+//	@Override
+	public String read() throws Exception, UnexpectedInputException,
+			ParseException, NonTransientResourceException {
+
+		if (count < messages.length) {
+			return messages[count++];
+		} else {
+			count = 0;
+		}
+		return null;
+	}
+
+}
+</code></pre>
+
+
+#### BatchItemProcessor.java
+Item Processor process the data read by the item reader.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.spring.batch.step;
+
+import org.springframework.batch.item.ItemProcessor;
+
+public class BatchItemProcessor implements ItemProcessor<String, String> {
+
+//	@Override
+	public String process(String data) throws Exception {
+		return data.toUpperCase();
+	}
+
+}
+</code></pre>
+
+
+#### BatchItemWriter.java
+Item Writer writes the processed data.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.spring.batch.step;
+
+import java.util.List;
+
+import org.springframework.batch.item.ItemWriter;
+
+public class BatchItemWriter implements ItemWriter<String> {
+
+	//@Override
+	public void write(List<? extends String> messages) throws Exception {
+		for (String msg : messages) {
+			System.out.println("Writing the data using batch writer: " + msg);
+		}
+	}
+
+}
+</code></pre>
+
+
+#### BatchJobCompletionListener.java
+This class extends JobExecutionListenerSupport and continuously listen the application change and prints the message once completed.
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.spring.batch.listener;
+
+import org.springframework.batch.core.BatchStatus;
+import org.springframework.batch.core.JobExecution;
+import org.springframework.batch.core.listener.JobExecutionListenerSupport;
+
+/**
+ * This class extends JobExecutionListenerSupport and continuously listen the application change and 
+ * prints the message once completed.
+ * @author Ashish Mondal
+ *
+ */
+public class BatchJobCompletionListener extends JobExecutionListenerSupport {
+
+	@Override
+	public void afterJob(JobExecution jobExecution) {
+		if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
+			System.out.println("BATCH JOB COMPLETED SUCCESSFULLY");
+		}
 	}
 
 }
