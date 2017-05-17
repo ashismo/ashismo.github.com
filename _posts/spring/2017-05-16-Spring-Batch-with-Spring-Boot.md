@@ -65,7 +65,7 @@ SL No | File Name | Description
 6 | **com.ashish.spring.batch.step.BatchItemWriter** | Item Writer writes the processed data.
 7 | **src/main/resources/application.properties** | database url, server port and log level property is defined in this file
 
-### pom.xml
+#### pom.xml
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -133,4 +133,32 @@ SL No | File Name | Description
 	
 	&lt;!-- h2db dependency END --&gt;
 &lt;/project&gt;
+</code></pre>
+
+#### WebConfig.java : Spring boot application configuration and batch configuration is present in this file
+
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+package com.ashish.spring.batch.config;
+
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication(scanBasePackages="com.ashish")
+@EnableBatchProcessing
+@EnableScheduling // Enables scheduling
+public class WebConfig {
+
+
+    /**
+     * Run the spring boot application in embedded tomcat 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(WebConfig.class, args);
+    }
+
+}
 </code></pre>
