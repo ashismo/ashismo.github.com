@@ -44,10 +44,10 @@ One of the very important aspect of spring batch is schedule a job. Scheduling o
 
 <div class="download-view">
 	<span class="download">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/" target="_blank">spring-batch.zip(20kb)</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/blob/master/spring/spring-boot-batch.zip" target="_blank">spring-boot-batch.zip(11kb)</a>
 	</span>
 	<span class="view">
-		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/" target="_blank">spring-batch</a>
+		<a href="https://github.com/ashismo/repositoryForMyBlog/tree/master/spring/spring-boot-batch" target="_blank">spring-boot-batch</a>
 	</span>
 </div>
 
