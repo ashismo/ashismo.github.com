@@ -347,7 +347,7 @@ public class BatchItemProcessor implements ItemProcessor<String, String> {
 #### BatchItemWriter.java
 Item Writer writes the processed data
 
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">
+```java
 package com.ashish.spring.batch.step;
 
 import java.util.List;
@@ -364,7 +364,7 @@ public class BatchItemWriter implements ItemWriter<String> {
 	}
 
 }
-</code></pre>
+```
 
 
 #### BatchJobCompletionListener.java
