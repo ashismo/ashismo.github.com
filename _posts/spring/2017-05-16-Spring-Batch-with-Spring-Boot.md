@@ -291,7 +291,7 @@ public class SpringBootAppWS {
 </code></pre>
 
 #### BatchItemReader.java
-Item Reader reads input for a given batch step.
+Item Reader reads input for a given batch step
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.spring.batch.step;
@@ -368,7 +368,7 @@ public class BatchItemWriter implements ItemWriter<String> {
 
 
 #### BatchJobCompletionListener.java
-This class extends JobExecutionListenerSupport and continuously listen the application change and prints the message once completed.
+This class extends JobExecutionListenerSupport and continuously listen the application change and prints the message once completed
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
 package com.ashish.spring.batch.listener;
