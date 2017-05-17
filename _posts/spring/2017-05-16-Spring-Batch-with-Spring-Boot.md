@@ -65,4 +65,72 @@ SL No | File Name | Description
 6 | **com.ashish.spring.batch.step.BatchItemWriter** | Item Writer writes the processed data.
 7 | **src/main/resources/application.properties** | database url, server port and log level property is defined in this file
 
+### pom.xml
 
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.ashish.spring.batch&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-boot-batch&lt;/artifactId&gt;
+	&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+	&lt;parent&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+		&lt;version&gt;1.3.3.RELEASE&lt;/version&gt;
+	&lt;/parent&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Below dependency has provided scope defined because during deployment 
+			in tomcat this jar is not required. This jar is required to execute the stand 
+			alone application with embedded tomcat --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+			&lt;scope&gt;provided&lt;/scope&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+			&lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+
+		&lt;!-- Spring batch dependency START --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-batch&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		&lt;!-- Spring batch dependency END --&gt;
+		
+		&lt;!-- h2db dependency START --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.h2database&lt;/groupId&gt;
+			&lt;artifactId&gt;h2&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+		
+		&lt;!-- Below dependency act as the h2 db client --&gt;
+		&lt;!-- URL to access the web client: http://localhost:9000/h2-console/login.do --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+			&lt;optional&gt;true&lt;/optional&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+	
+	&lt;!-- h2db dependency END --&gt;
+&lt;/project&gt;
+</code></pre>
