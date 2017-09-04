@@ -10,7 +10,7 @@ weight: 80
 In this blog, I have shown the step by step guide to setup a git server repository. This repository would be connected from client machine. In this example server and client are installed in the same server so server and client communicates over localhost.
 
 ### Git server Installation and Setup
-  * Install bitvise SSH server: URL - https://bvdl.s3-eu-west-1.amazonaws.com/BvSshServer-Inst.exe
+  * Install bitvise SSH server: URL - https://bvdl.s3-eu-west-1.amazonaws.com/BvSshServer-Inst.exe. This software is required to comunicate between client and server over SSH protocol. There are many other ssh server available in the market which could serve the same purpose.
   * Install git from this link https://git-scm.com/download/win. (select the installer as applicable for your system). Git has the capability to act as a server as well as client.
 
 #### Server side setup  
