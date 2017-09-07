@@ -27,7 +27,7 @@ Install SONAR in your machine and run SONAR server. Make sure http://localhost:9
 
 #### Add configuration in maven's setting.xml
 
-Locate your maven's settings.xml file and add the following configuration under <profiles> tag
+Locate your maven's settings.xml file and add the following configuration under &lt;profiles&gt; tag
 
 <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml"> 
 &lt;profile&gt;
