@@ -25,8 +25,8 @@ In this blog, I have shown the step by step guide to setup a git server reposito
   * **Step 6 & 7:** Click on **Entry 0 in Windows Groups**. Login Allowed must be checked.
   * **Step 8 & 9:** Click on **Terminal and exec requests** and **Inital terminal shell directory** would be **%HOME%** which means the repository on the server would be created under user's home directory (generally C:\users\<<username>>\)
   * **Step 10:** Create folder structure as shown in the image under %HOME% directory. This location would act as a server location
-  * **Step 11 & 12:** Go to the server location and execute **git init --bare** in **Git bash** shell. It would create the required folders as shown in step 12.
-  * **Step 13:** Add **** and **** into **Path** variable under **Environment Variables**
+  * **Step 11 & 12:** Go to the server location and execute **git init - -bare** in **Git bash** shell. It would create the required folders as shown in step 12.
+  * **Step 13:** Add **C:\Program Files (x86)\Git\bin** and **C:\Program Files (x86)\Git\libexec\git-core** into **Path** variable under **Environment Variables**
   AND you are done with server side setup.
   
 #### Client Side setup
